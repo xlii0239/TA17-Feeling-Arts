@@ -11,12 +11,12 @@ namespace FeelingArts.Controllers
     [Route("[controller]")]
     public class ArtworkController : Controller
     {
-        private BookStoresDBContext db = new BookStoresDBContext();
+        private FeelingArtsDBContext db = new FeelingArtsDBContext();
 
         [HttpGet]
         public IEnumerable<ArtworkSet> Get()
         {
-            using (var context = new BookStoresDBContext())
+            using (var context = new FeelingArtsDBContext())
             {
                 var listA = db.ArtistSets.ToList();
                 

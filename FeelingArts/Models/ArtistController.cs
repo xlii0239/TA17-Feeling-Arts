@@ -14,7 +14,7 @@ namespace FeelingArts.Controllers
         [HttpGet]
         public IEnumerable<ArtistSet> Get()
         {
-            using (var context = new BookStoresDBContext())
+            using (var context = new FeelingArtsDBContext())
             {
                 var listA = context.ArtistSets.ToArray();
                 Console.WriteLine(listA[0].ArtworkSets.Count);
