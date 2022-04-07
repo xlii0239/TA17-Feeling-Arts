@@ -56,7 +56,6 @@ class Search extends React.Component {
         }
         console.log("from changeFunction", this.state.artistShow);
     }
-
     render() {
 
         //const Item = this.state.artistshow.map((item, id) =>
@@ -66,16 +65,9 @@ class Search extends React.Component {
         //const data = this.state.artistshow;
         return (
           <>
-                <NavbarForHome/>
-                
-                <div className="section section-hero section-shaped">
-                    <div className="page-header" >
-                        <img
-                            alt="..."
-                            className="bg-image"
-                            src={require("assets/img/ill/index_bg.svg")}
-                        ></img>
-                        <Container className="shape-container d-flex align-items-center py-lg-2">
+                <NavbarForHome />
+                <div className="section">
+                        <Container className="shape-container d-flex align-items-center py-lg-2" >
                             <Input type="text" innerRef={Input => this.input = Input} placeHolder="Please enter artist's name" />
                             <Button color="primary"
                                 type="button"
@@ -83,16 +75,15 @@ class Search extends React.Component {
                             >
                                 Click to Search
                             </Button>
-                            <ProfileCard1 toData={this.state.artistShow}></ProfileCard1>
+                    </Container>
+                    <Row justify="space-around" align="middle">
+                        <Col xs={{ span: 5, offset: 1 }} lg={{ span: 6, offset: 5 }}>
+                    <ProfileCard1 toData={this.state.artistShow}></ProfileCard1>
                             {/*<TableAuthor showData={this.state.artistShow}></TableAuthor>*/}
-                        </Container>
-                        
+                            </Col>
+                        </ Row>
                     </div>
-                </div>
-                <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
+
                 <FooterForWeb />
           </>
         )

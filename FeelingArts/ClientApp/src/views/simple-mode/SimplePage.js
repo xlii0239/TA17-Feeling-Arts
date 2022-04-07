@@ -53,7 +53,7 @@ function SimplePage() {
                                             "url(" + require("assets/NewImg/Artwork.jpg") + ")",
                                     }}
                                 ></div>
-                                <a href="" onClick={(e) => e.preventDefault()}>
+                                <a href="searchartwork" onClick={(e) => e.button()}>
                                     <CardBody>
                                         <div className="content-center">
                                             <CardTitle tag="h4">Search Artwork</CardTitle>
@@ -76,7 +76,7 @@ function SimplePage() {
                                 <a href="#pablo" onClick={(e) => e.preventDefault()}>
                                     <CardBody>
                                         <div className="content-center">
-                                            <CardTitle tag="h4">Art through describe</CardTitle>
+                                            <CardTitle tag="h4">Art Through Describe</CardTitle>
                                         </div>
                                     </CardBody>
                                 </a>
@@ -97,7 +97,7 @@ function SimplePage() {
                                 <a href="#pablo" onClick={(e) => e.preventDefault()}>
                                     <CardBody>
                                         <div className="content-center">
-                                            <CardTitle tag="h4">Art through Music</CardTitle>
+                                            <CardTitle tag="h4">Art Through Music</CardTitle>
                                         </div>
                                     </CardBody>
                                 </a>
@@ -118,7 +118,7 @@ function SimplePage() {
                                 <a href="#pablo" onClick={(e) => e.preventDefault()}>
                                     <CardBody>
                                         <div className="content-center">
-                                            <CardTitle tag="h4">Art through touch</CardTitle>
+                                            <CardTitle tag="h4">Art Through Touch</CardTitle>
                                         </div>
                                     </CardBody>
                                 </a>
@@ -136,10 +136,10 @@ function SimplePage() {
                                             "url(" + require("assets/img/sections/athena.jpg") + ")",
                                     }}
                                 ></div>
-                                <a href="homepage" onClick={(e) => e.preventDefault()}>
+                                <a href="homepage" onClick={(e) => e.button()}>
                                     <CardBody>
                                         <div className="content-center">
-                                            <CardTitle tag="h4">Take me to the art</CardTitle>
+                                            <CardTitle tag="h4">Take Me To The Art</CardTitle>
                                         </div>
                                     </CardBody>
                                 </a>
