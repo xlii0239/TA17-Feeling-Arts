@@ -69,7 +69,7 @@ class SearchArtwork extends React.Component {
                 <NavbarForHome />              
                         <div className="section">
                         <Container className="shape-container flex align-items-center py-lg-2">
-                            <Input type="text" innerRef={Input => this.input = Input} placeHolder="Please enter artist's name" />
+                            <Input type="text" innerRef={Input => this.input = Input} placeHolder="Please enter artwork's name" />
                             <Button color="primary"
                                 type="button"
                                 onClick={this.search.bind(this)}
