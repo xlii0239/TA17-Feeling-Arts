@@ -9,34 +9,13 @@ import { Button, NavLink, Container, Row, Col } from "reactstrap";
 function FooterForWeb() {
     return (
         <>
-            <footer className="footer footer-simple bg-dark">
+            <footer className="footer footer-simple bg-dark" >
                 <Container>
                     <Row>
-                        <Col md="6">
-                            <a
-                                className="footer-brand"
-                                Text style={{ color: 'white', fontSize: 20 }}
-                                onClick={(e) => e.preventDefault()}
-                            >
-                                Feeling arts
-              </a>
-                        </Col>
-                        <Col md="6">
-                            <div className="column">
-                                <ul className="inline-menu">
-                                    <li>
-                                        <NavLink href="#pablo" onClick={(e) => e.preventDefault()}>
-                                            About Us
-                    </NavLink>
-                                    </li>
-                                    <li>
-                                        <NavLink href="#pablo" onClick={(e) => e.preventDefault()}>
-                                            Contact Us
-                    </NavLink>
-                                    </li>
-                         
-                                </ul>
-                            </div>
+                        <Col md="12">
+                            <h4 className="title text-white text-center">
+                                FEELING ARTS
+                            </h4>
                         </Col>
                         
                     </Row>

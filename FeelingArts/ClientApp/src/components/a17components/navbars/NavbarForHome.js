@@ -24,10 +24,12 @@ function NavbarForHome() {
   return (
     <>
         <Navbar className="navbar-dark bg-dark" expand="lg">
-        <Container>
+              <Container>
+                  <a href="homepage" onClick={(e) => e.button()}>
                   <NavbarBrand Text style={{ color: 'white', fontSize: 30 }}>
-            Feeling arts
+                          Feeling arts
           </NavbarBrand>
+                      </a>
           <button
             className="navbar-toggler"
             onClick={() => toggleCollapseOpen(!collapseOpen)}
