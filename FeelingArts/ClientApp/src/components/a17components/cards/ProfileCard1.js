@@ -30,7 +30,7 @@ function ProfileCard1(props) {
 
   return (
     <>
-      <Card className="card-profile" data-image="profile-image">
+          <Card className="card-profile" data-image="profile-image"     >
         <CardHeader>
           <div className="card-image">
             <UncontrolledDropdown>
