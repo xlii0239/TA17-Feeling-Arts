@@ -6,7 +6,7 @@ import React from "react";
 // } from "reactstrap";
 
 // Core Components
-import NavbarForHome from "a17component/navbars/NavbarForHome.js";
+import NavbarForHome from "components/a17component/navbars/NavbarForHome.js";
 import FooterForWeb from "a17component/footers/FooterForWeb.js";
 import NormalPage from "views/normal-mode/NormalPage.js";
 import NavbarPrimary from "components/a17components/navbars/NavbarPrimary.js";
@@ -24,6 +24,7 @@ function HomepageNormal() {
     return (
         <>
             <div className="wrapper">
+                <NavbarPrimary />
                 <NormalPage />
                 <br></br>
                 <br></br>

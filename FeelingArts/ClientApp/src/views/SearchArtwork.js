@@ -13,8 +13,9 @@ import {
 
 import TableAuthor from "views/TableAuthor.js";
 import DemoNavbar from "components/navbars/DemoNavbar.js";
-import NavbarPrimary from "components/a17components/navbars/NavbarPrimary.js";
+import NavbarForHome from "components/a17components/navbars/NavbarForHome.js";
 import Carousel from "components/a17components/cards/Carousel.js";
+import FooterForWeb from "components/a17components/footers/FooterForWeb.js";
 
 class SearchArtwork extends React.Component {
     constructor(props) {
@@ -65,7 +66,7 @@ class SearchArtwork extends React.Component {
         //const data = this.state.artistshow;
         return (
           <>
-            <NavbarPrimary/>
+                <NavbarForHome />
                 
                 <div className="section section-hero section-shaped">
                     <div className="page-header" >
@@ -89,6 +90,7 @@ class SearchArtwork extends React.Component {
                         
                     </div>
                 </div>
+                <FooterForWeb />
           </>
         )
     }

@@ -1,40 +1,71 @@
+/// <reference path="../search.js" />
+/// <reference path="../search.js" />
+/// <reference path="../../views/homepage/homepage.js" />
 import React from "react";
 
 // reactstrap components
 import { Card, CardBody, CardTitle, Container, Row, Col, Button} from "reactstrap";
 import { Link } from "react-router-dom";
+import NavbarForHome from "components/a17components/navbars/NavbarForHome.js";
+import FooterForWeb from "components/a17components/footers/FooterForWeb.js";
+
 
 
 function SimplePage() {
     return (
         <>
-            <section className="blogs-4">
+            <NavbarForHome />
+            <section className="blogs-home">
                 <Container fluid>
                     <br></br>
                     <br></br>
-                    <Row className="row-input" style={{ display: "d-flex", justifyContent: "center" }}>
-
-                        <Col className="pl-lg-0" sm="2" xs="6">
-                            <Link to="search">
-                                <Button block color="primary" type="search">
-                                    Artist
-                                </Button>
-                            </Link>
-                            <Link to="searchartwork">
-                                <Button block color="success" type="search">
-                                    Artwork
-                                </Button>
-                            </Link>
-                        </Col>
-                    </Row>
                     <br></br>
                     <br></br>
                     <Row>
                         <Col lg="6">
                             <Card
                                 className="card-blog card-background"
-                                data-animation="zooming"
-                            >
+                                data-animation="zooming"  >
+                                <div
+                                    className="full-background"
+                                    style={{
+                                        backgroundImage:
+                                            "url(" + require("assets/NewImg/Artist.jpg") + ")",
+                                    }}
+                                ></div>
+                                <a href="search" onClick={(e) => e.button()}>
+                                    <CardBody>
+                                        <div className="content-center">
+                                            <CardTitle tag="h4">Search Artist</CardTitle>
+                                        </div>
+                                    </CardBody>
+                                </a>
+                            </Card>
+                        </Col>
+                        <Col lg="6">
+                            <Card
+                                className="card-blog card-background"
+                                data-animation="zooming"  >
+                                <div
+                                    className="full-background"
+                                    style={{
+                                        backgroundImage:
+                                            "url(" + require("assets/NewImg/Artwork.jpg") + ")",
+                                    }}
+                                ></div>
+                                <a href="" onClick={(e) => e.preventDefault()}>
+                                    <CardBody>
+                                        <div className="content-center">
+                                            <CardTitle tag="h4">Search Artwork</CardTitle>
+                                        </div>
+                                    </CardBody>
+                                </a>
+                            </Card>
+                        </Col>
+                        <Col lg="6">
+                            <Card
+                                className="card-blog card-background"
+                                data-animation="zooming"  >
                                 <div
                                     className="full-background"
                                     style={{
@@ -105,7 +136,7 @@ function SimplePage() {
                                             "url(" + require("assets/img/sections/athena.jpg") + ")",
                                     }}
                                 ></div>
-                                <a href="#pablo" onClick={(e) => e.preventDefault()}>
+                                <a href="homepage" onClick={(e) => e.preventDefault()}>
                                     <CardBody>
                                         <div className="content-center">
                                             <CardTitle tag="h4">Take me to the art</CardTitle>
@@ -117,6 +148,11 @@ function SimplePage() {
                     </Row>
                 </Container>
             </section>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <FooterForWeb />
         </>
     );
 }

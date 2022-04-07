@@ -23,8 +23,7 @@ function HomepageSimple() {
     return (
         <>
             <div className="wrapper">
-                
-                
+                <NavbarForHome />
                 <SimplePage />
                 <br></br>
                 <br></br>
