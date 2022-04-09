@@ -4,6 +4,7 @@
       "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.ApiManagement/service/FeelingArtsapi/apis/FeelingArtsAPI",
       "type": "apis.azure",
       "apiEndpoint": "https://feelingartsapi.azure-api.net/"
+
     },
     "mssql1": {
       "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.Sql/servers/ta17-db/databases/FeelingArtsDB",
