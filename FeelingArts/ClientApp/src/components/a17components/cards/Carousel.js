@@ -6,19 +6,19 @@ import { Button, Container, Row, Col, UncontrolledCarousel } from "reactstrap";
 // Core Components
 const items = [
   {
-    src: require("assets/img/theme/img-1-1200x1000.jpg"),
+    src: require("assets/NewImg/MonaLisa.jpg"),
     altText: "Slide 1",
     caption: "",
     key: "key-1",
   },
   {
-    src: require("assets/img/theme/img-2-1200x1000.jpg"),
+      src: require("assets/NewImg/MonaLisa.jpg"),
     altText: "Slide 2",
     caption: "",
     key: "key-2",
   },
   {
-    src: require("assets/img/theme/img-1-1200x1000.jpg"),
+      src: require("assets/NewImg/MonaLisa.jpg"),
     altText: "Slide 3",
     caption: "",
     key: "key-3",

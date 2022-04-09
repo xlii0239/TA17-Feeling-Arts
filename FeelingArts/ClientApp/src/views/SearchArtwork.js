@@ -66,30 +66,21 @@ class SearchArtwork extends React.Component {
         //const data = this.state.artistshow;
         return (
           <>
-                <NavbarForHome />
-                
-                <div className="section section-hero section-shaped">
-                    <div className="page-header" >
-                        <img
-                            alt="..."
-                            className="bg-image"
-                            src={require("assets/img/ill/index_bg.svg")}
-                        ></img>
+                <NavbarForHome />              
+                        <div className="section">
                         <Container className="shape-container flex align-items-center py-lg-2">
-                            <Input type="text" innerRef={Input => this.input = Input} placeHolder="Please enter artist's name" />
+                            <Input type="text" innerRef={Input => this.input = Input} placeHolder="Please enter artwork's name" />
                             <Button color="primary"
                                 type="button"
-                                align="center"
                                 onClick={this.search.bind(this)}
                             >
-                                Click to Search
+                            Click to Search
                             </Button>
                             <Carousel toData={this.state.artworkShow}></Carousel>
                             {/*<TableAuthor showData={this.state.artistShow}></TableAuthor>*/}
                         </Container>
-                        
-                    </div>
-                </div>
+                        </div>
+
                 <FooterForWeb />
           </>
         )
