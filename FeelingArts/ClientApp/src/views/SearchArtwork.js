@@ -66,7 +66,13 @@ class SearchArtwork extends React.Component {
         //const data = this.state.artistshow;
         return (
           <>
-                <NavbarForHome />              
+                <NavbarForHome />
+                <br></br>
+                <ul class="breadcrumb bg-transparent font-weight-bold">
+                    <li class="breadcrumb-item text-light"><a href="homepage">Home</a></li>
+                    <li class="breadcrumb-item text-light"><a href="simplemode">Simple Mode</a></li>
+                    <li class="breadcrumb-item active">Search Artwork</li>
+                </ul>
                         <div className="section">
                         <Container className="shape-container flex align-items-center py-lg-2">
                             <Input type="text" innerRef={Input => this.input = Input} placeHolder="Please enter artwork's name" />

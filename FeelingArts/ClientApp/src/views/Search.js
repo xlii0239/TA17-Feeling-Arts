@@ -66,6 +66,12 @@ class Search extends React.Component {
         return (
           <>
                 <NavbarForHome />
+                <br></br>
+                <ul class="breadcrumb bg-transparent font-weight-bold">
+                    <li class="breadcrumb-item text-light"><a href="homepage">Home</a></li>
+                    <li class="breadcrumb-item text-light"><a href="simplemode">Simple Mode</a></li>
+                    <li class="breadcrumb-item active">Search Artist</li>
+                </ul>
                 <div className="section">
                         <Container className="shape-container d-flex align-items-center py-lg-2" >
                             <Input type="text" innerRef={Input => this.input = Input} placeHolder="Please enter artist's name" />

@@ -2,11 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 // reactstrap components
 import {
-  Collapse,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem,
-  UncontrolledDropdown,
   NavbarBrand,
   Navbar,
   NavItem,
@@ -25,107 +20,34 @@ function NavbarForHome() {
     <>
         <Navbar className="navbar-dark bg-dark" expand="lg">
               <Container>
+                  <NavbarBrand className="mr-lg-3" to="/homepage" tag={Link}>
+                      <img src={require("assets/NewImg/weblogo.png")}></img>
+                  </NavbarBrand>
                   <a href="homepage" onClick={(e) => e.button()}>
-                  <NavbarBrand Text style={{ color: 'white', fontSize: 30 }}>
+                  <NavbarBrand Text style={{ color: 'white', fontSize: 28 }}>
                           Feeling arts
           </NavbarBrand>
                       </a>
-          <button
-            className="navbar-toggler"
-            onClick={() => toggleCollapseOpen(!collapseOpen)}
-          >
-            <span className="navbar-toggler-icon"></span>
-          </button>
-          <Collapse isOpen={collapseOpen} navbar>
-            <div className="navbar-collapse-header">
-              <Row>
-                <Col className="collapse-brand" xs="6">
-                  <Link to="/index">
-                    <img
-                      alt="..."
-                      src={require("assets/img/brand/blue.png")}
-                    ></img>
-                  </Link>
-                </Col>
-                <Col className="collapse-close" xs="6">
-                  <button
-                    className="navbar-toggler"
-                    onClick={() => toggleCollapseOpen(!collapseOpen)}
-                  >
-                    <span></span>
-                    <span></span>
-                  </button>
-                </Col>
-              </Row>
-            </div>
-            <Nav className="ml-lg-auto" navbar>
-              <NavItem>
-                <NavLink
-                  className="nav-link-icon"
-                  href="#pablo"
-                  onClick={(e) => e.preventDefault()}
-                >
-                  <i className="ni ni-favourite-28"></i>
-                  <span className="nav-link-inner--text d-lg-none">
-                    Discover
-                  </span>
-                </NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink
-                  className="nav-link-icon"
-                  href="#pablo"
-                  onClick={(e) => e.preventDefault()}
-                >
-                  <i className="ni ni-notification-70"></i>
-                  <span className="nav-link-inner--text d-lg-none">
-                    Profile
-                  </span>
-                </NavLink>
-              </NavItem>
-              <UncontrolledDropdown nav>
-                <DropdownToggle
-                  aria-expanded={false}
-                  aria-haspopup={true}
-                  caret
-                  className="nav-link-icon"
-                  color="default"
-                  data-toggle="dropdown"
-                  href="#pablo"
-                  onClick={(e) => e.preventDefault()}
-                  id="navbar-default_dropdown_1"
-                  nav
-                  role="button"
-                >
-                  <i className="ni ni-settings-gear-65"></i>
-                  <span className="nav-link-inner--text d-lg-none">
-                    Settings
-                  </span>
-                </DropdownToggle>
-                <DropdownMenu aria-labelledby="navbar-default_dropdown_1" right>
-                  <DropdownItem
-                    href="#pablo"
-                    onClick={(e) => e.preventDefault()}
-                  >
-                    Action
-                  </DropdownItem>
-                  <DropdownItem
-                    href="#pablo"
-                    onClick={(e) => e.preventDefault()}
-                  >
-                    Another action
-                  </DropdownItem>
-                  <DropdownItem divider></DropdownItem>
-                  <DropdownItem
-                    href="#pablo"
-                    onClick={(e) => e.preventDefault()}
-                  >
-                    Something else here
-                  </DropdownItem>
-                </DropdownMenu>
-              </UncontrolledDropdown>
-            </Nav>
-          </Collapse>
+                  <Nav className="ml-auto" navbar>
+                      <NavItem>
+                          <NavLink
+                              className="nav-link-icon"
+                              href="simplemode"
+                              onClick={(e) => e.button()}
+                          >
+                              <span className="nav-link-inner--text">Simple Mode</span>
+                          </NavLink>
+                      </NavItem>
+                      <NavItem>
+                          <NavLink
+                              className="nav-link-icon"
+                              href="normalmode"
+                              onClick={(e) => e.button()}
+                          >
+                              <span className="nav-link-inner--text">Normal Mode</span>
+                          </NavLink>
+                      </NavItem>
+                      </ Nav>
         </Container>
       </Navbar>
     </>
