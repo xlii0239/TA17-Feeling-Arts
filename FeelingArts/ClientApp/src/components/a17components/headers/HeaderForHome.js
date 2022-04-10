@@ -20,7 +20,7 @@ function HeaderForHome() {
                     <Row>
                         <Col className="mx-auto text-center" md="6">
                             <h1 className="title text-white">
-                                A Place for Blind People to feeling arts
+                                A Place for Blind People to Feel Arts
               </h1>
                             
                         </Col>

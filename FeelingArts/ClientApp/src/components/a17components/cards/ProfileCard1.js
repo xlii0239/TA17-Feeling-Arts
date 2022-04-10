@@ -6,10 +6,6 @@ import {
   Card,
   CardHeader,
   CardBody,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem,
-  UncontrolledDropdown,
 } from "reactstrap";
 
 // Core Components
@@ -25,37 +21,13 @@ function ProfileCard1(props) {
     else {
         return (<><p>Loading</p></>)
     }
-    console.log("From profile card", name);
-    
+    console.log("From profile card", name);   
 
   return (
     <>
-          <Card className="card-profile" data-image="profile-image"     >
+        <Card className="card-profile" data-image="profile-image"  >
         <CardHeader>
           <div className="card-image">
-            <UncontrolledDropdown>
-              <DropdownToggle
-                aria-expanded={false}
-                caret
-                className="btn-icon-only"
-                color="link"
-                data-toggle="dropdown"
-                type="button"
-              >
-                <i className="ni ni-settings-gear-65"></i>
-              </DropdownToggle>
-              <DropdownMenu right x-placement="bottom-end">
-                <DropdownItem href="#pablo" onClick={(e) => e.preventDefault()}>
-                  Edit Profile
-                </DropdownItem>
-                <DropdownItem href="#pablo" onClick={(e) => e.preventDefault()}>
-                  Settings
-                </DropdownItem>
-                <DropdownItem href="#pablo" onClick={(e) => e.preventDefault()}>
-                  Log out
-                </DropdownItem>
-              </DropdownMenu>
-            </UncontrolledDropdown>
             <a href="#pablo" onClick={(e) => e.preventDefault()}>
               <img
                 alt="..."
@@ -67,14 +39,14 @@ function ProfileCard1(props) {
         </CardHeader>
         <CardBody className="pt-0">
           <h4 className="display-4 mb-0">{name}</h4>
-                  <p className="lead">{currentArtist.dateOfBirth + "-" + currentArtist.dateOfDeath}</p>
+                  <p className="lead">{currentArtist.dateOfBirth + " To " + currentArtist.dateOfDeath}</p>
           <div className="table-responsive">
             <ul className="list-unstyled">
               <li className="py-1">
                 <div className="d-flex align-items-center">
                   <div>
                     <Badge className="badge-circle mr-3" color="info">
-                      <i className="ni ni-atom"></i>
+                      <i className="ni ni-single-02"></i>
                     </Badge>
                   </div>
                   <div>
@@ -86,7 +58,7 @@ function ProfileCard1(props) {
                 <div className="d-flex align-items-center">
                   <div>
                     <Badge className="badge-circle mr-3" color="success">
-                      <i className="ni ni-user-run"></i>
+                      <i className="ni ni-trophy"></i>
                     </Badge>
                   </div>
                   <div>
@@ -97,8 +69,8 @@ function ProfileCard1(props) {
               <li className="py-1">
                 <div className="d-flex align-items-center">
                   <div>
-                    <Badge className="badge-circle mr-3" color="danger">
-                      <i className="ni ni-chart-bar-32"></i>
+                    <Badge className="badge-circle mr-3" color="warning">
+                                          <i className="ni ni-diamond"></i>
                     </Badge>
                   </div>
                   <div>
@@ -109,7 +81,7 @@ function ProfileCard1(props) {
             </ul>
           </div>
         </CardBody>
-      </Card>
+          </Card>
     </>
   );
 }

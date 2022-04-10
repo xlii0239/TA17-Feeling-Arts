@@ -1,78 +1,139 @@
 /// <reference path="../../components/headers/header3.js" />
 import React from "react";
 // JavaScript library for creating fancy carousels like components
-import Glide from "@glidejs/glide";
 // reactstrap components
-import { Input, Button, Container, Row, Col } from "reactstrap";
+import Glide from "@glidejs/glide";
+import { Button, Container, Row, Col } from "reactstrap";
 import { Link } from "react-router-dom";
 import FooterForWeb from "components/a17components/footers/FooterForWeb.js";
 import NavbarForHome from "components/a17components/navbars/NavbarForHome.js";
-import NormalHeader from "components/a17components/headers/NormalHeader.js";
+
 
 // Core Components
-
 function NormalPage() {
     React.useEffect(() => {
-        new Glide(".presentation-cards", {
+        new Glide(".glide", {
             type: "carousel",
             startAt: 0,
             focusAt: 2,
             perTouch: 1,
-            perView: 4,
+            perView: 5,
         }).mount();
-    }, []);
+        document.body.classList.add("normalpage");
+        window.scrollTo(0, 0);
+        document.body.scrollTop = 0;
+        return function cleanup() {
+            document.body.classList.remove("normalpage");
+        };
+    });
     return (
         <>
             <NavbarForHome />
-            <NormalHeader />
-            <Container className="pt-5">
-                <Row>
-                    <Col className="text-center my-5" md="12">
-                        <h1 className="display-1 mt-3">Still find more?</h1>
-                        <h2 className="lead">
-                            We provide more options for you
-                         </h2>
-                    <Col lg="12">
-                        <section className="display-6">
-                            <br></br>
-                            <br></br>
-                            <br></br>
-                            <Row className="row-input" style={{ display: "flex", justifyContent: "center" }}>
-                                <Col className="pl-lg-0" sm="4" xs="12">
-                                    <Link to="search">
-                                        <Button block color="primary" type="search">
-                                            Artist
-                                </Button>
-                                    </Link>
-                                    <Link to="searchartwork">
-                                        <Button block color="success" type="search">
-                                            Artwork
-                                </Button>
-                                    </Link>
-                                </Col>
-                            </Row>
-                        </section>
-                        </Col>
-                    </Col>
-                </Row>
-                </ Container>
             <br></br>
+            <div className="wrapper">
+            <ul class="breadcrumb bg-transparent font-weight-bold">
+                <li class="breadcrumb-item text-light"><a href="homepage">Home</a></li>
+                <li class="breadcrumb-item active">Normal Mode</li>
+                </ul>
+            <Container className="p-2 my-2">
+                <br></br>
+                <Button type="button" class="capitalize">
+                    <Link to="#">
+                        <h8>Art through music</h8>
+                    </Link>
+                        </Button>
+                    <Button type="button">
+                    <Link to="#">
+                        <h8>Art Through Touch</h8>
+                    </Link>
+                </Button>
 
-            <div className="presentation-cards">
-                  <div className="glide__track" data-glide-el="track">
-                      <ul className="glide__slides">
-                       <li className="glide__slide">
-                            <img
-                                alt="..."
-                                height="400"
-                                src={require("assets/NewImg/MonaLisa.jpg")}
-                                width="350"
-                            ></img>
-                        </li>
-                    </ul>
+                        <Button class="btn btn-info btn-lg" type="button">
+                    <Link to="#">
+                        <h8>Art Through Describe</h8>
+                    </Link>
+                </Button>
+                <Button class="btn btn-info btn-lg" type="button">
+                    <Link to="normalsearch">
+                        <h8>Search Artist</h8>
+                    </Link>
+                </Button>
+                <Button class="btn btn-info btn-lg" type="button">
+                    <Link to="normalsearchartwork">
+                        <h8>Search Artwork</h8>
+                    </Link>
+                </Button>
+            </Container>
+            <section>
+                <div className="glide">
+                    <div className="glide__track" data-glide-el="track">
+                        <ul className="glide__slides">
+                            <li className="glide__slide">
+                                <img
+                                    alt="..."
+                                    height="450"
+                                    src={require("assets/NewImg/MonaLisa.jpg")}
+                                    width="400"
+                                ></img>
+                            </li>
+                            <li className="glide__slide">
+                                <img
+                                    alt="..."
+                                    height="450"
+                                    src={require("assets/NewImg/Michelangelo.jpg")}
+                                    width="400"
+                                ></img>
+                            </li>
+                            <li className="glide__slide">
+                                <img
+                                    alt="..."
+                                    height="450"
+                                    src={require("assets/NewImg/Leonardo da Vinci.jpg")}
+                                    width="400"
+                                ></img>
+                            </li>
+                            <li className="glide__slide">
+                                <img
+                                    alt="..."
+                                    height="450"
+                                    src={require("assets/NewImg/Vincent van Gogh.jpg")}
+                                    width="400"
+                                ></img>
+                            </li>
+                            <li className="glide__slide">
+                                <img
+                                    alt="..."
+                                    height="450"
+                                    src={require("assets/NewImg/David2.jpg")}
+                                    width="400"
+                                ></img>
+                            </li>
+                        </ul>
+                    </div>
+                        <div className="glide__arrows" data-glide-el="controls">
+                            <button
+                                className="glide__arrow glide__arrow--left bg-light btn-lg"
+                                data-glide-dir="<"
+                            >
+                                <i className="ni ni-bold-left "></i>
+                            </button>
+                            <button
+                                className="glide__arrow glide__arrow--right bg-light btn-lg"
+                                data-glide-dir=">"
+                            >
+                                <i className="ni ni-bold-right"></i>
+                            </button>
+                        </div>
                 </div>
+                </section>
             </div>
-            <FooterForWeb />
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+                <FooterForWeb />
+
         </>
     );
 }

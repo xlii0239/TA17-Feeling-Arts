@@ -4,7 +4,7 @@
 import React from "react";
 
 // reactstrap components
-import { Card, CardBody, CardTitle, Container, Row, Col, Button} from "reactstrap";
+import { Card, CardBody, CardTitle, Container, Row, Col} from "reactstrap";
 import { Link } from "react-router-dom";
 import NavbarForHome from "components/a17components/navbars/NavbarForHome.js";
 import FooterForWeb from "components/a17components/footers/FooterForWeb.js";
@@ -15,13 +15,56 @@ function SimplePage() {
     return (
         <>
             <NavbarForHome />
+            <br></br>
+            <ul class="breadcrumb bg-transparent font-weight-bold">
+                <li class="breadcrumb-item text-light"><a href="homepage">Home</a></li>
+                <li class="breadcrumb-item active">Simple Mode</li>
+            </ul>
             <section className="blogs-home">
                 <Container fluid>
-                    <br></br>
-                    <br></br>
-                    <br></br>
-                    <br></br>
                     <Row>
+                        <Col lg="6">
+                            <Card
+                                className="card-blog card-background"
+                                data-animation="zooming"
+                            >
+                                <div
+                                    className="full-background"
+                                    style={{
+                                        backgroundImage:
+                                            "url(" + require("assets/NewImg/musicArt.jpg") + ")",
+                                    }}
+                                ></div>
+                                <a href="#pablo" onClick={(e) => e.preventDefault()}>
+                                    <CardBody>
+                                        <div className="content-center">
+                                            <CardTitle tag="h4">Art Through Music</CardTitle>
+                                        </div>
+                                    </CardBody>
+                                </a>
+                            </Card>
+                        </Col>
+                        <Col lg="6">
+                            <Card
+                                className="card-blog card-background"
+                                data-animation="zooming"
+                            >
+                                <div
+                                    className="full-background"
+                                    style={{
+                                        backgroundImage:
+                                            "url(" + require("assets/NewImg/touchArt.jpg") + ")",
+                                    }}
+                                ></div>
+                                <a href="#pablo" onClick={(e) => e.preventDefault()}>
+                                    <CardBody>
+                                        <div className="content-center">
+                                            <CardTitle tag="h4">Art Through Touch</CardTitle>
+                                        </div>
+                                    </CardBody>
+                                </a>
+                            </Card>
+                        </Col>
                         <Col lg="6">
                             <Card
                                 className="card-blog card-background"
@@ -81,49 +124,7 @@ function SimplePage() {
                                     </CardBody>
                                 </a>
                             </Card>
-                        </Col>
-                        <Col lg="6">
-                            <Card
-                                className="card-blog card-background"
-                                data-animation="zooming"
-                            >
-                                <div
-                                    className="full-background"
-                                    style={{
-                                        backgroundImage:
-                                            "url(" + require("assets/NewImg/musicArt.jpg") + ")",
-                                    }}
-                                ></div>
-                                <a href="#pablo" onClick={(e) => e.preventDefault()}>
-                                    <CardBody>
-                                        <div className="content-center">
-                                            <CardTitle tag="h4">Art Through Music</CardTitle>
-                                        </div>
-                                    </CardBody>
-                                </a>
-                            </Card>
-                        </Col>
-                        <Col lg="6">
-                            <Card
-                                className="card-blog card-background"
-                                data-animation="zooming"
-                            >
-                                <div
-                                    className="full-background"
-                                    style={{
-                                        backgroundImage:
-                                            "url(" + require("assets/NewImg/touchArt.jpg") + ")",
-                                    }}
-                                ></div>
-                                <a href="#pablo" onClick={(e) => e.preventDefault()}>
-                                    <CardBody>
-                                        <div className="content-center">
-                                            <CardTitle tag="h4">Art Through Touch</CardTitle>
-                                        </div>
-                                    </CardBody>
-                                </a>
-                            </Card>
-                        </Col>
+                        </Col>                      
                         <Col lg="6">
                             <Card
                                 className="card-blog card-background"
@@ -136,7 +137,7 @@ function SimplePage() {
                                             "url(" + require("assets/img/sections/athena.jpg") + ")",
                                     }}
                                 ></div>
-                                <a href="homepage" onClick={(e) => e.button()}>
+                                <a href="#pablo" onClick={(e) => e.preventDefault()}>
                                     <CardBody>
                                         <div className="content-center">
                                             <CardTitle tag="h4">Take Me To The Art</CardTitle>
