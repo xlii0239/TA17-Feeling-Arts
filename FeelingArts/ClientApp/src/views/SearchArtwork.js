@@ -1,18 +1,6 @@
 ﻿import React from 'react';
 
 import { Button, Container, Row, Col, Input } from "reactstrap";
-
-import {
-    DropdownToggle,
-    DropdownMenu,
-    DropdownItem,
-    UncontrolledDropdown,
-    Progress,
-    Table,
-} from "reactstrap";
-
-import TableAuthor from "views/TableAuthor.js";
-import DemoNavbar from "components/navbars/DemoNavbar.js";
 import NavbarForHome from "components/a17components/navbars/NavbarForHome.js";
 import Carousel from "components/a17components/cards/Carousel.js";
 import FooterForWeb from "components/a17components/footers/FooterForWeb.js";

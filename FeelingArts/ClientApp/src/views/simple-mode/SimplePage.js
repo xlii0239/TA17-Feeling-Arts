@@ -137,7 +137,7 @@ function SimplePage() {
                                             "url(" + require("assets/img/sections/athena.jpg") + ")",
                                     }}
                                 ></div>
-                                <a href="homepage" onClick={(e) => e.button()}>
+                                <a href="#pablo" onClick={(e) => e.preventDefault()}>
                                     <CardBody>
                                         <div className="content-center">
                                             <CardTitle tag="h4">Take Me To The Art</CardTitle>

@@ -1,29 +1,43 @@
 ﻿import React from 'react';
+
 import { Button, Container, Row, Col, Input } from "reactstrap";
+
+import {
+    DropdownToggle,
+    DropdownMenu,
+    DropdownItem,
+    UncontrolledDropdown,
+    Progress,
+    Table,
+} from "reactstrap";
+
+import TableAuthor from "views/TableAuthor.js";
+import DemoNavbar from "components/navbars/DemoNavbar.js";
 import NavbarForHome from "components/a17components/navbars/NavbarForHome.js";
-import ProfileCard1 from "components/a17components/cards/ProfileCard1.js";
+import Carousel from "components/a17components/cards/Carousel.js";
 import FooterForWeb from "components/a17components/footers/FooterForWeb.js";
 
-class Search extends React.Component {
+class NormalSearchArtwork extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            artist: [],
-            artistShow: []
+            artwork: [],
+            artworkShow: []
         }
     }
 
     componentDidMount() {
         this.populateData();
-        console.log("detail", this.state.artist)
+        console.log("detail", this.state.artwork)
     }
 
     //Change the table data
     search() {
         //var keyword = event.target.value
         var keyword = this.input.value
+
         if (keyword) {
-            var listData = this.state.artist
+            var listData = this.state.artwork
             var listShow = []
             for (var i = 0; i < listData.length; i++) {
                 if (!listData[i].name.search(keyword)) {
@@ -32,16 +46,17 @@ class Search extends React.Component {
             }
 
             this.setState({
-                artistShow: listShow
+                artworkShow: listShow
             })
         }
         else {
             this.setState({
-                artistShow: this.state.artist
+                artworkShow: this.state.artwork
             })
         }
-        console.log("from changeFunction", this.state.artistShow);
+        console.log("from changeFunction", this.state.artworkShow);
     }
+
     render() {
 
         //const Item = this.state.artistshow.map((item, id) =>
@@ -55,39 +70,34 @@ class Search extends React.Component {
                 <br></br>
                 <ul class="breadcrumb bg-transparent font-weight-bold">
                     <li class="breadcrumb-item text-light"><a href="homepage">Home</a></li>
-                    <li class="breadcrumb-item text-light"><a href="simplemode">Simple Mode</a></li>
-                    <li class="breadcrumb-item active">Search Artist</li>
+                    <li class="breadcrumb-item text-light"><a href="normalmode">Normal Mode</a></li>
+                    <li class="breadcrumb-item active">Search Artwork</li>
                 </ul>
-                <div className="section">
-                        <Container className="shape-container flex align-items-center py-lg-2" >
-                            <Input type="text" innerRef={Input => this.input = Input} placeHolder="Please enter artist's name" />
+                        <div className="section">
+                        <Container className="shape-container flex align-items-center py-lg-2">
+                            <Input type="text" innerRef={Input => this.input = Input} placeHolder="Please enter artwork's name" />
                             <Button color="primary"
-                            type="button"
+                                type="button"
                                 onClick={this.search.bind(this)}
                             >
                             Click to Search
                             </Button>
-                    </Container>
-                        </div>
-                    <Row>
-                    <Col xs={{ span: 5, offset: 1 }} lg={{ span: 6, offset: 2 }}>
-                    <Row justify="space-around" align="middle">
-                    <ProfileCard1 toData={this.state.artistShow}></ProfileCard1>
+                            <Carousel toData={this.state.artworkShow}></Carousel>
                             {/*<TableAuthor showData={this.state.artistShow}></TableAuthor>*/}
-                            </ Row>
-                    </Col>
-                </Row>
+                        </Container>
+                        </div>
+
                 <FooterForWeb />
           </>
         )
     }
 
     async populateData() {
-        const response = await fetch('artist');
+        const response = await fetch('artwork');
         const data = await response.json();
-        this.setState({ artist: data, artistShow: data });
-        console.log("detail", this.state.artist);
+        this.setState({ artwork: data, artworkShow: data });
+        console.log("detail", this.state.artwork);
     }
 }
 
-export default Search;
+export default NormalSearchArtwork;

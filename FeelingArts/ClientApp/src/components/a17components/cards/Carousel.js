@@ -72,13 +72,6 @@ function CarouselSection(props) {
               <p className="lead mt-4">
                               { props.toData[0].description }
               </p>
-              <Button
-                className="btn-white mt-4"
-                color="default"
-                href="https://www.creative-tim.com/learning-lab/reactstrap/carousel/argon-design-system"
-              >
-                See all components
-              </Button>
             </Col>
           </Row>
         </Container>

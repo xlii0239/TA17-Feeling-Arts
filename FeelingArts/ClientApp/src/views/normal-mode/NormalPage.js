@@ -54,12 +54,12 @@ function NormalPage() {
                     </Link>
                 </Button>
                 <Button class="btn btn-info btn-lg" type="button">
-                    <Link to="search">
+                    <Link to="normalsearch">
                         <h8>Search Artist</h8>
                     </Link>
                 </Button>
                 <Button class="btn btn-info btn-lg" type="button">
-                    <Link to="searchartwork">
+                    <Link to="normalsearchartwork">
                         <h8>Search Artwork</h8>
                     </Link>
                 </Button>
