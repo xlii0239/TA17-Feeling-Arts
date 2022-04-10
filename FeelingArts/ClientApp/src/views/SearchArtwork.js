@@ -1,18 +1,6 @@
 ﻿import React from 'react';
 
 import { Button, Container, Row, Col, Input } from "reactstrap";
-
-import {
-    DropdownToggle,
-    DropdownMenu,
-    DropdownItem,
-    UncontrolledDropdown,
-    Progress,
-    Table,
-} from "reactstrap";
-
-import TableAuthor from "views/TableAuthor.js";
-import DemoNavbar from "components/navbars/DemoNavbar.js";
 import NavbarForHome from "components/a17components/navbars/NavbarForHome.js";
 import Carousel from "components/a17components/cards/Carousel.js";
 import FooterForWeb from "components/a17components/footers/FooterForWeb.js";
@@ -66,7 +54,13 @@ class SearchArtwork extends React.Component {
         //const data = this.state.artistshow;
         return (
           <>
-                <NavbarForHome />              
+                <NavbarForHome />
+                <br></br>
+                <ul class="breadcrumb bg-transparent font-weight-bold">
+                    <li class="breadcrumb-item text-light"><a href="homepage">Home</a></li>
+                    <li class="breadcrumb-item text-light"><a href="simplemode">Simple Mode</a></li>
+                    <li class="breadcrumb-item active">Search Artwork</li>
+                </ul>
                         <div className="section">
                         <Container className="shape-container flex align-items-center py-lg-2">
                             <Input type="text" innerRef={Input => this.input = Input} placeHolder="Please enter artwork's name" />

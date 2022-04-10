@@ -53,7 +53,7 @@ function DemoNavbar(props) {
         id="dark-navbar-main"
       >
         <Container>
-          <NavbarBrand className="mr-lg-5" to="/index" tag={Link}>
+          <NavbarBrand className="mr-lg-6" to="/index" tag={Link}>
             <img alt="..." src={require("assets/img/brand/white.png")}></img>
           </NavbarBrand>
           <button
