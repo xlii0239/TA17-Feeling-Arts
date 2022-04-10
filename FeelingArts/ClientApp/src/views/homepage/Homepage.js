@@ -1,4 +1,5 @@
 import React from "react";
+import { Container, Row, Col } from "reactstrap";
 
 // reactstrap components
 // import {
@@ -24,10 +25,18 @@ function HomePage() {
     });
     return (
         <>
+            <NavbarForHome type="transparent" />
             <div className="wrapper">
-                <NavbarForHome />
                 <HeaderForHome />
-                <BlogsForHome />
+                <div className="main main-raised">
+                    <Container>
+                        <Row>
+                            <Col lg="12" md="2">
+                                <BlogsForHome />
+                            </Col>
+                        </Row>
+                    </Container>
+                 </div>
                 <br></br>
                 <br></br>
                 <FooterForWeb />

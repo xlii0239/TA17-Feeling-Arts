@@ -9,7 +9,6 @@ import React from "react";
 import NavbarForHome from "ta17component/navbars/NavbarForHome.js";
 import FooterForWeb from "ta17component/footers/FooterForWeb.js";
 import SimplePage from "views/simple-mode/SimplePage.js";
-import NavbarPrimary from "components/a17components/navbars/NavbarPrimary.js";
 
 function HomepageSimple() {
     React.useEffect(() => {

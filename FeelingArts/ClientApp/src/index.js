@@ -33,6 +33,8 @@ import ResetPage from "views/examples/ResetPage.js";
 import HomeBlog from "views/HomeBlog.js";
 import Search from "views/Search.js";
 import SearchArtwork from "views/SearchArtwork.js";
+import NormalSearch from "views/normal-mode/NormalSearch.js"
+import NormalSearchArtwork from "views/normal-mode/NormalSearchArtwork.js"
 import Homepage from "views/homepage/Homepage.js";
 import SimpleMode from "views/simple-mode/SimplePage.js";
 import NormalMode from "views/normal-mode/NormalPage.js";
@@ -161,7 +163,17 @@ ReactDOM.render(
           path="/searchartwork"
           exact
           render={(props) => <SearchArtwork {...props} />}
-      />
+            />
+            <Route
+                path="/normalsearch"
+                exact
+                render={(props) => <NormalSearch {...props} />}
+            />
+            <Route
+                path="/normalsearchartwork"
+                exact
+                render={(props) => <NormalSearchArtwork {...props} />}
+            />
       <Route
           path="/normalmode"
           exact

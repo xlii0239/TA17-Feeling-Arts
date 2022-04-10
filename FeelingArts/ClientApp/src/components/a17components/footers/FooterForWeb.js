@@ -9,36 +9,19 @@ import { Button, NavLink, Container, Row, Col } from "reactstrap";
 function FooterForWeb() {
     return (
         <>
-            <footer className="footer footer-simple bg-dark" >
+            <footer className="footer footer-simple transparent">
                 <Container>
                     <Row>
-                        <Col md="12">
-                            <h4 className="title text-white text-center">
+                        <Col md="3">
+                            <h5 className="title text-darkblue font-weight-bold">
                                 FEELING ARTS
-                            </h4>
+                            </h5>
                         </Col>
+                        <p className="copyright text-dark text-right">
+                            All rights reserved.
+                  </p>
                         
                     </Row>
-
-                    <div className="column">
-                        <ul className="d-flex justify-content-center">
-                            <li>
-                                <NavLink href="#pablo" onClick={(e) => e.preventDefault()}>
-                                    Terms &amp; conditions
-                </NavLink>
-                            </li>
-                            <li>
-                                <NavLink href="#pablo" onClick={(e) => e.preventDefault()}>
-                                    Privacy policy
-                </NavLink>
-                            </li>
-                            <li>
-                                <NavLink href="#pablo" onClick={(e) => e.preventDefault()}>
-                                    Legal notice
-                </NavLink>
-                            </li>
-                        </ul>
-                    </div>
                 </Container>
             </footer>
         </>

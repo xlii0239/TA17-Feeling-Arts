@@ -1,18 +1,5 @@
 ﻿import React from 'react';
-
 import { Button, Container, Row, Col, Input } from "reactstrap";
-
-import {
-    DropdownToggle,
-    DropdownMenu,
-    DropdownItem,
-    UncontrolledDropdown,
-    Progress,
-    Table,
-} from "reactstrap";
-
-import TableAuthor from "views/TableAuthor.js";
-import DemoNavbar from "components/navbars/DemoNavbar.js";
 import NavbarForHome from "components/a17components/navbars/NavbarForHome.js";
 import ProfileCard1 from "components/a17components/cards/ProfileCard1.js";
 import FooterForWeb from "components/a17components/footers/FooterForWeb.js";
@@ -35,7 +22,6 @@ class Search extends React.Component {
     search() {
         //var keyword = event.target.value
         var keyword = this.input.value
-
         if (keyword) {
             var listData = this.state.artist
             var listShow = []
@@ -66,24 +52,31 @@ class Search extends React.Component {
         return (
           <>
                 <NavbarForHome />
+                <br></br>
+                <ul class="breadcrumb bg-transparent font-weight-bold">
+                    <li class="breadcrumb-item text-light"><a href="homepage">Home</a></li>
+                    <li class="breadcrumb-item text-light"><a href="simplemode">Simple Mode</a></li>
+                    <li class="breadcrumb-item active">Search Artist</li>
+                </ul>
                 <div className="section">
-                        <Container className="shape-container d-flex align-items-center py-lg-2" >
+                        <Container className="shape-container flex align-items-center py-lg-2" >
                             <Input type="text" innerRef={Input => this.input = Input} placeHolder="Please enter artist's name" />
                             <Button color="primary"
-                                type="button"
+                            type="button"
                                 onClick={this.search.bind(this)}
                             >
-                                Click to Search
+                            Click to Search
                             </Button>
                     </Container>
+                        </div>
+                    <Row>
+                    <Col xs={{ span: 5, offset: 1 }} lg={{ span: 6, offset: 2 }}>
                     <Row justify="space-around" align="middle">
-                        <Col xs={{ span: 5, offset: 1 }} lg={{ span: 6, offset: 5 }}>
                     <ProfileCard1 toData={this.state.artistShow}></ProfileCard1>
                             {/*<TableAuthor showData={this.state.artistShow}></TableAuthor>*/}
-                            </Col>
-                        </ Row>
-                    </div>
-
+                            </ Row>
+                    </Col>
+                </Row>
                 <FooterForWeb />
           </>
         )
