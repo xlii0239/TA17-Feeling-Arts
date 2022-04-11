@@ -23,6 +23,13 @@ function ProfileCard1(props) {
     }
     console.log("From profile card", name);   
 
+    try {
+        var srcLink = require("assets/NewImg/artists/" + currentArtist.artist + ".jpg");
+    }
+    catch (e) {
+        var srcLink = require("assets/NewImg/artists/" + "image-not-found" + ".jpg");
+    }
+
   return (
     <>
         <Card className="card-profile" data-image="profile-image"  >
@@ -32,7 +39,7 @@ function ProfileCard1(props) {
               <img
                 alt="..."
                 className="img rounded"
-                src={require("assets/NewImg/artists/" + name + ".jpg")}
+                src={srcLink}
               ></img>
             </a>
           </div>

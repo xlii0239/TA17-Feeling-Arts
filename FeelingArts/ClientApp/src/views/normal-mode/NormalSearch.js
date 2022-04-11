@@ -30,7 +30,7 @@ class NormalSearch extends React.Component {
             var artistData = this.state.artist
             var artworkData = this.state.artwork
 
-            var artistSearchResults = []0-,
+            var artistSearchResults = []
             var artworkSearchResults = []
 
             for (var i = 0; i < artistData.length; i++) {
@@ -57,6 +57,29 @@ class NormalSearch extends React.Component {
         }
         console.log("from changeFunction", this.state.artistShow);
     }
+
+    searchArtwork(artistName) {
+        var keyword = artistName.toLowerCase();
+        var artworkData = this.state.artwork
+        var artworkSearchResults = []
+        for (var i = 0; i < artworkData.length; i++) {
+            if (!artworkData[i].artist.toLowerCase().search(keyword)) {
+                artworkSearchResults = [...artworkSearchResults, artworkData[i]]
+            }
+        }
+        return artworkSearchResults;
+    }
+
+    requireErrorHandled(artworkName) {
+        try {
+            return require("assets/NewImg/artworks/" + artworkName + ".jpg");
+        }
+        catch (e) {
+            return require("assets/NewImg/artworks/" + "image-not-found" + ".jpg")
+        }
+    }
+
+    
 
     render() {
 
@@ -92,16 +115,35 @@ class NormalSearch extends React.Component {
                                 {this.state.artistShow.map((item, index) => {
                                     return (
                                         <li key={item.id}>
-                                            <ProfileCard1 toData={item}></ProfileCard1>                                           
+                                            <Container>
+                                                <Row>
+                                                    <Col sm className="py-2 border rounded">
+                                                        <ProfileCard1 toData={item}></ProfileCard1>
+                                                    </Col>
+                                                    <Col sm className="py-2 border rounded">
+                                                        
+                                                        {this.searchArtwork(item.artist).map((item, index) => {
+                                                            return (
+                                                                        <img
+                                                                            alt="..."
+                                                                            className="img-fluid rounded shadow-lg"
+                                                                            src={this.requireErrorHandled(item.artwork)}
+                                                                        >
+                                                                        </img>
+                                                                )
+                                                        })}
+                                                    </Col>
+                                                </Row>
+                                            </Container>
                                         </li>
                                     )
                                 })}
                             </ul>
                         </ Row>
                     </Col>
-                    <Col lg="4" md={{ span: 6, offset: 2 }}>
-                        <Team1 />
-                    </Col>
+                    {/*<Col lg="4" md={{ span: 6, offset: 2 }}>*/}
+                    {/*    <Team1 />*/}
+                    {/*</Col>*/}
                 </Row>
                 <br></br>
                 <br></br>
