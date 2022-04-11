@@ -34,7 +34,7 @@ function ArtworkResultShow(props) {
             )
         }
         else {
-            return (<><p>No such data, please check your search keywords</p></>)
+            return (<><h4 className="lead text-center font-weight-bold text-warning">No result, please check your search keywords</h4></>)
         }
         //const Item = this.state.artistshow.map((item, id) =>
         //    <p key={id}>{ item.name}</p> 

@@ -76,46 +76,6 @@ function SimplePage() {
                                     className="full-background"
                                     style={{
                                         backgroundImage:
-                                            "url(" + require("assets/NewImg/Artist.jpg") + ")",
-                                    }}
-                                ></div>
-                                <a href="search" onClick={(e) => e.button()}>
-                                    <CardBody>
-                                        <div className="content-center">
-                                            <CardTitle tag="h4">Search Artist</CardTitle>
-                                        </div>
-                                    </CardBody>
-                                </a>
-                            </Card>
-                        </Col>
-                        <Col lg="6">
-                            <Card
-                                className="card-blog card-background"
-                                data-animation="zooming"  >
-                                <div
-                                    className="full-background"
-                                    style={{
-                                        backgroundImage:
-                                            "url(" + require("assets/NewImg/Artwork.jpg") + ")",
-                                    }}
-                                ></div>
-                                <a href="searchartwork" onClick={(e) => e.button()}>
-                                    <CardBody>
-                                        <div className="content-center">
-                                            <CardTitle tag="h4">Search Artwork</CardTitle>
-                                        </div>
-                                    </CardBody>
-                                </a>
-                            </Card>
-                        </Col>
-                        <Col lg="6">
-                            <Card
-                                className="card-blog card-background"
-                                data-animation="zooming"  >
-                                <div
-                                    className="full-background"
-                                    style={{
-                                        backgroundImage:
                                             "url(" + require("assets/NewImg/describeArt.jpg") + ")",
                                     }}
                                 ></div>
@@ -127,28 +87,27 @@ function SimplePage() {
                                     </CardBody>
                                 </a>
                             </Card>
-                        </Col>                      
+                        </Col>
                         <Col lg="6">
                             <Card
                                 className="card-blog card-background"
-                                data-animation="zooming"
-                            >
+                                data-animation="zooming"  >
                                 <div
                                     className="full-background"
                                     style={{
                                         backgroundImage:
-                                            "url(" + require("assets/img/sections/athena.jpg") + ")",
+                                            "url(" + require("assets/NewImg/Artist.jpg") + ")",
                                     }}
                                 ></div>
-                                <a href="#pablo" onClick={(e) => e.preventDefault()}>
+                                <a href="SimpleSearch" onClick={(e) => e.button()}>
                                     <CardBody>
                                         <div className="content-center">
-                                            <CardTitle tag="h4">Take Me To The Art</CardTitle>
+                                            <CardTitle tag="h4">Search More</CardTitle>
                                         </div>
                                     </CardBody>
                                 </a>
                             </Card>
-                        </Col>
+                        </Col>                                                                            
                     </Row>
                 </Container>
             </section>

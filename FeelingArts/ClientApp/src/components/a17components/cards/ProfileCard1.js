@@ -19,7 +19,7 @@ function ProfileCard1(props) {
         currentArtist = props.toData;
     }
     else {
-        return (<><p>No result, please enter your search keywords!</p></>)
+        return (<><p>No result, please check your search keywords</p></>)
     }
     console.log("From profile card", name);   
 
