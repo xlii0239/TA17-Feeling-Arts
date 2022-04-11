@@ -17,6 +17,7 @@ import BlogsForHome from "components/a17components/blogs/BlogsForHome.js";
 
 function HomePage() {
     React.useEffect(() => {
+        document.title = "Feeing Arts-Home Page"
         document.body.classList.add("home-page");
         window.scrollTo(0, 0);
         document.body.scrollTop = 0;

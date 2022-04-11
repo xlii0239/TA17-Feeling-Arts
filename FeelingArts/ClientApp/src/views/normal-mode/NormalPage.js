@@ -19,6 +19,7 @@ function NormalPage() {
             perTouch: 1,
             perView: 5,
         }).mount();
+        document.title = "Feeing Arts-Normal Mode"
         document.body.classList.add("normalpage");
         window.scrollTo(0, 0);
         document.body.scrollTop = 0;

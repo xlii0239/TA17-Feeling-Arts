@@ -12,6 +12,9 @@ import FooterForWeb from "components/a17components/footers/FooterForWeb.js";
 
 
 function SimplePage() {
+    React.useEffect(() => {
+        document.title = "Feeing Arts-Simple Mode"
+    });
     return (
         <>
             <NavbarForHome />
