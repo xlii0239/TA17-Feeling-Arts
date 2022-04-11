@@ -42,7 +42,7 @@ class SimpleSearch extends React.Component {
             }
 
             for (var i = 0; i < artworkData.length; i++) {
-                if (!artworkData[i].artist.toLowerCase().search(keyword)) {
+                if (!artworkData[i].artwork.toLowerCase().search(keyword)) {
                     artworkSearchResults = [...artworkSearchResults, artworkData[i]]
                 }
             }

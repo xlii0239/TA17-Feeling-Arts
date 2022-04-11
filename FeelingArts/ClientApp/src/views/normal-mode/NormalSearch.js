@@ -30,7 +30,7 @@ class NormalSearch extends React.Component {
             var artistData = this.state.artist
             var artworkData = this.state.artwork
 
-            var artistSearchResults = []
+            var artistSearchResults = []0-,
             var artworkSearchResults = []
 
             for (var i = 0; i < artistData.length; i++) {
@@ -40,7 +40,7 @@ class NormalSearch extends React.Component {
             }
 
             for (var i = 0; i < artworkData.length; i++) {
-                if (!artworkData[i].artist.toLowerCase().search(keyword)) {
+                if (!artworkData[i].artwork.toLowerCase().search(keyword)) {
                     artworkSearchResults = [...artworkSearchResults, artworkData[i]]
                 }
             }
