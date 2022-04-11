@@ -56,12 +56,7 @@ function NormalPage() {
                 </Button>
                 <Button class="btn btn-info btn-lg" type="button">
                     <Link to="normalsearch">
-                        <h8>Search Artist</h8>
-                    </Link>
-                </Button>
-                <Button class="btn btn-info btn-lg" type="button">
-                    <Link to="normalsearchartwork">
-                        <h8>Search Artwork</h8>
+                        <h8>Search More</h8>
                     </Link>
                 </Button>
             </Container>

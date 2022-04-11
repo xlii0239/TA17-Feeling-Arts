@@ -71,12 +71,12 @@ class NormalSearch extends React.Component {
                 <br></br>
                 <ul class="breadcrumb bg-transparent font-weight-bold">
                     <li class="breadcrumb-item text-light"><a href="homepage">Home</a></li>
-                    <li class="breadcrumb-item text-light"><a href="simplemode">Simple Mode</a></li>
-                    <li class="breadcrumb-item active">Search Artist</li>
+                    <li class="breadcrumb-item text-light"><a href="normalmode">Normal Mode</a></li>
+                    <li class="breadcrumb-item active">Search More</li>
                 </ul>
                 <div className="section">
                     <Container className="shape-container flex align-items-center py-lg-2" >
-                        <Input type="text" innerRef={Input => this.input = Input} placeHolder="Please enter artist's name" />
+                        <Input type="text" innerRef={Input => this.input = Input} placeHolder="Please enter contents you want to search" />
                         <Button color="primary"
                             type="button"
                             onClick={this.search.bind(this)}
@@ -90,41 +90,17 @@ class NormalSearch extends React.Component {
                         <Row justify="space-around" align="middle">
                             <ul>
                                 {this.state.artistShow.map((item, index) => {
-                                    // item子体   index下标
-                                    // react里一般使用map遍历，通过return返回渲染代码块
-                                    // map可用于返回符合条件的内容结合if语句
-                                    // map不结合if判断语句则可以遍历数组，返回全部数组的内容
                                     return (
                                         <li key={item.id}>
-                                            <ProfileCard1 toData={item}></ProfileCard1>
-                                            
+                                            <ProfileCard1 toData={item}></ProfileCard1>                                           
                                         </li>
                                     )
                                 })}
                             </ul>
-                            {/*<TableAuthor showData={this.state.artistShow}></TableAuthor>*/}
-                            
-                            {/*<ul>*/}
-                            {/*    {this.state.artworkShow.map((item, index) => {*/}
-                            {/*        // item子体   index下标*/}
-                            {/*        // react里一般使用map遍历，通过return返回渲染代码块*/}
-                            {/*        // map可用于返回符合条件的内容结合if语句*/}
-                            {/*        // map不结合if判断语句则可以遍历数组，返回全部数组的内容*/}
-                            {/*        return (*/}
-                            {/*            <li key={item.id}>*/}
-                            {/*                <img*/}
-                            {/*                    alt="..."*/}
-                            {/*                    className="img rounded"*/}
-                            {/*                    src={require("assets/NewImg/artworks/" + item.artwork + ".jpg")}*/}
-                            {/*                ></img>*/}
-                            {/*            </li>*/}
-                            {/*        )*/}
-                            {/*    })}*/}
-                            {/*</ul>*/}
                         </ Row>
                     </Col>
                     <Col lg="4" md={{ span: 6, offset: 2 }}>
-
+                        <Team1 />
                     </Col>
                 </Row>
                 <br></br>

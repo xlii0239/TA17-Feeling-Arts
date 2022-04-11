@@ -60,6 +60,7 @@ class SimpleSearch extends React.Component {
         console.log("from changeFunction", this.state.artistShow);
     }
     render() {
+
         //const Item = this.state.artistshow.map((item, id) =>
         //    <p key={id}>{ item.name}</p> 
         //)
@@ -72,7 +73,7 @@ class SimpleSearch extends React.Component {
                 <ul class="breadcrumb bg-transparent font-weight-bold">
                     <li class="breadcrumb-item text-light"><a href="homepage">Home</a></li>
                     <li class="breadcrumb-item text-light"><a href="simplemode">Simple Mode</a></li>
-                    <li class="breadcrumb-item active">Search Artist</li>
+                    <li class="breadcrumb-item active">Search More</li>
                 </ul>
                 <div className="section">
                     <Container className="shape-container flex align-items-center py-lg-2">
@@ -84,16 +85,16 @@ class SimpleSearch extends React.Component {
                             Click to Search
                         </Button>
                     </Container>
-
-                    <p>This is artist search results</p>
-                    <ArtistResultShow toData={this.state.artistShow}>
-
-                    </ArtistResultShow>
-
-                    <p>This is artist search results</p>
+                    <Col>
+                        <h3 className="lead text-center font-weight-bold">This is artist search results</h3>                        
+                        <ArtistResultShow toData={this.state.artistShow}>
+                        </ArtistResultShow>
+                    </Col>
+                    <Col>
+                        <h3 className="lead text-center font-weight-bold">This is artwork search results</h3>
                     <ArtworkResultShow toData={this.state.artworkShow}>
-
-                    </ArtworkResultShow>
+                        </ArtworkResultShow>
+                        </Col>
                 </div>
                 <FooterForWeb />
           </>
