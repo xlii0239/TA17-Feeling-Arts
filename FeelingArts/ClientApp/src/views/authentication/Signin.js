@@ -25,7 +25,7 @@ function Signin() {
             setErrorMessage((prevState) => ({
                 value: "Empty username/password field",
             }));
-        } else if (userData.username == "admin" && userData.password == "123456") {
+        } else if (userData.username == "admin" && userData.password == "ta17") {
             //Signin Success
             localStorage.setItem("isAuthenticated", "true");
             window.location.pathname = "/homepage";
@@ -37,7 +37,7 @@ function Signin() {
 
     return (
         <div className="text-center">
-            <h1>Signin User</h1>
+            <h1>You do not have permission to access this resource, please log in</h1>
             <form
                 style={{
                     display: "flex",

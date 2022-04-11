@@ -1,16 +1,19 @@
 ﻿import React from 'react';
-
 import { Button, Container, Row, Col, Input } from "reactstrap";
 import NavbarForHome from "components/a17components/navbars/NavbarForHome.js";
 import ProfileCard1 from "components/a17components/cards/ProfileCard1.js";
 import FooterForWeb from "components/a17components/footers/FooterForWeb.js";
+import Team1 from "components/a17components/cards/Team1.js";
+import Carousel from "components/a17components/cards/Carousel.js";
 
 class NormalSearch extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
             artist: [],
-            artistShow: []
+            artistShow: [],
+            artwork: [],
+            artworkShow: []
         }
     }
 
@@ -22,27 +25,39 @@ class NormalSearch extends React.Component {
     //Change the table data
     search() {
         //var keyword = event.target.value
-        var keyword = this.input.value
-        if (keyword) {
-            var listData = this.state.artist
-            var listShow = []
-            for (var i = 0; i < listData.length; i++) {
-                if (!listData[i].name.search(keyword)) {
-                    listShow = [...listShow, listData[i]]
+        var keyword = this.input.value.toLowerCase()
+        if (keyword.length > 0) {
+            var artistData = this.state.artist
+            var artworkData = this.state.artwork
+
+            var artistSearchResults = []
+            var artworkSearchResults = []
+
+            for (var i = 0; i < artistData.length; i++) {
+                if (!artistData[i].artist.toLowerCase().search(keyword)) {
+                    artistSearchResults = [...artistSearchResults, artistData[i]]
+                }
+            }
+
+            for (var i = 0; i < artworkData.length; i++) {
+                if (!artworkData[i].artist.toLowerCase().search(keyword)) {
+                    artworkSearchResults = [...artworkSearchResults, artworkData[i]]
                 }
             }
 
             this.setState({
-                artistShow: listShow
+                artistShow: artistSearchResults,
+                artworkShow: artworkSearchResults
             })
         }
         else {
             this.setState({
-                artistShow: this.state.artist
+                artistShow: []
             })
         }
         console.log("from changeFunction", this.state.artistShow);
     }
+
     render() {
 
         //const Item = this.state.artistshow.map((item, id) =>
@@ -51,7 +66,7 @@ class NormalSearch extends React.Component {
         //this.populateData();
         //const data = this.state.artistshow;
         return (
-          <>
+            <>
                 <NavbarForHome />
                 <br></br>
                 <ul class="breadcrumb bg-transparent font-weight-bold">
@@ -67,27 +82,66 @@ class NormalSearch extends React.Component {
                             onClick={this.search.bind(this)}
                         >
                             Click to Search
-                            </Button>
+                        </Button>
                     </Container>
                 </div>
                 <Row>
-                    <Col xs={{ span: 5, offset: 1 }} lg={{ span: 6, offset: 2 }}>
+                    <Col xs={{ span: 5, offset: 2 }} lg={{ span: 5, offset: 2 }}>
                         <Row justify="space-around" align="middle">
-                            <ProfileCard1 toData={this.state.artistShow}></ProfileCard1>
+                            <ul>
+                                {this.state.artistShow.map((item, index) => {
+                                    // item子体   index下标
+                                    // react里一般使用map遍历，通过return返回渲染代码块
+                                    // map可用于返回符合条件的内容结合if语句
+                                    // map不结合if判断语句则可以遍历数组，返回全部数组的内容
+                                    return (
+                                        <li key={item.id}>
+                                            <ProfileCard1 toData={item}></ProfileCard1>
+                                            
+                                        </li>
+                                    )
+                                })}
+                            </ul>
                             {/*<TableAuthor showData={this.state.artistShow}></TableAuthor>*/}
+                            
+                            {/*<ul>*/}
+                            {/*    {this.state.artworkShow.map((item, index) => {*/}
+                            {/*        // item子体   index下标*/}
+                            {/*        // react里一般使用map遍历，通过return返回渲染代码块*/}
+                            {/*        // map可用于返回符合条件的内容结合if语句*/}
+                            {/*        // map不结合if判断语句则可以遍历数组，返回全部数组的内容*/}
+                            {/*        return (*/}
+                            {/*            <li key={item.id}>*/}
+                            {/*                <img*/}
+                            {/*                    alt="..."*/}
+                            {/*                    className="img rounded"*/}
+                            {/*                    src={require("assets/NewImg/artworks/" + item.artwork + ".jpg")}*/}
+                            {/*                ></img>*/}
+                            {/*            </li>*/}
+                            {/*        )*/}
+                            {/*    })}*/}
+                            {/*</ul>*/}
                         </ Row>
                     </Col>
+                    <Col lg="4" md={{ span: 6, offset: 2 }}>
+
+                    </Col>
                 </Row>
+                <br></br>
+                <br></br>
                 <FooterForWeb />
-          </>
+            </>
         )
     }
 
     async populateData() {
         const response = await fetch('artist');
+        const response1 = await fetch('artwork');
         const data = await response.json();
-        this.setState({ artist: data, artistShow: data });
+        const data1 = await response1.json();
+        this.setState({ artist: data, artwork: data1});
         console.log("detail", this.state.artist);
+        console.log("detail", this.state.artwork);
     }
 }
 
