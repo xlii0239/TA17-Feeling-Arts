@@ -38,6 +38,9 @@ import NormalSearchArtwork from "views/normal-mode/NormalSearchArtwork.js"
 import Homepage from "views/homepage/Homepage.js";
 import SimpleMode from "views/simple-mode/SimplePage.js";
 import NormalMode from "views/normal-mode/NormalPage.js";
+import ProtectedRoute from "./components/a17components/authentication/ProtectedRoute";
+import Signin from "./views/authentication/Signin";
+
 
 ReactDOM.render(
   <BrowserRouter>
@@ -149,11 +152,11 @@ ReactDOM.render(
         exact
         render={(props) => <Search {...props} />}
       />
-      <Route
-          path="/homepage"
-          exact
-          render={(props) => <Homepage {...props} />}
-      />
+      {/*<Route*/}
+      {/*    path="/homepage"*/}
+      {/*    exact*/}
+      {/*    render={(props) => <Homepage {...props} />}*/}
+      {/*/>*/}
       <Route
           path="/simplemode"
           exact
@@ -164,22 +167,29 @@ ReactDOM.render(
           exact
           render={(props) => <SearchArtwork {...props} />}
             />
-            <Route
-                path="/normalsearch"
-                exact
-                render={(props) => <NormalSearch {...props} />}
-            />
-            <Route
-                path="/normalsearchartwork"
-                exact
-                render={(props) => <NormalSearchArtwork {...props} />}
-            />
+        <Route
+            path="/normalsearch"
+            exact
+            render={(props) => <NormalSearch {...props} />}
+        />
+        <Route
+            path="/normalsearchartwork"
+            exact
+            render={(props) => <NormalSearchArtwork {...props} />}
+        />
       <Route
           path="/normalmode"
           exact
           render={(props) => <NormalMode {...props} />}
-      />
-      <Redirect to="/homepage" />
+            />
+        <Route
+            path="/signin"
+            exact
+            render={(props) => <Signin {...props} />}
+        />
+      <Route exact path="signin" component={Signin} />
+      <ProtectedRoute exact path="/homepage" component={Homepage} />
+      <Redirect to="/signin" />
     </Switch>
   </BrowserRouter>,
   document.getElementById("root")

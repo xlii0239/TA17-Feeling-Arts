@@ -14,6 +14,7 @@ import BlogsForHome from "components/a17components/blogs/BlogsForHome.js";
 
 
 
+
 function HomePage() {
     React.useEffect(() => {
         document.body.classList.add("home-page");
@@ -23,6 +24,16 @@ function HomePage() {
             document.body.classList.remove("home-page");
         };
     });
+
+    //This is the logout function
+    //const handleLogout = () => {
+    //    localStorage.clear();
+    //    window.location.pathname = "/signin";
+    //};
+    //<button className="btn btn-primary" onClick={handleLogout}>
+    //    Logout
+    //</button>
+
     return (
         <>
             <NavbarForHome type="transparent" />
