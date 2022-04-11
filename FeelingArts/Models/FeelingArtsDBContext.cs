@@ -17,7 +17,9 @@ namespace FeelingArts.Models
         {
         }
 
+        public virtual DbSet<ArtistInfo> ArtistInfos { get; set; }
         public virtual DbSet<ArtistSet> ArtistSets { get; set; }
+        public virtual DbSet<ArtworkInfo> ArtworkInfos { get; set; }
         public virtual DbSet<ArtworkSet> ArtworkSets { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -32,6 +34,50 @@ namespace FeelingArts.Models
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.HasAnnotation("Relational:Collation", "SQL_Latin1_General_CP1_CI_AS");
+
+            modelBuilder.Entity<ArtistInfo>(entity =>
+            {
+                entity.HasKey(e => new { e.Id, e.Artist });
+
+                entity.ToTable("ArtistInfo");
+
+                entity.Property(e => e.Id).HasColumnName("id");
+
+                entity.Property(e => e.Artist)
+                    .HasMaxLength(40)
+                    .IsUnicode(false)
+                    .HasColumnName("artist");
+
+                entity.Property(e => e.Bio)
+                    .IsRequired()
+                    .HasMaxLength(700)
+                    .IsUnicode(false)
+                    .HasColumnName("bio");
+
+                entity.Property(e => e.BirthYear).HasColumnName("birth_year");
+
+                entity.Property(e => e.DeathYear).HasColumnName("death_year");
+
+                entity.Property(e => e.Genre)
+                    .IsRequired()
+                    .HasMaxLength(50)
+                    .IsUnicode(false)
+                    .HasColumnName("genre");
+
+                entity.Property(e => e.Nationality)
+                    .IsRequired()
+                    .HasMaxLength(20)
+                    .IsUnicode(false)
+                    .HasColumnName("nationality");
+
+                entity.Property(e => e.Paintings).HasColumnName("paintings");
+
+                entity.Property(e => e.WikipediaLink)
+                    .IsRequired()
+                    .HasMaxLength(125)
+                    .IsUnicode(false)
+                    .HasColumnName("wikipedia_link");
+            });
 
             modelBuilder.Entity<ArtistSet>(entity =>
             {
@@ -50,6 +96,47 @@ namespace FeelingArts.Models
                 entity.Property(e => e.Name).IsRequired();
 
                 entity.Property(e => e.Nationality).IsRequired();
+            });
+
+            modelBuilder.Entity<ArtworkInfo>(entity =>
+            {
+                entity.HasKey(e => new { e.Id, e.Artist });
+
+                entity.ToTable("ArtworkInfo");
+
+                entity.Property(e => e.Id).HasColumnName("id");
+
+                entity.Property(e => e.Artist)
+                    .HasMaxLength(30)
+                    .IsUnicode(false)
+                    .HasColumnName("artist");
+
+                entity.Property(e => e.Artwork)
+                    .HasMaxLength(200)
+                    .IsUnicode(false)
+                    .HasColumnName("artwork");
+
+                entity.Property(e => e.CreateYear).HasColumnName("create_year");
+
+                entity.Property(e => e.Describe)
+                    .HasMaxLength(2000)
+                    .IsUnicode(false)
+                    .HasColumnName("describe");
+
+                entity.Property(e => e.Genre)
+                    .HasMaxLength(50)
+                    .IsUnicode(false)
+                    .HasColumnName("genre");
+
+                entity.Property(e => e.ReferenceLink)
+                    .HasMaxLength(200)
+                    .IsUnicode(false)
+                    .HasColumnName("reference_link");
+
+                entity.Property(e => e.Style)
+                    .HasMaxLength(50)
+                    .IsUnicode(false)
+                    .HasColumnName("style");
             });
 
             modelBuilder.Entity<ArtworkSet>(entity =>

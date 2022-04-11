@@ -12,6 +12,8 @@ import FooterForWeb from "components/a17components/footers/FooterForWeb.js";
 import HeaderForHome from "components/a17components/headers/HeaderForHome.js";
 import BlogsForHome from "components/a17components/blogs/BlogsForHome.js";
 
+
+
 function HomePage() {
     React.useEffect(() => {
         document.body.classList.add("home-page");
