@@ -12,14 +12,12 @@ namespace FeelingArts.Controllers
     public class ArtistController : Controller
     {
         [HttpGet]
-        public IEnumerable<ArtistSet> Get()
+        public IEnumerable<ArtistInfo> Get()
         {
             using (var context = new FeelingArtsDBContext())
             {
-                var listA = context.ArtistSets.ToArray();
-                Console.WriteLine(listA[0].ArtworkSets.Count);
-                Console.WriteLine("--------------=======================");
-                return context.ArtistSets.ToArray();
+                var listA = context.ArtistInfos.ToArray();
+                return listA;
             }
         }
     }
