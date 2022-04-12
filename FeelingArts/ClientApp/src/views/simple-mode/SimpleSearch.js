@@ -3,8 +3,9 @@ import { Button, Container, Row, Col, Input } from "reactstrap";
 import NavbarForHome from "components/a17components/navbars/NavbarForHome.js";
 import ProfileCard1 from "components/a17components/cards/ProfileCard1.js";
 import FooterForWeb from "components/a17components/footers/FooterForWeb.js";
+import Team1 from "components/a17components/cards/Team1.js";
 
-class Search extends React.Component {
+class SimpleSearch extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -70,13 +71,18 @@ class Search extends React.Component {
                     </Container>
                         </div>
                     <Row>
-                    <Col xs={{ span: 5, offset: 1 }} lg={{ span: 6, offset: 2 }}>
+                    <Col xs={{ span: 5, offset: 2 }} lg={{ span: 5, offset: 2 }}>
                     <Row justify="space-around" align="middle">
                     <ProfileCard1 toData={this.state.artistShow}></ProfileCard1>
                             {/*<TableAuthor showData={this.state.artistShow}></TableAuthor>*/}
                             </ Row>
                     </Col>
+                    <Col lg="4"  md={{ span: 6, offset: 2 }}>
+                        <Team1 />
+                        </Col>
                 </Row>
+                <br></br>
+                <br></br>
                 <FooterForWeb />
           </>
         )
@@ -90,4 +96,4 @@ class Search extends React.Component {
     }
 }
 
-export default Search;
+export default SimpleSearch;

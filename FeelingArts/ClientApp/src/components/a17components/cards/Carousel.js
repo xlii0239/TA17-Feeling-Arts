@@ -40,8 +40,8 @@ function CarouselSection(props) {
         currentArtwork = props.toData;
         console.log("From search artwork", currentArtwork)
         for (let i = 0; i < currentArtwork.length; i++) {
-            console.log("From search artwork", currentArtwork[i].name)
-            pic.src = require("assets/NewImg/" + currentArtwork[i].name + ".jpg")
+            console.log("From search artwork", currentArtwork[i].artwork)
+            pic.src = require("assets/NewImg/artworks/" + currentArtwork[i].artwork + ".jpg")
             pic.altText = "Slide " + i
             pic.caption = ""
             pic.key = "key-" + i
@@ -68,9 +68,9 @@ function CarouselSection(props) {
               </div>
             </Col>
             <Col className="mb-5 mb-lg-0" lg="5">
-              <h1 className="font-weight-light">{props.toData[0].name}</h1>
+              <h1 className="font-weight-light">Artwor Search Result</h1>
               <p className="lead mt-4">
-                              { props.toData[0].description }
+                              There are {currentArtwork.length} artworks in total
               </p>
             </Col>
           </Row>

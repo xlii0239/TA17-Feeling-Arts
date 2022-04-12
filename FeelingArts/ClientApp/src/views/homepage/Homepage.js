@@ -14,8 +14,10 @@ import BlogsForHome from "components/a17components/blogs/BlogsForHome.js";
 
 
 
+
 function HomePage() {
     React.useEffect(() => {
+        document.title = "Feeing Arts-Home Page"
         document.body.classList.add("home-page");
         window.scrollTo(0, 0);
         document.body.scrollTop = 0;
@@ -23,6 +25,16 @@ function HomePage() {
             document.body.classList.remove("home-page");
         };
     });
+
+    //This is the logout function
+    //const handleLogout = () => {
+    //    localStorage.clear();
+    //    window.location.pathname = "/signin";
+    //};
+    //<button className="btn btn-primary" onClick={handleLogout}>
+    //    Logout
+    //</button>
+
     return (
         <>
             <NavbarForHome type="transparent" />

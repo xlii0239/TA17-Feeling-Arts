@@ -31,13 +31,18 @@ import ResetPage from "views/examples/ResetPage.js";
 
 
 import HomeBlog from "views/HomeBlog.js";
-import Search from "views/Search.js";
+//import Search from "views/Search.js";
 import SearchArtwork from "views/SearchArtwork.js";
 import NormalSearch from "views/normal-mode/NormalSearch.js"
 import NormalSearchArtwork from "views/normal-mode/NormalSearchArtwork.js"
 import Homepage from "views/homepage/Homepage.js";
 import SimpleMode from "views/simple-mode/SimplePage.js";
 import NormalMode from "views/normal-mode/NormalPage.js";
+import ProtectedRoute from "./components/a17components/authentication/ProtectedRoute";
+import Signin from "./views/authentication/Signin";
+import SimpleSearch from "./views/simple-search/SimpleSearch";
+
+
 
 ReactDOM.render(
   <BrowserRouter>
@@ -144,16 +149,16 @@ ReactDOM.render(
         exact
         render={(props) => <HomeBlog {...props} />}
       />
-      <Route
-        path="/search"
-        exact
-        render={(props) => <Search {...props} />}
-      />
-      <Route
-          path="/homepage"
-          exact
-          render={(props) => <Homepage {...props} />}
-      />
+      {/*<Route*/}
+      {/*  path="/search"*/}
+      {/*  exact*/}
+      {/*  render={(props) => <Search {...props} />}*/}
+      {/*/>*/}
+      {/*<Route*/}
+      {/*    path="/homepage"*/}
+      {/*    exact*/}
+      {/*    render={(props) => <Homepage {...props} />}*/}
+      {/*/>*/}
       <Route
           path="/simplemode"
           exact
@@ -164,22 +169,34 @@ ReactDOM.render(
           exact
           render={(props) => <SearchArtwork {...props} />}
             />
-            <Route
-                path="/normalsearch"
-                exact
-                render={(props) => <NormalSearch {...props} />}
-            />
-            <Route
-                path="/normalsearchartwork"
-                exact
-                render={(props) => <NormalSearchArtwork {...props} />}
-            />
+        <Route
+            path="/normalsearch"
+            exact
+            render={(props) => <NormalSearch {...props} />}
+        />
+        <Route
+            path="/normalsearchartwork"
+            exact
+            render={(props) => <NormalSearchArtwork {...props} />}
+        />
       <Route
           path="/normalmode"
           exact
           render={(props) => <NormalMode {...props} />}
-      />
-      <Redirect to="/homepage" />
+            />
+        <Route
+            path="/signin"
+            exact
+            render={(props) => <Signin {...props} />}
+        />
+        <Route
+            path="/simplesearch"
+            exact
+            render={(props) => <SimpleSearch {...props} />}
+        />
+      <Route exact path="signin" component={Signin} />
+      <ProtectedRoute exact path="/homepage" component={Homepage} />
+      <Redirect to="/signin" />
     </Switch>
   </BrowserRouter>,
   document.getElementById("root")

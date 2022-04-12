@@ -14,14 +14,21 @@ function ProfileCard1(props) {
     console.log("From profile card", props.toData);
     let name = "User";
     let currentArtist;
-    if (typeof props.toData[0] !== 'undefined') {
-        name = props.toData[0].name;
-        currentArtist = props.toData[0];
+    if (typeof props.toData !== 'undefined') {
+        name = props.toData.artist;
+        currentArtist = props.toData;
     }
     else {
-        return (<><p>Loading</p></>)
+        return (<><p>No result, please check your search keywords</p></>)
     }
     console.log("From profile card", name);   
+
+    try {
+        var srcLink = require("assets/NewImg/artists/" + currentArtist.artist + ".jpg");
+    }
+    catch (e) {
+        var srcLink = require("assets/NewImg/artists/" + "image-not-found" + ".jpg");
+    }
 
   return (
     <>
@@ -32,14 +39,14 @@ function ProfileCard1(props) {
               <img
                 alt="..."
                 className="img rounded"
-                src={require("assets/NewImg/" + name + ".jpg")}
+                src={srcLink}
               ></img>
             </a>
           </div>
         </CardHeader>
         <CardBody className="pt-0">
           <h4 className="display-4 mb-0">{name}</h4>
-                  <p className="lead">{currentArtist.dateOfBirth + " To " + currentArtist.dateOfDeath}</p>
+                  <p className="lead">{currentArtist.birthYear + " To " + currentArtist.deathYear}</p>
           <div className="table-responsive">
             <ul className="list-unstyled">
               <li className="py-1">
@@ -62,7 +69,7 @@ function ProfileCard1(props) {
                     </Badge>
                   </div>
                   <div>
-                    <h6 className="mb-1">{"Famous In: " + currentArtist.famousIn}</h6>
+                    <h6 className="mb-1">{"Famous In: " + currentArtist.genre}</h6>
                   </div>
                 </div>
               </li>
@@ -74,7 +81,7 @@ function ProfileCard1(props) {
                     </Badge>
                   </div>
                   <div>
-                    <h6 className="mb-1">{"Master Piece: " + currentArtist.masterpiece}</h6>
+                    <h6 className="mb-1">{"Master Piece: " + currentArtist.paintings}</h6>
                   </div>
                 </div>
               </li>
