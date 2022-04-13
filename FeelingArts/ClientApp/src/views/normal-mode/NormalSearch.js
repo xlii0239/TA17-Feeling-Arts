@@ -34,7 +34,7 @@ class NormalSearch extends React.Component {
             var artworkSearchResults = []
 
             for (var i = 0; i < artistData.length; i++) {
-                if (!artistData[i].artist.toLowerCase().search(keyword)) {
+                if (artistData[i].artist.toLowerCase().indexOf(keyword) != -1) {
                     artistSearchResults = [...artistSearchResults, artistData[i]]
                 }
             }
@@ -127,7 +127,7 @@ class NormalSearch extends React.Component {
                                                                         <img
                                                                             alt="..."
                                                                             className="img-fluid rounded shadow-lg"
-                                                                            src={this.requireErrorHandled(item.artwork)}
+                                                                            src={this.requireErrorHandled(item.imageNo)}
                                                                         >
                                                                         </img>
                                                                 )

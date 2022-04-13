@@ -16,5 +16,6 @@ namespace FeelingArts.Models
         public string Bio { get; set; }
         public string WikipediaLink { get; set; }
         public int Paintings { get; set; }
+        public string ImageNo { get; set; }
     }
 }

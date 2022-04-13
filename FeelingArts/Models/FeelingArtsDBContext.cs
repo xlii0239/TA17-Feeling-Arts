@@ -64,6 +64,11 @@ namespace FeelingArts.Models
                     .IsUnicode(false)
                     .HasColumnName("genre");
 
+                entity.Property(e => e.ImageNo)
+                    .HasMaxLength(20)
+                    .IsUnicode(false)
+                    .HasColumnName("imageNo");
+
                 entity.Property(e => e.Nationality)
                     .IsRequired()
                     .HasMaxLength(20)
@@ -127,6 +132,11 @@ namespace FeelingArts.Models
                     .HasMaxLength(50)
                     .IsUnicode(false)
                     .HasColumnName("genre");
+
+                entity.Property(e => e.ImageNo)
+                    .HasMaxLength(20)
+                    .IsUnicode(false)
+                    .HasColumnName("imageNo");
 
                 entity.Property(e => e.ReferenceLink)
                     .HasMaxLength(200)
