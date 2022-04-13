@@ -71,8 +71,10 @@ class SimpleSearch extends React.Component {
                 </ul>
                 <div className="section">
                     <Container className="shape-container flex align-items-center py-lg-2">
-                        <h2 class="font-weight-bold">All results</h2>
-                        <Input type="text" innerRef={Input => this.input = Input} placeHolder="Please enter contents you want to search" />
+                        <h6 class="text-muted">
+                            Search Feelingarts.tk by entering the keywords of the artist name in the search box below.
+                            </h6>
+                        <Input type="text" innerRef={Input => this.input = Input} placeHolder="Search all results" />
                         <Button color="primary"
                             type="button"
                             onClick={this.search.bind(this)}
