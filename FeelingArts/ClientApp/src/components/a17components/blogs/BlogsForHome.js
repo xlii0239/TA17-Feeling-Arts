@@ -9,7 +9,7 @@ function BlogsForHome() {
         <>
                 <Container fluid>
                     <Row>
-                        <Col lg="6">
+                        <Col lg="6" >
                             <Card
                                 className="card-blog card-background"
                                 data-animation="zooming"

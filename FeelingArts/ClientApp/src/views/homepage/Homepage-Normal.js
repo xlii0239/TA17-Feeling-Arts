@@ -27,9 +27,6 @@ function HomepageNormal() {
             <div className="wrapper">
                 <NavbarPrimary />
                 <NormalPage />
-                <br></br>
-                <br></br>
-                <br></br>
                 <FooterForWeb />
             </div>
         </>

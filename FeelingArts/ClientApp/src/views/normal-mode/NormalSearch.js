@@ -2,7 +2,6 @@
 import { Button, Container, Row, Col, Input } from "reactstrap";
 import NavbarForHome from "components/a17components/navbars/NavbarForHome.js";
 import ProfileCard1 from "components/a17components/cards/ProfileCard1.js";
-import FooterForWeb from "components/a17components/footers/FooterForWeb.js";
 import Team1 from "components/a17components/cards/Team1.js";
 import Carousel from "components/a17components/cards/Carousel.js";
 
@@ -91,11 +90,10 @@ class NormalSearch extends React.Component {
         return (
             <>
                 <NavbarForHome />
-                <br></br>
                 <ul class="breadcrumb bg-transparent font-weight-bold">
-                    <li class="breadcrumb-item text-light"><a href="homepage">Home</a></li>
-                    <li class="breadcrumb-item text-light"><a href="normalmode">Normal Mode</a></li>
-                    <li class="breadcrumb-item active">Search More</li>
+                    <li class="breadcrumb-item text-light"><a href="homepage" class="text-dark font-weight-bold">Home</a></li>
+                    <li class="breadcrumb-item text-light"><a href="normalmode" class="text-dark font-weight-bold">Normal Mode</a></li>
+                    <li class="breadcrumb-item active">Search Artist</li>
                 </ul>
                 <div className="section">
                     <Container className="shape-container flex align-items-center py-lg-2" >
@@ -108,8 +106,8 @@ class NormalSearch extends React.Component {
                         </Button>
                     </Container>
                 </div>
-                <Row>
-                    <Col xs={{ span: 5, offset: 2 }} lg={{ span: 5, offset: 2 }}>
+                <Row class="lg-12 align-center">
+                    <Col lg={{ span: 5, offset: 2 }}>
                         <Row justify="space-around" align="middle">
                             <ul>
                                 {this.state.artistShow.map((item, index) => {
@@ -117,10 +115,10 @@ class NormalSearch extends React.Component {
                                         <li key={item.id}>
                                             <Container>
                                                 <Row>
-                                                    <Col sm className="py-2 border rounded">
+                                                    <Col sm className="px-2 border rounded">
                                                         <ProfileCard1 toData={item}></ProfileCard1>
                                                     </Col>
-                                                    <Col sm className="py-2 border rounded">
+                                                    <Col sm className="px-2 border-right-0 rounded">
                                                         
                                                         {this.searchArtwork(item.artist).map((item, index) => {
                                                             return (
@@ -145,9 +143,6 @@ class NormalSearch extends React.Component {
                     {/*    <Team1 />*/}
                     {/*</Col>*/}
                 </Row>
-                <br></br>
-                <br></br>
-                <FooterForWeb />
             </>
         )
     }
