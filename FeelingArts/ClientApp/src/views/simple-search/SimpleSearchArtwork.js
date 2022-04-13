@@ -35,13 +35,13 @@ class SimpleSearchArtwork extends React.Component {
             var artworkSearchResults = []
 
             for (var i = 0; i < artistData.length; i++) {
-                if (!artistData[i].artist.toLowerCase().search(keyword)) {
+                if (artistData[i].artist.toLowerCase().indexOf(keyword) != -1) {
                     artistSearchResults = [...artistSearchResults, artistData[i]]
                 }
             }
 
             for (var i = 0; i < artworkData.length; i++) {
-                if (!artworkData[i].artwork.toLowerCase().search(keyword)) {
+                if (artworkData[i].artwork.toLowerCase().indexOf(keyword) != -1) {
                     artworkSearchResults = [...artworkSearchResults, artworkData[i]]
                 }
             }
@@ -94,7 +94,7 @@ class SimpleSearchArtwork extends React.Component {
         const response1 = await fetch('artwork');
         const data = await response.json();
         const data1 = await response1.json();
-        this.setState({ artist: data, artistShow: data, artwork: data1, artworkShow: data1 });
+        this.setState({ artist: data, artwork: data1});
         console.log("detail", this.state.artist);
         console.log("detail", this.state.artwork);
     }
