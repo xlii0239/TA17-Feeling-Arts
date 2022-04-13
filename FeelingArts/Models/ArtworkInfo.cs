@@ -15,5 +15,6 @@ namespace FeelingArts.Models
         public string Artwork { get; set; }
         public string Describe { get; set; }
         public string ReferenceLink { get; set; }
+        public string ImageNo { get; set; }
     }
 }

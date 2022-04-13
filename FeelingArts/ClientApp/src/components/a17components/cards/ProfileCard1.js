@@ -24,7 +24,7 @@ function ProfileCard1(props) {
     console.log("From profile card", name);   
 
     try {
-        var srcLink = require("assets/NewImg/artists/" + currentArtist.artist + ".jpg");
+        var srcLink = require("assets/NewImg/artists/" + currentArtist.imageNo + ".jpg");
     }
     catch (e) {
         var srcLink = require("assets/NewImg/artists/" + "image-not-found" + ".jpg");
