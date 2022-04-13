@@ -98,7 +98,7 @@ function SimplePage() {
                                             "url(" + require("assets/NewImg/Artist.jpg") + ")",
                                     }}
                                 ></div>
-                                <a href="SimpleSearch" onClick={(e) => e.button()}>
+                                <a href="simplesearch" onClick={(e) => e.button()}>
                                     <CardBody>
                                         <div className="content-center">
                                             <CardTitle tag="h4">Search Artist</CardTitle>
@@ -118,7 +118,7 @@ function SimplePage() {
                                             "url(" + require("assets/NewImg/Artwork.jpg") + ")",
                                     }}
                                 ></div>
-                                <a href="SimpleSearch" onClick={(e) => e.button()}>
+                                <a href="simplesearchartwork" onClick={(e) => e.button()}>
                                     <CardBody>
                                         <div className="content-center">
                                             <CardTitle tag="h4">Search Artwork</CardTitle>

@@ -41,6 +41,8 @@ import NormalMode from "views/normal-mode/NormalPage.js";
 import ProtectedRoute from "./components/a17components/authentication/ProtectedRoute";
 import Signin from "./views/authentication/Signin";
 import SimpleSearch from "./views/simple-search/SimpleSearch";
+import SimpleSearchArtwork from "./views/simple-search/SimpleSearchArtwork";
+
 
 
 
@@ -49,107 +51,7 @@ ReactDOM.render(
   <BrowserRouter>
     <Switch>
       <Route path="/index" exact render={(props) => <Index {...props} />} />
-      <Route
-        path="/sections"
-        exact
-        render={(props) => <Sections {...props} />}
-      />
-      <Route
-        path="/presentation"
-        exact
-        render={(props) => <Presentation {...props} />}
-      />
-      <Route
-        path="/about-us"
-        exact
-        render={(props) => <AboutUs {...props} />}
-      />
-      <Route
-        path="/account-settings"
-        exact
-        render={(props) => <AccountSettings {...props} />}
-      />
-      <Route
-        path="/blog-post"
-        exact
-        render={(props) => <BlogPost {...props} />}
-      />
-      <Route
-        path="/blog-posts"
-        exact
-        render={(props) => <BlogPosts {...props} />}
-      />
-      <Route
-        path="/chat-page"
-        exact
-        render={(props) => <ChatPage {...props} />}
-      />
-      <Route
-        path="/checkout-page"
-        exact
-        render={(props) => <CheckoutPage {...props} />}
-      />
-      <Route
-        path="/contact-us"
-        exact
-        render={(props) => <ContactUs {...props} />}
-      />
-      <Route
-        path="/ecommerce"
-        exact
-        render={(props) => <Ecommerce {...props} />}
-      />
-      <Route path="/error" exact render={(props) => <Error {...props} />} />
-      <Route
-        path="/error-500"
-        exact
-        render={(props) => <Error500 {...props} />}
-      />
-      <Route
-        path="/invoice-page"
-        exact
-        render={(props) => <InvoicePage {...props} />}
-      />
-      <Route
-        path="/landing-page"
-        exact
-        render={(props) => <LandingPage {...props} />}
-      />
-      <Route
-        path="/login-page"
-        exact
-        render={(props) => <LoginPage {...props} />}
-      />
-      <Route
-        path="/pricing-page"
-        exact
-        render={(props) => <PricingPage {...props} />}
-      />
-      <Route
-        path="/product-page"
-        exact
-        render={(props) => <ProductPage {...props} />}
-      />
-      <Route
-        path="/profile-page"
-        exact
-        render={(props) => <ProfilePage {...props} />}
-      />
-      <Route
-        path="/register-page"
-        exact
-        render={(props) => <RegisterPage {...props} />}
-      />
-      <Route
-        path="/reset-page"
-        exact
-        render={(props) => <ResetPage {...props} />}
-      />
-      <Route
-        path="/homeblog"
-        exact
-        render={(props) => <HomeBlog {...props} />}
-      />
+      
       {/*<Route*/}
       {/*  path="/search"*/}
       {/*  exact*/}
@@ -202,6 +104,7 @@ ReactDOM.render(
         <ProtectedRoute exact path="/normalsearch" component={NormalSearch} />
         <ProtectedRoute exact path="/normalsearchartwork" component={NormalSearchArtwork} />
         <ProtectedRoute exact path="/simplesearch" component={SimpleSearch} />
+        <ProtectedRoute exact path="/simplesearchartwork" component={SimpleSearchArtwork} />
         <Redirect to="/signin" />
     </Switch>
   </BrowserRouter>,
