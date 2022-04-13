@@ -25,7 +25,7 @@ function ArtistResultShow(props) {
             )
         }
         else {
-            return (<><h4 className="lead text-center font-weight-bold text-warning">No result, please check your search keywords</h4></>)
+            return (<><h4 className="lead text-center font-weight-bold text-warning">No result so far, please check your search keywords</h4></>)
         }
         //const Item = this.state.artistshow.map((item, id) =>
         //    <p key={id}>{ item.name}</p> 

@@ -40,11 +40,12 @@ function ProfileCard1(props) {
                 alt="..."
                 className="img rounded"
                 src={srcLink}
+                 style={{ width: 250, height: 260 }}
               ></img>
             </a>
           </div>
-        </CardHeader>
-        <CardBody className="pt-0">
+              </CardHeader>
+        <CardBody className="pt-2">
           <h4 className="display-4 mb-0">{name}</h4>
                   <p className="lead">{currentArtist.birthYear + " -- " + currentArtist.deathYear}</p>
           <div className="table-responsive">
@@ -87,7 +88,7 @@ function ProfileCard1(props) {
               </li>
             </ul>
           </div>
-        </CardBody>
+                  </CardBody>
           </Card>
     </>
   );

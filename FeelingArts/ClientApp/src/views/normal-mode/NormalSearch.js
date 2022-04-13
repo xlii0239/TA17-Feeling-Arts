@@ -265,7 +265,7 @@ class NormalSearch extends React.Component {
 
         // Autosuggest will pass through all these props to the input.
         const inputProps = {
-            placeholder: 'Type an artist name',
+            placeholder: 'Enter an artist name',
             value,
             onChange: this.onChange
         };
@@ -278,10 +278,13 @@ class NormalSearch extends React.Component {
                     <li class="breadcrumb-item text-light"><a href="normalmode" class="text-dark font-weight-bold">Normal Mode</a></li>
                     <li class="breadcrumb-item active">Search Artist</li>
                 </ul>
-                <div className="section">
-                    <Container className="shape-container flex align-items-center py-lg-2" >
+                <div className="section" >
+                    <Container className="shape-container py-lg-2" >
+                        <h6 class="text-muted">
+                            Search Feelingarts.tk by entering the keywords of the artist name in the search box below.
+                            </h6>
                         {/*<Input type="text" innerRef={Input => this.input = Input} placeHolder="Please enter contents you want to search" />*/}
-                        <Autosuggest
+                            <Autosuggest 
                             suggestions={suggestions}
                             onSuggestionsFetchRequested={this.onSuggestionsFetchRequested}
                             onSuggestionsClearRequested={this.onSuggestionsClearRequested}
@@ -289,12 +292,14 @@ class NormalSearch extends React.Component {
                             renderSuggestion={renderSuggestion}
                             inputProps={inputProps}
                         />
-                        <Button color="primary"
-                            type="button"
-                            onClick={this.search.bind(this)}
+                            <button
+                                color="transparent"
+                                type="button"
+                                onClick={this.search.bind(this)}
                         >
-                            Click to Search
-                        </Button>
+                            <i className="fa fa-search"></i>
+                            </button>
+
                     </Container>
                 </div>
                 <Row class="lg-12 align-center">
@@ -310,16 +315,16 @@ class NormalSearch extends React.Component {
                                                         <ProfileCard1 toData={item}></ProfileCard1>
                                                     </Col>
                                                     <Col sm className="px-2 border-right-0 rounded">
-                                                        
+
                                                         {this.searchArtwork(item.artist).map((item, index) => {
                                                             return (
-                                                                        <img
-                                                                            alt="..."
-                                                                            className="img-fluid rounded shadow-lg"
-                                                                            src={this.requireErrorHandled(item.imageNo)}
-                                                                        >
-                                                                        </img>
-                                                                )
+                                                                <img
+                                                                    alt="..."
+                                                                    className="img-fluid rounded shadow-lg"
+                                                                    src={this.requireErrorHandled(item.imageNo)}
+                                                                >
+                                                                </img>
+                                                            )
                                                         })}
                                                     </Col>
                                                 </Row>

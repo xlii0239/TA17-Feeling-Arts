@@ -10,22 +10,22 @@ import NavbarForHome from "components/a17components/navbars/NavbarForHome.js";
 
 // Core Components
 function NormalPage() {
-    //React.useEffect(() => {
-    //    new Glide(".glide", {
-    //        type: "carousel",
-    //        startAt: 0,
-    //        focusAt: 2,
-    //        perTouch: 1,
-    //        perView: 5,
-    //    }).mount();
-    //    document.title = "Feeing Arts-Normal Mode"
-    //    document.body.classList.add("normalpage");
-    //    window.scrollTo(0, 0);
-    //    document.body.scrollTop = 0;
-    //    return function cleanup() {
-    //        document.body.classList.remove("normalpage");
-    //    };
-    //});
+    React.useEffect(() => {
+        new Glide(".glide", {
+            type: "carousel",
+            startAt: 0,
+            focusAt: 2,
+            perTouch: 1,
+            perView: 5,
+        }).mount();
+        document.title = "Feeing Arts-Normal Mode"
+        document.body.classList.add("normalpage");
+        window.scrollTo(0, 0);
+        document.body.scrollTop = 0;
+        return function cleanup() {
+            document.body.classList.remove("normalpage");
+        };
+    });
     return (
         <>
             <NavbarForHome />
@@ -34,7 +34,7 @@ function NormalPage() {
                     <li class="breadcrumb-item text-light"><a href="homepage" class="text-dark font-weight-bold">Home</a></li>
                 <li class="breadcrumb-item active">Normal Mode</li>
                 </ul>
-            <Container px="2">
+            <Container class="align-item-center">
                 {/*    <Button>*/}
                 {/*    <Link to="#">*/}
                 {/*            <h8 class="text-capitalize text-muted">Art through music</h8>*/}
@@ -56,68 +56,68 @@ function NormalPage() {
                     </Link>
                 </Button>
                 </Container>
-                {/*<section className="py-6">*/}
-                {/*<div className="glide">*/}
-                {/*    <div className="glide__track" data-glide-el="track">*/}
-                {/*        <ul className="glide__slides">*/}
-                {/*            <li className="glide__slide">*/}
-                {/*                <img*/}
-                {/*                    alt="..."*/}
-                {/*                    height="450"*/}
-                {/*                    src={require("assets/NewImg/MonaLisa.jpg")}*/}
-                {/*                    width="400"*/}
-                {/*                ></img>*/}
-                {/*            </li>*/}
-                {/*            <li className="glide__slide">*/}
-                {/*                <img*/}
-                {/*                    alt="..."*/}
-                {/*                    height="450"*/}
-                {/*                    src={require("assets/NewImg/Michelangelo.jpg")}*/}
-                {/*                    width="400"*/}
-                {/*                ></img>*/}
-                {/*            </li>*/}
-                {/*            <li className="glide__slide">*/}
-                {/*                <img*/}
-                {/*                    alt="..."*/}
-                {/*                    height="450"*/}
-                {/*                    src={require("assets/NewImg/Leonardo da Vinci.jpg")}*/}
-                {/*                    width="400"*/}
-                {/*                ></img>*/}
-                {/*            </li>*/}
-                {/*            <li className="glide__slide">*/}
-                {/*                <img*/}
-                {/*                    alt="..."*/}
-                {/*                    height="450"*/}
-                {/*                    src={require("assets/NewImg/Vincent van Gogh.jpg")}*/}
-                {/*                    width="400"*/}
-                {/*                ></img>*/}
-                {/*            </li>*/}
-                {/*            <li className="glide__slide">*/}
-                {/*                <img*/}
-                {/*                    alt="..."*/}
-                {/*                    height="450"*/}
-                {/*                    src={require("assets/NewImg/David2.jpg")}*/}
-                {/*                    width="400"*/}
-                {/*                ></img>*/}
-                {/*            </li>*/}
-                {/*        </ul>*/}
-                {/*    </div>*/}
-                {/*        <div className="glide__arrows" data-glide-el="controls">*/}
-                {/*            <button*/}
-                {/*                className="glide__arrow glide__arrow--left bg-light btn-lg"*/}
-                {/*                data-glide-dir="<"*/}
-                {/*            >*/}
-                {/*                <i className="ni ni-bold-left "></i>*/}
-                {/*            </button>*/}
-                {/*            <button*/}
-                {/*                className="glide__arrow glide__arrow--right bg-light btn-lg"*/}
-                {/*                data-glide-dir=">"*/}
-                {/*            >*/}
-                {/*                <i className="ni ni-bold-right"></i>*/}
-                {/*            </button>*/}
-                {/*        </div>*/}
-                {/*</div>*/}
-                {/*    </section>*/}
+                <section className="py-6">
+                <div className="glide">
+                    <div className="glide__track" data-glide-el="track">
+                        <ul className="glide__slides">
+                            <li className="glide__slide">
+                                <img
+                                    alt="..."
+                                    height="450"
+                                    src={require("assets/NewImg/MonaLisa.jpg")}
+                                    width="400"
+                                ></img>
+                            </li>
+                            <li className="glide__slide">
+                                <img
+                                    alt="..."
+                                    height="450"
+                                    src={require("assets/NewImg/Michelangelo.jpg")}
+                                    width="400"
+                                ></img>
+                            </li>
+                            <li className="glide__slide">
+                                <img
+                                    alt="..."
+                                    height="450"
+                                    src={require("assets/NewImg/Leonardo da Vinci.jpg")}
+                                    width="400"
+                                ></img>
+                            </li>
+                            <li className="glide__slide">
+                                <img
+                                    alt="..."
+                                    height="450"
+                                    src={require("assets/NewImg/Vincent van Gogh.jpg")}
+                                    width="400"
+                                ></img>
+                            </li>
+                            <li className="glide__slide">
+                                <img
+                                    alt="..."
+                                    height="450"
+                                    src={require("assets/NewImg/David2.jpg")}
+                                    width="400"
+                                ></img>
+                            </li>
+                        </ul>
+                    </div>
+                        <div className="glide__arrows" data-glide-el="controls">
+                            <button
+                                className="glide__arrow glide__arrow--left bg-light btn-lg"
+                                data-glide-dir="<"
+                            >
+                                <i className="ni ni-bold-left "></i>
+                            </button>
+                            <button
+                                className="glide__arrow glide__arrow--right bg-light btn-lg"
+                                data-glide-dir=">"
+                            >
+                                <i className="ni ni-bold-right"></i>
+                            </button>
+                        </div>
+                </div>
+                    </section>
             </div>
 
 
