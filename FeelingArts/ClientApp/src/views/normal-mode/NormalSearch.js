@@ -7,91 +7,128 @@ import Team1 from "components/a17components/cards/Team1.js";
 import Carousel from "components/a17components/cards/Carousel.js";
 import Autosuggest from 'react-autosuggest';
 
-import theme from "./theme.css";
 
 
-
-const artists = [
+let artists = [
     {
-        name: 'Andrei Rublev',
+        name: 'Andrei Rublev'
     },
     {
-        name: 'Andy Warhol',
+        name: 'Andy Warhol'
     },
     {
-        name: 'Camille Pissarro',
+        name: 'Camille Pissarro'
     },
     {
-        name: 'Caravaggio',
+        name: 'Caravaggio'
     },
     {
-        name: 'Claude Monet',
+        name: 'Claude Monet'
     },
     {
-        name: 'Diego Velazquez',
+        name: 'Diego Velazquez'
     },
     {
-        name: 'Diego Rivera',
+        name: 'Diego Rivera'
     },
     {
-        name: 'Edgar Degas',
+        name: 'Edgar Degas'
     },
     {
-        name: 'El Greco',
+        name: 'El Greco'
     },
     {
-        name: 'Eugene Delacroix',
+        name: 'Eugene Delacroix'
     },
     {
-        name: 'Francisco Goya',
+        name: 'Francisco Goya'
     },
     {
-        name: 'Frida Kahlo',
+        name: 'Frida Kahlo'
     },
     {
-        name: 'Georges Seurat',
+        name: 'Georges Seurat'
     },
     {
-        name: 'Gustav Klimt',
+        name: 'Gustav Klimt'
     },
     {
-        name: 'Gustave Courbet',
+        name: 'Gustave Courbet'
     },
     {
-        name: 'Henri de Toulouse - Lautrec',
+        name: 'Henri de Toulouse - Lautrec'
     },
     {
-        name: 'Henri Rousseau',
+        name: 'Henri Rousseau'
     },
     {
-        name: 'Hieronymus Bosch',
+        name: 'Hieronymus Bosch'
     },
     {
-        name: 'Jackson Pollock',
+        name: 'Jackson Pollock'
     },
     {
-        name: 'Jan van Eyck',
+        name: 'Jan van Eyck'
     },
     {
-        name: 'Joan Miro',
+        name: 'Joan Miro'
     },
     {
-        name: 'Kazimir Malevich',
+        name: 'Kazimir Malevich'
     },
     {
-        name: 'Leonardo da Vinci',
+        name: 'Leonardo da Vinci'
     },
     {
-        name: 'Marc Chagall',
+        name: 'Marc Chagall'
     },
     {
-        name: 'Michelangelo',
+        name: 'Michelangelo'
     },
     {
-        name: 'Pablo Picasso',
+        name: 'Pablo Picasso'
     },
     {
-        name: 'Paul Cezanne',
+        name: 'Paul Cezanne'
+    },
+    {
+        name: 'Paul Gauguin'
+    },
+    {
+        name: 'Paul Cezanne'
+    },
+    {
+        name: 'Peter Paul Rubens'
+    },
+    {
+        name: 'Pierre - Auguste Renoir'
+    },
+    {
+        name: 'Piet Mondrian'
+    },
+    {
+        name: 'Raphael'
+    },
+    {
+        name: 'Rembrandt'
+    },
+    {
+        name: 'Rene Magritte'
+    },
+    {
+        name: 'Sandro Botticelli'
+    },
+    {
+        name: 'Titian'
+    },
+    {
+        name: 'Vincent van Gogh'
+    },
+    {
+        name: 'William Turner'
+    },
+    {
+        name: 'Paul Cezanne'
     }
 ];
 
@@ -148,6 +185,12 @@ class NormalSearch extends React.Component {
 
     componentDidMount() {
         this.populateData();
+        for (var i = 0; i < this.state.artist.length; i++) {
+            var artistSuggest = {
+                name: this.state.artist.artist
+            }
+            artists.push(artistSuggest)
+        }
         console.log("detail", this.state.artist)
     }
 
@@ -239,9 +282,8 @@ class NormalSearch extends React.Component {
                 </ul>
                 <div className="section">
                     <Container className="shape-container flex align-items-center py-lg-2" >
-                        <Input type="text" innerRef={Input => this.input = Input} placeHolder="Please enter contents you want to search" />
+                        {/*<Input type="text" innerRef={Input => this.input = Input} placeHolder="Please enter contents you want to search" />*/}
                         <Autosuggest
-                            theme={theme}
                             suggestions={suggestions}
                             onSuggestionsFetchRequested={this.onSuggestionsFetchRequested}
                             onSuggestionsClearRequested={this.onSuggestionsClearRequested}
@@ -306,7 +348,9 @@ class NormalSearch extends React.Component {
         const response1 = await fetch('artwork');
         const data = await response.json();
         const data1 = await response1.json();
-        this.setState({ artist: data, artwork: data1});
+        this.setState({ artist: data, artwork: data1 });
+
+        
         console.log("detail", this.state.artist);
         console.log("detail", this.state.artwork);
     }
