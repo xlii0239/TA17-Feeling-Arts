@@ -12,6 +12,7 @@ import SimplePage from "views/simple-mode/SimplePage.js";
 
 function HomepageSimple() {
     React.useEffect(() => {
+        document.title = "Feeing Arts-Simple Mode"
         document.body.classList.add("homepage-simple");
         window.scrollTo(0, 0);
         document.body.scrollTop = 0;

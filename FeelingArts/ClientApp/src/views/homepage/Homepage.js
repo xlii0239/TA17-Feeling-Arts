@@ -12,8 +12,12 @@ import FooterForWeb from "components/a17components/footers/FooterForWeb.js";
 import HeaderForHome from "components/a17components/headers/HeaderForHome.js";
 import BlogsForHome from "components/a17components/blogs/BlogsForHome.js";
 
+
+
+
 function HomePage() {
     React.useEffect(() => {
+        document.title = "Feeing Arts-Home Page"
         document.body.classList.add("home-page");
         window.scrollTo(0, 0);
         document.body.scrollTop = 0;
@@ -21,6 +25,7 @@ function HomePage() {
             document.body.classList.remove("home-page");
         };
     });
+
     return (
         <>
             <NavbarForHome type="transparent" />
@@ -29,14 +34,12 @@ function HomePage() {
                 <div className="main main-raised">
                     <Container>
                         <Row>
-                            <Col lg="12" md="2">
+                            <Col lg="12" md="12">
                                 <BlogsForHome />
                             </Col>
                         </Row>
                     </Container>
                  </div>
-                <br></br>
-                <br></br>
                 <FooterForWeb />
             </div>
         </>

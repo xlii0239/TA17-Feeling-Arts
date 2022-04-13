@@ -10,7 +10,7 @@ function FooterForWeb() {
     return (
         <>
             <footer className="footer footer-simple transparent">
-                <Container>
+                <div class= "container">
                     <Row>
                         <Col md="3">
                             <h5 className="title text-darkblue font-weight-bold">
@@ -22,7 +22,7 @@ function FooterForWeb() {
                   </p>
                         
                     </Row>
-                </Container>
+                </div>
             </footer>
         </>
     );

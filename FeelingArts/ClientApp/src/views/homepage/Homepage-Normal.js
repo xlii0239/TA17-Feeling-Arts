@@ -14,6 +14,7 @@ import NavbarPrimary from "components/a17components/navbars/NavbarPrimary.js";
 
 function HomepageNormal() {
     React.useEffect(() => {
+        document.title = "Feeing Arts-Normal Mode"
         document.body.classList.add("homepage-normal");
         window.scrollTo(0, 0);
         document.body.scrollTop = 0;
@@ -26,9 +27,6 @@ function HomepageNormal() {
             <div className="wrapper">
                 <NavbarPrimary />
                 <NormalPage />
-                <br></br>
-                <br></br>
-                <br></br>
                 <FooterForWeb />
             </div>
         </>
