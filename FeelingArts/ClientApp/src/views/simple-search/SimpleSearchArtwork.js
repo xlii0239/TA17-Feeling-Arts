@@ -7,7 +7,7 @@ import ArtworkResultShow from './ArtworkResultShow';
 
 
 
-class SimpleSearch extends React.Component {
+class SimpleSearchArtwork extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -62,7 +62,7 @@ class SimpleSearch extends React.Component {
     render() {
 
         return (
-          <>
+            <>
                 <NavbarForHome />
                 <ul class="breadcrumb bg-transparent font-weight-bold">
                     <li class="breadcrumb-item"><a href="homepage" class="text-dark font-weight-bold">Home</a></li>
@@ -80,12 +80,12 @@ class SimpleSearch extends React.Component {
                             Click to Search
                         </Button>
                     </Container>
-                    <Col>                       
-                        <ArtistResultShow toData={this.state.artistShow}>
-                        </ArtistResultShow>
+                    <Col>
+                        <ArtworkResultShow toData={this.state.artworkShow}>
+                        </ArtworkResultShow>
                     </Col>
                 </div>
-          </>
+            </>
         )
     }
 
@@ -100,4 +100,4 @@ class SimpleSearch extends React.Component {
     }
 }
 
-export default SimpleSearch;
+export default SimpleSearchArtwork;

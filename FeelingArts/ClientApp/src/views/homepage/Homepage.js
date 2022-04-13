@@ -26,15 +26,6 @@ function HomePage() {
         };
     });
 
-    //This is the logout function
-    //const handleLogout = () => {
-    //    localStorage.clear();
-    //    window.location.pathname = "/signin";
-    //};
-    //<button className="btn btn-primary" onClick={handleLogout}>
-    //    Logout
-    //</button>
-
     return (
         <>
             <NavbarForHome type="transparent" />
@@ -43,14 +34,12 @@ function HomePage() {
                 <div className="main main-raised">
                     <Container>
                         <Row>
-                            <Col lg="12" md="2">
+                            <Col lg="12" md="12">
                                 <BlogsForHome />
                             </Col>
                         </Row>
                     </Container>
                  </div>
-                <br></br>
-                <br></br>
                 <FooterForWeb />
             </div>
         </>

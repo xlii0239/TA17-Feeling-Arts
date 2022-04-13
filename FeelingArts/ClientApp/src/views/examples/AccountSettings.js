@@ -108,7 +108,6 @@ function AccountSettings() {
                     <h3 className="title mt-4">Charlie Bailey</h3>
                   </section>
                   <section>
-                    <br></br>
                     <Nav className="flex-column" role="tablist">
                       <NavItem>
                         <NavLink
@@ -167,9 +166,6 @@ function AccountSettings() {
                       </NavItem>
                     </Nav>
                   </section>
-                  <br></br>
-                  <br></br>
-                  <br></br>
                   <div>
                     <div className="progress-container progress-primary">
                       <span className="progress-badge">Profile Completion</span>
@@ -196,7 +192,6 @@ function AccountSettings() {
                           </h2>
                         </header>
                         <hr className="line-primary"></hr>
-                        <br></br>
                         <Row>
                           <Col className="align-self-center" md="3">
                             <label className="labels" htmlFor="#firstName">
@@ -493,7 +488,6 @@ function AccountSettings() {
                         <h2 className="text-uppercase">Billing method</h2>
                       </header>
                       <hr className="line-primary"></hr>
-                      <br></br>
                       <Table className="align-items-center">
                         <thead>
                           <tr>
@@ -628,8 +622,6 @@ function AccountSettings() {
                               </FormGroup>
                             </Col>
                           </Row>
-                          <br></br>
-                          <br></br>
                           <header>
                             <h2 className="text-uppercase">
                               Security Settings

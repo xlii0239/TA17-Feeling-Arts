@@ -37,6 +37,7 @@ function Signin() {
 
     return (
         <div className="text-center">
+            <container>
             <h1>You do not have permission to access this resource, please log in</h1>
             <form
                 style={{
@@ -47,7 +48,7 @@ function Signin() {
                 }}
             >
                 <div className="form-group">
-                    <label>Username</label>
+                        <label class="font-weight-bold">Username</label>
                     <input
                         className="form-control"
                         type="text"
@@ -57,7 +58,7 @@ function Signin() {
                 </div>
 
                 <div className="form-group">
-                    <label>Password</label>
+                        <label class="font-weight-bold">Password</label>
                     <input
                         className="form-control"
                         type="password"
@@ -65,9 +66,9 @@ function Signin() {
                         onChange={(e) => handleInputChange(e)}
                     />
                 </div>
-                <button
+                    <button                   
                     type="submit"
-                    className="btn btn-primary"
+                    className="btn btn-secondary"
                     onClick={handleSubmit}
                 >
                     Submit
@@ -76,7 +77,8 @@ function Signin() {
                 {errorMessage.value && (
                     <p className="text-danger"> {errorMessage.value} </p>
                 )}
-            </form>
+                </form>
+                </container>
         </div>
     );
 }
