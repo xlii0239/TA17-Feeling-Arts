@@ -41,6 +41,8 @@ import NormalMode from "views/normal-mode/NormalPage.js";
 import ProtectedRoute from "./components/a17components/authentication/ProtectedRoute";
 import Signin from "./views/authentication/Signin";
 import SimpleSearch from "./views/simple-search/SimpleSearch";
+import AutoSuggest from "./views/simple-search/AutoSuggest";
+
 
 
 
@@ -194,6 +196,12 @@ ReactDOM.render(
             exact
             render={(props) => <SimpleSearch {...props} />}
         />
+        <Route
+            path="/autosuggest"
+            exact
+            render={(props) => <AutoSuggest {...props} />}
+        />
+
       <Route exact path="signin" component={Signin} />
       <ProtectedRoute exact path="/homepage" component={Homepage} />
       <Redirect to="/signin" />
