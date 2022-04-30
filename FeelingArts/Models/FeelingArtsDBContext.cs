@@ -21,6 +21,7 @@ namespace FeelingArts.Models
         public virtual DbSet<ArtistSet> ArtistSets { get; set; }
         public virtual DbSet<ArtworkInfo> ArtworkInfos { get; set; }
         public virtual DbSet<ArtworkSet> ArtworkSets { get; set; }
+        public virtual DbSet<MusicInfo> MusicInfos { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -138,11 +139,6 @@ namespace FeelingArts.Models
                     .IsUnicode(false)
                     .HasColumnName("imageNo");
 
-                entity.Property(e => e.ReferenceLink)
-                    .HasMaxLength(200)
-                    .IsUnicode(false)
-                    .HasColumnName("reference_link");
-
                 entity.Property(e => e.Style)
                     .HasMaxLength(50)
                     .IsUnicode(false)
@@ -168,6 +164,57 @@ namespace FeelingArts.Models
                     .HasForeignKey(d => d.ArtistId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_ArtistArtwork");
+            });
+
+            modelBuilder.Entity<MusicInfo>(entity =>
+            {
+                entity.HasKey(e => new { e.Id, e.MusicNo })
+                    .HasName("PK__MusicInf__78A2C1C258B4C38E");
+
+                entity.ToTable("MusicInfo");
+
+                entity.Property(e => e.Id).HasColumnName("id");
+
+                entity.Property(e => e.MusicNo)
+                    .HasMaxLength(20)
+                    .IsUnicode(false)
+                    .HasColumnName("musicNo");
+
+                entity.Property(e => e.ImageNo)
+                    .IsRequired()
+                    .HasMaxLength(20)
+                    .IsUnicode(false)
+                    .HasColumnName("imageNo");
+
+                entity.Property(e => e.MArtistName)
+                    .IsRequired()
+                    .HasMaxLength(32)
+                    .IsUnicode(false)
+                    .HasColumnName("m_artist_name");
+
+                entity.Property(e => e.MCreateYear).HasColumnName("m_create_year");
+
+                entity.Property(e => e.MDescription)
+                    .HasMaxLength(700)
+                    .IsUnicode(false)
+                    .HasColumnName("m_description");
+
+                entity.Property(e => e.MGenre)
+                    .HasMaxLength(20)
+                    .IsUnicode(false)
+                    .HasColumnName("m_genre");
+
+                entity.Property(e => e.MLink)
+                    .IsRequired()
+                    .HasMaxLength(300)
+                    .IsUnicode(false)
+                    .HasColumnName("m_link");
+
+                entity.Property(e => e.TrackName)
+                    .IsRequired()
+                    .HasMaxLength(128)
+                    .IsUnicode(false)
+                    .HasColumnName("track_name");
             });
 
             OnModelCreatingPartial(modelBuilder);

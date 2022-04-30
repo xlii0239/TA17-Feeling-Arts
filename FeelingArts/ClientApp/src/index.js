@@ -42,6 +42,7 @@ import ProtectedRoute from "./components/a17components/authentication/ProtectedR
 import Signin from "./views/authentication/Signin";
 import SimpleSearch from "./views/simple-search/SimpleSearch";
 import SimpleSearchArtwork from "./views/simple-search/SimpleSearchArtwork";
+import ThreeDimentionModel from "./views/3d-model/ThreeDimentionModel";
 
 
 
@@ -105,6 +106,8 @@ ReactDOM.render(
         <ProtectedRoute exact path="/normalsearchartwork" component={NormalSearchArtwork} />
         <ProtectedRoute exact path="/simplesearch" component={SimpleSearch} />
         <ProtectedRoute exact path="/simplesearchartwork" component={SimpleSearchArtwork} />
+        <ProtectedRoute exact path="/3d-model" component={ThreeDimentionModel} />
+
         <Redirect to="/signin" />
     </Switch>
   </BrowserRouter>,
