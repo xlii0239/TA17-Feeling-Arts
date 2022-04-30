@@ -31,6 +31,8 @@
     "reactstrap": "8.5.1",
     "redux": "^4.0.5",
     "redux-thunk": "^2.3.0",
+    "stl-viewer": "^0.12.0",
+    "styled-components": "^5.3.5",
     "thunk": "0.0.1",
     "web-vitals": "^1.1.0"
   },
@@ -63,5 +65,8 @@
     "typescript": "3.9.7",
     "@types/googlemaps": "3.39.11",
     "@types/markerclustererplus": "2.1.33"
+  },
+  "devDependencies": {
+    "@babel/plugin-bugfix-v8-spread-parameters-in-optional-chaining": "^7.16.7"
   }
 }

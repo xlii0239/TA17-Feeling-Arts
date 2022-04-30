@@ -39,7 +39,7 @@ function HomePage() {
                             </Col>
                         </Row>
                     </Container>
-                 </div>
+                </div>
                 <FooterForWeb />
             </div>
         </>
