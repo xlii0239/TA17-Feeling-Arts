@@ -43,6 +43,8 @@ import Signin from "./views/authentication/Signin";
 import SimpleSearch from "./views/simple-search/SimpleSearch";
 import SimpleSearchArtwork from "./views/simple-search/SimpleSearchArtwork";
 import ThreeDimentionModel from "./views/3d-model/ThreeDimentionModel";
+import SimpleArtMusic from "views/simple-mode/SimpleArtMusic.js";
+import NormalArtMusic from "views/normal-mode/NormalArtMusic.js";
 
 
 
@@ -107,7 +109,8 @@ ReactDOM.render(
         <ProtectedRoute exact path="/simplesearch" component={SimpleSearch} />
         <ProtectedRoute exact path="/simplesearchartwork" component={SimpleSearchArtwork} />
         <ProtectedRoute exact path="/3d-model" component={ThreeDimentionModel} />
-
+        <ProtectedRoute exact path="/simpleartmusic" component={SimpleArtMusic} />
+        <ProtectedRoute exact path="/normalartmusic" component={NormalArtMusic} />
         <Redirect to="/signin" />
     </Switch>
   </BrowserRouter>,

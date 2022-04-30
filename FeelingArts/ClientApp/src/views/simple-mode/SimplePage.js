@@ -25,48 +25,48 @@ function SimplePage() {
             <section className="blogs-home">
                 <Container fluid>
                     <Row>
-                        {/*<Col lg="6">*/}
-                        {/*    <Card*/}
-                        {/*        className="card-blog card-background"*/}
-                        {/*        data-animation="zooming"*/}
-                        {/*    >*/}
-                        {/*        <div*/}
-                        {/*            className="full-background"*/}
-                        {/*            style={{*/}
-                        {/*                backgroundImage:*/}
-                        {/*                    "url(" + require("assets/NewImg/musicArt.jpg") + ")",*/}
-                        {/*            }}*/}
-                        {/*        ></div>*/}
-                        {/*        <a href="#pablo" onClick={(e) => e.preventDefault()}>*/}
-                        {/*            <CardBody>*/}
-                        {/*                <div className="content-center">*/}
-                        {/*                    <CardTitle tag="h4">Art Through Music</CardTitle>*/}
-                        {/*                </div>*/}
-                        {/*            </CardBody>*/}
-                        {/*        </a>*/}
-                        {/*    </Card>*/}
-                        {/*</Col>*/}
-                        {/*<Col lg="6">*/}
-                        {/*    <Card*/}
-                        {/*        className="card-blog card-background"*/}
-                        {/*        data-animation="zooming"*/}
-                        {/*    >*/}
-                        {/*        <div*/}
-                        {/*            className="full-background"*/}
-                        {/*            style={{*/}
-                        {/*                backgroundImage:*/}
-                        {/*                    "url(" + require("assets/NewImg/touchArt.jpg") + ")",*/}
-                        {/*            }}*/}
-                        {/*        ></div>*/}
-                        {/*        <a href="#pablo" onClick={(e) => e.preventDefault()}>*/}
-                        {/*            <CardBody>*/}
-                        {/*                <div className="content-center">*/}
-                        {/*                    <CardTitle tag="h4">Art Through Touch</CardTitle>*/}
-                        {/*                </div>*/}
-                        {/*            </CardBody>*/}
-                        {/*        </a>*/}
-                        {/*    </Card>*/}
-                        {/*</Col>*/}
+                        <Col lg="6">
+                            <Card
+                                className="card-blog card-background"
+                                data-animation="zooming"
+                            >
+                                <div
+                                    className="full-background"
+                                    style={{
+                                        backgroundImage:
+                                            "url(" + require("assets/NewImg/musicArt.jpg") + ")",
+                                    }}
+                                ></div>
+                                <a href="SimpleArtMusic" onClick={(e) => e.button()}>
+                                    <CardBody>
+                                        <div className="content-center">
+                                            <CardTitle tag="h4">Art Through Music</CardTitle>
+                                        </div>
+                                    </CardBody>
+                                </a>
+                            </Card>
+                        </Col>
+                        <Col lg="6">
+                            <Card
+                                className="card-blog card-background"
+                                data-animation="zooming"
+                            >
+                                <div
+                                    className="full-background"
+                                    style={{
+                                        backgroundImage:
+                                            "url(" + require("assets/NewImg/touchArt.jpg") + ")",
+                                    }}
+                                ></div>
+                                <a href="#pablo" onClick={(e) => e.preventDefault()}>
+                                    <CardBody>
+                                        <div className="content-center">
+                                            <CardTitle tag="h4">Art Through Touch</CardTitle>
+                                        </div>
+                                    </CardBody>
+                                </a>
+                            </Card>
+                        </Col>
                         {/*<Col lg="6">*/}
                         {/*    <Card*/}
                         {/*        className="card-blog card-background"*/}

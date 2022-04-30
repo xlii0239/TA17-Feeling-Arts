@@ -31,20 +31,20 @@ function NormalPage() {
             <NavbarForHome />
             <div className="wrapper">
             <ul class="breadcrumb bg-transparent font-weight-bold">
-                    <li class="breadcrumb-item text-light"><a href="homepage" class="text-dark font-weight-bold">Home</a></li>
+                <li class="breadcrumb-item text-light"><a href="homepage" class="text-dark font-weight-bold">Home</a></li>
                 <li class="breadcrumb-item active">Normal Mode</li>
                 </ul>
             <Container class="align-item-center">
-                {/*    <Button>*/}
-                {/*    <Link to="#">*/}
-                {/*            <h8 class="text-capitalize text-muted">Art through music</h8>*/}
-                {/*    </Link>*/}
-                {/*        </Button>*/}
-                {/*    <Button type="button">*/}
-                {/*    <Link to="#">*/}
-                {/*            <h8 class="text-capitalize text-muted">Art Through Touch</h8>*/}
-                {/*    </Link>*/}
-                {/*</Button>*/}
+                    <Button class="btn btn-info btn-lg" type="button">
+                        <Link to="normalartmusic">
+                            <h5 class="text-capitalize text-muted">Art through music</h5>
+                    </Link>
+                        </Button>
+                    <Button class="btn btn-info btn-lg" type="button">
+                    <Link to="#">
+                            <h5 class="text-capitalize text-muted">Art Through Touch</h5>
+                    </Link>
+                </Button>
                 {/* <Button class="btn btn-info btn-lg" type="button">*/}
                 {/*    <Link to="#">*/}
                 {/*            <h8 class="text-capitalize text-muted">Art Through Describe</h8>*/}

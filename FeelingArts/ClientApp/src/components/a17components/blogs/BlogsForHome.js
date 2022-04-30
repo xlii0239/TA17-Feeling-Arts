@@ -26,7 +26,7 @@ function BlogsForHome() {
                                         <div className="content-bottom">
                                             <CardTitle tag="h3">Simple Mode</CardTitle>
                                             <h6 className="card-category text-white opacity-8">
-                                                Simple mode provide friendly experience for blind people
+                                                Providing friendly experience for people with low or no vision
                                              </h6>
                                         </div>
                                     </CardBody>
@@ -48,10 +48,10 @@ function BlogsForHome() {
                                 <a href="normalmode" onClick={(e) => e.button()}>
                                     <CardBody>
                                         <div className="content-bottom">
-                                            <CardTitle tag="h3">Normal Mode</CardTitle>
+                                            <CardTitle tag="h3">Picture Mode</CardTitle>
                                             <h6 className="card-category text-white opacity-8">
-                                                Normal mode provide friendly experience for normal people
-                      </h6>
+                                                Providing friendly visual experience for all people
+                                            </h6>
                                         </div>
                                     </CardBody>
                                 </a>

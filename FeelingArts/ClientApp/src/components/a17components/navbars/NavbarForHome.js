@@ -21,7 +21,7 @@ function NavbarForHome() {
         <Navbar className="navbar-dark bg-dark" expand="lg">
               <Container>
                   <NavbarBrand className="mr-lg-3" to="/homepage" tag={Link}>
-                      <img src={require("assets/NewImg/weblogo.png")} style={{width:55,height:45}}></img>
+                      <img src={require("assets/NewImg/weblogo.png")} alt="Feeling arts website logo" style={{width:55,height:45}}></img>
                   </NavbarBrand>
                   <a href="homepage" onClick={(e) => e.button()}>
                   <NavbarBrand Text style={{ color: 'white', fontSize: 28 }}>
