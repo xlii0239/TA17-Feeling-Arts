@@ -1,6 +1,20 @@
 ﻿import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";
+import {
+    Button,
+    Card,
+    CardHeader,
+    CardBody,
+    CardImg,
+    CardTitle,
+    FormGroup,
+    Form,
+    Input,
+    InputGroupAddon,
+    InputGroupText,
+    InputGroup,
+} from "reactstrap";
 
 function Signin() {
     const [userData, setUserData] = useState({ username: "", password: "" });
@@ -36,18 +50,18 @@ function Signin() {
     };
 
     return (
-        <div className="text-center">
+        <Card className="bg-secondary shadow mx-auto">
             <container>
-            <h1>You do not have permission to access this resource, please log in</h1>
-            <form
-                style={{
-                    display: "flex",
-                    flexDirection: "column",
-                    justifyContent: "center",
-                    alignItems: "center",
-                }}
-            >
-                <div className="form-group">
+                <CardHeader className="col-md-6 offset-md-3">
+                    <CardImg
+                        alt="..."
+                        src={require("assets/img/ill/bg5-1.svg")}
+                    ></CardImg>
+                    <CardTitle className="text-center" tag="h4">
+                        Please log in
+          </CardTitle>
+                </CardHeader>
+                <CardBody className="col-md-6 offset-md-3">
                         <label class="font-weight-bold">Username</label>
                     <input
                         className="form-control"
@@ -55,9 +69,8 @@ function Signin() {
                         name="username"
                         onChange={(e) => handleInputChange(e)}
                     />
-                </div>
 
-                <div className="form-group">
+                    <div className="form-group">
                         <label class="font-weight-bold">Password</label>
                     <input
                         className="form-control"
@@ -73,13 +86,12 @@ function Signin() {
                 >
                     Submit
                 </button>
-
                 {errorMessage.value && (
                     <p className="text-danger"> {errorMessage.value} </p>
                 )}
-                </form>
+                </CardBody>
                 </container>
-        </div>
+        </Card>
     );
 }
 

@@ -7,11 +7,11 @@ import { Card, CardBody, CardTitle, Container, Row, Col } from "reactstrap";
 function BlogsForHome() {
     return (
         <>
-                <Container fluid>
-                    <Row>
-                        <Col lg="6" >
+                <Container>
+                <Row>
+                    <Col lg="6">
                             <Card
-                                className="card-blog card-background"
+                            className="card-blog card-background"
                                 data-animation="zooming"
                             >
                                 <div
@@ -26,16 +26,16 @@ function BlogsForHome() {
                                         <div className="content-bottom">
                                             <CardTitle tag="h3">Simple Mode</CardTitle>
                                             <h6 className="card-category text-white opacity-8">
-                                                Providing friendly experience for people with low or no vision
+                                                Providing friendly experience for people with no vision
                                              </h6>
                                         </div>
                                     </CardBody>
                                 </a>
                             </Card>
                         </Col>
-                        <Col lg="6">
+                    <Col lg="6" >
                             <Card
-                                className="card-blog card-background"
+                            className="card-blog card-background"
                                 data-animation="zooming"
                             >
                                 <div

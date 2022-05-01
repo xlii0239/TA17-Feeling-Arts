@@ -6,6 +6,7 @@ import "assets/css/nucleo-svg.css";
 import "assets/css/nucleo-icons.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import "assets/scss/argon-design-system.scss?v1.0.0";
+import "@fortawesome/fontawesome-free/css/all.min.css";
 
 import Index from "views/Index.js";
 import Sections from "views/Sections.js";
@@ -45,6 +46,7 @@ import SimpleSearchArtwork from "./views/simple-search/SimpleSearchArtwork";
 import ThreeDimentionModel from "./views/3d-model/ThreeDimentionModel";
 import SimpleArtMusic from "views/simple-mode/SimpleArtMusic.js";
 import NormalArtMusic from "views/normal-mode/NormalArtMusic.js";
+import ListeningPage from "views/simple-mode/ListeningPage.js"
 
 
 
@@ -111,6 +113,7 @@ ReactDOM.render(
         <ProtectedRoute exact path="/3d-model" component={ThreeDimentionModel} />
         <ProtectedRoute exact path="/simpleartmusic" component={SimpleArtMusic} />
         <ProtectedRoute exact path="/normalartmusic" component={NormalArtMusic} />
+        <ProtectedRoute exact path="/listeningpage" component={ListeningPage} />
         <Redirect to="/signin" />
     </Switch>
   </BrowserRouter>,
