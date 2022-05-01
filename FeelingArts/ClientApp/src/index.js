@@ -47,6 +47,7 @@ import ThreeDimentionModel from "./views/3d-model/ThreeDimentionModel";
 import SimpleArtMusic from "views/simple-mode/SimpleArtMusic.js";
 import NormalArtMusic from "views/normal-mode/NormalArtMusic.js";
 import ListeningPage from "views/simple-mode/ListeningPage.js"
+import NormalListeningPage from "views/normal-mode/NormalListeningPage.js"
 
 
 
@@ -114,6 +115,7 @@ ReactDOM.render(
         <ProtectedRoute exact path="/simpleartmusic" component={SimpleArtMusic} />
         <ProtectedRoute exact path="/normalartmusic" component={NormalArtMusic} />
         <ProtectedRoute exact path="/listeningpage" component={ListeningPage} />
+        <ProtectedRoute exact path="/normallisteningpage" component={NormalListeningPage} />
         <Redirect to="/signin" />
     </Switch>
   </BrowserRouter>,

@@ -8,18 +8,17 @@ import { Container, Row, Col } from "reactstrap";
 function NormalComponents() {
   return (
     <>
-      <section className="section-basic-components" lg="12">
-        <Container>
+          <div className="section-basic-components col-md-10 offset-md-2 ">
           <Row>
-                      <Col className="col-sm-3">
-                          <h4 className="title text-uppercase ml-0 font-weight-bold font-italic text-center">
-                              Discover more
+                      <Col className="col-sm-4">
+                          <h4 className="title text-center font-weight-bold font-italic">
+                              Discovering
                 </h4>
-                          <div className="info info-horizontal ml-0">
+                          <div className="info info-horizontal">
                               <div className="description">
-                                  <h7 className="info-title text-uppercase font-weight-bold pl-0">
+                                  <h5 className="info-title font-weight-bold pl-0">
                                       Art through music
-                    </h7>
+                    </h5>
                                   <p className=" opacity-8">
                                       Feel and understand the mood and emotion of the artwork with the matching music.
                     </p>
@@ -27,16 +26,16 @@ function NormalComponents() {
                           </div>
                           <div className="info info-horizontal ml-0 ">
                               <div className="description">
-                                  <h7 className="info-title text-uppercase font-weight-bold pl-0">
+                                  <h5 className="info-title font-weight-bold pl-0">
                                       Art through touch
-                    </h7>
+                    </h5>
                                   <p className="opacity-8">
                                       Experience and feel the form and expression of artwork by touching the 3D model
                     </p>
                               </div>
                           </div>
             </Col>
-                      <Col className="col-sm-9">
+                      <Col className="col-sm-8">
               <div className="image-container">
                 <img
                   alt="MonaLisa photo"
@@ -47,27 +46,26 @@ function NormalComponents() {
                   alt="Michelangelo photo"
                   className="coloured-card-btn-img"
                   src={require("assets/NewImg/Michelangelo.jpg")}
-                ></img>
-                <img
-                  alt="Vincent van Gogh photo"
-                                  className="coloured-card-img"
-                   src={require("assets/NewImg/Vincent van Gogh.jpg")}
+                   ></img>
+                              <img
+                                  alt="David photo"
+                                  className="linkedin-btn-img"
+                                  src={require("assets/NewImg/David3D.png")}
                               ></img>
-                 <img
-                    alt="David photo"
-                      className="linkedin-btn-img"
-                     src={require("assets/NewImg/David3D.png")}
-                 ></img>
                 <img
                   alt="The starry night photo"
                   className="table-img align-item-center"
                   src={require("assets/NewImg/The-Starry-Night.jpg")}
-                ></img>
+                              ></img>
+                              <img
+                                  alt="Vincent van Gogh photo"
+                                  className="w-5"
+                                  src={require("assets/NewImg/Vincent van Gogh.jpg")}
+                              ></img>
               </div>
             </Col>
           </Row>
-        </Container>
-      </section>
+      </div>
     </>
   );
 }

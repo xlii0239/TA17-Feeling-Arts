@@ -4,7 +4,7 @@ import { Container, Row, Col,Button } from "reactstrap";
 
 
 
-function ListeningPage() {
+function NormalListeningPage() {
     React.useEffect(() => {
         document.title = "Listening page"
     });
@@ -13,8 +13,8 @@ function ListeningPage() {
             <NavbarForHome />
             <ul class="breadcrumb bg-transparent font-weight-bold ">
                 <li class="breadcrumb-item"><a href="homepage" class="text-dark font-weight-bold">Home</a></li>
-                <li class="breadcrumb-item text-light"><a href="simplemode" class="text-dark font-weight-bold">Simple Mode</a></li>
-                <li class="breadcrumb-item"><a href="SimpleArtMusic" class="text-dark font-weight-bold">Art through Music</a></li>
+                <li class="breadcrumb-item text-light"><a href="normalmode" class="text-dark font-weight-bold">Picture Mode</a></li>
+                <li class="breadcrumb-item"><a href="NormalArtMusic" class="text-dark font-weight-bold">Art through Music</a></li>
                 <li class="breadcrumb-item active">Listening</li>
             </ul>
             <div className="page-header">
@@ -52,5 +52,5 @@ function ListeningPage() {
     );
 }
 
-export default ListeningPage;
+export default NormalListeningPage;
 
