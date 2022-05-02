@@ -31,45 +31,18 @@ function ThreeDimentionModel() {
     console.log("modelNO from model page", modelNo)
 
     const url = 'https://storage.googleapis.com/feeling-arts-data/3d_model/' + modelNo + '.stl'
-    const url_img = 'https://storage.googleapis.com/feeling-arts-data/artwork-img/' + imgNo + '.jpg'
-
-    const downloadModel = (e) => {
-        window.location = url;
-    };
 
     return (
         <>
             <NavbarForHome type="transparent"/>
             <Container fluid className='gx-0'>
                 <Row>
-                    <Col sm>
-                        <img
-                            alt="..."
-                            className="img-fluid rounded shadow-lg"
-                            src={url_img}
-                        >
-                        </img>
-                    </Col>
-                    <Col sm>
-                        <STLViewer
-                            url={url}
-                            model={url}
-                            width={800}
-	                        height={800}
-                            modelColor='#2CA4B9'
-                            backgroundColor='#EAEAEA'
-                            rotate={true}
-                            orbitControls={true}
-                        />
-                    </Col>
-                </Row>
-                <Row>
-                    <Col sm className="py-2 border rounded">
+                    <Col>
                         <Button color="success" size="lg" type="button" href={url}>
                             Download 3D Model (STL file)
                         </Button>
                     </Col>
-                    <Col sm className="py-2 border rounded" display="flex">
+                    <Col>
                         <Button color="success" size="lg" type="button" href={url}>
                             3D Model Print Advice
                         </Button>

@@ -10,30 +10,18 @@ namespace FeelingArts.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class MusicController : Controller
+    public class ThreeDimentionModelController : Controller
     {
         private FeelingArtsDBContext db = new FeelingArtsDBContext();
 
         [HttpGet]
-        public IEnumerable<MusicInfo> Index()
+        public IEnumerable<ThreeDimentionModelInfo> Index()
         {
             using (var context = new FeelingArtsDBContext())
             {
-                var listA = db.MusicInfos.ToArray();
+                var listA = db.ThreeDimentionModelInfos.ToArray();
                 return listA;
             }
-        }
-
-        [HttpGet("{imageNo}")]
-        public async Task<IActionResult> GetMusicByImage([FromRoute] string imageNo)
-        {
-
-            var music = await db.MusicInfos.Where(x => x.ImageNo == imageNo).ToListAsync();
-            if (music == null)
-            {
-                return NotFound();
-            }
-            return Ok(music);
         }
     }
 }

@@ -43,6 +43,9 @@ import Signin from "./views/authentication/Signin";
 import SimpleSearch from "./views/simple-search/SimpleSearch";
 import SimpleSearchArtwork from "./views/simple-search/SimpleSearchArtwork";
 import ThreeDimentionModel from "./views/3d-model/ThreeDimentionModel";
+import ThreeDimentionModelHomePage from "./views/3d-model/ThreeDimentionModelHomePage";
+import ThreeDimentionModelHomePageSimple from "./views/simple-mode/3d-model/ThreeDimentionModelHomePageSimple";
+import ThreeDimentionModelSimple from "./views/simple-mode/3d-model/ThreeDimentionModelSimple";
 
 
 
@@ -98,7 +101,8 @@ ReactDOM.render(
       {/*      exact*/}
       {/*      render={(props) => <SimpleSearch {...props} />}*/}
       {/*  />*/}
-        <Route exact path="signin" component={Signin} />
+        <Route exact path="/signin" component={Signin} />
+        {/*<Route exact path="/homepage" component={Homepage} />*/}
         <ProtectedRoute exact path="/homepage" component={Homepage} />
         <ProtectedRoute exact path="/simplemode" component={SimpleMode} />
         <ProtectedRoute exact path="/normalmode" component={NormalMode} />
@@ -107,6 +111,9 @@ ReactDOM.render(
         <ProtectedRoute exact path="/simplesearch" component={SimpleSearch} />
         <ProtectedRoute exact path="/simplesearchartwork" component={SimpleSearchArtwork} />
         <ProtectedRoute exact path="/3d-model" component={ThreeDimentionModel} />
+        <ProtectedRoute exact path="/3d-model-home" component={ThreeDimentionModelHomePage} />
+        <ProtectedRoute exact path="/3d-model-simple" component={ThreeDimentionModelSimple} />
+        <ProtectedRoute exact path="/3d-model-home-simple" component={ThreeDimentionModelHomePageSimple} />
 
         <Redirect to="/signin" />
     </Switch>
