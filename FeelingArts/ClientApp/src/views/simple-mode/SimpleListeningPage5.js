@@ -4,7 +4,7 @@ import { Container, Row, Col,Button } from "reactstrap";
 
 
 
-function ListeningPage() {
+function SimpleListeningPage5() {
     React.useEffect(() => {
         document.title = "Listening page"
     });
@@ -33,16 +33,29 @@ function ListeningPage() {
                             </div>
                     </div>
                     <h2 className="lead text-dark p-5">
-                        Enjoy the artworks with this song
+                        Enjoy the artworks with this song created by Chris Haugen.
                     <Button
                         className="btn-icon col-md-2 offset-md-6"
                         color="warning"
-                        href="#23424"
+                            href="https://youtu.be/-zh55UqH98M"
                     >
                         <span className="btn-inner--icon">
                             <i className="ni ni-button-play"></i>
                         </span>
                         <span className="btn-inner--text">Play</span>
+                        </Button>
+                    </h2>
+                    <h2 className="lead text-dark p-5">
+                        Enjoy the artworks with this song created by Chris Haugen.
+                    <Button
+                            className="btn-icon col-md-2 offset-md-6"
+                            color="warning"
+                            href="https://youtu.be/zy3DOXSCkVE"
+                        >
+                            <span className="btn-inner--icon">
+                                <i className="ni ni-button-play"></i>
+                            </span>
+                            <span className="btn-inner--text">Play</span>
                         </Button>
                     </h2>
                     </row>
@@ -52,5 +65,5 @@ function ListeningPage() {
     );
 }
 
-export default ListeningPage;
+export default SimpleListeningPage5;
 

@@ -47,8 +47,18 @@ import ThreeDimentionModel from "./views/3d-model/ThreeDimentionModel";
 
 import SimpleArtMusic from "views/simple-mode/SimpleArtMusic.js";
 import NormalArtMusic from "views/normal-mode/NormalArtMusic.js";
-import ListeningPage from "views/simple-mode/ListeningPage.js"
-import NormalListeningPage from "views/normal-mode/NormalListeningPage.js"
+import SimpleListeningPage1 from "views/simple-mode/SimpleListeningPage1.js"
+import SimpleListeningPage2 from "views/simple-mode/SimpleListeningPage2.js"
+import SimpleListeningPage3 from "views/simple-mode/SimpleListeningPage3.js"
+import SimpleListeningPage4 from "views/simple-mode/SimpleListeningPage4.js"
+import SimpleListeningPage5 from "views/simple-mode/SimpleListeningPage5.js"
+import SimpleListeningPage6 from "views/simple-mode/SimpleListeningPage6.js"
+import NormalListeningPage1 from "views/normal-mode/NormalListeningPage1.js"
+import NormalListeningPage2 from "views/normal-mode/NormalListeningPage2.js"
+import NormalListeningPage3 from "views/normal-mode/NormalListeningPage3.js"
+import NormalListeningPage4 from "views/normal-mode/NormalListeningPage4.js"
+import NormalListeningPage5 from "views/normal-mode/NormalListeningPage5.js"
+import NormalListeningPage6 from "views/normal-mode/NormalListeningPage6.js"
 
 import ThreeDimentionModelHomePage from "./views/3d-model/ThreeDimentionModelHomePage";
 import ThreeDimentionModelHomePageSimple from "./views/simple-mode/3d-model/ThreeDimentionModelHomePageSimple";

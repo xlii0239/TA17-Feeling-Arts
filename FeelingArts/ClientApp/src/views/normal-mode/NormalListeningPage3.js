@@ -4,7 +4,7 @@ import { Container, Row, Col,Button } from "reactstrap";
 
 
 
-function NormalListeningPage() {
+function NormalListeningPage3() {
     React.useEffect(() => {
         document.title = "Listening page"
     });
@@ -27,30 +27,43 @@ function NormalListeningPage() {
                 >
                 </div>
                 <row className="floating-box bg-secondary col-md-8 offset-md-2">
-                        <div className="box text-left">
+                    <div className="box text-left">
                         <div className="icon icon-shape bg-warning icon-xl rounded-circle text-white">
-                                <i className="fa fa-music"></i>
-                            </div>
+                            <i className="fa fa-music"></i>
+                        </div>
                     </div>
                     <h2 className="lead text-dark p-5">
-                        Enjoy the artworks with this song
+                        Enjoy the artworks with this song created by Simple Sound.
                     <Button
-                        className="btn-icon col-md-2 offset-md-6"
-                        color="warning"
-                        href="#23424"
-                    >
-                        <span className="btn-inner--icon">
-                            <i className="ni ni-button-play"></i>
-                        </span>
-                        <span className="btn-inner--text">Play</span>
+                            className="btn-icon col-md-2 offset-md-6"
+                            color="warning"
+                            href="https://www.youtube.com/watch?v=qVYXMSJRFuE"
+                        >
+                            <span className="btn-inner--icon">
+                                <i className="ni ni-button-play"></i>
+                            </span>
+                            <span className="btn-inner--text">Play</span>
                         </Button>
                     </h2>
-                    </row>
+                    <h2 className="lead text-dark p-5">
+                        Enjoy the artworks with this song created by MUSIC TV.
+                    <Button
+                            className="btn-icon col-md-2 offset-md-6"
+                            color="warning"
+                            href="https://youtu.be/-qVOvXgUdkU"
+                        >
+                            <span className="btn-inner--icon">
+                                <i className="ni ni-button-play"></i>
+                            </span>
+                            <span className="btn-inner--text">Play</span>
+                        </Button>
+                    </h2>
+                </row>
             </div>
             
         </>
     );
 }
 
-export default NormalListeningPage;
+export default NormalListeningPage3;
 

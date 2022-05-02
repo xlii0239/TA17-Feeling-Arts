@@ -7,7 +7,7 @@ import { Card, CardBody, CardTitle, Container, Row, Col } from "reactstrap";
 function BlogsForHome() {
     return (
         <>
-                <Container>
+            <Container fluid>
                 <Row>
                     <Col lg="6">
                             <Card
