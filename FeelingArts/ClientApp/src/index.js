@@ -44,6 +44,7 @@ import Signin from "./views/authentication/Signin";
 import SimpleSearch from "./views/simple-search/SimpleSearch";
 import SimpleSearchArtwork from "./views/simple-search/SimpleSearchArtwork";
 import ThreeDimentionModel from "./views/3d-model/ThreeDimentionModel";
+
 import SimpleArtMusic from "views/simple-mode/SimpleArtMusic.js";
 import NormalArtMusic from "views/normal-mode/NormalArtMusic.js";
 import SimpleListeningPage1 from "views/simple-mode/SimpleListeningPage1.js"
@@ -58,6 +59,11 @@ import NormalListeningPage3 from "views/normal-mode/NormalListeningPage3.js"
 import NormalListeningPage4 from "views/normal-mode/NormalListeningPage4.js"
 import NormalListeningPage5 from "views/normal-mode/NormalListeningPage5.js"
 import NormalListeningPage6 from "views/normal-mode/NormalListeningPage6.js"
+
+import ThreeDimentionModelHomePage from "./views/3d-model/ThreeDimentionModelHomePage";
+import ThreeDimentionModelHomePageSimple from "./views/simple-mode/3d-model/ThreeDimentionModelHomePageSimple";
+import ThreeDimentionModelSimple from "./views/simple-mode/3d-model/ThreeDimentionModelSimple";
+
 
 
 
@@ -113,7 +119,8 @@ ReactDOM.render(
       {/*      exact*/}
       {/*      render={(props) => <SimpleSearch {...props} />}*/}
       {/*  />*/}
-        <Route exact path="signin" component={Signin} />
+        <Route exact path="/signin" component={Signin} />
+        {/*<Route exact path="/homepage" component={Homepage} />*/}
         <ProtectedRoute exact path="/homepage" component={Homepage} />
         <ProtectedRoute exact path="/simplemode" component={SimpleMode} />
         <ProtectedRoute exact path="/normalmode" component={NormalMode} />
@@ -122,20 +129,11 @@ ReactDOM.render(
         <ProtectedRoute exact path="/simplesearch" component={SimpleSearch} />
         <ProtectedRoute exact path="/simplesearchartwork" component={SimpleSearchArtwork} />
         <ProtectedRoute exact path="/3d-model" component={ThreeDimentionModel} />
+
         <ProtectedRoute exact path="/simpleartmusic" component={SimpleArtMusic} />
         <ProtectedRoute exact path="/normalartmusic" component={NormalArtMusic} />
-        <ProtectedRoute exact path="/simplelisteningpage1" component={SimpleListeningPage1} />
-        <ProtectedRoute exact path="/simplelisteningpage2" component={SimpleListeningPage2} />
-        <ProtectedRoute exact path="/simplelisteningpage3" component={SimpleListeningPage3} />
-        <ProtectedRoute exact path="/simplelisteningpage4" component={SimpleListeningPage4} />
-        <ProtectedRoute exact path="/simplelisteningpage5" component={SimpleListeningPage5} />
-        <ProtectedRoute exact path="/simplelisteningpage6" component={SimpleListeningPage6} />
-        <ProtectedRoute exact path="/normallisteningpage1" component={NormalListeningPage1} />
-        <ProtectedRoute exact path="/normallisteningpage2" component={NormalListeningPage2} />
-        <ProtectedRoute exact path="/normallisteningpage3" component={NormalListeningPage3} />
-        <ProtectedRoute exact path="/normallisteningpage4" component={NormalListeningPage4} />
-        <ProtectedRoute exact path="/normallisteningpage5" component={NormalListeningPage5} />
-        <ProtectedRoute exact path="/normallisteningpage6" component={NormalListeningPage6} />
+        <ProtectedRoute exact path="/listeningpage" component={ListeningPage} />
+        <ProtectedRoute exact path="/normallisteningpage" component={NormalListeningPage} />
         <Redirect to="/signin" />
     </Switch>
   </BrowserRouter>,
