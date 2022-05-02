@@ -7,11 +7,11 @@ import { Card, CardBody, CardTitle, Container, Row, Col } from "reactstrap";
 function BlogsForHome() {
     return (
         <>
-                <Container fluid>
-                    <Row>
-                        <Col lg="6" >
+                <Container>
+                <Row>
+                    <Col lg="6">
                             <Card
-                                className="card-blog card-background"
+                            className="card-blog card-background"
                                 data-animation="zooming"
                             >
                                 <div
@@ -26,16 +26,16 @@ function BlogsForHome() {
                                         <div className="content-bottom">
                                             <CardTitle tag="h3">Simple Mode</CardTitle>
                                             <h6 className="card-category text-white opacity-8">
-                                                Simple mode provide friendly experience for blind people
+                                                Providing friendly experience for people with no vision
                                              </h6>
                                         </div>
                                     </CardBody>
                                 </a>
                             </Card>
                         </Col>
-                        <Col lg="6">
+                    <Col lg="6" >
                             <Card
-                                className="card-blog card-background"
+                            className="card-blog card-background"
                                 data-animation="zooming"
                             >
                                 <div
@@ -48,10 +48,10 @@ function BlogsForHome() {
                                 <a href="normalmode" onClick={(e) => e.button()}>
                                     <CardBody>
                                         <div className="content-bottom">
-                                            <CardTitle tag="h3">Normal Mode</CardTitle>
+                                            <CardTitle tag="h3">Picture Mode</CardTitle>
                                             <h6 className="card-category text-white opacity-8">
-                                                Normal mode provide friendly experience for normal people
-                      </h6>
+                                                Providing friendly visual experience for all people
+                                            </h6>
                                         </div>
                                     </CardBody>
                                 </a>
