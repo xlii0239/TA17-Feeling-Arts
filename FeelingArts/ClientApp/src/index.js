@@ -128,13 +128,14 @@ ReactDOM.render(
         <ProtectedRoute exact path="/normalsearchartwork" component={NormalSearchArtwork} />
         <ProtectedRoute exact path="/simplesearch" component={SimpleSearch} />
         <ProtectedRoute exact path="/simplesearchartwork" component={SimpleSearchArtwork} />
-        <ProtectedRoute exact path="/3d-model" component={ThreeDimentionModel} />
+        
 
         <ProtectedRoute exact path="/simpleartmusic" component={SimpleArtMusic} />
         <ProtectedRoute exact path="/normalartmusic" component={NormalArtMusic} />
-        <ProtectedRoute exact path="/listeningpage" component={ListeningPage} />
-        <ProtectedRoute exact path="/normallisteningpage" component={NormalListeningPage} />
+        {/*<ProtectedRoute exact path="/listeningpage" component={ListeningPage} />*/}
+        {/*<ProtectedRoute exact path="/normallisteningpage" component={NormalListeningPage} />*/}
 
+        <ProtectedRoute exact path="/3d-model" component={ThreeDimentionModel} />
         <ProtectedRoute exact path="/3d-model-home" component={ThreeDimentionModelHomePage} />
         <ProtectedRoute exact path="/3d-model-simple" component={ThreeDimentionModelSimple} />
         <ProtectedRoute exact path="/3d-model-home-simple" component={ThreeDimentionModelHomePageSimple} />

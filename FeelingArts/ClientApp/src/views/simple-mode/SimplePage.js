@@ -58,7 +58,7 @@ function SimplePage() {
                                             "url(" + require("assets/NewImg/touchArt.jpg") + ")",
                                     }}
                                 ></div>
-                                <a href="#pablo" onClick={(e) => e.preventDefault()}>
+                                <a href="3d-model-home-simple" onClick={(e) => e.button()}>
                                     <CardBody>
                                         <div className="content-center">
                                             <CardTitle tag="h4">Art Through Touch</CardTitle>
