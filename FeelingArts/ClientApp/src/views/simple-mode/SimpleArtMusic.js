@@ -35,15 +35,15 @@ function SimpleArtMusic() {
                                                 <i className="ni ni-palette"></i>
                                             </div>
                                             <h4 className="text-primary text-capitalize font-weight-bold">
-                                                Mona Lisa
+                                                Agony In The Garden
                                            </h4>
                                             <p className="description mt-3 font-weight-bold">
-                                                By Leonardo da Vinci.
+                                                By Albrecht Durer.
                                            </p>
                                             <Button
                                                 className="mt-4"
                                                 color="primary"
-                                                href="/listeningpage"
+                                                href="/simplelisteningpage1"
                                                 onClick={(e) => e.button()}
                                             >
                                                 Listening
@@ -58,15 +58,84 @@ function SimpleArtMusic() {
                                                 <i className="ni ni-palette"></i>
                                             </div>
                                             <h4 className="text-success text-capitalize font-weight-bold">
-                                                David
+                                                Archangel Michael
                       </h4>
                                             <p className="description mt-3 font-weight-bold">
-                                                By Michelangelo
+                                                By Andrei Rublev.
                       </p>
                                             <Button
                                                 className="mt-4"
                                                 color="success"
-                                                href="/listeningpage"
+                                                href="/simplelisteningpage2"
+                                                onClick={(e) => e.button()}
+                                            >
+                                                Listening
+                      </Button>
+                                        </CardBody>
+                                    </Card>
+                                </Col>
+                                <Col lg="4">
+                                    <Card className="card-lift--hover shadow border-0">
+                                        <CardBody className="py-5">
+                                            <div className="icon icon-shape icon-shape-danger rounded-circle mb-4">
+                                                <i className="ni ni-palette"></i>
+                                            </div>
+                                            <h4 className="text-danger text-capitalize font-weight-bold">
+                                                Frozen Assets
+                      </h4>
+                                            <p className="description mt-3 font-weight-bold">
+                                                By Diego Rivera.
+                      </p>
+                                            <Button
+                                                className="mt-4"
+                                                color="danger"
+                                                href="/simplelisteningpage3"
+                                                onClick={(e) => e.button()}
+                                            >
+                                                Listening
+                      </Button>
+                                        </CardBody>
+                                    </Card>
+                                </Col>
+                                <Col lg="4">
+                                    <Card className="card-lift--hover shadow border-0">
+                                        <CardBody className="py-5">
+                                            <div className="icon icon-shape icon-shape-info rounded-circle mb-4">
+                                                <i className="ni ni-palette"></i>
+                                            </div>
+                                            <h4 className="text-info text-capitalize font-weight-bold">
+                                                Shot Marilyn
+                      </h4>
+                                            <p className="description mt-3 font-weight-bold">
+                                                By Andy Warhol.
+                      </p>
+                                            <Button
+                                                className="mt-4"
+                                                color="info"
+                                                href="/simplelisteningpage4"
+                                                onClick={(e) => e.button()}
+                                            >
+                                                Listening
+                      </Button>
+                                        </CardBody>
+                                    </Card>
+                                </Col>
+                                <Col lg="4">
+                                    <Card className="card-lift--hover shadow border-0">
+                                        <CardBody className="py-5">
+                                            <div className="icon icon-shape icon-shape-dark rounded-circle mb-4">
+                                                <i className="ni ni-palette"></i>
+                                            </div>
+                                            <h4 className="text-dark text-capitalize font-weight-bold">
+                                                Snow at Louveciennes
+                      </h4>
+                                            <p className="description mt-3 font-weight-bold">
+                                                By Alfred Sisley.
+                      </p>
+                                            <Button
+                                                className="mt-4"
+                                                color="secondary"
+                                                href="/simplelisteningpage5"
                                                 onClick={(e) => e.button()}
                                             >
                                                 Listening
@@ -81,15 +150,15 @@ function SimpleArtMusic() {
                                                 <i className="ni ni-palette"></i>
                                             </div>
                                             <h4 className="text-warning text-capitalize font-weight-bold">
-                                                The Starry Night
+                                                The Yellow House
                       </h4>
                                             <p className="description mt-3 font-weight-bold">
-                                                By Vincent van Gogh
+                                                By Vincent van Gogh.
                       </p>
                                             <Button
                                                 className="mt-4"
                                                 color="warning"
-                                                href="/listeningpage"
+                                                href="/simplelisteningpage6"
                                                 onClick={(e) => e.button()}
                                             >
                                                 Listening

@@ -37,18 +37,18 @@ function NormalArtMusic() {
                                 style={{
                                     backgroundImage:
                                         "url(" +
-                                        require("assets/img/theme/masha-rostovskaya.jpg") +
+                                        require("assets/NewImg/artworks/w1.jpg") +
                                         ")",
                                 }}
                             >
                                 <CardBody className="text-center">
                                     <a href="#pablo" onClick={(e) => e.preventDefault()}>
-                                        <CardTitle tag="h2">Artworks</CardTitle>
+                                        <CardTitle tag="h4">Agony In The Garden</CardTitle>
                                     </a>
-                                    <h6 className="desc text-white opacity-8">By Artworks</h6>
+                                    <h6 className="desc text-white opacity-8">By Albrecht Durer.</h6>
                                     <Button
                                         color="warning"
-                                        href="normallisteningpage"
+                                        href="normallisteningpage1"
                                         onClick={(e) => e.button()}
                                         className="mt-4"
                                     >
@@ -62,17 +62,17 @@ function NormalArtMusic() {
                                 className="card-background"
                                 style={{
                                     backgroundImage:
-                                        "url(" + require("assets/img/theme/ali-pazani.jpg") + ")",
+                                        "url(" + require("assets/NewImg/artworks/w7.jpg") + ")",
                                 }}
                             >
                                 <CardBody className="text-center">
                                     <a href="#pablo" onClick={(e) => e.preventDefault()}>
-                                        <CardTitle tag="h2">Artworks</CardTitle>
+                                        <CardTitle tag="h4">Archangel Michael</CardTitle>
                                     </a>
-                                    <h6 className="desc text-white opacity-8">By Artworks</h6>
+                                    <h6 className="desc text-white opacity-8">By Andrei Rublev.</h6>
                                     <Button
                                         color="danger"
-                                        href="normallisteningpage"
+                                        href="normallisteningpage2"
                                         onClick={(e) => e.button()}
                                         className="mt-4"
                                     >
@@ -86,17 +86,89 @@ function NormalArtMusic() {
                                 className="card-background"
                                 style={{
                                     backgroundImage:
-                                        "url(" + require("assets/img/theme/willy-dade.jpg") + ")",
+                                        "url(" + require("assets/NewImg/artworks/w18.jpg") + ")",
                                 }}
                             >
                                 <CardBody className="text-center">
                                     <a href="#pablo" onClick={(e) => e.preventDefault()}>
-                                        <CardTitle tag="h2">Artist</CardTitle>
+                                        <CardTitle tag="h4">Frozen Assets</CardTitle>
                                     </a>
-                                    <h6 className="desc text-white opacity-8">By Artworks</h6>
+                                    <h6 className="desc text-white opacity-8">By Diego Rivera.</h6>
                                     <Button
                                         color="success"
-                                        href="normallisteningpage"
+                                        href="normallisteningpage3"
+                                        onClick={(e) => e.button()}
+                                        className="mt-4"
+                                    >
+                                        Listening
+                  </Button>
+                                </CardBody>
+                            </Card>
+                        </Col>
+                        <Col lg="4">
+                            <Card
+                                className="card-background"
+                                style={{
+                                    backgroundImage:
+                                        "url(" + require("assets/NewImg/artworks/w10.jpg") + ")",
+                                }}
+                            >
+                                <CardBody className="text-center">
+                                    <a href="#pablo" onClick={(e) => e.preventDefault()}>
+                                        <CardTitle tag="h4">Shot Marilyn</CardTitle>
+                                    </a>
+                                    <h6 className="desc text-white opacity-8">By Andy Warhol.</h6>
+                                    <Button
+                                        color="secondary"
+                                        href="normallisteningpage4"
+                                        onClick={(e) => e.button()}
+                                        className="mt-4"
+                                    >
+                                        Listening
+                  </Button>
+                                </CardBody>
+                            </Card>
+                        </Col>
+                        <Col lg="4">
+                            <Card
+                                className="card-background"
+                                style={{
+                                    backgroundImage:
+                                        "url(" + require("assets/NewImg/artworks/w5.jpg") + ")",
+                                }}
+                            >
+                                <CardBody className="text-center">
+                                    <a href="#pablo" onClick={(e) => e.preventDefault()}>
+                                        <CardTitle tag="h4">Snow at Louveciennes</CardTitle>
+                                    </a>
+                                    <h6 className="desc text-white opacity-8">By Alfred Sisley.</h6>
+                                    <Button
+                                        color="info"
+                                        href="normallisteningpage5"
+                                        onClick={(e) => e.button()}
+                                        className="mt-4"
+                                    >
+                                        Listening
+                  </Button>
+                                </CardBody>
+                            </Card>
+                        </Col>
+                        <Col lg="4">
+                            <Card
+                                className="card-background"
+                                style={{
+                                    backgroundImage:
+                                        "url(" + require("assets/NewImg/artworks/w100.jpg") + ")",
+                                }}
+                            >
+                                <CardBody className="text-center">
+                                    <a href="#pablo" onClick={(e) => e.preventDefault()}>
+                                        <CardTitle tag="h4">The Yellow House</CardTitle>
+                                    </a>
+                                    <h6 className="desc text-white opacity-8">By Vincent van Gogh.</h6>
+                                    <Button
+                                        color="primary"
+                                        href="normallisteningpage6"
                                         onClick={(e) => e.button()}
                                         className="mt-4"
                                     >
