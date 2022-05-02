@@ -19,7 +19,7 @@ const items = [
                         <img
                             alt="..."
                             className=" d-block w-100"
-                                src={require("assets/NewImg/David2.jpg")}
+                                src={require("assets/NewImg/David.jpg")}
                             ></img>
                         </div>
                 </Row>
@@ -34,7 +34,7 @@ const items = [
                         <img
                             alt="..."
                             className=" d-block w-100"
-                                src={require("assets/NewImg/David2.jpg")}
+                                src={require("assets/NewImg/David.jpg")}
                             ></img>
                         </div>                
                 </Row>

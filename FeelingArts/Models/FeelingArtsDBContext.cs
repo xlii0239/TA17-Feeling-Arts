@@ -22,6 +22,7 @@ namespace FeelingArts.Models
         public virtual DbSet<ArtworkInfo> ArtworkInfos { get; set; }
         public virtual DbSet<ArtworkSet> ArtworkSets { get; set; }
         public virtual DbSet<MusicInfo> MusicInfos { get; set; }
+        public virtual DbSet<ThreeDimentionModelInfo> ThreeDimentionModelInfos { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -215,6 +216,39 @@ namespace FeelingArts.Models
                     .HasMaxLength(128)
                     .IsUnicode(false)
                     .HasColumnName("track_name");
+            });
+
+            modelBuilder.Entity<ThreeDimentionModelInfo>(entity =>
+            {
+                entity.HasKey(e => new { e.Id, e.ModelNo })
+                    .HasName("PK__ThreeDim__8232B66336BD2B3F");
+
+                entity.ToTable("ThreeDimentionModelInfo");
+
+                entity.Property(e => e.Id).HasColumnName("id");
+
+                entity.Property(e => e.ModelNo)
+                    .HasMaxLength(20)
+                    .IsUnicode(false)
+                    .HasColumnName("modelNo");
+
+                entity.Property(e => e.ImageNo)
+                    .IsRequired()
+                    .HasMaxLength(20)
+                    .IsUnicode(false)
+                    .HasColumnName("imageNo");
+
+                entity.Property(e => e.MLink)
+                    .IsRequired()
+                    .HasMaxLength(300)
+                    .IsUnicode(false)
+                    .HasColumnName("m_link");
+
+                entity.Property(e => e.ModelName)
+                    .IsRequired()
+                    .HasMaxLength(128)
+                    .IsUnicode(false)
+                    .HasColumnName("model_name");
             });
 
             OnModelCreatingPartial(modelBuilder);
