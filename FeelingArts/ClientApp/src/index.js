@@ -53,7 +53,7 @@ import NormalListeningPage from "views/normal-mode/NormalListeningPage.js"
 import ThreeDimentionModelHomePage from "./views/3d-model/ThreeDimentionModelHomePage";
 import ThreeDimentionModelHomePageSimple from "./views/simple-mode/3d-model/ThreeDimentionModelHomePageSimple";
 import ThreeDimentionModelSimple from "./views/simple-mode/3d-model/ThreeDimentionModelSimple";
-
+import About3dPrinting from "./views/3d-model/About3dPrinting";
 
 
 
@@ -128,6 +128,7 @@ ReactDOM.render(
         <ProtectedRoute exact path="/3d-model-home" component={ThreeDimentionModelHomePage} />
         <ProtectedRoute exact path="/3d-model-simple" component={ThreeDimentionModelSimple} />
         <ProtectedRoute exact path="/3d-model-home-simple" component={ThreeDimentionModelHomePageSimple} />
+        <ProtectedRoute exact path="/about-3d-printing" component={About3dPrinting} />
 
         <Redirect to="/signin" />
     </Switch>
