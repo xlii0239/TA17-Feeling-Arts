@@ -42,7 +42,7 @@ function NormalPage() {
                     </Link>
                         </Button>
                     <Button class="btn btn-info btn-lg" type="button">
-                    <Link to="#">
+                    <Link to="3d-model-home">
                             <h5 class="text-capitalize text-muted">Art Through Touch</h5>
                     </Link>
                 </Button>

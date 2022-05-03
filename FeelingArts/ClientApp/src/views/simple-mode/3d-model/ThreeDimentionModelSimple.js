@@ -43,7 +43,7 @@ function ThreeDimentionModel() {
                         </Button>
                     </Col>
                     <Col>
-                        <Button color="success" size="lg" type="button" href={url}>
+                        <Button color="success" size="lg" type="button" href={"about-3d-printing"}>
                             3D Model Print Advice
                         </Button>
                     </Col>
