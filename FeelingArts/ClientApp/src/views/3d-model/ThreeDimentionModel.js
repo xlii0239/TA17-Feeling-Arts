@@ -70,7 +70,7 @@ function ThreeDimentionModel() {
                         </Button>
                     </Col>
                     <Col sm className="py-2 border rounded" display="flex">
-                        <Button color="success" size="lg" type="button" href={url}>
+                        <Button color="success" size="lg" type="button" href="about-3d-printing">
                             3D Model Print Advice
                         </Button>
                     </Col>

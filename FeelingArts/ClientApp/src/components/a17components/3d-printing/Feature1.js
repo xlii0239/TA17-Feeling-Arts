@@ -55,7 +55,7 @@ function Feature1() {
                 </h6>
                 <p className="description opacity-8">
                   The 3DExperience Make Marketplace is operated by the French 
-                  software company Dassault Syst¨¨mes, providing on-demand manufacturing.
+                  software company Dassault Systemes, providing on-demand manufacturing.
                 </p>
                 <a
                   className="text-primary"
@@ -76,7 +76,7 @@ function Feature1() {
                   Shapeways
                 </h6>
                 <p className="description opacity-8">
-                    The world¡¯s most popular online 3D printing service Shapeways offers two services.
+                    The world most popular online 3D printing service Shapeways offers two services.
                     On the consumer side, you can choose from a broad array of professionally designed
                     items, customize them, and have them printed to your specifications.
                 </p>

@@ -128,17 +128,31 @@ ReactDOM.render(
         <ProtectedRoute exact path="/normalsearchartwork" component={NormalSearchArtwork} />
         <ProtectedRoute exact path="/simplesearch" component={SimpleSearch} />
         <ProtectedRoute exact path="/simplesearchartwork" component={SimpleSearchArtwork} />
+        
+
+
+        {/*<ProtectedRoute exact path="/listeningpage" component={ListeningPage} />*/}
+        {/*<ProtectedRoute exact path="/normallisteningpage" component={NormalListeningPage} />*/}
+
         <ProtectedRoute exact path="/3d-model" component={ThreeDimentionModel} />
-
-        <ProtectedRoute exact path="/simpleartmusic" component={SimpleArtMusic} />
-        <ProtectedRoute exact path="/normalartmusic" component={NormalArtMusic} />
-        <ProtectedRoute exact path="/listeningpage" component={ListeningPage} />
-        <ProtectedRoute exact path="/normallisteningpage" component={NormalListeningPage} />
-
         <ProtectedRoute exact path="/3d-model-home" component={ThreeDimentionModelHomePage} />
         <ProtectedRoute exact path="/3d-model-simple" component={ThreeDimentionModelSimple} />
         <ProtectedRoute exact path="/3d-model-home-simple" component={ThreeDimentionModelHomePageSimple} />
         <ProtectedRoute exact path="/about-3d-printing" component={About3dPrinting} />
+        <ProtectedRoute exact path="/simpleartmusic" component={SimpleArtMusic} />
+        <ProtectedRoute exact path="/normalartmusic" component={NormalArtMusic} />
+        <ProtectedRoute exact path="/normallisteningpage1" component={NormalListeningPage1} />
+        <ProtectedRoute exact path="/normallisteningpage2" component={NormalListeningPage2} />
+        <ProtectedRoute exact path="/normallisteningpage3" component={NormalListeningPage3} />
+        <ProtectedRoute exact path="/normallisteningpage4" component={NormalListeningPage4} />
+        <ProtectedRoute exact path="/normallisteningpage5" component={NormalListeningPage5} />
+        <ProtectedRoute exact path="/normallisteningpage6" component={NormalListeningPage6} />
+        <ProtectedRoute exact path="/simplelisteningpage1" component={SimpleListeningPage1} />
+        <ProtectedRoute exact path="/simplelisteningpage2" component={SimpleListeningPage2} />
+        <ProtectedRoute exact path="/simplelisteningpage3" component={SimpleListeningPage3} />
+        <ProtectedRoute exact path="/simplelisteningpage4" component={SimpleListeningPage4} />
+        <ProtectedRoute exact path="/simplelisteningpage5" component={SimpleListeningPage5} />
+        <ProtectedRoute exact path="/simplelisteningpage6" component={SimpleListeningPage6} />
 
         <Redirect to="/signin" />
     </Switch>
