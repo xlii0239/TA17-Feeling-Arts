@@ -52,7 +52,7 @@ function NormalArtMusic() {
                                         onClick={(e) => e.button()}
                                         className="mt-4"
                                     >
-                                        Listening
+                                        Listen
                   </Button>
                                 </CardBody>
                             </Card>
@@ -76,7 +76,7 @@ function NormalArtMusic() {
                                         onClick={(e) => e.button()}
                                         className="mt-4"
                                     >
-                                        Listening
+                                        Listen
                   </Button>
                                 </CardBody>
                             </Card>
@@ -100,7 +100,7 @@ function NormalArtMusic() {
                                         onClick={(e) => e.button()}
                                         className="mt-4"
                                     >
-                                        Listening
+                                        Listen
                   </Button>
                                 </CardBody>
                             </Card>
@@ -124,7 +124,7 @@ function NormalArtMusic() {
                                         onClick={(e) => e.button()}
                                         className="mt-4"
                                     >
-                                        Listening
+                                        Listen
                   </Button>
                                 </CardBody>
                             </Card>
@@ -148,7 +148,7 @@ function NormalArtMusic() {
                                         onClick={(e) => e.button()}
                                         className="mt-4"
                                     >
-                                        Listening
+                                        Listen
                   </Button>
                                 </CardBody>
                             </Card>
@@ -172,7 +172,7 @@ function NormalArtMusic() {
                                         onClick={(e) => e.button()}
                                         className="mt-4"
                                     >
-                                        Listening
+                                        Listen
                   </Button>
                                 </CardBody>
                             </Card>

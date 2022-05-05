@@ -35,34 +35,34 @@ function NormalPage() {
                 <li class="breadcrumb-item text-light"><a href="homepage" class="text-dark font-weight-bold">Home</a></li>
                 <li class="breadcrumb-item active">Picture Mode</li>
                 </ul>
-            <Container class="align-item-center">
-                    <Button class="btn btn-info btn-lg" type="button">
-                        <Link to="normalartmusic">
-                            <h5 class="text-capitalize text-muted">Art through music</h5>
-                    </Link>
-                        </Button>
-                    <Button class="btn btn-info btn-lg" type="button">
-                    <Link to="3d-model-home">
-                            <h5 class="text-capitalize text-muted">Art Through Touch</h5>
-                    </Link>
-                </Button>
+{/*            <Container class="align-item-center">*/}
+                {/*    <Button class="btn btn-info btn-lg" type="button">*/}
+                {/*        <Link to="normalartmusic">*/}
+                {/*            <h5 class="text-capitalize text-muted">Art through music</h5>*/}
+                {/*    </Link>*/}
+                {/*        </Button>*/}
+                {/*    <Button class="btn btn-info btn-lg" type="button">*/}
+                {/*    <Link to="3d-model-home">*/}
+                {/*            <h5 class="text-capitalize text-muted">Art Through Touch</h5>*/}
+                {/*    </Link>*/}
+                {/*</Button>*/}
                 {/* <Button class="btn btn-info btn-lg" type="button">*/}
                 {/*    <Link to="#">*/}
                 {/*            <h8 class="text-capitalize text-muted">Art Through Describe</h8>*/}
                 {/*    </Link>*/}
                 {/*</Button>*/}
-                <Button class="btn btn-info btn-lg" type="button">
-                    <Link to="normalsearch">
-                            <h5 class="text-capitalize text-muted">Search Artist</h5>
-                    </Link>
-                    </Button>
+                {/*<Button class="btn btn-info btn-lg" type="button">*/}
+                {/*    <Link to="normalsearch">*/}
+                {/*            <h5 class="text-capitalize text-muted">Search Artist</h5>*/}
+                {/*    </Link>*/}
+                {/*    </Button>*/}
 
-                </Container>
-                <section className="py-6">
-                    <div className="wrapper align-item-left">
+                {/*</Container>*/}
+                {/*<section className="py-6">*/}
+                {/*    <div className="wrapper align-item-left">*/}
                     <NormalComponents />
-                    </div>
-                    </section>
+                {/*    </div>*/}
+                {/*    </section>*/}
                 {/*<section className="py-6">*/}
                 {/*<div className="glide">*/}
                 {/*    <div className="glide__track" data-glide-el="track">*/}

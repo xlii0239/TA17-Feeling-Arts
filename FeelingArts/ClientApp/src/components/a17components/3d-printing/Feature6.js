@@ -14,7 +14,7 @@ function Feature6() {
             <Col lg="6">
               <div className="info info-horizontal info-hover-primary">
                 <div className="icon icon-shape icon-shape-info rounded-circle text-white">
-                  <i className="ni ni-html5 text-info"></i>
+                                  <i className="fa fa-question text-info"></i>
                 </div>
                 <div className="description pl-4">
                   <h5 className="title">What is 3D printing?</h5>
@@ -24,13 +24,6 @@ function Feature6() {
                     The process works by laying down thin layers of material in the form of liquid
                     or powdered plastic, metal or cement, and then fusing the layers together.
                   </p>
-                  <a
-                    className="text-info"
-                    href="#pablo"
-                    onClick={(e) => e.preventDefault()}
-                  >
-                    Learn more
-                  </a>
                 </div>
               </div>
               <div className="info info-horizontal info-hover-primary">
@@ -45,13 +38,6 @@ function Feature6() {
                     your ideas to transform them into actual objects.
                     Even the most complex geometries can be printed.
                   </p>
-                  <a
-                    className="text-info"
-                    href="#pablo"
-                    onClick={(e) => e.preventDefault()}
-                  >
-                    Learn more
-                  </a>
                 </div>
               </div>
               <div className="info info-horizontal info-hover-primary">
@@ -64,13 +50,6 @@ function Feature6() {
                     You can buy a 3D printer.Most Entry Level and Hobbyist 3D printers are priced from $300 – $500
                     Or you can choose a 3D printing service provider and pay on demand
                   </p>
-                  <a
-                    className="text-info"
-                    href="#pablo"
-                    onClick={(e) => e.preventDefault()}
-                  >
-                    Learn more
-                  </a>
                 </div>
               </div>
             </Col>

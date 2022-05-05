@@ -18,7 +18,7 @@ function HeaderForHome() {
                 ></div>
                 <div className="content-center">
                     <Row>
-                        <Col className="mx-auto text-center" md="6">
+                        <Col className="mx-auto text-center">
                             <h1 className="title text-white">
                                 A Place for All People to Feel Arts
               </h1>

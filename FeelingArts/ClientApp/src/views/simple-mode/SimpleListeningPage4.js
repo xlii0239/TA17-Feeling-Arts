@@ -15,7 +15,7 @@ function SimpleListeningPage4() {
                 <li class="breadcrumb-item"><a href="homepage" class="text-dark font-weight-bold">Home</a></li>
                 <li class="breadcrumb-item text-light"><a href="simplemode" class="text-dark font-weight-bold">Simple Mode</a></li>
                 <li class="breadcrumb-item"><a href="SimpleArtMusic" class="text-dark font-weight-bold">Art through Music</a></li>
-                <li class="breadcrumb-item active">Listening</li>
+                <li class="breadcrumb-item active">Listen</li>
             </ul>
             <div className="page-header">
                 <div
@@ -33,7 +33,7 @@ function SimpleListeningPage4() {
                             </div>
                     </div>
                     <h2 className="lead text-dark p-5">
-                        Enjoy the artworks with this song created by Blondie.
+                        Enjoy the Shot Marilyn with this song which is created by Blondie.
                     <Button
                         className="btn-icon col-md-2 offset-md-6"
                         color="warning"
@@ -46,7 +46,7 @@ function SimpleListeningPage4() {
                         </Button>
                     </h2>
                     <h2 className="lead text-dark p-5">
-                        Enjoy the artworks with this song created by Debbie Harry.
+                        Enjoy the Shot Marilyn with this song which is created by Debbie Harry.
                     <Button
                             className="btn-icon col-md-2 offset-md-6"
                             color="warning"
