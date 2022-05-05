@@ -40,6 +40,11 @@ class ThreeDimentionModelHomePage extends React.Component {
         return (
             <>
                 <NavbarForHome />
+                <ul class="breadcrumb bg-transparent font-weight-bold">
+                    <li class="breadcrumb-item"><a href="homepage" class="text-dark font-weight-bold">Home</a></li>
+                    <li class="breadcrumb-item"><a href="normalmode" class="text-dark font-weight-bold">Picture Mode</a></li>
+                    <li class="breadcrumb-item active">Art through Touch</li>
+                </ul>
                 <Container fluid>
                     <Row>
                         <Col>

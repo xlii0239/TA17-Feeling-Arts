@@ -39,7 +39,13 @@ function ThreeDimentionModel() {
 
     return (
         <>
-            <NavbarForHome type="transparent"/>
+            <NavbarForHome type="transparent" />
+            <ul class="breadcrumb bg-transparent font-weight-bold">
+                <li class="breadcrumb-item"><a href="homepage" class="text-dark font-weight-bold">Home</a></li>
+                <li class="breadcrumb-item"><a href="normalmode" class="text-dark font-weight-bold">Picture Mode</a></li>
+                <li class="breadcrumb-item"><a href="3d-model-home" class="text-dark font-weight-bold">Art through Touch</a></li>
+                <li class="breadcrumb-item active">3D Model</li>
+            </ul>
             <Container fluid className='gx-0'>
                 <Row>
                     <Col sm>

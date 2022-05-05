@@ -2,7 +2,6 @@
 import { Container, Row, Col, Button } from "reactstrap";
 
 import NavbarForHome from "components/a17components/navbars/NavbarForHome.js";
-import FooterForWeb from "components/a17components/footers/FooterForWeb.js";
 import HeaderForHome from "components/a17components/headers/HeaderForHome.js";
 
 import STLViewer from 'stl-viewer'
@@ -34,22 +33,33 @@ function ThreeDimentionModel() {
 
     return (
         <>
-            <NavbarForHome type="transparent"/>
+            <NavbarForHome type="transparent" />
+            <ul class="breadcrumb bg-transparent font-weight-bold">
+                <li class="breadcrumb-item"><a href="homepage" class="text-dark font-weight-bold">Home</a></li>
+                <li class="breadcrumb-item"><a href="simplemode" class="text-dark font-weight-bold">Simple Mode</a></li>
+                <li class="breadcrumb-item"><a href="3d-model-home-simple" class="text-dark font-weight-bold">Art through Touch</a></li>
+                <li class="breadcrumb-item active">3D Model</li>
+            </ul>
             <Container fluid className='gx-0'>
                 <Row>
                     <Col>
+                        <h4 className="lead text-dark ">
+                            Click on the button below to download the 3D Shadows Depict of the Artwork.
                         <Button color="success" size="lg" type="button" href={url}>
-                            Download 3D Model (STL file)
+                                Download 3D Model (STL file)
                         </Button>
+                            </h4>
                     </Col>
                     <Col>
+                        <h4 className="lead text-dark">
+                            Click on the button below to get the 3D printing instructions.
+                                                    </h4>
                         <Button color="success" size="lg" type="button" href={"about-3d-printing"}>
-                            3D Model Print Advice
+                                3D Model Print Advice
                         </Button>
                     </Col>
                 </Row>
             </Container>
-            <FooterForWeb />
         </>
     );
 }

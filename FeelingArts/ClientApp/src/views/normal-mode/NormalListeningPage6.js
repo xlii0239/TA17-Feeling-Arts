@@ -15,7 +15,7 @@ function NormalListeningPage6() {
                 <li class="breadcrumb-item"><a href="homepage" class="text-dark font-weight-bold">Home</a></li>
                 <li class="breadcrumb-item text-light"><a href="normalmode" class="text-dark font-weight-bold">Picture Mode</a></li>
                 <li class="breadcrumb-item"><a href="NormalArtMusic" class="text-dark font-weight-bold">Art through Music</a></li>
-                <li class="breadcrumb-item active">Listening</li>
+                <li class="breadcrumb-item active">Listen</li>
             </ul>
             <div className="page-header">
                 <div
@@ -33,7 +33,7 @@ function NormalListeningPage6() {
                         </div>
                     </div>
                     <h2 className="lead text-dark p-5">
-                        Enjoy the artworks with this song created by Yellow House.
+                        Enjoy the The Yellow House with this song which is created by Yellow House.
                     <Button
                             className="btn-icon col-md-2 offset-md-6"
                             color="warning"
@@ -46,7 +46,7 @@ function NormalListeningPage6() {
                         </Button>
                     </h2>
                     <h2 className="lead text-dark p-5">
-                        Enjoy the artworks with this song created by KnittinGirl.
+                        Enjoy the The Yellow House with this song which is created by KnittinGirl.
                     <Button
                             className="btn-icon col-md-2 offset-md-6"
                             color="warning"

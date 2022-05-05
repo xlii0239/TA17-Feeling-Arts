@@ -46,7 +46,7 @@ function SimpleArtMusic() {
                                                 href="/simplelisteningpage1"
                                                 onClick={(e) => e.button()}
                                             >
-                                                Listening
+                                                Listen
                       </Button>
                                         </CardBody>
                                     </Card>
@@ -69,7 +69,7 @@ function SimpleArtMusic() {
                                                 href="/simplelisteningpage2"
                                                 onClick={(e) => e.button()}
                                             >
-                                                Listening
+                                                Listen
                       </Button>
                                         </CardBody>
                                     </Card>
@@ -92,7 +92,7 @@ function SimpleArtMusic() {
                                                 href="/simplelisteningpage3"
                                                 onClick={(e) => e.button()}
                                             >
-                                                Listening
+                                                Listen
                       </Button>
                                         </CardBody>
                                     </Card>
@@ -115,7 +115,7 @@ function SimpleArtMusic() {
                                                 href="/simplelisteningpage4"
                                                 onClick={(e) => e.button()}
                                             >
-                                                Listening
+                                                Listen
                       </Button>
                                         </CardBody>
                                     </Card>
@@ -138,7 +138,7 @@ function SimpleArtMusic() {
                                                 href="/simplelisteningpage5"
                                                 onClick={(e) => e.button()}
                                             >
-                                                Listening
+                                                Listen
                       </Button>
                                         </CardBody>
                                     </Card>
@@ -161,7 +161,7 @@ function SimpleArtMusic() {
                                                 href="/simplelisteningpage6"
                                                 onClick={(e) => e.button()}
                                             >
-                                                Listening
+                                                Listen
                       </Button>
                                         </CardBody>
                                     </Card>

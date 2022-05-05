@@ -275,7 +275,7 @@ class NormalSearch extends React.Component {
                 <NavbarForHome />
                 <ul class="breadcrumb bg-transparent font-weight-bold">
                     <li class="breadcrumb-item text-light"><a href="homepage" class="text-dark font-weight-bold">Home</a></li>
-                    <li class="breadcrumb-item text-light"><a href="normalmode" class="text-dark font-weight-bold">Normal Mode</a></li>
+                    <li class="breadcrumb-item text-light"><a href="normalmode" class="text-dark font-weight-bold">Picture Mode</a></li>
                     <li class="breadcrumb-item active">Search Artist</li>
                 </ul>
                 <div className="section" >
