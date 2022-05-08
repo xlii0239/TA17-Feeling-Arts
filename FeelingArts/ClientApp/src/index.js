@@ -47,6 +47,7 @@ import ThreeDimentionModel from "./views/3d-model/ThreeDimentionModel";
 
 import SimpleArtMusic from "views/simple-mode/SimpleArtMusic.js";
 import NormalArtMusic from "views/normal-mode/NormalArtMusic.js";
+import MusicInfo from "./components/a17components/Music/MusicInfo.js"
 import SimpleListeningPage1 from "views/simple-mode/SimpleListeningPage1.js"
 import SimpleListeningPage2 from "views/simple-mode/SimpleListeningPage2.js"
 import SimpleListeningPage3 from "views/simple-mode/SimpleListeningPage3.js"
@@ -141,6 +142,7 @@ ReactDOM.render(
         <ProtectedRoute exact path="/about-3d-printing" component={About3dPrinting} />
         <ProtectedRoute exact path="/simpleartmusic" component={SimpleArtMusic} />
         <ProtectedRoute exact path="/normalartmusic" component={NormalArtMusic} />
+        <ProtectedRoute exact path="/musicinfo" component={MusicInfo} />
         <ProtectedRoute exact path="/normallisteningpage1" component={NormalListeningPage1} />
         <ProtectedRoute exact path="/normallisteningpage2" component={NormalListeningPage2} />
         <ProtectedRoute exact path="/normallisteningpage3" component={NormalListeningPage3} />

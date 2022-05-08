@@ -11,7 +11,7 @@ function NormalComponents() {
     <>
           <Row className="section-basic-components">
               <Col lg="6" md="6">
-                  <CardBody className="col-md-6 offset-md-3">
+                  <CardBody className="col-md-8 offset-md-3">
                       <CardTitle className="font-weight-bold" tag="h3">
                           <a href="normalartmusic" onClick={(e) => e.button()}>
                             Art through Music
@@ -21,7 +21,7 @@ function NormalComponents() {
                                 Feel and understand the mood and emotion of the artwork with the matching music.
                             </p>
                   </CardBody>
-                  <CardBody className="col-md-6 offset-md-3">
+                  <CardBody className="col-md-8 offset-md-3">
                       <CardTitle className="font-weight-bold" tag="h3">
                           <a href="3d-model-home" onClick={(e) => e.button()}>
                               Art through Touch
@@ -31,14 +31,24 @@ function NormalComponents() {
                                       Experience and feel the form and expression of artwork by touching the 3D model.
                     </p>
                   </CardBody>
-                  <CardBody className="col-md-6 offset-md-3">
+                  <CardBody className="col-md-8 offset-md-3">
                       <CardTitle className="font-weight-bold" tag="h3">
                           <a href="normalsearch" onClick={(e) => e.button()}>
                               Search Artist
                           </a>
                       </CardTitle>
                       <p className="opacity-8">
-                          Experience more by providing more artist and artwork information.
+                          Experience more by providing more artists information.
+                    </p>
+                  </CardBody>
+                  <CardBody className="col-md-8 offset-md-3">
+                      <CardTitle className="font-weight-bold" tag="h3">
+                          <a href="normalsearchartwork" onClick={(e) => e.button()}>
+                              Search Artwork
+                          </a>
+                      </CardTitle>
+                      <p className="opacity-8">
+                          Experience more by providing more artworks information.
                     </p>
                   </CardBody>
             </Col>

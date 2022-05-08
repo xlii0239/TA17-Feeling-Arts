@@ -1,6 +1,7 @@
 import React from "react";
 import NavbarForHome from "components/a17components/navbars/NavbarForHome.js";
-import { Container, Row, Col,Button } from "reactstrap";
+import { Container, Row, Col, Button } from "reactstrap";
+import MusicInfo from "components/a17components/Music/MusicInfo.js";
 
 
 
@@ -26,39 +27,47 @@ function SimpleListeningPage4() {
                     }}
                 >
                 </div>
-                <row className="floating-box bg-secondary col-md-8 offset-md-2">
-                        <div className="box text-left">
-                        <div className="icon icon-shape bg-warning icon-xl rounded-circle text-white">
-                                <i className="fa fa-music"></i>
-                            </div>
-                    </div>
-                    <h2 className="lead text-dark p-5">
-                        Enjoy the Shot Marilyn with this song which is created by Blondie.
-                    <Button
-                        className="btn-icon col-md-2 offset-md-6"
-                        color="warning"
-                            href="https://youtu.be/aa911_8TP2s"
-                    >
-                        <span className="btn-inner--icon">
-                            <i className="ni ni-button-play"></i>
-                        </span>
-                        <span className="btn-inner--text">Play</span>
-                        </Button>
-                    </h2>
-                    <h2 className="lead text-dark p-5">
-                        Enjoy the Shot Marilyn with this song which is created by Debbie Harry.
-                    <Button
-                            className="btn-icon col-md-2 offset-md-6"
-                            color="warning"
-                            href="https://youtu.be/Pdo95gvIv68"
-                        >
-                            <span className="btn-inner--icon">
-                                <i className="ni ni-button-play"></i>
-                            </span>
-                            <span className="btn-inner--text">Play</span>
-                        </Button>
-                    </h2>
-                    </row>
+                <row className="mx-auto">
+                    <h3 className="title font-weight-bold">
+                        Shot Marilyn
+                </h3>
+                    <h5 className="font-italic">By Andy Warhol</h5>
+                    <MusicInfo videoId='aa911_8TP2s' />
+                    <MusicInfo videoId='Pdo95gvIv68' />
+                </row>
+                {/*<row className="floating-box bg-secondary col-md-8 offset-md-2">*/}
+                {/*        <div className="box text-left">*/}
+                {/*        <div className="icon icon-shape bg-warning icon-xl rounded-circle text-white">*/}
+                {/*                <i className="fa fa-music"></i>*/}
+                {/*            </div>*/}
+                {/*    </div>*/}
+                {/*    <h2 className="lead text-dark p-5">*/}
+                {/*        Enjoy the Shot Marilyn with this song which is created by Blondie.*/}
+                {/*    <Button*/}
+                {/*        className="btn-icon col-md-2 offset-md-6"*/}
+                {/*        color="warning"*/}
+                {/*            href="https://youtu.be/aa911_8TP2s"*/}
+                {/*    >*/}
+                {/*        <span className="btn-inner--icon">*/}
+                {/*            <i className="ni ni-button-play"></i>*/}
+                {/*        </span>*/}
+                {/*        <span className="btn-inner--text">Play</span>*/}
+                {/*        </Button>*/}
+                {/*    </h2>*/}
+                {/*    <h2 className="lead text-dark p-5">*/}
+                {/*        Enjoy the Shot Marilyn with this song which is created by Debbie Harry.*/}
+                {/*    <Button*/}
+                {/*            className="btn-icon col-md-2 offset-md-6"*/}
+                {/*            color="warning"*/}
+                {/*            href="https://youtu.be/Pdo95gvIv68"*/}
+                {/*        >*/}
+                {/*            <span className="btn-inner--icon">*/}
+                {/*                <i className="ni ni-button-play"></i>*/}
+                {/*            </span>*/}
+                {/*            <span className="btn-inner--text">Play</span>*/}
+                {/*        </Button>*/}
+                {/*    </h2>*/}
+                {/*    </row>*/}
             </div>
             
         </>
