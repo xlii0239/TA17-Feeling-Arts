@@ -24,7 +24,7 @@ function About3dPrinting() {
   });
   return (
     <>
-      <NavbarForHome type="transparent"/>
+          <NavbarForHome type="transparent" />
       <div className="wrapper">
         <Feature6 />
         <Feature1 />

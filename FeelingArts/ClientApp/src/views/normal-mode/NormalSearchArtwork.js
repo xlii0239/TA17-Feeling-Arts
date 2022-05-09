@@ -1,101 +1,101 @@
 ﻿import React from 'react';
-
 import { Button, Container, Row, Col, Input } from "reactstrap";
-
-import {
-    DropdownToggle,
-    DropdownMenu,
-    DropdownItem,
-    UncontrolledDropdown,
-    Progress,
-    Table,
-} from "reactstrap";
-
-import TableAuthor from "views/TableAuthor.js";
-import DemoNavbar from "components/navbars/DemoNavbar.js";
 import NavbarForHome from "components/a17components/navbars/NavbarForHome.js";
-import Carousel from "components/a17components/cards/Carousel.js";
-import FooterForWeb from "components/a17components/footers/FooterForWeb.js";
+import ArtworkResultShow from 'views/simple-search/ArtworkResultShow.js';
+
+
 
 class NormalSearchArtwork extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
+            artist: [],
             artwork: [],
+            artistShow: [],
             artworkShow: []
         }
     }
 
     componentDidMount() {
         this.populateData();
-        console.log("detail", this.state.artwork)
+        console.log("detail", this.state.artist)
     }
 
     //Change the table data
     search() {
         //var keyword = event.target.value
-        var keyword = this.input.value
+        var keyword = this.input.value.toLowerCase()
+        if (keyword.length > 0) {
+            var artistData = this.state.artist
+            var artworkData = this.state.artwork
 
-        if (keyword) {
-            var listData = this.state.artwork
-            var listShow = []
-            for (var i = 0; i < listData.length; i++) {
-                if (!listData[i].name.search(keyword)) {
-                    listShow = [...listShow, listData[i]]
+            var artistSearchResults = []
+            var artworkSearchResults = []
+
+            for (var i = 0; i < artistData.length; i++) {
+                if (artistData[i].artist.toLowerCase().indexOf(keyword) != -1) {
+                    artistSearchResults = [...artistSearchResults, artistData[i]]
+                }
+            }
+
+            for (var i = 0; i < artworkData.length; i++) {
+                if (artworkData[i].artwork.toLowerCase().indexOf(keyword) != -1) {
+                    artworkSearchResults = [...artworkSearchResults, artworkData[i]]
                 }
             }
 
             this.setState({
-                artworkShow: listShow
+                artistShow: artistSearchResults,
+                artworkShow: artworkSearchResults
             })
         }
         else {
             this.setState({
-                artworkShow: this.state.artwork
+                artistShow: this.state.artist
             })
         }
-        console.log("from changeFunction", this.state.artworkShow);
+        console.log("from changeFunction", this.state.artistShow);
     }
 
     render() {
 
-        //const Item = this.state.artistshow.map((item, id) =>
-        //    <p key={id}>{ item.name}</p> 
-        //)
-        //this.populateData();
-        //const data = this.state.artistshow;
         return (
-          <>
+            <>
                 <NavbarForHome />
-                <br></br>
                 <ul class="breadcrumb bg-transparent font-weight-bold">
-                    <li class="breadcrumb-item text-light"><a href="homepage">Home</a></li>
-                    <li class="breadcrumb-item text-light"><a href="normalmode">Normal Mode</a></li>
+                    <li class="breadcrumb-item"><a href="homepage" class="text-dark font-weight-bold">Home</a></li>
+                    <li class="breadcrumb-item"><a href="simplemode" class="text-dark font-weight-bold">Simple Mode</a></li>
                     <li class="breadcrumb-item active">Search Artwork</li>
                 </ul>
-                        <div className="section">
-                        <Container className="shape-container flex align-items-center py-lg-2">
-                            <Input type="text" innerRef={Input => this.input = Input} placeHolder="Please enter artwork's name" />
-                            <Button color="primary"
-                                type="button"
-                                onClick={this.search.bind(this)}
-                            >
+                <div className="section">
+                    <Container className="shape-container flex align-items-center py-lg-2">
+                        <h6 class="text-muted">
+                            Search Feelingarts.tk by entering the keywords of the artwork name in the search box below.
+                            </h6>
+                        <Input type="text" innerRef={Input => this.input = Input} placeHolder="Search all results" />
+                        <Button color="primary"
+                            type="button"
+                            onClick={this.search.bind(this)}
+                        >
                             Click to Search
-                            </Button>
-                            <Carousel toData={this.state.artworkShow}></Carousel>
-                            {/*<TableAuthor showData={this.state.artistShow}></TableAuthor>*/}
-                        </Container>
-                        </div>
-
-                <FooterForWeb />
-          </>
+                        </Button>
+                    </Container>
+                    <Col>
+                        <ArtworkResultShow toData={this.state.artworkShow}>
+                        </ArtworkResultShow>
+                    </Col>
+                </div>
+            </>
         )
     }
 
     async populateData() {
-        const response = await fetch('artwork');
+        const response = await fetch('artist');
+        const response1 = await fetch('artwork');
         const data = await response.json();
-        this.setState({ artwork: data, artworkShow: data });
+        const data1 = await response1.json();
+        this.setState({ artist: data, artwork: data1 });
+        console.log("detail", this.state.artist);
         console.log("detail", this.state.artwork);
     }
 }

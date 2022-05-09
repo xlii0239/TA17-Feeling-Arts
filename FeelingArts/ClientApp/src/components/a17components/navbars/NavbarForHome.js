@@ -35,7 +35,7 @@ function NavbarForHome() {
                               href="simplemode"
                               onClick={(e) => e.button()}
                           >
-                              <span className="nav-link-inner--text">Simple Mode</span>
+                              <span>Simple Mode</span>
                           </NavLink>
                       </NavItem>
                       <NavItem>
@@ -44,7 +44,7 @@ function NavbarForHome() {
                               href="normalmode"
                               onClick={(e) => e.button()}
                           >
-                              <span className="nav-link-inner--text">Picture Mode</span>
+                              <span>Picture Mode</span>
                           </NavLink>
                       </NavItem>
                       </ Nav>

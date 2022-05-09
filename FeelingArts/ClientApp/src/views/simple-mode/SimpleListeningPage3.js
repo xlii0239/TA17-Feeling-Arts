@@ -1,6 +1,7 @@
 import React from "react";
 import NavbarForHome from "components/a17components/navbars/NavbarForHome.js";
-import { Container, Row, Col,Button } from "reactstrap";
+import { Container, Row, Col, Button } from "reactstrap";
+import MusicInfo from "components/a17components/Music/MusicInfo.js";
 
 
 
@@ -26,39 +27,48 @@ function SimpleListeningPage3() {
                     }}
                 >
                 </div>
-                <row className="floating-box bg-secondary col-md-8 offset-md-2">
-                        <div className="box text-left">
-                        <div className="icon icon-shape bg-warning icon-xl rounded-circle text-white">
-                                <i className="fa fa-music"></i>
-                            </div>
-                    </div>
-                    <h2 className="lead text-dark p-5">
-                        Enjoy the Frozen Assets with this song which is created by Simple Sound.
-                    <Button
-                        className="btn-icon col-md-2 offset-md-6"
-                        color="warning"
-                            href="https://www.youtube.com/watch?v=qVYXMSJRFuE"
-                    >
-                        <span className="btn-inner--icon">
-                            <i className="ni ni-button-play"></i>
-                        </span>
-                        <span className="btn-inner--text">Play</span>
-                        </Button>
-                    </h2>
-                    <h2 className="lead text-dark p-5">
-                        Enjoy the Frozen Assets with this song which is created by MUSIC TV.
-                    <Button
-                            className="btn-icon col-md-2 offset-md-6"
-                            color="warning"
-                            href="https://youtu.be/-qVOvXgUdkU"
-                        >
-                            <span className="btn-inner--icon">
-                                <i className="ni ni-button-play"></i>
-                            </span>
-                            <span className="btn-inner--text">Play</span>
-                        </Button>
-                    </h2>
-                    </row>
+                <row className="mx-auto">
+                    <h3 className="title font-weight-bold">
+                        Frozen Assets
+                </h3>
+                    <h5 className="font-italic">By Diego Rivera</h5>
+                    <MusicInfo videoId='qVYXMSJRFuE' />
+                    <MusicInfo videoId='-qVOvXgUdkU' />
+                </row>
+
+                {/*<row className="floating-box bg-secondary col-md-8 offset-md-2">*/}
+                {/*        <div className="box text-left">*/}
+                {/*        <div className="icon icon-shape bg-warning icon-xl rounded-circle text-white">*/}
+                {/*                <i className="fa fa-music"></i>*/}
+                {/*            </div>*/}
+                {/*    </div>*/}
+                {/*    <h2 className="lead text-dark p-5">*/}
+                {/*        Enjoy the Frozen Assets with this song which is created by Simple Sound.*/}
+                {/*    <Button*/}
+                {/*        className="btn-icon col-md-2 offset-md-6"*/}
+                {/*        color="warning"*/}
+                {/*            href="https://www.youtube.com/watch?v=qVYXMSJRFuE"*/}
+                {/*    >*/}
+                {/*        <span className="btn-inner--icon">*/}
+                {/*            <i className="ni ni-button-play"></i>*/}
+                {/*        </span>*/}
+                {/*        <span className="btn-inner--text">Play</span>*/}
+                {/*        </Button>*/}
+                {/*    </h2>*/}
+                {/*    <h2 className="lead text-dark p-5">*/}
+                {/*        Enjoy the Frozen Assets with this song which is created by MUSIC TV.*/}
+                {/*    <Button*/}
+                {/*            className="btn-icon col-md-2 offset-md-6"*/}
+                {/*            color="warning"*/}
+                {/*            href="https://youtu.be/-qVOvXgUdkU"*/}
+                {/*        >*/}
+                {/*            <span className="btn-inner--icon">*/}
+                {/*                <i className="ni ni-button-play"></i>*/}
+                {/*            </span>*/}
+                {/*            <span className="btn-inner--text">Play</span>*/}
+                {/*        </Button>*/}
+                {/*    </h2>*/}
+                {/*    </row>*/}
             </div>
             
         </>
