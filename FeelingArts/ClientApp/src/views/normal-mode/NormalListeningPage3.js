@@ -1,7 +1,7 @@
 import React from "react";
 import NavbarForHome from "components/a17components/navbars/NavbarForHome.js";
-import { Container, Row, Col,Button } from "reactstrap";
-
+import { Container, Row, Col,Button,Card } from "reactstrap";
+import MusicInfo from "components/a17components/Music/MusicInfo.js";
 
 
 function NormalListeningPage3() {
@@ -11,54 +11,36 @@ function NormalListeningPage3() {
     return (
         <>
             <NavbarForHome />
-            <ul class="breadcrumb bg-transparent font-weight-bold ">
-                <li class="breadcrumb-item"><a href="homepage" class="text-dark font-weight-bold">Home</a></li>
-                <li class="breadcrumb-item text-light"><a href="normalmode" class="text-dark font-weight-bold">Picture Mode</a></li>
-                <li class="breadcrumb-item"><a href="NormalArtMusic" class="text-dark font-weight-bold">Art through Music</a></li>
-                <li class="breadcrumb-item active">Listen</li>
+            <ul className="breadcrumb bg-transparent font-weight-bold ">
+                <li className="breadcrumb-item"><a href="homepage" className="text-dark font-weight-bold">Home</a></li>
+                <li className="breadcrumb-item text-light"><a href="normalmode" className="text-dark font-weight-bold">Picture Mode</a></li>
+                <li className="breadcrumb-item"><a href="NormalArtMusic" className="text-dark font-weight-bold">Art through Music</a></li>
+                <li className="breadcrumb-item active">Listen</li>
             </ul>
             <div className="page-header">
-                <div
-                    className="page-header-image"
-                    style={{
-                        backgroundImage:
-                            "url(" + require("assets/NewImg/Music-Drawing-Ideas.jpg") + ")",
-                    }}
-                >
-                </div>
-                <row className="floating-box bg-secondary col-md-8 offset-md-2">
-                    <div className="box text-left">
-                        <div className="icon icon-shape bg-warning icon-xl rounded-circle text-white">
-                            <i className="fa fa-music"></i>
-                        </div>
-                    </div>
-                    <h2 className="lead text-dark p-5">
-                        Enjoy the Frozen Assets with this song which is created by Simple Sound.
-                    <Button
-                            className="btn-icon col-md-2 offset-md-6"
-                            color="warning"
-                            href="https://www.youtube.com/watch?v=qVYXMSJRFuE"
-                        >
-                            <span className="btn-inner--icon">
-                                <i className="ni ni-button-play"></i>
-                            </span>
-                            <span className="btn-inner--text">Play</span>
-                        </Button>
-                    </h2>
-                    <h2 className="lead text-dark p-5">
-                        Enjoy the Frozen Assets with this song which is created by MUSIC TV.
-                    <Button
-                            className="btn-icon col-md-2 offset-md-6"
-                            color="warning"
-                            href="https://youtu.be/-qVOvXgUdkU"
-                        >
-                            <span className="btn-inner--icon">
-                                <i className="ni ni-button-play"></i>
-                            </span>
-                            <span className="btn-inner--text">Play</span>
-                        </Button>
-                    </h2>
-                </row>
+                <Container>
+                    <Row>
+                        <Col className="mr-auto" lg="4">
+                            <h4 className="title font-weight-bold">Frozen Assets</h4>
+                            <h5 className="font-italic">By Diego Rivera</h5>
+                            <Card>
+                            <img
+                                alt="Agony In The Garden"
+                                className="img-fluid"
+                                src={require("assets/NewImg/artworks/w18.jpg")}
+                                ></img>
+                                </Card>
+                        </Col>
+                        <Col className="pl-md-0" lg="7" md="12">
+                            <Row className="mx-auto">
+                                <Col lg="8" md="4">
+                                    <MusicInfo videoId='qVYXMSJRFuE' />
+                                    <MusicInfo videoId='-qVOvXgUdkU' />
+                                </Col>
+                            </Row>
+                        </Col>
+                    </Row>
+                </Container>
             </div>
             
         </>

@@ -40,11 +40,11 @@ function ThreeDimentionModel() {
     return (
         <>
             <NavbarForHome type="transparent" />
-            <ul class="breadcrumb bg-transparent font-weight-bold">
-                <li class="breadcrumb-item"><a href="homepage" class="text-dark font-weight-bold">Home</a></li>
-                <li class="breadcrumb-item"><a href="normalmode" class="text-dark font-weight-bold">Picture Mode</a></li>
-                <li class="breadcrumb-item"><a href="3d-model-home" class="text-dark font-weight-bold">Art through Touch</a></li>
-                <li class="breadcrumb-item active">3D Model</li>
+            <ul className="breadcrumb bg-transparent font-weight-bold">
+                <li className="breadcrumb-item"><a href="homepage" className="text-dark font-weight-bold">Home</a></li>
+                <li className="breadcrumb-item"><a href="normalmode" className="text-dark font-weight-bold">Picture Mode</a></li>
+                <li className="breadcrumb-item"><a href="3d-model-home" className="text-dark font-weight-bold">Art through Touch</a></li>
+                <li className="breadcrumb-item active">3D Model</li>
             </ul>
             <Container fluid className='gx-0'>
                 <Row>
@@ -76,7 +76,7 @@ function ThreeDimentionModel() {
                         </Button>
                     </Col>
                     <Col sm className="py-2 border rounded" display="flex">
-                        <Button color="success" size="lg" type="button" href="about-3d-printing">
+                        <Button color="success" size="lg" type="button" href="normal-about-3d-printing">
                             3D Model Print Advice
                         </Button>
                     </Col>
