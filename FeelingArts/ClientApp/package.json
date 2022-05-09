@@ -5,6 +5,7 @@
   "dependencies": {
     "@fortawesome/fontawesome-free": "5.14.0",
     "@glidejs/glide": "3.4.1",
+    "@google-cloud/vision": "^2.4.2",
     "@testing-library/jest-dom": "4.2.4",
     "@testing-library/react": "9.3.2",
     "@testing-library/user-event": "7.1.2",
@@ -29,6 +30,7 @@
     "react-router-dom": "5.2.0",
     "react-scripts": "3.4.1",
     "react-youtube": "^9.0.1",
+    "react-webcam": "^7.0.1",
     "reactstrap": "8.5.1",
     "redux": "^4.0.5",
     "redux-thunk": "^2.3.0",
