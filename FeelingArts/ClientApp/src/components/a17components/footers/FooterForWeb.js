@@ -10,7 +10,7 @@ function FooterForWeb() {
     return (
         <>
             <footer className="footer footer-simple transparent">
-                <div class= "container">
+                <div className= "container">
                     <Row>
                         <Col md="3">
                             <h5 className="title text-darkblue font-weight-bold">

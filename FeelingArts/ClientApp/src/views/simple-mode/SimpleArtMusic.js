@@ -12,10 +12,10 @@ function SimpleArtMusic() {
     return (
         <>
             <NavbarForHome />
-            <ul class="breadcrumb bg-transparent font-weight-bold">
-                <li class="breadcrumb-item"><a href="homepage" class="text-dark font-weight-bold">Home</a></li>
-                <li class="breadcrumb-item"><a href="simplemode" class="text-dark font-weight-bold">Simple Mode</a></li>
-                <li class="breadcrumb-item active">Art through Music</li>
+            <ul className="breadcrumb bg-transparent font-weight-bold">
+                <li className="breadcrumb-item"><a href="homepage" className="text-dark font-weight-bold">Home</a></li>
+                <li className="breadcrumb-item"><a href="simplemode" className="text-dark font-weight-bold">Simple Mode</a></li>
+                <li className="breadcrumb-item active">Art through Music</li>
             </ul>
             <div className="blogs-6">
                 <Container>

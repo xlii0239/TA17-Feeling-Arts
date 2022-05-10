@@ -1,7 +1,7 @@
 import React from "react";
 import NavbarForHome from "components/a17components/navbars/NavbarForHome.js";
 import { Container, Row, Col,Button } from "reactstrap";
-
+import MusicInfo from "components/a17components/Music/MusicInfo.js";
 
 
 function NormalListeningPage6() {
@@ -18,47 +18,27 @@ function NormalListeningPage6() {
                 <li class="breadcrumb-item active">Listen</li>
             </ul>
             <div className="page-header">
-                <div
-                    className="page-header-image"
-                    style={{
-                        backgroundImage:
-                            "url(" + require("assets/NewImg/Music-Drawing-Ideas.jpg") + ")",
-                    }}
-                >
-                </div>
-                <row className="floating-box bg-secondary col-md-8 offset-md-2">
-                    <div className="box text-left">
-                        <div className="icon icon-shape bg-warning icon-xl rounded-circle text-white">
-                            <i className="fa fa-music"></i>
-                        </div>
-                    </div>
-                    <h2 className="lead text-dark p-5">
-                        Enjoy the The Yellow House with this song which is created by Yellow House.
-                    <Button
-                            className="btn-icon col-md-2 offset-md-6"
-                            color="warning"
-                            href="https://youtu.be/asdM2znz3OM"
-                        >
-                            <span className="btn-inner--icon">
-                                <i className="ni ni-button-play"></i>
-                            </span>
-                            <span className="btn-inner--text">Play</span>
-                        </Button>
-                    </h2>
-                    <h2 className="lead text-dark p-5">
-                        Enjoy the The Yellow House with this song which is created by KnittinGirl.
-                    <Button
-                            className="btn-icon col-md-2 offset-md-6"
-                            color="warning"
-                            href="https://youtu.be/p9wy03frCwI"
-                        >
-                            <span className="btn-inner--icon">
-                                <i className="ni ni-button-play"></i>
-                            </span>
-                            <span className="btn-inner--text">Play</span>
-                        </Button>
-                    </h2>
-                </row>
+                <Container>
+                    <Row>
+                        <Col className="mr-auto" lg="4">
+                            <h4 className="title font-weight-bold">The Yellow House</h4>
+                            <h5 className="font-italic">By Vincent van Gogh</h5>
+                            <img
+                                alt="Agony In The Garden"
+                                className="img-fluid"
+                                src={require("assets/NewImg/artworks/w100.jpg")}
+                            ></img>
+                        </Col>
+                        <Col className="pl-md-0" lg="7" md="12">
+                            <Row className="mx-auto">
+                                <Col lg="8" md="4">
+                                    <MusicInfo videoId='asdM2znz3OM' />
+                                    <MusicInfo videoId='p9wy03frCwI' />
+                                </Col>
+                            </Row>
+                        </Col>
+                    </Row>
+                </Container>
             </div>
             
         </>
