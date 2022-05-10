@@ -12,29 +12,32 @@ function SimpleListeningPage6() {
     return (
         <>
             <NavbarForHome />
-            <ul class="breadcrumb bg-transparent font-weight-bold ">
-                <li class="breadcrumb-item"><a href="homepage" class="text-dark font-weight-bold">Home</a></li>
-                <li class="breadcrumb-item text-light"><a href="simplemode" class="text-dark font-weight-bold">Simple Mode</a></li>
-                <li class="breadcrumb-item"><a href="SimpleArtMusic" class="text-dark font-weight-bold">Art through Music</a></li>
-                <li class="breadcrumb-item active">Listen</li>
+            <ul className="breadcrumb bg-transparent font-weight-bold ">
+                <li className="breadcrumb-item"><a href="homepage" className="text-dark font-weight-bold">Home</a></li>
+                <li className="breadcrumb-item text-light"><a href="simplemode" className="text-dark font-weight-bold">Simple Mode</a></li>
+                <li className="breadcrumb-item"><a href="SimpleArtMusic" className="text-dark font-weight-bold">Art through Music</a></li>
+                <li className="breadcrumb-item active">Listen</li>
             </ul>
             <div className="page-header">
-                <div
-                    className="page-header-image"
-                    style={{
-                        backgroundImage:
-                            "url(" + require("assets/NewImg/Music-Drawing-Ideas.jpg") + ")",
-                    }}
-                >
-                </div>
-                <row className="mx-auto">
-                    <h3 className="title font-weight-bold">
-                        Snow At Louveciennes
-                </h3>
-                    <h5 className="font-italic">By Alfred Sisley</h5>
-                    <MusicInfo videoId='asdM2znz3OM' />
-                    <MusicInfo videoId='p9wy03frCwI' />
-                </row>
+                <Container>
+                    <Row>
+                        <Col className="mr-auto" lg="4">
+                            <h3 className="title font-weight-bold">
+                                Artwork information:
+                     </h3>
+                            <h5 className="title font-weight-bold">The Yellow House</h5>
+                            <h6 className="font-italic">By Vincent van Gogh</h6>                           
+                        </Col>
+                        <Col className="pl-md-0" lg="7" md="12">
+                            <Row className="mx-auto">
+                                <Col lg="8" md="4">
+                                    <MusicInfo videoId='asdM2znz3OM' />
+                                    <MusicInfo videoId='p9wy03frCwI' />
+                                </Col>
+                            </Row>
+                        </Col>
+                    </Row>
+                </Container>
                 {/*<row className="floating-box bg-secondary col-md-8 offset-md-2">*/}
                 {/*        <div className="box text-left">*/}
                 {/*        <div className="icon icon-shape bg-warning icon-xl rounded-circle text-white">*/}

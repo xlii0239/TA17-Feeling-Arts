@@ -13,7 +13,7 @@ import Feature6 from "components/a17components/3d-printing/Feature6.js";
 import Feature1 from "components/a17components/3d-printing/Feature1.js";
 import Pricing5 from "components/a17components/3d-printing/Pricing5.js";
 
-function About3dPrinting() {
+function NormalAbout3dPrinting() {
   React.useEffect(() => {
     document.body.classList.add("about-3d-printing-page");
     window.scrollTo(0, 0);
@@ -27,8 +27,8 @@ function About3dPrinting() {
        <NavbarForHome type="transparent" />
           <ul class="breadcrumb bg-transparent font-weight-bold">
               <li className="breadcrumb-item"><a href="homepage" className="text-dark font-weight-bold">Home</a></li>
-              <li className="breadcrumb-item"><a href="simplemode" className="text-dark font-weight-bold">Simple Mode</a></li>
-              <li className="breadcrumb-item"><a href="3d-model-home-simple" className="text-dark font-weight-bold">Art through Touch</a></li>
+              <li className="breadcrumb-item"><a href="normalmode" className="text-dark font-weight-bold">Picture Mode</a></li>
+              <li className="breadcrumb-item"><a href="3d-model-home" className="text-dark font-weight-bold">Art through Touch</a></li>
               <li className="breadcrumb-item">3D Model Print Advice</li>
           </ul>
       <div className="wrapper">
@@ -43,4 +43,4 @@ function About3dPrinting() {
   );
 }
 
-export default About3dPrinting;
+export default NormalAbout3dPrinting;

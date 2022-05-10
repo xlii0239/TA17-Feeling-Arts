@@ -67,7 +67,6 @@ import ThreeDimentionModelSimple from "./views/simple-mode/3d-model/ThreeDimenti
 import About3dPrinting from "./views/3d-model/About3dPrinting";
 import TakePhotos from "./views/object-detect/TakePhotos";
 import ObjectDetect from "./views/object-detect/ObjectDetect";
-import SimpleMap from "./views/simple-mode/map/Map";
 
 
 
@@ -142,6 +141,7 @@ ReactDOM.render(
         <ProtectedRoute exact path="/3d-model-simple" component={ThreeDimentionModelSimple} />
         <ProtectedRoute exact path="/3d-model-home-simple" component={ThreeDimentionModelHomePageSimple} />
         <ProtectedRoute exact path="/about-3d-printing" component={About3dPrinting} />
+        <ProtectedRoute exact path="/normal-about-3d-printing" component={NormalAbout3dPrinting} />
         <ProtectedRoute exact path="/simpleartmusic" component={SimpleArtMusic} />
         <ProtectedRoute exact path="/normalartmusic" component={NormalArtMusic} />
         <ProtectedRoute exact path="/musicinfo" component={MusicInfo} />
@@ -157,9 +157,6 @@ ReactDOM.render(
         <ProtectedRoute exact path="/simplelisteningpage4" component={SimpleListeningPage4} />
         <ProtectedRoute exact path="/simplelisteningpage5" component={SimpleListeningPage5} />
         <ProtectedRoute exact path="/simplelisteningpage6" component={SimpleListeningPage6} />
-        <ProtectedRoute exact path="/takephotos" component={TakePhotos} />
-        <ProtectedRoute exact path="/objectdetect" component={ObjectDetect} />
-        {/*<Route exact path="/objectdetect" component={ObjectDetect} />*/}
 
         <ProtectedRoute exact path="/simplemap" component={SimpleMap} />
 
