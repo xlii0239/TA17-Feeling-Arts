@@ -67,6 +67,7 @@ import ThreeDimentionModelSimple from "./views/simple-mode/3d-model/ThreeDimenti
 import About3dPrinting from "./views/3d-model/About3dPrinting";
 import TakePhotos from "./views/object-detect/TakePhotos";
 import ObjectDetect from "./views/object-detect/ObjectDetect";
+import NormalAbout3dPrinting from "./views/3d-model/NormalAbout3dPrinting";
 
 
 
@@ -158,7 +159,6 @@ ReactDOM.render(
         <ProtectedRoute exact path="/simplelisteningpage5" component={SimpleListeningPage5} />
         <ProtectedRoute exact path="/simplelisteningpage6" component={SimpleListeningPage6} />
 
-        <ProtectedRoute exact path="/simplemap" component={SimpleMap} />
 
         <Redirect to="/signin" />
     </Switch>
