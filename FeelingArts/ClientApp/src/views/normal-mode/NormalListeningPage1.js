@@ -36,7 +36,7 @@ function NormalListeningPage1() {
                             <Col className="pl-md-0" lg="7" md="12">
                             <Row className="mx-auto">
                                 <Col className=" mx-auto" md="8" lg="12">
-                                    <h5>Listing to the identical music of the artwork with the matching description keywords.</h5>
+                                    <h5>Listening to the identical music of the artwork with the matching description keywords.</h5>
                                 </Col>
                                     <Col lg="8">
                                         <MusicInfo videoId='am18duPzcgo' />

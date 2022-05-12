@@ -41,22 +41,52 @@ function ThreeDimentionModel() {
                 <li className="breadcrumb-item active">3D Model</li>
             </ul>
             <Container fluid className='gx-0'>
-                <Row>
-                    <Col>
-                        <h4 className="lead text-dark lg-6 ">
-                            Click on the button below to download the 3D Shadows Depict of the Artwork.
-                        <Button color="success" size="lg" type="button" href={url}>
-                                Download 3D Model (STL file)
-                        </Button>
-                            </h4>
+                <Col className="text-center mx-auto" md="8" lg="12">
+                    <h4 className="display-4">Enjoy the 3D model to feel more about the artwork.</h4>
+                </Col>
+                <Row className="row-grid mt-5">
+                    <Col lg="6">
+                        <div className="info info-horizontal transparent">
+                            <div className="icon icon-shape icon-shape-info rounded-circle text-white">
+                                <i className="fa fa-download text-info"></i>
+                            </div>
+                            <div className="description pl-4">
+                                <h5 className="title font-weight-bold">Download 3D Model</h5>
+                                <p>
+
+                                    Touch the artwork by depicting the replica with 3D shadows of the artwork, highlighting the light and shadow contrast of the artwork.
+                                    Click the download button to get the 3D model file.
+                  </p>
+                                <a
+                                    className="font-weight-bold"
+                                    href={url}
+                                    onClick={(e) => e.button()}
+                                >
+                                    Download
+                  </a>
+                            </div>
+                        </div>
                     </Col>
-                    <Col>
-                        <h4 className="lead text-dark lg-6">
-                            Click on the button below to get the 3D printing instructions.
-                                                    </h4>
-                        <Button color="success" size="lg" type="button" href={"about-3d-printing"}>
-                                3D Model Print Advice
-                        </Button>
+                    <Col lg="6">
+                        <div className="info info-horizontal bg-transparent">
+                            <div className="icon icon-shape icon-shape-info rounded-circle text-white">
+                                <i className="far fa-edit text-info"></i>
+                            </div>
+                            <div className="description pl-4">
+                                <h5 className="title font-weight-bold">3D Model print advice</h5>
+                                <p>
+                                    After downloading the 3D Model of the artwork, it can be printed layer by layer on the 3D printer.
+                                    Click the learn more button to get some information about 3D printing.
+                  </p>
+                                <a
+                                    className="font-weight-bold" 
+                                    href="about-3d-printing"
+                                    onClick={(e) => e.button()}
+                                >
+                                    Learn more
+                  </a>
+                            </div>
+                        </div>
                     </Col>
                 </Row>
             </Container>

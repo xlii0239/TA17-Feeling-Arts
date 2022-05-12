@@ -25,7 +25,7 @@ function SimplePage() {
             <section className="blogs-6">
                 <Row>
                     <Col className="text-center mx-auto" md="8" lg="12">
-                        <h4 className="display-4">Start the Artwork exploration!</h4>
+                        <h4 className="display-4">Start the artwork exploration!</h4>
                     </Col>
                     <Col className="text-center mx-auto" lg="12">
                         <h5>Select your preference and create your new experience.</h5>
