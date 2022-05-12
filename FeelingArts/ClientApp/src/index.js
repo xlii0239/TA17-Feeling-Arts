@@ -1,3 +1,4 @@
+
 import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
@@ -7,6 +8,7 @@ import "assets/css/nucleo-icons.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import "assets/scss/argon-design-system.scss?v1.0.0";
 import "@fortawesome/fontawesome-free/css/all.min.css";
+
 
 import Index from "views/Index.js";
 import Sections from "views/Sections.js";
@@ -65,9 +67,8 @@ import ThreeDimentionModelHomePage from "./views/3d-model/ThreeDimentionModelHom
 import ThreeDimentionModelHomePageSimple from "./views/simple-mode/3d-model/ThreeDimentionModelHomePageSimple";
 import ThreeDimentionModelSimple from "./views/simple-mode/3d-model/ThreeDimentionModelSimple";
 import About3dPrinting from "./views/3d-model/About3dPrinting";
-import TakePhotos from "./views/object-detect/TakePhotos";
-import ObjectDetect from "./views/object-detect/ObjectDetect";
 import NormalAbout3dPrinting from "./views/3d-model/NormalAbout3dPrinting";
+
 
 
 
@@ -158,7 +159,6 @@ ReactDOM.render(
         <ProtectedRoute exact path="/simplelisteningpage4" component={SimpleListeningPage4} />
         <ProtectedRoute exact path="/simplelisteningpage5" component={SimpleListeningPage5} />
         <ProtectedRoute exact path="/simplelisteningpage6" component={SimpleListeningPage6} />
-
 
         <Redirect to="/signin" />
     </Switch>

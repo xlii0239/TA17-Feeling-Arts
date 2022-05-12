@@ -31,7 +31,7 @@ function TakePhotos() {
         //let imageStr = image.slice(23)
         //let urlStr = encodeURIComponent(imageStr)
         //window.location = "/objectdetect" + "?image=" + urlStr;
-        
+
         //console.log("modelName from three model page", modelName)
     };
     return (

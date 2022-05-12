@@ -28,11 +28,12 @@ function NavbarForHome() {
                           FEELING ARTS
                   </Col>
                       </a>
-                  <Nav className="ml-auto" navbar>
+                  <Nav className="ml-auto" >
                       <NavItem>
                           <NavLink
                               className="nav-link-icon"
                               href="simplemode"
+                              style={{ color: 'white'}}
                               onClick={(e) => e.button()}
                           >
                               <span>Simple Mode</span>
@@ -42,6 +43,7 @@ function NavbarForHome() {
                           <NavLink
                               className="nav-link-icon"
                               href="normalmode"
+                              style={{ color: 'white' }}
                               onClick={(e) => e.button()}
                           >
                               <span>Picture Mode</span>

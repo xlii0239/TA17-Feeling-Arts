@@ -45,6 +45,14 @@ class ThreeDimentionModelHomePage extends React.Component {
                     <li class="breadcrumb-item"><a href="normalmode" class="text-dark font-weight-bold">Picture Mode</a></li>
                     <li class="breadcrumb-item active">Art through Touch</li>
                 </ul>
+                <Row>
+                    <Col className="text-center mx-auto" md="8" lg="12">
+                        <h4 className="display-4">Get the 3D shadows depict replica.</h4>
+                    </Col>
+                    <Col className="text-center mx-auto" lg="12">
+                        <h5>Through our sense of touching to experience and feel the vividly form and expression of artwork.</h5>
+                    </Col>
+                </Row>
                 <Container fluid>
                     <Row>
                         <Col>
