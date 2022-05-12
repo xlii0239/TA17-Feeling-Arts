@@ -69,7 +69,11 @@ import TakePhotos from "./views/object-detect/TakePhotos";
 import ObjectDetect from "./views/object-detect/ObjectDetect";
 import NormalAbout3dPrinting from "./views/3d-model/NormalAbout3dPrinting";
 
+import SimpleArtMusicHome from "views/simple-mode/music/SimpleArtMusicHome.js";
+import SimpleListeningPage from "./views/simple-mode/music/SimpleListeningPage";
 
+import NormalArtMusicHome from "./views/normal-mode/music/NromalArtMusicHome"
+import NromalListeningPage from "./views/normal-mode/music/NormalListeningPage"
 
 
 ReactDOM.render(
@@ -159,6 +163,11 @@ ReactDOM.render(
         <ProtectedRoute exact path="/simplelisteningpage5" component={SimpleListeningPage5} />
         <ProtectedRoute exact path="/simplelisteningpage6" component={SimpleListeningPage6} />
 
+        <ProtectedRoute exact path="/simplemusic" component={SimpleArtMusicHome} />
+        <ProtectedRoute exact path="/simplemusiclisten" component={SimpleListeningPage} />
+
+        <ProtectedRoute exact path="/normalmusic" component={NormalArtMusicHome} />
+        <ProtectedRoute exact path="/normalmusiclisten" component={NromalListeningPage} />
 
         <Redirect to="/signin" />
     </Switch>

@@ -37,7 +37,7 @@ function SimplePage() {
                                             "url(" + require("assets/NewImg/musicArt.jpg") + ")",
                                     }}
                                 ></div>
-                                <a href="SimpleArtMusic" onClick={(e) => e.button()}>
+                                <a href="simplemusic" onClick={(e) => e.button()}>
                                     <CardBody>
                                         <div className="content-center">
                                             <CardTitle tag="h4">Art Through Music</CardTitle>
