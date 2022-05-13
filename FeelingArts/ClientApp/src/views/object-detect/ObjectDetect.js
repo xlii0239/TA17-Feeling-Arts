@@ -36,7 +36,7 @@ function ObjectDetect(props) {
         },
     }
     );
-    
+
 
     //// Imports the Google Cloud client library
     //const vision = require('@google-cloud/vision');
@@ -58,7 +58,7 @@ function ObjectDetect(props) {
     //labels.forEach(label => console.log(label.description));
 
     return (
-        <h1>{ response}</h1>
+        <h1>{response}</h1>
     );
 }
 export default ObjectDetect;

@@ -18,11 +18,19 @@ function SimplePage() {
     return (
         <>
             <NavbarForHome />
-            <ul class="breadcrumb bg-transparent font-weight-bold">
-                <li class="breadcrumb-item"><a href="homepage" class="text-dark font-weight-bold">Home</a></li>
-                <li class="breadcrumb-item active">Simple Mode</li>
+            <ul className="breadcrumb bg-transparent font-weight-bold">
+                <li className="breadcrumb-item"><a href="homepage" className="text-dark font-weight-bold">Home</a></li>
+                <li className="breadcrumb-item active">Simple Mode</li>
             </ul>
-            <section className="blogs-home">
+            <section className="blogs-6">
+                <Row>
+                    <Col className="text-center mx-auto" md="8" lg="12">
+                        <h4 className="display-4">Start the artwork exploration!</h4>
+                    </Col>
+                    <Col className="text-center mx-auto" lg="12">
+                        <h5>Select your preference and create your new experience.</h5>
+                    </Col>
+                </Row>            
                 <Container fluid>
                     <Row>
                         <Col lg="6">

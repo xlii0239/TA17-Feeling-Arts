@@ -35,6 +35,14 @@ function NormalPage() {
                 <li class="breadcrumb-item text-light"><a href="homepage" class="text-dark font-weight-bold">Home</a></li>
                 <li class="breadcrumb-item active">Picture Mode</li>
                 </ul>
+                <Row>
+                    <Col className="text-center mx-auto" md="8" lg="12">
+                        <h4 className="display-4">Start the artwork exploration!</h4>
+                    </Col>
+                    <Col className="text-center mx-auto" lg="12">
+                        <h5> Select your preference and create your new experience.</h5>
+                    </Col>
+                </Row>
 {/*            <Container class="align-item-center">*/}
                 {/*    <Button class="btn btn-info btn-lg" type="button">*/}
                 {/*        <Link to="normalartmusic">*/}

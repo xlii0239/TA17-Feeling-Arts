@@ -26,8 +26,12 @@ function NormalArtMusic() {
             <div className="normal art music">
                 <Container>
                     <Row>
-                        <Col className="text-center mx-auto" md="8">
-                            <h3 className="display-3">Some of Arts Matches Music</h3>
+                        <Col className="text-center mx-auto" md="8" lg="12">
+                            <h4 className="display-4">Enjoy the matched music.</h4>
+                        </Col>
+                        <Col className="text-center mx-auto" lg="12">
+                            <h5>  Through our sense of hearing to feel and understand the mood,</h5>
+                            <h5>emotion, power and temperament conveyed by the artwork.</h5>
                         </Col>
                     </Row>
                     <Row className="justify-content-center mt-5">

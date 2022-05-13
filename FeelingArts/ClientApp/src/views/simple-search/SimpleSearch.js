@@ -6,7 +6,6 @@ import ArtistResultShow from './ArtistResultShow';
 import ArtworkResultShow from './ArtworkResultShow';
 
 
-
 class SimpleSearch extends React.Component {
     constructor(props) {
         super(props);
