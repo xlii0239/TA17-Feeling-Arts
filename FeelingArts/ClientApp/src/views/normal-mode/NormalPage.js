@@ -31,9 +31,9 @@ function NormalPage() {
         <>
             <NavbarForHome />
             <div className="wrapper">
-            <ul class="breadcrumb bg-transparent font-weight-bold">
-                <li class="breadcrumb-item text-light"><a href="homepage" class="text-dark font-weight-bold">Home</a></li>
-                <li class="breadcrumb-item active">Picture Mode</li>
+            <ul className="breadcrumb bg-transparent font-weight-bold">
+                <li className="breadcrumb-item text-light"><a href="homepage" className="text-dark font-weight-bold">Home</a></li>
+                <li className="breadcrumb-item active">Picture Mode</li>
                 </ul>
                 <Row>
                     <Col className="text-center mx-auto" md="8" lg="12">

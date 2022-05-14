@@ -44,7 +44,7 @@ class SimpleListeningPage extends React.Component {
                 <ul className="breadcrumb bg-transparent font-weight-bold ">
                     <li className="breadcrumb-item"><a href="homepage" className="text-dark font-weight-bold">Home</a></li>
                     <li className="breadcrumb-item text-light"><a href="simplemode" className="text-dark font-weight-bold">Simple Mode</a></li>
-                    <li className="breadcrumb-item"><a href="SimpleArtMusic" className="text-dark font-weight-bold">Art through Music</a></li>
+                    <li className="breadcrumb-item"><a href="simplemusic" className="text-dark font-weight-bold">Art through Music</a></li>
                     <li className="breadcrumb-item active">Listen</li>
                 </ul>
                 <div className="page-header">

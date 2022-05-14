@@ -50,8 +50,8 @@ class NromalListeningPage extends React.Component {
                 <NavbarForHome />
                 <ul className="breadcrumb bg-transparent font-weight-bold ">
                     <li className="breadcrumb-item"><a href="homepage" className="text-dark font-weight-bold">Home</a></li>
-                    <li className="breadcrumb-item text-light"><a href="simplemode" className="text-dark font-weight-bold">Simple Mode</a></li>
-                    <li className="breadcrumb-item"><a href="SimpleArtMusic" className="text-dark font-weight-bold">Art through Music</a></li>
+                    <li className="breadcrumb-item text-light"><a href="normalmode" className="text-dark font-weight-bold">Picture Mode</a></li>
+                    <li className="breadcrumb-item"><a href="normalmusic" className="text-dark font-weight-bold">Art through Music</a></li>
                     <li className="breadcrumb-item active">Listen</li>
                 </ul>
                 <div className="page-header">

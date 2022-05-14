@@ -12,7 +12,7 @@ function NormalComponents() {
           <Row className="section-basic-components">
               <Col lg="6" md="6">
                   <CardBody className="col-md-8 offset-md-3">
-                      <CardTitle className="font-weight-bold" tag="h3">
+                      <CardTitle className="font-weight-bold" tag="h4">
                           <a href="normalmusic" onClick={(e) => e.button()}>
                             Art through Music
                         </a>
