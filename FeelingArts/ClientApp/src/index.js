@@ -74,6 +74,7 @@ import SimpleListeningPage from "./views/simple-mode/music/SimpleListeningPage";
 
 import NormalArtMusicHome from "./views/normal-mode/music/NromalArtMusicHome"
 import NromalListeningPage from "./views/normal-mode/music/NormalListeningPage"
+import SimpleMap from "./views/simple-mode/map/SimpleMap";
 
 
 
@@ -169,6 +170,9 @@ ReactDOM.render(
 
         <ProtectedRoute exact path="/normalmusic" component={NormalArtMusicHome} />
         <ProtectedRoute exact path="/normalmusiclisten" component={NromalListeningPage} />
+
+
+        <ProtectedRoute exact path="/simplemap" component={SimpleMap} />
 
         <Redirect to="/signin" />
     </Switch>
