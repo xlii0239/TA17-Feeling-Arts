@@ -63,7 +63,7 @@ function ThreeDimentionModel() {
 	                        height={600}
                             modelColor='#2CA4B9'
                             backgroundColor='#EAEAEA'
-                            rotate={true}
+                            rotate={false}
                             orbitControls={true}
                         />
                     </Col>
