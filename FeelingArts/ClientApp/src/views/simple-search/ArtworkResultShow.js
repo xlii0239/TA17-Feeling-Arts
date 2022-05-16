@@ -21,9 +21,9 @@ function ArtworkResultShow(props) {
 
                                 </li>
                                 <div>
-                                    <a href="simplemusic"
+                                    <a href={"/simplemusiclisten" + "?artwork_no=" + item.imageNo + "&artwork_name=" + item.artwork}
                                         style={{ border: '1px solid', 'text-align': 'center', display: 'block', color: "#525f7f", cursor: 'pointer' }}>Music</a>
-                                    <a href="3d-model-home-simple"
+                                    <a href={"/3d-model-simple" + "?model_no=" + item.modelNo + "&img_no=" + item.imageNo}
                                         style={{ border: '1px solid', 'text-align': 'center', display: 'block', color: "#525f7f" }}>3D</a>
                                 </div>
                             </div>

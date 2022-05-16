@@ -49,6 +49,16 @@ function NavbarForHome() {
                               <span>Picture Mode</span>
                           </NavLink>
                       </NavItem>
+                      <NavItem>
+                          <NavLink
+                              className="nav-link-icon"
+                              href="gallerymap"
+                              style={{ color: 'white' }}
+                              onClick={(e) => e.button()}
+                          >
+                              <span>Gallery Map</span>
+                          </NavLink>
+                      </NavItem>
                       </ Nav>
         </Container>
       </Navbar>

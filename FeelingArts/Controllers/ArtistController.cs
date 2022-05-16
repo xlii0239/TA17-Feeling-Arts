@@ -7,7 +7,6 @@ using FeelingArts.Models;
 
 namespace FeelingArts.Controllers
 {
-    [ValidateAntiForgeryToken]
     [ApiController]
     [Route("[controller]")]
     public class ArtistController : Controller

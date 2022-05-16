@@ -1,8 +1,20 @@
 ﻿import React from 'react';
-import { Button, Container, Row, Col, Input } from "reactstrap";
+import { Button, Container, Card, CardBody, Row, Col, Input } from "reactstrap";
 import NavbarForHome from "components/a17components/navbars/NavbarForHome.js";
 import ArtworkResultShow from 'views/simple-search/ArtworkResultShow.js';
 
+
+const handleClickMusic = (e, imageNo, artworkName) => {
+
+    window.location = "/normalmusiclisten" + "?artwork_no=" + imageNo + "&artwork_name=" + artworkName;
+    //console.log("modelName from three model page", modelName)
+};
+
+const handleClick3dModel = (e, modelNo, imgNo) => {
+
+    window.location = "/3d-model" + "?model_no=" + modelNo + "&img_no=" + imgNo;
+    //console.log("modelName from three model page", modelName)
+};
 
 
 class NormalSearchArtwork extends React.Component {
@@ -80,10 +92,56 @@ class NormalSearchArtwork extends React.Component {
                             Click to Search
                         </Button>
                     </Container>
-                    <Col>
-                        <ArtworkResultShow toData={this.state.artworkShow}>
-                        </ArtworkResultShow>
-                    </Col>
+                    {/*<Col>*/}
+                    {/*    <ArtworkResultShow toData={this.state.artworkShow}>*/}
+                    {/*    </ArtworkResultShow>*/}
+                    {/*</Col>*/}
+                    <Row className="justify-content-center mt-5">
+                        <Col lg="12">
+                            <Row className="row-grid">
+                                {this.state.artworkShow.map((item, index) => {
+                                    let imageURL = 'https://storage.googleapis.com/feeling-arts-data/artwork-img/' + item.imageNo + '.jpg'
+                                    return (
+                                        <Col lg="4">
+                                            <Card
+                                                className="card-background"
+                                                style={{
+                                                    backgroundImage: "url(" + imageURL + ")",
+                                                }}
+                                            >
+                                                <CardBody className="py-5">
+                                                    <div className="icon icon-shape icon-shape-primary rounded-circle mb-4">
+                                                        <i className="ni ni-palette"></i>
+                                                    </div>
+                                                    <h4 className="text-primary text-capitalize font-weight-bold">
+                                                        {item.artwork}
+                                                    </h4>
+                                                    <p className="description mt-3 font-weight-bold">
+                                                        {item.artist + "created in " + item.createYear + ", belongs to " + item.style + " style."}
+                                                    </p>
+                                                    <Button
+                                                        className="mt-4"
+                                                        color="primary"
+                                                        onClick={(e) => handleClickMusic(e, item.imageNo, item.artwork)}
+                                                    >
+                                                        Listen
+                                                    </Button>
+                                                    <Button
+                                                        className="mt-4"
+                                                        color="primary"
+                                                        onClick={(e) => handleClick3dModel(e, item.modelNo, item.imageNo)}
+                                                    >
+                                                        Touch
+                                                    </Button>
+                                                </CardBody>
+                                            </Card>
+                                        </Col>
+                                    )
+                                })}
+                            </Row>
+                        </Col>
+                    </Row>
+
                 </div>
             </>
         )
