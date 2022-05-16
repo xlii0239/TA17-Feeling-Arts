@@ -4,7 +4,8 @@ import React from "react";
 import { Button, Card, CardBody, CardTitle, Container, Row, Col } from "reactstrap";
 import { Link } from "react-router-dom";
 import NavbarForHome from "components/a17components/navbars/NavbarForHome.js";
-
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/swiper.min.css';
 
 const handleClick = (e, imageNo, artworkName) => {
 
@@ -12,7 +13,7 @@ const handleClick = (e, imageNo, artworkName) => {
     //console.log("modelName from three model page", modelName)
 };
 
-class NormalArtMusicHome extends React.Component{
+class NormalArtMusicHome extends React.Component {
 
     constructor(props) {
         super(props);
@@ -70,11 +71,20 @@ class NormalArtMusicHome extends React.Component{
                         <Row className="justify-content-center mt-5">
                             <Col lg="12">
                                 <Row className="row-grid">
-                                        {this.state.artwork.map((item, index) => {
+                                    <Swiper className="swiper"
+                                        style={{ width: '1200px' }}
+                                        onSlideChange={() => console.log('slide change')}
+                                        onSwiper={(swiper) => console.log(swiper)}
+                                        slidesPerView={3}
+                                        spaceBetween={30}
+                                        loop={true}
+                                        grid={{ fill: 'rows', rows: 2 }}
+                                    >
+                                        {this.state.artwork.slice(0, 79).map((item, index) => {
                                             let imageURL = 'https://storage.googleapis.com/feeling-arts-data/artwork-img/' + item.imageNo + '.jpg'
                                             console.log("URL", imageURL)
                                             return (
-                                                <Col lg="4">
+                                                <SwiperSlide key={index}>
                                                     <Card
                                                         className="card-background"
                                                         style={{
@@ -85,7 +95,9 @@ class NormalArtMusicHome extends React.Component{
                                                             <div className="icon icon-shape icon-shape-primary rounded-circle mb-4">
                                                                 <i className="ni ni-palette"></i>
                                                             </div>
-                                                            <h4 className="text-primary text-capitalize font-weight-bold">
+                                                            <h4 className="text-primary text-capitalize font-weight-bold"
+                                                                style={{ height: "72px" }}
+                                                            >
                                                                 {item.artwork}
                                                             </h4>
                                                             <p className="description mt-3 font-weight-bold">
@@ -100,10 +112,55 @@ class NormalArtMusicHome extends React.Component{
                                                             </Button>
                                                         </CardBody>
                                                     </Card>
-                                                </Col>
+                                                </SwiperSlide>
                                             )
                                         })}
-                                    
+                                    </Swiper>
+                                    <Swiper className="swiper"
+                                        style={{ width: '1200px' }}
+                                        onSlideChange={() => console.log('slide change')}
+                                        onSwiper={(swiper) => console.log(swiper)}
+                                        slidesPerView={3}
+                                        spaceBetween={30}
+                                        loop={true}
+                                        grid={{ fill: 'rows', rows: 2 }}
+                                    >
+                                        {this.state.artwork.slice(79, this.state.artwork.length).map((item, index) => {
+                                            let imageURL = 'https://storage.googleapis.com/feeling-arts-data/artwork-img/' + item.imageNo + '.jpg'
+                                            console.log("URL", imageURL)
+                                            return (
+                                                <SwiperSlide key={index}>
+                                                    <Card
+                                                        className="card-background"
+                                                        style={{
+                                                            backgroundImage: "url(" + imageURL + ")",
+                                                        }}
+                                                    >
+                                                        <CardBody className="py-5">
+                                                            <div className="icon icon-shape icon-shape-primary rounded-circle mb-4">
+                                                                <i className="ni ni-palette"></i>
+                                                            </div>
+                                                            <h4 className="text-primary text-capitalize font-weight-bold"
+                                                                style={{ height: "72px" }}
+                                                            >
+                                                                {item.artwork}
+                                                            </h4>
+                                                            <p className="description mt-3 font-weight-bold">
+                                                                {item.artist + "created in " + item.createYear + ", belongs to " + item.style + " style."}
+                                                            </p>
+                                                            <Button
+                                                                className="mt-4"
+                                                                color="primary"
+                                                                onClick={(e) => handleClick(e, item.imageNo, item.artwork)}
+                                                            >
+                                                                Listen
+                                                            </Button>
+                                                        </CardBody>
+                                                    </Card>
+                                                </SwiperSlide>
+                                            )
+                                        })}
+                                    </Swiper>
 
                                 </Row>
                             </Col>
@@ -114,7 +171,7 @@ class NormalArtMusicHome extends React.Component{
         )
     }
 }
-    
+
 
 
 export default NormalArtMusicHome;

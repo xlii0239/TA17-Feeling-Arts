@@ -3,7 +3,7 @@ import NavbarForHome from "components/a17components/navbars/NavbarForHome.js";
 import { Container, Row, Col, Button } from "reactstrap";
 import MusicInfo from "components/a17components/Music/MusicInfo.js";
 
-import {useLocation} from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 class SimpleListeningPage extends React.Component {
 
@@ -67,7 +67,7 @@ class SimpleListeningPage extends React.Component {
                                                 <MusicInfo videoId={video_url} />
                                                 {/*<MusicInfo videoId='k58gA9ZUhFU' />*/}
                                             </Col>
-                                            )
+                                        )
                                     })}
                                 </Row>
                             </Col>

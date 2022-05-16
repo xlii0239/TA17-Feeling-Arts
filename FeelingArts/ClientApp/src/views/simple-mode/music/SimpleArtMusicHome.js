@@ -3,6 +3,8 @@ import React from "react";
 // reactstrap components
 import { Button, Card, CardBody, CardTitle, Container, Row, Col } from "reactstrap";
 import { Link } from "react-router-dom";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/swiper.min.css';
 import NavbarForHome from "components/a17components/navbars/NavbarForHome.js";
 
 
@@ -12,7 +14,7 @@ const handleClick = (e, imageNo, artworkName) => {
     //console.log("modelName from three model page", modelName)
 };
 
-class SimpleArtMusicHome extends React.Component{
+class SimpleArtMusicHome extends React.Component {
 
     constructor(props) {
         super(props);
@@ -66,35 +68,98 @@ class SimpleArtMusicHome extends React.Component{
                         <Row className="justify-content-center mt-5">
                             <Col lg="12">
                                 <Row className="row-grid">
-                                        {this.state.artwork.map((item, index) => {
+                                    <Swiper className="swiper"
+                                        style={{ width: '1200px' }}
+                                        onSlideChange={() => console.log('slide change')}
+                                        onSwiper={(swiper) => console.log(swiper)}
+                                        slidesPerView={3}
+                                        spaceBetween={30}
+                                        loop={true}
+                                        grid={{ fill: 'rows', rows: 2 }}
+                                    >
+                                        {this.state.artwork.slice(0, 52).map((item, index) => {
+                                            console.log(this.state.artwork.length);
+
                                             return (
-                                                <Col lg="4">
-                                                    <Card className="card-lift--hover shadow border-0"
-                                                    >
+                                                <SwiperSlide key={index}>
+                                                    <Card className="card-lift--hover shadow border-0">
                                                         <CardBody className="py-5">
                                                             <div className="icon icon-shape icon-shape-primary rounded-circle mb-4">
                                                                 <i className="ni ni-palette"></i>
                                                             </div>
-                                                            <h4 className="text-primary text-capitalize font-weight-bold">
+                                                            <h4 className="text-primary text-capitalize font-weight-bold"
+                                                                style={{ height: '72px' }}>
                                                                 {item.artwork}
                                                             </h4>
                                                             <p className="description mt-3 font-weight-bold">
-                                                                {item.artist + "created in " + item.createYear + ", belongs to " + item.style + " style."}
+                                                                {item.artist +
+                                                                    "created in " +
+                                                                    item.createYear +
+                                                                    ", belongs to " +
+                                                                    item.style +
+                                                                    " style."}
                                                             </p>
                                                             <Button
                                                                 className="mt-4"
                                                                 color="primary"
-                                                                onClick={(e) => handleClick(e, item.imageNo, item.artwork)}
+                                                                onClick={(e) =>
+                                                                    handleClick(e, item.imageNo, item.artwork)
+                                                                }
                                                             >
                                                                 Listen
-                                                            </Button>
+                                </Button>
                                                         </CardBody>
                                                     </Card>
-                                                </Col>
-                                            )
+                                                </SwiperSlide>
+                                            );
                                         })}
-                                    
+                                    </Swiper>
+                                    <Swiper className="swiper"
+                                        style={{ width: '1200px' }}
+                                        onSlideChange={() => console.log('slide change')}
+                                        onSwiper={(swiper) => console.log(swiper)}
+                                        slidesPerView={3}
+                                        spaceBetween={30}
+                                        loop={true}
+                                        grid={{ fill: 'rows', rows: 2 }}
+                                    >
+                                        {this.state.artwork.slice(52, this.state.artwork.length).map((item, index) => {
+                                            console.log(this.state.artwork.length);
 
+                                            return (
+                                                <SwiperSlide key={index}>
+                                                    <Card className="card-lift--hover shadow border-0">
+                                                        <CardBody className="py-5">
+                                                            <div className="icon icon-shape icon-shape-primary rounded-circle mb-4">
+                                                                <i className="ni ni-palette"></i>
+                                                            </div>
+                                                            <h4 className="text-primary text-capitalize font-weight-bold"
+                                                                style={{ height: '72px' }}>
+                                                                {item.artwork}
+                                                            </h4>
+                                                            <p className="description mt-3 font-weight-bold">
+                                                                {item.artist +
+                                                                    "created in " +
+                                                                    item.createYear +
+                                                                    ", belongs to " +
+                                                                    item.style +
+                                                                    " style."}
+                                                            </p>
+                                                            <Button
+                                                                className="mt-4"
+                                                                color="primary"
+                                                                onClick={(e) =>
+                                                                    handleClick(e, item.imageNo, item.artwork)
+                                                                }
+                                                            >
+                                                                Listen
+                                </Button>
+                                                        </CardBody>
+                                                    </Card>
+                                                </SwiperSlide>
+                                            );
+                                        })}
+                                    </Swiper>
                                 </Row>
                             </Col>
                         </Row>
@@ -104,7 +169,7 @@ class SimpleArtMusicHome extends React.Component{
         )
     }
 }
-    
+
 
 
 export default SimpleArtMusicHome;
