@@ -2,7 +2,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
-
 import "assets/css/nucleo-svg.css";
 import "assets/css/nucleo-icons.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
@@ -57,12 +56,13 @@ import ThreeDimentionModelSimple from "./views/simple-mode/3d-model/ThreeDimenti
 import About3dPrinting from "./views/3d-model/About3dPrinting";
 import NormalAbout3dPrinting from "./views/3d-model/NormalAbout3dPrinting";
 
-import SimpleArtMusicHome from "views/simple-mode/music/SimpleArtMusicHome.js";
+import SimpleArtMusicHome from "views/simple-mode/music/SimpleArtMusicHome";
 import SimpleListeningPage from "./views/simple-mode/music/SimpleListeningPage";
 
-import NormalArtMusicHome from "./views/normal-mode/music/NromalArtMusicHome"
+import NormalArtMusicHome from "./views/normal-mode/music/NormalArtMusicHome"
+
 import NromalListeningPage from "./views/normal-mode/music/NormalListeningPage"
-import SimpleMap from "./views/simple-mode/map/SimpleMap";
+import GalleryMap from "./views/map/GalleryMap";
 
 
 
@@ -137,21 +137,9 @@ ReactDOM.render(
         <ProtectedRoute exact path="/3d-model-home-simple" component={ThreeDimentionModelHomePageSimple} />
         <ProtectedRoute exact path="/about-3d-printing" component={About3dPrinting} />
         <ProtectedRoute exact path="/normal-about-3d-printing" component={NormalAbout3dPrinting} />
-        <ProtectedRoute exact path="/simpleartmusic" component={SimpleArtMusic} />
-        <ProtectedRoute exact path="/normalartmusic" component={NormalArtMusic} />
+
         <ProtectedRoute exact path="/musicinfo" component={MusicInfo} />
-        <ProtectedRoute exact path="/normallisteningpage1" component={NormalListeningPage1} />
-        <ProtectedRoute exact path="/normallisteningpage2" component={NormalListeningPage2} />
-        <ProtectedRoute exact path="/normallisteningpage3" component={NormalListeningPage3} />
-        <ProtectedRoute exact path="/normallisteningpage4" component={NormalListeningPage4} />
-        <ProtectedRoute exact path="/normallisteningpage5" component={NormalListeningPage5} />
-        <ProtectedRoute exact path="/normallisteningpage6" component={NormalListeningPage6} />
-        <ProtectedRoute exact path="/simplelisteningpage1" component={SimpleListeningPage1} />
-        <ProtectedRoute exact path="/simplelisteningpage2" component={SimpleListeningPage2} />
-        <ProtectedRoute exact path="/simplelisteningpage3" component={SimpleListeningPage3} />
-        <ProtectedRoute exact path="/simplelisteningpage4" component={SimpleListeningPage4} />
-        <ProtectedRoute exact path="/simplelisteningpage5" component={SimpleListeningPage5} />
-        <ProtectedRoute exact path="/simplelisteningpage6" component={SimpleListeningPage6} />
+
 
         <ProtectedRoute exact path="/simplemusic" component={SimpleArtMusicHome} />
         <ProtectedRoute exact path="/simplemusiclisten" component={SimpleListeningPage} />
@@ -160,7 +148,7 @@ ReactDOM.render(
         <ProtectedRoute exact path="/normalmusiclisten" component={NromalListeningPage} />
 
 
-        <ProtectedRoute exact path="/simplemap" component={SimpleMap} />
+        <ProtectedRoute exact path="/gallerymap" component={GalleryMap} />
 
         <Redirect to="/signin" />
     </Switch>

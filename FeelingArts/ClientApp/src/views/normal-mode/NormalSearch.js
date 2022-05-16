@@ -190,7 +190,8 @@ class NormalSearch extends React.Component {
             }
             artists.push(artistSuggest)
         }
-        console.log("detail", this.state.artist)
+        console.log("artist detail", this.state.artist)
+        console.log("artwork detail", this.state.artwork)
     }
 
     //Change the table data
@@ -318,12 +319,15 @@ class NormalSearch extends React.Component {
 
                                                         {this.searchArtwork(item.artist).map((item, index) => {
                                                             return (
-                                                                <img
-                                                                    alt="..."
-                                                                    className="img-fluid rounded shadow-lg"
-                                                                    src={this.requireErrorHandled(item.imageNo)}
-                                                                >
-                                                                </img>
+                                                                <div>
+                                                                    <img
+                                                                        alt="..."
+                                                                        className="img-fluid rounded shadow-lg"
+                                                                        src={this.requireErrorHandled(item.imageNo)}
+                                                                    >
+                                                                    </img>
+                                                                    <h1>{item.artwork}</h1>
+                                                                </div>
                                                             )
                                                         })}
                                                     </Col>
@@ -349,10 +353,6 @@ class NormalSearch extends React.Component {
         const data = await response.json();
         const data1 = await response1.json();
         this.setState({ artist: data, artwork: data1 });
-
-        
-        console.log("detail", this.state.artist);
-        console.log("detail", this.state.artwork);
     }
 }
 

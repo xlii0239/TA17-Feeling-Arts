@@ -11,7 +11,7 @@ const mapStyles = {
     height: '70%'
 };
 
-class SimpleMap extends Component {
+class GalleryMap extends Component {
     constructor() {
         super();
         this.state = {
@@ -111,7 +111,6 @@ class SimpleMap extends Component {
                 <NavbarForHome />
                 <ul className="breadcrumb bg-transparent font-weight-bold">
                     <li className="breadcrumb-item"><a href="homepage" className="text-dark font-weight-bold">Home</a></li>
-                    <li className="breadcrumb-item"><a href="simplemode" className="text-dark font-weight-bold">Simple Mode</a></li>
                     <li className="breadcrumb-item active">Galleries Info</li>
                 </ul>
 
@@ -150,20 +149,45 @@ class SimpleMap extends Component {
                                 <div>
                                     {(() => {
                                         if (this.state.selectedPlace.name) {
+                                            let imageURL = 'https://storage.googleapis.com/feeling-arts-data/app-img-source/map-infowindow-background.jpg'
                                             return (
                                                 <div>
-                                                    <h1>name has length, folowing is name</h1>
-                                                    <h2></h2>
-                                                    <Card className="card-lift--hover shadow border-0">
+                                                    <Card className="card-background"
+                                                        style={{
+                                                            backgroundImage: "url(" + imageURL + ")",
+                                                        }}
+                                                    >
                                                         <CardBody className="py-5">
                                                             <div className="icon icon-shape icon-shape-dark rounded-circle mb-4">
                                                                 <i className="ni ni-palette"></i>
                                                             </div>
+                                                            
                                                             <h4 className="text-dark text-capitalize font-weight-bold">
                                                                 {this.state.selectedPlace.name.split("|")[0]}
                                                             </h4>
-                                                            <p className="description mt-3 font-weight-bold">
-                                                                { this.state.selectedPlace.name.split("|")[3] } 
+                                                            <h4 className="text-dark text-capitalize font-weight-bold">
+                                                                {this.state.selectedPlace.name.split("|")[2]}
+                                                            </h4>
+                                                            <p className="text-dark description mt-3 font-weight-bold">
+                                                                {"Address: " + this.state.selectedPlace.name.split("|")[3] } 
+                                                            </p>
+                                                            <p className="text-dark description mt-3 font-weight-bold">
+                                                                {"Phone: "+ this.state.selectedPlace.name.split("|")[4]}
+                                                            </p>
+                                                            <p className="text-dark description mt-3 font-weight-bold">
+                                                                {"Wheel Support: " + this.state.selectedPlace.name.split("|")[5]}
+                                                            </p>
+                                                            <p className="text-dark description mt-3 font-weight-bold">
+                                                                {"Blind Support: " + this.state.selectedPlace.name.split("|")[6]}
+                                                            </p>
+                                                            <p className="text-dark description mt-3 font-weight-bold">
+                                                                {"Audio Support: " + this.state.selectedPlace.name.split("|")[7]}
+                                                            </p>
+                                                            <p className="text-dark description mt-3 font-weight-bold">
+                                                                {"Guide Dog Support: " + this.state.selectedPlace.name.split("|")[8]}
+                                                            </p>
+                                                            <p className="text-dark description mt-3 font-weight-bold">
+                                                                {"Other Support: " + this.state.selectedPlace.name.split("|")[9]}
                                                             </p>
                                                             <Button
                                                                 className="mt-4"
@@ -211,4 +235,4 @@ class SimpleMap extends Component {
 
 export default GoogleApiWrapper({
     apiKey: 'AIzaSyBkRVZ1kstmg-vm8lz5uGlLA48ibeCbkO0'
-})(SimpleMap);
+})(GalleryMap);

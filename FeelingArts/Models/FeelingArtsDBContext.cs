@@ -141,6 +141,11 @@ namespace FeelingArts.Models
                     .IsUnicode(false)
                     .HasColumnName("imageNo");
 
+                entity.Property(e => e.ModelNo)
+                    .HasMaxLength(20)
+                    .IsUnicode(false)
+                    .HasColumnName("modelNo");
+
                 entity.Property(e => e.Style)
                     .HasMaxLength(50)
                     .IsUnicode(false)
