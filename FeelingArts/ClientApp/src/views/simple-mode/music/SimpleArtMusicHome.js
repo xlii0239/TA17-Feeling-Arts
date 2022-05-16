@@ -61,8 +61,12 @@ class SimpleArtMusicHome extends React.Component {
                 <div className="blogs-6">
                     <Container>
                         <Row>
-                            <Col className="text-center mx-auto" md="8">
-                                <h3 className="display-3">Some of Arts Matches Music</h3>
+                            <Col className="text-center mx-auto" md="8" lg="12">
+                                <h4 className="display-4">Enjoy the matched music.</h4>
+                            </Col>
+                            <Col className="text-center mx-auto" lg="12">
+                                <h5>  Through our sense of hearing to feel and understand the mood,</h5>
+                                <h5>emotion, power and temperament conveyed by the artwork.</h5>
                             </Col>
                         </Row>
                         <Row className="justify-content-center mt-5">
@@ -84,21 +88,18 @@ class SimpleArtMusicHome extends React.Component {
                                                 <SwiperSlide key={index}>
                                                     <Card className="card-lift--hover shadow border-0">
                                                         <CardBody className="py-5">
-                                                            <div className="icon icon-shape icon-shape-primary rounded-circle mb-4">
-                                                                <i className="ni ni-palette"></i>
-                                                            </div>
-                                                            <h4 className="text-primary text-capitalize font-weight-bold"
-                                                                style={{ height: '72px' }}>
-                                                                {item.artwork}
-                                                            </h4>
-                                                            <p className="description mt-3 font-weight-bold">
-                                                                {item.artist +
-                                                                    "created in " +
-                                                                    item.createYear +
-                                                                    ", belongs to " +
-                                                                    item.style +
-                                                                    " style."}
-                                                            </p>
+                                                            <Row>
+                                                                <h5 className="text-primary text-capitalize font-weight-bold"
+                                                                    style={{ height: '100px' }}>
+                                                                    {item.artwork}
+                                                                </h5>
+                                                            </Row>
+                                                            <Row className="description mt-3 font-weight-bold">
+                                                                {item.artist + " created in " + item.createYear}
+                                                            </Row>
+                                                            <Row className="description mt-3 font-weight-bold">
+                                                                {item.style + " style"}
+                                                            </Row>
                                                             <Button
                                                                 className="mt-4"
                                                                 color="primary"
@@ -129,22 +130,19 @@ class SimpleArtMusicHome extends React.Component {
                                             return (
                                                 <SwiperSlide key={index}>
                                                     <Card className="card-lift--hover shadow border-0">
-                                                        <CardBody className="py-5">
-                                                            <div className="icon icon-shape icon-shape-primary rounded-circle mb-4">
-                                                                <i className="ni ni-palette"></i>
-                                                            </div>
-                                                            <h4 className="text-primary text-capitalize font-weight-bold"
-                                                                style={{ height: '72px' }}>
-                                                                {item.artwork}
-                                                            </h4>
-                                                            <p className="description mt-3 font-weight-bold">
-                                                                {item.artist +
-                                                                    "created in " +
-                                                                    item.createYear +
-                                                                    ", belongs to " +
-                                                                    item.style +
-                                                                    " style."}
-                                                            </p>
+                                                        <CardBody className="mx-auto">
+                                                            <Row>
+                                                                <h5 className="text-primary text-capitalize font-weight-bold"
+                                                                    style={{ height: '100px' }}>
+                                                                    {item.artwork}
+                                                                </h5>
+                                                            </Row>
+                                                            <Row className="description mt-3 font-weight-bold">
+                                                                {item.artist + " created in " + item.createYear}
+                                                            </Row>
+                                                            <Row className="description mt-3 font-weight-bold">
+                                                                {item.style + " style"}
+                                                            </Row>
                                                             <Button
                                                                 className="mt-4"
                                                                 color="primary"

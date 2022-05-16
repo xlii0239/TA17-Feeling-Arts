@@ -113,9 +113,16 @@ class GalleryMap extends Component {
                     <li className="breadcrumb-item"><a href="homepage" className="text-dark font-weight-bold">Home</a></li>
                     <li className="breadcrumb-item active">Galleries Info</li>
                 </ul>
-
                 <div>
                     <Container>
+                        <Row>
+                            <Col className="text-center mx-auto" md="8" lg="12">
+                                <h4 className="display-4">Find galleries near me.</h4>
+                            </Col>
+                            <Col className="text-center mx-auto" lg="12">
+                                <h5> Discover various information about the gallery by clicking on the gallery's tab on the map.</h5>
+                            </Col>
+                        </Row>
                         <Map
                             google={this.props.google}
                             zoom={14}

@@ -92,20 +92,22 @@ class NormalArtMusicHome extends React.Component {
                                                         }}
                                                     >
                                                         <CardBody className="py-5">
-                                                            <div className="icon icon-shape icon-shape-primary rounded-circle mb-4">
-                                                                <i className="ni ni-palette"></i>
-                                                            </div>
-                                                            <h4 className="text-primary text-capitalize font-weight-bold"
-                                                                style={{ height: "72px" }}
-                                                            >
-                                                                {item.artwork}
-                                                            </h4>
-                                                            <p className="description mt-3 font-weight-bold">
-                                                                {item.artist + "created in " + item.createYear + ", belongs to " + item.style + " style."}
-                                                            </p>
+                                                            <Row>
+                                                                <h5 className="text-primary text-capitalize font-weight-bold text-light"
+                                                                    style={{ height: "100px" }}
+                                                                >
+                                                                    {item.artwork}
+                                                                </h5>
+                                                            </Row>
+                                                            <Row className="description mt-3 font-weight-bold text-light">
+                                                                {item.artist + " created in " + item.createYear}
+                                                            </Row>
+                                                            <Row className="description mt-3 font-weight-bold text-light">
+                                                                {item.style + " style"}
+                                                            </Row>
                                                             <Button
                                                                 className="mt-4"
-                                                                color="primary"
+                                                                color="info"
                                                                 onClick={(e) => handleClick(e, item.imageNo, item.artwork)}
                                                             >
                                                                 Listen
@@ -137,20 +139,22 @@ class NormalArtMusicHome extends React.Component {
                                                         }}
                                                     >
                                                         <CardBody className="py-5">
-                                                            <div className="icon icon-shape icon-shape-primary rounded-circle mb-4">
-                                                                <i className="ni ni-palette"></i>
-                                                            </div>
-                                                            <h4 className="text-primary text-capitalize font-weight-bold"
-                                                                style={{ height: "72px" }}
-                                                            >
-                                                                {item.artwork}
-                                                            </h4>
-                                                            <p className="description mt-3 font-weight-bold">
-                                                                {item.artist + "created in " + item.createYear + ", belongs to " + item.style + " style."}
-                                                            </p>
+                                                            <Row>
+                                                                <h4 className="text-primary text-capitalize font-weight-bold text-light"
+                                                                    style={{ height: "100px" }}
+                                                                >
+                                                                    {item.artwork}
+                                                                </h4>
+                                                            </Row>
+                                                            <Row className="description mt-3 font-weight-bold text-light">
+                                                                {item.artist + " created in " + item.createYear}
+                                                            </Row>
+                                                            <Row className="description mt-3 font-weight-bold text-light">
+                                                                {item.style + " style"}
+                                                            </Row>
                                                             <Button
                                                                 className="mt-4"
-                                                                color="primary"
+                                                                color="info"
                                                                 onClick={(e) => handleClick(e, item.imageNo, item.artwork)}
                                                             >
                                                                 Listen

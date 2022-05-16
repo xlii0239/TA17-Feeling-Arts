@@ -12,19 +12,19 @@ function ArtworkResultShow(props) {
         return (
             <Container className="shape-container flex align-items-center py-lg-2" >
                 <ol
-                    style={{ border: '1px solid', 'margin-top': "20px" }}>
+                    style={{ 'margin-top': "20px" }}>
                     {list.map((item, index) => {
                         return (
-                            <div style={{ display: 'flex', 'align-items': 'center', 'justify-content': 'space-between' }}>
-                                <li key={item.id}>
+                            <div style={{ display: 'flex', 'align-items': 'center', 'justify-content': 'space-between', 'marginBottom': '15px'}}>
+                                <li key={item.id} style={{ width: '75%', 'textAlign': 'justify'}}>
                                     This artwork' name is {item.artwork}, the following is its decsription: {item.describe}
-
                                 </li>
                                 <div>
                                     <a href={"/simplemusiclisten" + "?artwork_no=" + item.imageNo + "&artwork_name=" + item.artwork}
-                                        style={{ border: '1px solid', 'text-align': 'center', display: 'block', color: "#525f7f", cursor: 'pointer' }}>Music</a>
+                                        style={{ border: '2px solid', 'text-align': 'center', display: 'block', color: "Info", cursor: 'pointer' }}>Listen Music</a>
+                                    <div style={{ height: '20px' }}></div>
                                     <a href={"/3d-model-simple" + "?model_no=" + item.modelNo + "&img_no=" + item.imageNo}
-                                        style={{ border: '1px solid', 'text-align': 'center', display: 'block', color: "#525f7f" }}>3D</a>
+                                        style={{ border: '2px solid', 'text-align': 'center', display: 'block', color: "Info" }}>3D Touch</a>
                                 </div>
                             </div>
 
@@ -36,7 +36,7 @@ function ArtworkResultShow(props) {
     }
     else {
         return (<><h4 className="lead text-center font-weight-bold text-warning">
-            No result so far, please check your search keywords
+            No result so far, please input your search keywords
                 </h4></>)
     }
     //const Item = this.state.artistshow.map((item, id) =>

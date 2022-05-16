@@ -15,9 +15,12 @@ function ArtistResultShow(props) {
                     <ol>
                         {list.map((item, index) => {
                             return (
-                                <li key={item.id}>
+                                <div style={{ display: 'flex', 'align-items': 'center', 'justify-content': 'space-between', 'marginBottom': '15px' }}>
+                                    <li key={item.id} style={{ width: '100%', 'textAlign': 'justify' }}>
                                     The artist's name is { item.artist}, the following is introduction: { item.bio}
                                 </li>
+                                    <div style={{ height: '20px' }}></div>
+                                </div>
                             )
                         })}
                     </ol>
@@ -25,7 +28,7 @@ function ArtistResultShow(props) {
             )
         }
         else {
-            return (<><h4 className="lead text-center font-weight-bold text-warning">No result so far, please check your search keywords</h4></>)
+            return (<><h4 className="lead text-center font-weight-bold text-warning">No result so far, please input your search keywords</h4></>)
         }
         //const Item = this.state.artistshow.map((item, id) =>
         //    <p key={id}>{ item.name}</p> 
