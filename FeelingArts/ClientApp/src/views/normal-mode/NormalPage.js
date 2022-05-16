@@ -31,9 +31,9 @@ function NormalPage() {
         <>
             <NavbarForHome />
             <div className="wrapper">
-            <ul class="breadcrumb bg-transparent font-weight-bold">
-                <li class="breadcrumb-item text-light"><a href="homepage" class="text-dark font-weight-bold">Home</a></li>
-                <li class="breadcrumb-item active">Picture Mode</li>
+                <ul className="breadcrumb bg-transparent font-weight-bold">
+                    <li className="breadcrumb-item text-light"><a href="homepage" className="text-dark font-weight-bold">Home</a></li>
+                    <li className="breadcrumb-item active">Picture Mode</li>
                 </ul>
                 <Row>
                     <Col className="text-center mx-auto" md="8" lg="12">
@@ -43,7 +43,7 @@ function NormalPage() {
                         <h5> Select your preference and create your new experience.</h5>
                     </Col>
                 </Row>
-{/*            <Container class="align-item-center">*/}
+                {/*            <Container class="align-item-center">*/}
                 {/*    <Button class="btn btn-info btn-lg" type="button">*/}
                 {/*        <Link to="normalartmusic">*/}
                 {/*            <h5 class="text-capitalize text-muted">Art through music</h5>*/}
@@ -68,7 +68,7 @@ function NormalPage() {
                 {/*</Container>*/}
                 {/*<section className="py-6">*/}
                 {/*    <div className="wrapper align-item-left">*/}
-                    <NormalComponents />
+                <NormalComponents />
                 {/*    </div>*/}
                 {/*    </section>*/}
                 {/*<section className="py-6">*/}

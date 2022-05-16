@@ -61,12 +61,12 @@ class SimpleSearch extends React.Component {
     render() {
 
         return (
-          <>
+            <>
                 <NavbarForHome />
-                <ul class="breadcrumb bg-transparent font-weight-bold">
-                    <li class="breadcrumb-item"><a href="homepage" class="text-dark font-weight-bold">Home</a></li>
-                    <li class="breadcrumb-item"><a href="simplemode" class="text-dark font-weight-bold">Simple Mode</a></li>
-                    <li class="breadcrumb-item active">Search Artist</li>
+                <ul className="breadcrumb bg-transparent font-weight-bold">
+                    <li className="breadcrumb-item"><a href="homepage" className="text-dark font-weight-bold">Home</a></li>
+                    <li className="breadcrumb-item"><a href="simplemode" className="text-dark font-weight-bold">Simple Mode</a></li>
+                    <li className="breadcrumb-item active">Search Artist</li>
                 </ul>
                 <div className="section">
                     <Container className="shape-container flex align-items-center py-lg-2">
@@ -81,12 +81,12 @@ class SimpleSearch extends React.Component {
                             Click to Search
                         </Button>
                     </Container>
-                    <Col>                       
+                    <Col>
                         <ArtistResultShow toData={this.state.artistShow}>
                         </ArtistResultShow>
                     </Col>
                 </div>
-          </>
+            </>
         )
     }
 
@@ -95,7 +95,7 @@ class SimpleSearch extends React.Component {
         const response1 = await fetch('artwork');
         const data = await response.json();
         const data1 = await response1.json();
-        this.setState({ artist: data, artwork: data1});
+        this.setState({ artist: data, artwork: data1 });
         console.log("detail", this.state.artist);
         console.log("detail", this.state.artwork);
     }

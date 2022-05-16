@@ -64,7 +64,7 @@ class NormalSearchArtwork extends React.Component {
                 <NavbarForHome />
                 <ul class="breadcrumb bg-transparent font-weight-bold">
                     <li class="breadcrumb-item"><a href="homepage" class="text-dark font-weight-bold">Home</a></li>
-                    <li class="breadcrumb-item"><a href="simplemode" class="text-dark font-weight-bold">Simple Mode</a></li>
+                    <li class="breadcrumb-item"><a href="normalmode" class="text-dark font-weight-bold">Picture Mode</a></li>
                     <li class="breadcrumb-item active">Search Artwork</li>
                 </ul>
                 <div className="section">

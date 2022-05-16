@@ -3,7 +3,7 @@ import NavbarForHome from "components/a17components/navbars/NavbarForHome.js";
 import { Container, Row, Col, Button } from "reactstrap";
 import MusicInfo from "components/a17components/Music/MusicInfo.js";
 
-import {useLocation} from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 
 
@@ -50,8 +50,8 @@ class NromalListeningPage extends React.Component {
                 <NavbarForHome />
                 <ul className="breadcrumb bg-transparent font-weight-bold ">
                     <li className="breadcrumb-item"><a href="homepage" className="text-dark font-weight-bold">Home</a></li>
-                    <li className="breadcrumb-item text-light"><a href="simplemode" className="text-dark font-weight-bold">Simple Mode</a></li>
-                    <li className="breadcrumb-item"><a href="SimpleArtMusic" className="text-dark font-weight-bold">Art through Music</a></li>
+                    <li className="breadcrumb-item text-light"><a href="normalmode" className="text-dark font-weight-bold">Picture Mode</a></li>
+                    <li className="breadcrumb-item"><a href="normalmusic" className="text-dark font-weight-bold">Art through Music</a></li>
                     <li className="breadcrumb-item active">Listen</li>
                 </ul>
                 <div className="page-header">
@@ -68,6 +68,7 @@ class NromalListeningPage extends React.Component {
                                     alt="..."
                                     className="img-fluid rounded shadow-lg"
                                     src={this.state.artworkImageURL}
+                                    style={{ marginBottom: "60px" }}
                                 >
                                 </img>
                             </Col>
@@ -80,7 +81,7 @@ class NromalListeningPage extends React.Component {
                                                 <MusicInfo videoId={video_url} />
                                                 {/*<MusicInfo videoId='k58gA9ZUhFU' />*/}
                                             </Col>
-                                            )
+                                        )
                                     })}
                                 </Row>
                             </Col>
