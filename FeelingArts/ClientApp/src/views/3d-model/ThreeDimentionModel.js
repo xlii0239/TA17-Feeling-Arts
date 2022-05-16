@@ -3,7 +3,6 @@ import { Container, Row, Col, Button } from "reactstrap";
 
 import NavbarForHome from "components/a17components/navbars/NavbarForHome.js";
 import FooterForWeb from "components/a17components/footers/FooterForWeb.js";
-import HeaderForHome from "components/a17components/headers/HeaderForHome.js";
 
 import STLViewer from 'stl-viewer'
 
@@ -39,10 +38,16 @@ function ThreeDimentionModel() {
 
     return (
         <>
-            <NavbarForHome type="transparent"/>
+            <NavbarForHome type="transparent" />
+            <ul className="breadcrumb bg-transparent font-weight-bold">
+                <li className="breadcrumb-item"><a href="homepage" className="text-dark font-weight-bold">Home</a></li>
+                <li className="breadcrumb-item"><a href="normalmode" className="text-dark font-weight-bold">Picture Mode</a></li>
+                <li className="breadcrumb-item"><a href="3d-model-home" className="text-dark font-weight-bold">Art through Touch</a></li>
+                <li className="breadcrumb-item active">3D Model</li>
+            </ul>
             <Container fluid className='gx-0'>
-                <Row>
-                    <Col sm>
+                <Row className="row-grid mt-5">
+                    <Col>
                         <img
                             alt="..."
                             className="img-fluid rounded shadow-lg"
@@ -50,15 +55,15 @@ function ThreeDimentionModel() {
                         >
                         </img>
                     </Col>
-                    <Col sm>
+                    <Col>                     
                         <STLViewer
                             url={url}
                             model={url}
-                            width={800}
-	                        height={800}
+                            width={700}
+	                        height={600}
                             modelColor='#2CA4B9'
                             backgroundColor='#EAEAEA'
-                            rotate={true}
+                            rotate={false}
                             orbitControls={true}
                         />
                     </Col>
@@ -70,7 +75,7 @@ function ThreeDimentionModel() {
                         </Button>
                     </Col>
                     <Col sm className="py-2 border rounded" display="flex">
-                        <Button color="success" size="lg" type="button" href="about-3d-printing">
+                        <Button color="success" size="lg" type="button" href="normal-about-3d-printing">
                             3D Model Print Advice
                         </Button>
                     </Col>

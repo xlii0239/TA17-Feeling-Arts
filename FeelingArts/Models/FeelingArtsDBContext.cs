@@ -21,6 +21,7 @@ namespace FeelingArts.Models
         public virtual DbSet<ArtistSet> ArtistSets { get; set; }
         public virtual DbSet<ArtworkInfo> ArtworkInfos { get; set; }
         public virtual DbSet<ArtworkSet> ArtworkSets { get; set; }
+        public virtual DbSet<GalleryInfo> GalleryInfos { get; set; }
         public virtual DbSet<MusicInfo> MusicInfos { get; set; }
         public virtual DbSet<ThreeDimentionModelInfo> ThreeDimentionModelInfos { get; set; }
 
@@ -140,6 +141,11 @@ namespace FeelingArts.Models
                     .IsUnicode(false)
                     .HasColumnName("imageNo");
 
+                entity.Property(e => e.ModelNo)
+                    .HasMaxLength(20)
+                    .IsUnicode(false)
+                    .HasColumnName("modelNo");
+
                 entity.Property(e => e.Style)
                     .HasMaxLength(50)
                     .IsUnicode(false)
@@ -167,6 +173,94 @@ namespace FeelingArts.Models
                     .HasConstraintName("FK_ArtistArtwork");
             });
 
+            modelBuilder.Entity<GalleryInfo>(entity =>
+            {
+                entity.HasKey(e => new { e.Id, e.GalleryId })
+                    .HasName("PK__GalleryI__8B07C63C38DA6B50");
+
+                entity.ToTable("GalleryInfo");
+
+                entity.Property(e => e.GalleryId)
+                    .HasMaxLength(20)
+                    .IsUnicode(false)
+                    .HasColumnName("galleryId");
+
+                entity.Property(e => e.Address)
+                    .IsRequired()
+                    .HasMaxLength(128)
+                    .IsUnicode(false)
+                    .HasColumnName("address");
+
+                entity.Property(e => e.AudioSupport)
+                    .IsRequired()
+                    .HasMaxLength(50)
+                    .IsUnicode(false)
+                    .HasColumnName("audio_support");
+
+                entity.Property(e => e.BlindSupport)
+                    .IsRequired()
+                    .HasMaxLength(50)
+                    .IsUnicode(false)
+                    .HasColumnName("blind_support");
+
+                entity.Property(e => e.Category)
+                    .IsRequired()
+                    .HasMaxLength(128)
+                    .IsUnicode(false)
+                    .HasColumnName("category");
+
+                entity.Property(e => e.GalleryName)
+                    .IsRequired()
+                    .HasMaxLength(128)
+                    .IsUnicode(false)
+                    .HasColumnName("galleryName");
+
+                entity.Property(e => e.GuideDogSupport)
+                    .IsRequired()
+                    .HasMaxLength(100)
+                    .IsUnicode(false)
+                    .HasColumnName("guide_dog_support");
+
+                entity.Property(e => e.Lat)
+                    .HasColumnType("decimal(10, 7)")
+                    .HasColumnName("lat");
+
+                entity.Property(e => e.Lng)
+                    .HasColumnType("decimal(10, 7)")
+                    .HasColumnName("lng");
+
+                entity.Property(e => e.OtherSupport)
+                    .IsRequired()
+                    .HasMaxLength(120)
+                    .IsUnicode(false)
+                    .HasColumnName("other_support");
+
+                entity.Property(e => e.PhoneNumber)
+                    .IsRequired()
+                    .HasMaxLength(20)
+                    .IsUnicode(false)
+                    .HasColumnName("phone_number");
+
+                entity.Property(e => e.State)
+                    .IsRequired()
+                    .HasMaxLength(20)
+                    .IsUnicode(false)
+                    .HasColumnName("state")
+                    .HasDefaultValueSql("('VIC')");
+
+                entity.Property(e => e.Website)
+                    .IsRequired()
+                    .HasMaxLength(128)
+                    .IsUnicode(false)
+                    .HasColumnName("website");
+
+                entity.Property(e => e.WheelSupport)
+                    .IsRequired()
+                    .HasMaxLength(20)
+                    .IsUnicode(false)
+                    .HasColumnName("wheel_support");
+            });
+
             modelBuilder.Entity<MusicInfo>(entity =>
             {
                 entity.HasKey(e => new { e.Id, e.MusicNo })
@@ -188,8 +282,7 @@ namespace FeelingArts.Models
                     .HasColumnName("imageNo");
 
                 entity.Property(e => e.MArtistName)
-                    .IsRequired()
-                    .HasMaxLength(32)
+                    .HasMaxLength(128)
                     .IsUnicode(false)
                     .HasColumnName("m_artist_name");
 

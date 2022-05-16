@@ -8,6 +8,7 @@ import Autosuggest from 'react-autosuggest';
 
 
 
+
 let artists = [
     {
         name: 'Andrei Rublev'
@@ -190,7 +191,8 @@ class NormalSearch extends React.Component {
             }
             artists.push(artistSuggest)
         }
-        console.log("detail", this.state.artist)
+        console.log("artist detail", this.state.artist)
+        console.log("artwork detail", this.state.artwork)
     }
 
     //Change the table data
@@ -275,7 +277,7 @@ class NormalSearch extends React.Component {
                 <NavbarForHome />
                 <ul class="breadcrumb bg-transparent font-weight-bold">
                     <li class="breadcrumb-item text-light"><a href="homepage" class="text-dark font-weight-bold">Home</a></li>
-                    <li class="breadcrumb-item text-light"><a href="normalmode" class="text-dark font-weight-bold">Normal Mode</a></li>
+                    <li class="breadcrumb-item text-light"><a href="normalmode" class="text-dark font-weight-bold">Picture Mode</a></li>
                     <li class="breadcrumb-item active">Search Artist</li>
                 </ul>
                 <div className="section" >
@@ -284,7 +286,8 @@ class NormalSearch extends React.Component {
                             Search Feelingarts.tk by entering the keywords of the artist name in the search box below.
                             </h6>
                         {/*<Input type="text" innerRef={Input => this.input = Input} placeHolder="Please enter contents you want to search" />*/}
-                            <Autosuggest 
+                        <div style={{ 'display': 'flex', 'alignItems': 'center' }}>
+                        <Autosuggest
                             suggestions={suggestions}
                             onSuggestionsFetchRequested={this.onSuggestionsFetchRequested}
                             onSuggestionsClearRequested={this.onSuggestionsClearRequested}
@@ -299,7 +302,7 @@ class NormalSearch extends React.Component {
                         >
                             <i className="fa fa-search"></i>
                             </button>
-
+                        </div>
                     </Container>
                 </div>
                 <Row class="lg-12 align-center">
@@ -318,12 +321,15 @@ class NormalSearch extends React.Component {
 
                                                         {this.searchArtwork(item.artist).map((item, index) => {
                                                             return (
-                                                                <img
-                                                                    alt="..."
-                                                                    className="img-fluid rounded shadow-lg"
-                                                                    src={this.requireErrorHandled(item.imageNo)}
-                                                                >
-                                                                </img>
+                                                                <div>
+                                                                    <img
+                                                                        alt="..."
+                                                                        className="img-fluid rounded shadow-lg"
+                                                                        src={this.requireErrorHandled(item.imageNo)}
+                                                                    >
+                                                                    </img>
+                                                                    <h1>{item.artwork}</h1>
+                                                                </div>
                                                             )
                                                         })}
                                                     </Col>
@@ -349,10 +355,6 @@ class NormalSearch extends React.Component {
         const data = await response.json();
         const data1 = await response1.json();
         this.setState({ artist: data, artwork: data1 });
-
-        
-        console.log("detail", this.state.artist);
-        console.log("detail", this.state.artwork);
     }
 }
 

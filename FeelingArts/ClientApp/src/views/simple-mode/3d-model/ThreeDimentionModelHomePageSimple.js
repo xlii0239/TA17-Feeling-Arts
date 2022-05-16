@@ -40,6 +40,19 @@ class ThreeDimentionModelHomePage extends React.Component {
         return (
             <>
                 <NavbarForHome />
+                <ul class="breadcrumb bg-transparent font-weight-bold">
+                    <li class="breadcrumb-item"><a href="homepage" class="text-dark font-weight-bold">Home</a></li>
+                    <li class="breadcrumb-item"><a href="simplemode" class="text-dark font-weight-bold">Simple Mode</a></li>
+                    <li class="breadcrumb-item active">Art through Touch</li>
+                </ul>
+                <Row>
+                    <Col className="text-center mx-auto" md="8" lg="12">
+                        <h4 className="display-4">Get the 3D shadows depict replica.</h4>
+                    </Col>
+                    <Col className="text-center mx-auto" lg="12">
+                        <h5>Through our sense of touching to experience and feel the vividly form and expression of artwork.</h5>
+                    </Col>
+                </Row>
                 <Container fluid>
                     <Row>
                         <Col>

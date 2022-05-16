@@ -24,27 +24,39 @@ function NavbarForHome() {
                       <img src={require("assets/NewImg/weblogo.png")} alt="Feeling arts website logo" style={{width:55,height:45}}></img>
                   </NavbarBrand>
                   <a href="homepage" onClick={(e) => e.button()}>
-                  <NavbarBrand Text style={{ color: 'white', fontSize: 28 }}>
-                          Feeling arts
-                  </NavbarBrand>
+                      <Col style={{ color: 'white', fontSize: 28}}>
+                          FEELING ARTS
+                  </Col>
                       </a>
-                  <Nav className="ml-auto" navbar>
+                  <Nav className="ml-auto" >
                       <NavItem>
                           <NavLink
                               className="nav-link-icon"
                               href="simplemode"
+                              style={{ color: 'white'}}
                               onClick={(e) => e.button()}
                           >
-                              <span className="nav-link-inner--text">Simple Mode</span>
+                              <span>Simple Mode</span>
                           </NavLink>
                       </NavItem>
                       <NavItem>
                           <NavLink
                               className="nav-link-icon"
                               href="normalmode"
+                              style={{ color: 'white' }}
                               onClick={(e) => e.button()}
                           >
-                              <span className="nav-link-inner--text">Picture Mode</span>
+                              <span>Picture Mode</span>
+                          </NavLink>
+                      </NavItem>
+                      <NavItem>
+                          <NavLink
+                              className="nav-link-icon"
+                              href="gallerymap"
+                              style={{ color: 'white' }}
+                              onClick={(e) => e.button()}
+                          >
+                              <span>Gallery Map</span>
                           </NavLink>
                       </NavItem>
                       </ Nav>

@@ -2,27 +2,34 @@ import React from "react";
 //footer3 style
 
 // reactstrap components
-import { Button, NavLink, Container, Row, Col } from "reactstrap";
+import {
+    Button,
+    NavItem,
+    NavLink,
+    Nav,
+    Container,
+    Row,
+    Col,
+    UncontrolledTooltip, } from "reactstrap";
 
 // Core Components
 
 function FooterForWeb() {
     return (
         <>
-            <footer className="footer footer-simple transparent">
-                <div class= "container">
-                    <Row>
-                        <Col md="3">
-                            <h5 className="title text-darkblue font-weight-bold">
-                                FEELING ARTS
-                            </h5>
+            <footer className="footer">
+                <Row className="footer-simple align-items-center md-3">
+                    <Col lg="8">
+                        <div className="title text-dark display-4 font-weight-bold col-md-6 offset-md-3">
+                            FEELING ARTS
+                            </div>
                         </Col>
-                        <p className="copyright text-dark text-right">
-                            All rights reserved.
-                  </p>
-                        
+                    <Col lg="4" className="align-items-center justify-content-md-between col-md-6 ">
+                        <div className="copyright text-dark">
+                            All rights reserved.  &copy; 2022
+                          </div>
+                    </Col>
                     </Row>
-                </div>
             </footer>
         </>
     );

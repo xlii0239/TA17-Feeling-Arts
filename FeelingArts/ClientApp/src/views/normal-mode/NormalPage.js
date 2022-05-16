@@ -31,38 +31,46 @@ function NormalPage() {
         <>
             <NavbarForHome />
             <div className="wrapper">
-            <ul class="breadcrumb bg-transparent font-weight-bold">
-                <li class="breadcrumb-item text-light"><a href="homepage" class="text-dark font-weight-bold">Home</a></li>
-                <li class="breadcrumb-item active">Picture Mode</li>
+                <ul className="breadcrumb bg-transparent font-weight-bold">
+                    <li className="breadcrumb-item text-light"><a href="homepage" className="text-dark font-weight-bold">Home</a></li>
+                    <li className="breadcrumb-item active">Picture Mode</li>
                 </ul>
-            <Container class="align-item-center">
-                    <Button class="btn btn-info btn-lg" type="button">
-                        <Link to="normalartmusic">
-                            <h5 class="text-capitalize text-muted">Art through music</h5>
-                    </Link>
-                        </Button>
-                    <Button class="btn btn-info btn-lg" type="button">
-                    <Link to="3d-model-home">
-                            <h5 class="text-capitalize text-muted">Art Through Touch</h5>
-                    </Link>
-                </Button>
+                <Row>
+                    <Col className="text-center mx-auto" md="8" lg="12">
+                        <h4 className="display-4">Start the artwork exploration!</h4>
+                    </Col>
+                    <Col className="text-center mx-auto" lg="12">
+                        <h5> Select your preference and create your new experience.</h5>
+                    </Col>
+                </Row>
+                {/*            <Container class="align-item-center">*/}
+                {/*    <Button class="btn btn-info btn-lg" type="button">*/}
+                {/*        <Link to="normalartmusic">*/}
+                {/*            <h5 class="text-capitalize text-muted">Art through music</h5>*/}
+                {/*    </Link>*/}
+                {/*        </Button>*/}
+                {/*    <Button class="btn btn-info btn-lg" type="button">*/}
+                {/*    <Link to="3d-model-home">*/}
+                {/*            <h5 class="text-capitalize text-muted">Art Through Touch</h5>*/}
+                {/*    </Link>*/}
+                {/*</Button>*/}
                 {/* <Button class="btn btn-info btn-lg" type="button">*/}
                 {/*    <Link to="#">*/}
                 {/*            <h8 class="text-capitalize text-muted">Art Through Describe</h8>*/}
                 {/*    </Link>*/}
                 {/*</Button>*/}
-                <Button class="btn btn-info btn-lg" type="button">
-                    <Link to="normalsearch">
-                            <h5 class="text-capitalize text-muted">Search Artist</h5>
-                    </Link>
-                    </Button>
+                {/*<Button class="btn btn-info btn-lg" type="button">*/}
+                {/*    <Link to="normalsearch">*/}
+                {/*            <h5 class="text-capitalize text-muted">Search Artist</h5>*/}
+                {/*    </Link>*/}
+                {/*    </Button>*/}
 
-                </Container>
-                <section className="py-6">
-                    <div className="wrapper align-item-left">
-                    <NormalComponents />
-                    </div>
-                    </section>
+                {/*</Container>*/}
+                {/*<section className="py-6">*/}
+                {/*    <div className="wrapper align-item-left">*/}
+                <NormalComponents />
+                {/*    </div>*/}
+                {/*    </section>*/}
                 {/*<section className="py-6">*/}
                 {/*<div className="glide">*/}
                 {/*    <div className="glide__track" data-glide-el="track">*/}

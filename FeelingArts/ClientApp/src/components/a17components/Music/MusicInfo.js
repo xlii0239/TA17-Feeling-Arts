@@ -1,43 +1,38 @@
 ﻿import React from 'react';
-import ReactAplayer from 'react-aplayer';
+import YouTube from 'react-youtube';
 
-export default class App extends React.Component {
-    // event binding example
-    onPlay = () => {
-        console.log('on play');
-    };
-
-    onPause = () => {
-        console.log('on pause');
-    };
-
-    // example of access aplayer instance
-    onInit = ap => {
-        this.ap = ap;
-    };
-
+class MusicInfo extends React.Component {
+    videoOnReady(event) {
+        // access to player in all event handlers via event.target
+        event.target.playVideoAt()
+        console.log(event.target)
+    }
+    videoOnPlay(event) {
+        const player = event.target
+        console.log(player.getCurrentTime())
+    }
+    videoStateChange(event) {
+        console.log(event)
+    }
     render() {
-        const props = {
-            audio: [
-                {
-                    name: '',
-                    artist: '',
-                    url: '',
-                    cover: '.jpg',
-                    theme: '#ebd0c2'
-                }
-            ]
-        };
-
+        const opts = {
+            height: '300',
+            width: '100%',
+            playerVars: {
+                autoplay: 0
+            }
+        }
+        const { videoId } = this.props
         return (
-            <div>
-                <ReactAplayer
-                    {...props}
-                    onInit={this.onInit}
-                    onPlay={this.onPlay}
-                    onPause={this.onPause}
-                />
-            </div>
-        );
+            <YouTube
+                videoId={videoId}
+                opts={opts}
+                onReady={this.videoOnReady}
+                onPlay={this.videoOnPlay}
+                onStateChange={this.videoStateChange}
+            />
+        )
     }
 }
+
+export default MusicInfo;

@@ -44,8 +44,8 @@ function HomePage() {
                         </Row>
                     </Container>
                 </div>
-                <FooterForWeb />
             </div>
+            <FooterForWeb />
         </>
     );
 }

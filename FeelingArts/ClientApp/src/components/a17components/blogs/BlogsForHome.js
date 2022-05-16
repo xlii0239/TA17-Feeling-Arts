@@ -25,7 +25,7 @@ function BlogsForHome() {
                                     <CardBody>
                                         <div className="content-bottom">
                                             <CardTitle tag="h3">Simple Mode</CardTitle>
-                                            <h6 className="card-category text-white opacity-8">
+                                        <h6 className="card-category text-white opacity-8">
                                                 Providing friendly experience for people with no vision
                                              </h6>
                                         </div>
