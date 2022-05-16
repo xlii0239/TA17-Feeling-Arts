@@ -16,7 +16,7 @@ class MusicInfo extends React.Component {
     }
     render() {
         const opts = {
-            height: '100%',
+            height: '300',
             width: '100%',
             playerVars: {
                 autoplay: 0

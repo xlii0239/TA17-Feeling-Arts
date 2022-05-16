@@ -4,6 +4,7 @@ import NavbarForHome from "components/a17components/navbars/NavbarForHome.js";
 import ArtworkResultShow from 'views/simple-search/ArtworkResultShow.js';
 
 
+
 const handleClickMusic = (e, imageNo, artworkName) => {
 
     window.location = "/normalmusiclisten" + "?artwork_no=" + imageNo + "&artwork_name=" + artworkName;
@@ -97,7 +98,7 @@ class NormalSearchArtwork extends React.Component {
                     {/*    </ArtworkResultShow>*/}
                     {/*</Col>*/}
                     <Row className="justify-content-center mt-5">
-                        <Col lg="12">
+                        <Col lg="9">
                             <Row className="row-grid">
                                 {this.state.artworkShow.map((item, index) => {
                                     let imageURL = 'https://storage.googleapis.com/feeling-arts-data/artwork-img/' + item.imageNo + '.jpg'
@@ -110,25 +111,29 @@ class NormalSearchArtwork extends React.Component {
                                                 }}
                                             >
                                                 <CardBody className="py-5">
-                                                    <div className="icon icon-shape icon-shape-primary rounded-circle mb-4">
-                                                        <i className="ni ni-palette"></i>
-                                                    </div>
-                                                    <h4 className="text-primary text-capitalize font-weight-bold">
-                                                        {item.artwork}
-                                                    </h4>
-                                                    <p className="description mt-3 font-weight-bold">
-                                                        {item.artist + "created in " + item.createYear + ", belongs to " + item.style + " style."}
-                                                    </p>
+                                                    <Row>
+                                                        <h4 className="text-primary text-capitalize font-weight-bold text-light"
+                                                            style={{ height: "100px" }}
+                                                        >
+                                                            {item.artwork}
+                                                        </h4>
+                                                    </Row>
+                                                    <Row className="description mt-3 font-weight-bold text-light">
+                                                        {item.artist + " created in " + item.createYear}
+                                                    </Row>
+                                                    <Row className="description mt-3 font-weight-bold text-light">
+                                                        {item.style + " style"}
+                                                    </Row>
                                                     <Button
                                                         className="mt-4"
-                                                        color="primary"
+                                                        color="info"
                                                         onClick={(e) => handleClickMusic(e, item.imageNo, item.artwork)}
                                                     >
                                                         Listen
                                                     </Button>
                                                     <Button
                                                         className="mt-4"
-                                                        color="primary"
+                                                        color="warning"
                                                         onClick={(e) => handleClick3dModel(e, item.modelNo, item.imageNo)}
                                                     >
                                                         Touch

@@ -4,7 +4,7 @@
 import React from "react";
 
 // reactstrap components
-import { Card, CardBody, CardTitle, Container, Row, Col} from "reactstrap";
+import { Card, CardBody, CardTitle, Container, Row, Col } from "reactstrap";
 import { Link } from "react-router-dom";
 import NavbarForHome from "components/a17components/navbars/NavbarForHome.js";
 
@@ -30,7 +30,7 @@ function SimplePage() {
                     <Col className="text-center mx-auto" lg="12">
                         <h5>Select your preference and create your new experience.</h5>
                     </Col>
-                </Row>            
+                </Row>
                 <Container fluid>
                     <Row>
                         <Col lg="6">

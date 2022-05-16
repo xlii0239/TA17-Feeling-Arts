@@ -8,6 +8,7 @@ import Autosuggest from 'react-autosuggest';
 
 
 
+
 let artists = [
     {
         name: 'Andrei Rublev'
@@ -285,7 +286,8 @@ class NormalSearch extends React.Component {
                             Search Feelingarts.tk by entering the keywords of the artist name in the search box below.
                             </h6>
                         {/*<Input type="text" innerRef={Input => this.input = Input} placeHolder="Please enter contents you want to search" />*/}
-                            <Autosuggest 
+                        <div style={{ 'display': 'flex', 'alignItems': 'center' }}>
+                        <Autosuggest
                             suggestions={suggestions}
                             onSuggestionsFetchRequested={this.onSuggestionsFetchRequested}
                             onSuggestionsClearRequested={this.onSuggestionsClearRequested}
@@ -300,7 +302,7 @@ class NormalSearch extends React.Component {
                         >
                             <i className="fa fa-search"></i>
                             </button>
-
+                        </div>
                     </Container>
                 </div>
                 <Row class="lg-12 align-center">
