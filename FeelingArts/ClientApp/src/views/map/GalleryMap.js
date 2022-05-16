@@ -35,13 +35,36 @@ class GalleryMap extends Component {
                     lng: 144.2769939
                 }
             ],
-            galleriesData: []
+            galleriesData: [],
+            userLocation: {
+                lat: 0,
+                lng: 0
+            }
 
         };
     }
 
+    
+
+
     componentDidMount() {
+
+        const getUserCurrentLocation = position => {
+            const location = {
+                lat: position.coords.latitude,
+                lng: position.coords.longitude
+            }
+
+            this.setState({ userLocation: location })
+        }
+
+        navigator.geolocation.getCurrentPosition(getUserCurrentLocation)
+        
+
         this.populateData();
+
+        
+
     }
 
     async populateData() {
@@ -105,6 +128,9 @@ class GalleryMap extends Component {
 
     render() {
         if (!this.props.loaded) return <div>Loading...</div>;
+        if (this.state.userLocation.lat == 0) return <div>Loading...</div>
+
+        console.log("User Location", this.state.userLocation)
 
         return (
             <>
@@ -128,8 +154,8 @@ class GalleryMap extends Component {
                             zoom={14}
                             style={mapStyles}
                             initialCenter={{
-                                lat: -37.8150384504867,
-                                lng: 144.9666541890734
+                                lat: this.state.userLocation.lat,
+                                lng: this.state.userLocation.lng
                             }}
                         >
 
