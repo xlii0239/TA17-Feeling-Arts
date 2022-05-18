@@ -5,6 +5,7 @@ import { Button, Card, CardBody, CardTitle, Container, Row, Col } from "reactstr
 import { Link } from "react-router-dom";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper.min.css';
+import { Pagination, Navigation } from "swiper";
 import NavbarForHome from "components/a17components/navbars/NavbarForHome.js";
 
 
@@ -21,7 +22,8 @@ class SimpleArtMusicHome extends React.Component {
         this.state = {
             artwork: [],
             music: [],
-            test: []
+            test: [],
+            num: 9
         }
     }
 
@@ -72,99 +74,52 @@ class SimpleArtMusicHome extends React.Component {
                         <Row className="justify-content-center mt-5">
                             <Col lg="12">
                                 <Row className="row-grid">
-                                    <Swiper className="swiper"
-                                        style={{ width: '1200px' }}
-                                        onSlideChange={() => console.log('slide change')}
-                                        onSwiper={(swiper) => console.log(swiper)}
-                                        slidesPerView={3}
-                                        spaceBetween={30}
-                                        loop={true}
-                                        grid={{ fill: 'rows', rows: 2 }}
-                                    >
-                                        {this.state.artwork.slice(0, 52).map((item, index) => {
-                                            console.log(this.state.artwork.length);
+                                    {this.state.artwork.slice(0, this.state.num).map((item, index) => {
+                                        console.log(this.state.artwork.length);
 
-                                            return (
-                                                <SwiperSlide key={index}>
-                                                    <Card className="card-lift--hover shadow border-0">
-                                                        <CardBody className="py-5">
-                                                            <Row>
-                                                                <h5 className="text-primary text-capitalize font-weight-bold"
-                                                                    style={{ height: '100px' }}>
-                                                                    {item.artwork}
-                                                                </h5>
-                                                            </Row>
-                                                            <Row className="description mt-3 font-weight-bold">
-                                                                {item.artist + " created in " + item.createYear}
-                                                            </Row>
-                                                            <Row className="description mt-3 font-weight-bold">
-                                                                {item.style + " style"}
-                                                            </Row>
-                                                            <Button
-                                                                className="mt-4"
-                                                                color="primary"
-                                                                onClick={(e) =>
-                                                                    handleClick(e, item.imageNo, item.artwork)
-                                                                }
-                                                            >
-                                                                Listen
+                                        return (
+                                            <Col lg="4">
+                                                <Card className="card-lift--hover shadow border-0">
+                                                    <CardBody className="py-5">
+                                                        <h4 className="text-primary text-capitalize font-weight-bold"
+                                                            style={{ height: '72px' }}>
+                                                            {item.artwork}
+                                                        </h4>
+                                                        <p className="description mt-3 font-weight-bold">
+                                                            {item.artist +
+                                                                " created in " +
+                                                                item.createYear}
+                                                            </p>
+                                                        <p className="description mt-3 font-weight-bold">
+                                                                
+                                                                {item.style +
+                                                                " style."}
+                                                        </p>
+                                                        <Button
+                                                            className="mt-4"
+                                                            color="primary"
+                                                            onClick={(e) =>
+                                                                handleClick(e, item.imageNo, item.artwork)
+                                                            }
+                                                        >
+                                                            Listen
                                 </Button>
-                                                        </CardBody>
-                                                    </Card>
-                                                </SwiperSlide>
-                                            );
-                                        })}
-                                    </Swiper>
-                                    <Swiper className="swiper"
-                                        style={{ width: '1200px' }}
-                                        onSlideChange={() => console.log('slide change')}
-                                        onSwiper={(swiper) => console.log(swiper)}
-                                        slidesPerView={3}
-                                        spaceBetween={30}
-                                        loop={true}
-                                        grid={{ fill: 'rows', rows: 2 }}
-                                    >
-                                        {this.state.artwork.slice(52, this.state.artwork.length).map((item, index) => {
-                                            console.log(this.state.artwork.length);
+                                                    </CardBody>
+                                                </Card>
+                                            </Col>
+                                        );
+                                    })}
 
-                                            return (
-                                                <SwiperSlide key={index}>
-                                                    <Card className="card-lift--hover shadow border-0">
-                                                        <CardBody className="mx-auto">
-                                                            <Row>
-                                                                <h5 className="text-primary text-capitalize font-weight-bold"
-                                                                    style={{ height: '100px' }}>
-                                                                    {item.artwork}
-                                                                </h5>
-                                                            </Row>
-                                                            <Row className="description mt-3 font-weight-bold">
-                                                                {item.artist + " created in " + item.createYear}
-                                                            </Row>
-                                                            <Row className="description mt-3 font-weight-bold">
-                                                                {item.style + " style"}
-                                                            </Row>
-                                                            <Button
-                                                                className="mt-4"
-                                                                color="primary"
-                                                                onClick={(e) =>
-                                                                    handleClick(e, item.imageNo, item.artwork)
-                                                                }
-                                                            >
-                                                                Listen
-                                </Button>
-                                                        </CardBody>
-                                                    </Card>
-                                                </SwiperSlide>
-                                            );
-                                        })}
-                                    </Swiper>
                                 </Row>
                             </Col>
+                            <div r-if="this.state.num < 9" onClick={(e) => { this.setState({ num: this.state.artwork.length }); }} style={{ border: '2px solid #5e72e4', 'marginBottom': '20px', padding: '10px 20px', 'borderRadius': '10px', 'cursor': 'pointer' }}>
+                                Loading more</div>
+
                         </Row>
                     </Container>
                 </div>
             </>
-        )
+        );
     }
 }
 

@@ -4,7 +4,9 @@ import { Link } from 'react-router';
 import NavbarForHome from "components/a17components/navbars/NavbarForHome.js";
 import FooterForWeb from "components/a17components/footers/FooterForWeb.js";
 import HeaderForHome from "components/a17components/headers/HeaderForHome.js";
-
+import { Swiper, SwiperSlide } from 'swiper/react' 
+import 'swiper/swiper.min.css' 
+import 'assets/css/common.css'
 import STLViewer from 'stl-viewer'
 
 const url = "https://storage.googleapis.com/feeling-arts-data/ccab50f18fb14c91ccca300a.stl"
@@ -19,7 +21,8 @@ class ThreeDimentionModelHomePage extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            model: []
+            model: [],
+            change: 1,
         }
     }
 
@@ -54,31 +57,83 @@ class ThreeDimentionModelHomePage extends React.Component {
                     </Col>
                 </Row>
                 <Container fluid>
-                    <Row>
-                        <Col>
-                            {this.state.model.map((item, index) => {
-                                return (
-                                        <Card key={item.Id}
-                                            className="card-blog card-background"
-                                            data-animation="zooming"  >
-                                            <div
-                                                className="full-background"
-                                                style={{
-                                                    backgroundImage: "url(https://storage.googleapis.com/feeling-arts-data/artwork-img/" + item.imageNo + ".jpg)",
+                    <Row style={{ position: "relative" }}>
+
+                        <div style={{ display: this.state.change < 2 ? "block" : "none" }}>
+                            <img src={require("assets/img/tip.png")}
+                                style={{ animation: "zy 2.5s .15s linear infinite", width: "92px", height: "80px", position: "absolute", "zIndex": 999, "left": "20px", "top": "50px" }} />
+                        </div>
+                        <Col >
+                            <Swiper className="swiper"
+                                style={{ width: '1200px' }}
+                                onSlideChange={() => { this.setState({ change: 2 }); console.log(this.state.change) }}
+                                onSwiper={(swiper) => console.log(swiper)}
+                                slidesPerView={3}
+                                spaceBetween={30}
+                                loop={true}
+                                grid={{ fill: 'rows', rows: 2 }}
+                            >
+                                {this.state.model.slice(0, 51).map((item, index) => {
+                                    return (
+                                        <SwiperSlide key={index}>
+                                            <Card key={item.Id}
+                                                className="card-blog card-background"
+                                                data-animation="zooming"  >
+                                                <div
+                                                    className="full-background"
+                                                    style={{
+                                                        backgroundImage: "url(https://storage.googleapis.com/feeling-arts-data/artwork-img/" + item.imageNo + ".jpg)",
                                                         /*"url(" + require("assets/NewImg/Artwork.jpg") + ")",*/
-                                                }}
-                                            ></div>
-                                            <a onClick={(e) => handleClick(e, item.modelNo, item.imageNo)}>
-                                                <CardBody>
-                                                    <div className="content-center">
-                                                        <CardTitle tag="h4">{item.modelName}</CardTitle>
-                                                        {console.log("card title", item.modelName)}
-                                                    </div>
-                                                </CardBody>
-                                            </a>
-                                        </Card>
-                                )
-                            })}
+                                                    }}
+                                                ></div>
+                                                <a onClick={(e) => handleClick(e, item.modelNo, item.imageNo)}>
+                                                    <CardBody>
+                                                        <div className="content-center">
+                                                            <CardTitle tag="h4">{item.modelName}</CardTitle>
+                                                            {console.log("card title", item.modelName)}
+                                                        </div>
+                                                    </CardBody>
+                                                </a>
+                                            </Card>
+                                        </SwiperSlide>
+                                    )
+                                })}
+                            </Swiper>
+                            <Swiper className="swiper"
+                                style={{ width: '1200px' }}
+                                onSlideChange={() => { this.setState({ change: 2 }); console.log(this.state.change) }}
+                                onSwiper={(swiper) => console.log(swiper)}
+                                slidesPerView={3}
+                                spaceBetween={30}
+                                loop={true}
+                                grid={{ fill: 'rows', rows: 2 }}
+                            >
+                                {this.state.model.slice(51, this.state.model.length).map((item, index) => {
+                                    return (
+                                        <SwiperSlide key={index}>
+                                            <Card key={item.Id}
+                                                className="card-blog card-background"
+                                                data-animation="zooming"  >
+                                                <div
+                                                    className="full-background"
+                                                    style={{
+                                                        backgroundImage: "url(https://storage.googleapis.com/feeling-arts-data/artwork-img/" + item.imageNo + ".jpg)",
+                                                        /*"url(" + require("assets/NewImg/Artwork.jpg") + ")",*/
+                                                    }}
+                                                ></div>
+                                                <a onClick={(e) => handleClick(e, item.modelNo, item.imageNo)}>
+                                                    <CardBody>
+                                                        <div className="content-center">
+                                                            <CardTitle tag="h4">{item.modelName}</CardTitle>
+                                                            {console.log("card title", item.modelName)}
+                                                        </div>
+                                                    </CardBody>
+                                                </a>
+                                            </Card>
+                                        </SwiperSlide>
+                                    )
+                                })}
+                            </Swiper>
                         </Col>
                         {/*<Col rg="6">*/}
                         {/*    {this.state.model.map((item, index) => {*/}

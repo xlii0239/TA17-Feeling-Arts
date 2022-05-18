@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import NavbarForHome from "components/a17components/navbars/NavbarForHome.js";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper.min.css';
+import 'assets/css/common.css'
 
 const handleClick = (e, imageNo, artworkName) => {
 
@@ -20,7 +21,8 @@ class NormalArtMusicHome extends React.Component {
         this.state = {
             artwork: [],
             music: [],
-            test: []
+            test: [],
+            change: 1,
         }
     }
 
@@ -70,10 +72,14 @@ class NormalArtMusicHome extends React.Component {
                         </Row>
                         <Row className="justify-content-center mt-5">
                             <Col lg="12">
-                                <Row className="row-grid">
+                                <Row className="row-grid" style={{ position: "relative" }}>
+                                    <div style={{ display: this.state.change < 2 ? "block" : "none" }}>
+                                        <img src={require("assets/img/tip.png")}
+                                            style={{ animation: "zy 2.5s .15s linear infinite", width: "92px", height: "80px", position: "absolute", "zIndex": 999, "left": "-120px", "top": "50px" }} />
+                                    </div>
                                     <Swiper className="swiper"
                                         style={{ width: '1200px' }}
-                                        onSlideChange={() => console.log('slide change')}
+                                        onSlideChange={() => { this.setState({ change: 2 }); console.log(this.state.change) }}
                                         onSwiper={(swiper) => console.log(swiper)}
                                         slidesPerView={3}
                                         spaceBetween={30}
@@ -92,22 +98,24 @@ class NormalArtMusicHome extends React.Component {
                                                         }}
                                                     >
                                                         <CardBody className="py-5">
-                                                            <Row>
-                                                                <h5 className="text-primary text-capitalize font-weight-bold text-light"
-                                                                    style={{ height: "100px" }}
-                                                                >
-                                                                    {item.artwork}
-                                                                </h5>
-                                                            </Row>
-                                                            <Row className="description mt-3 font-weight-bold text-light">
-                                                                {item.artist + " created in " + item.createYear}
-                                                            </Row>
-                                                            <Row className="description mt-3 font-weight-bold text-light">
-                                                                {item.style + " style"}
-                                                            </Row>
+                                                            <h4 className="text-white text-capitalize font-weight-bold"
+                                                                style={{ height: "72px" }}
+                                                            >
+                                                                {item.artwork}
+                                                            </h4>
+                                                            <p className="text-white description mt-3 font-weight-bold">
+                                                                {item.artist +
+                                                                    " created in " +
+                                                                    item.createYear}
+                                                            </p>
+                                                            <p className="text-white description mt-3 font-weight-bold">
+
+                                                                {item.style +
+                                                                    " style."}
+                                                            </p>
                                                             <Button
                                                                 className="mt-4"
-                                                                color="info"
+                                                                color="primary"
                                                                 onClick={(e) => handleClick(e, item.imageNo, item.artwork)}
                                                             >
                                                                 Listen
@@ -120,7 +128,7 @@ class NormalArtMusicHome extends React.Component {
                                     </Swiper>
                                     <Swiper className="swiper"
                                         style={{ width: '1200px' }}
-                                        onSlideChange={() => console.log('slide change')}
+                                        onSlideChange={() => { this.setState({ change: 2 }); console.log(this.state.change) }}
                                         onSwiper={(swiper) => console.log(swiper)}
                                         slidesPerView={3}
                                         spaceBetween={30}
@@ -139,22 +147,24 @@ class NormalArtMusicHome extends React.Component {
                                                         }}
                                                     >
                                                         <CardBody className="py-5">
-                                                            <Row>
-                                                                <h4 className="text-primary text-capitalize font-weight-bold text-light"
-                                                                    style={{ height: "100px" }}
-                                                                >
-                                                                    {item.artwork}
-                                                                </h4>
-                                                            </Row>
-                                                            <Row className="description mt-3 font-weight-bold text-light">
-                                                                {item.artist + " created in " + item.createYear}
-                                                            </Row>
-                                                            <Row className="description mt-3 font-weight-bold text-light">
-                                                                {item.style + " style"}
-                                                            </Row>
+                                                            <h4 className="text-white text-capitalize font-weight-bold"
+                                                                style={{ height: "72px" }}
+                                                            >
+                                                                {item.artwork}
+                                                            </h4>
+                                                            <p className="text-white description mt-3 font-weight-bold">
+                                                                {item.artist +
+                                                                    " created in " +
+                                                                    item.createYear}
+                                                            </p>
+                                                            <p className="text-white description mt-3 font-weight-bold">
+
+                                                                {item.style +
+                                                                    " style."}
+                                                            </p>
                                                             <Button
                                                                 className="mt-4"
-                                                                color="info"
+                                                                color="primary"
                                                                 onClick={(e) => handleClick(e, item.imageNo, item.artwork)}
                                                             >
                                                                 Listen
