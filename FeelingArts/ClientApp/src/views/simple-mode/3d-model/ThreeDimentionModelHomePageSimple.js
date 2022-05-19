@@ -55,28 +55,28 @@ class ThreeDimentionModelHomePage extends React.Component {
                 </Row>
                 <Container fluid>
                     <Row>
-                        <Col>
-                            {this.state.model.map((item, index) => {
+                        <Col lg="8" style={{ margin: "0px auto" }}>
+                            {this.state.model.slice(0, this.state.num).map((item, index) => {
                                 return (
-                                        <Card key={item.Id}
-                                            className="card-blog card-background"
-                                            data-animation="zooming"  >
-                                            <div
-                                                className="full-background"
-                                                style={{
-                                                    backgroundImage: "url(https://storage.googleapis.com/feeling-arts-data/artwork-img/" + item.imageNo + ".jpg)",
-                                                        /*"url(" + require("assets/NewImg/Artwork.jpg") + ")",*/
-                                                }}
-                                            ></div>
-                                            <a onClick={(e) => handleClick(e, item.modelNo, item.imageNo)}>
-                                                <CardBody>
-                                                    <div className="content-center">
-                                                        <CardTitle tag="h4">{item.modelName}</CardTitle>
-                                                        {console.log("card title", item.modelName)}
-                                                    </div>
-                                                </CardBody>
-                                            </a>
-                                        </Card>
+                                    <Card key={item.Id}
+                                        className="card-blog card-background"
+                                        data-animation="zooming"  >
+                                        <div
+                                            className="full-background"
+                                            style={{
+                                                backgroundImage: "url(https://storage.googleapis.com/feeling-arts-data/artwork-img/" + item.imageNo + ".jpg)",
+                                                /*"url(" + require("assets/NewImg/Artwork.jpg") + ")",*/
+                                            }}
+                                        ></div>
+                                        <a onClick={(e) => handleClick(e, item.modelNo, item.imageNo)}>
+                                            <CardBody>
+                                                <div className="content-center">
+                                                    <CardTitle tag="h4">{item.modelName}</CardTitle>
+                                                    {console.log("card title", item.modelName)}
+                                                </div>
+                                            </CardBody>
+                                        </a>
+                                    </Card>
                                 )
                             })}
                         </Col>
@@ -88,6 +88,9 @@ class ThreeDimentionModelHomePage extends React.Component {
                         {/*    })}*/}
                         {/*</Col>*/}
                     </Row>
+                    <div r-if="this.state.num < 9" onClick={(e) => { this.setState({ num: this.state.model.length }); }}
+                        style={{ width: "141px", height: "46px", margin: "0px auto", border: '1px solid #5e72e4', 'marginBottom': '20px', padding: '10px 20px', 'borderRadius': '10px', 'cursor': 'pointer', "textAlign": "center" }}>
+                        loading more</div>
                 </Container>
 
                 <FooterForWeb />

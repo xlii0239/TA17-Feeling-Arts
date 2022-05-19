@@ -74,13 +74,15 @@ class SimpleSearchArtwork extends React.Component {
                         <h6 class="text-muted">
                             Search Feelingarts.tk by entering the keywords of the artwork name in the search box below.
                             </h6>
-                        <Input type="text" innerRef={Input => this.input = Input} placeholder="Search all results" />
-                        <Button color="primary"
-                            type="button"
-                            onClick={this.search.bind(this)}
-                        >
-                            Click to Search
+                        <div style={{ display: "flex" }}>
+                            <Input style={{ width: "60%" }} type="text" innerRef={Input => this.input = Input} placeholder="Search all results" />
+                            <Button color="primary"
+                                type="button"
+                                onClick={this.search.bind(this)}
+                            >
+                                Click to Search
                         </Button>
+                        </div>
                     </Container>
                     <Col>
                         <ArtworkResultShow toData={this.state.artworkShow}>

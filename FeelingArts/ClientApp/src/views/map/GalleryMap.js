@@ -35,36 +35,13 @@ class GalleryMap extends Component {
                     lng: 144.2769939
                 }
             ],
-            galleriesData: [],
-            userLocation: {
-                lat: 0,
-                lng: 0
-            }
+            galleriesData: []
 
         };
     }
 
-    
-
-
     componentDidMount() {
-
-        const getUserCurrentLocation = position => {
-            const location = {
-                lat: position.coords.latitude,
-                lng: position.coords.longitude
-            }
-
-            this.setState({ userLocation: location })
-        }
-
-        navigator.geolocation.getCurrentPosition(getUserCurrentLocation)
-        
-
         this.populateData();
-
-        
-
     }
 
     async populateData() {
@@ -93,7 +70,7 @@ class GalleryMap extends Component {
         //        lng: lng
         //    }
         //    gitems.push(item)
-            
+
         //}
 
 
@@ -128,9 +105,6 @@ class GalleryMap extends Component {
 
     render() {
         if (!this.props.loaded) return <div>Loading...</div>;
-        if (this.state.userLocation.lat == 0) return <div>Loading...</div>
-
-        console.log("User Location", this.state.userLocation)
 
         return (
             <>
@@ -154,8 +128,8 @@ class GalleryMap extends Component {
                             zoom={14}
                             style={mapStyles}
                             initialCenter={{
-                                lat: this.state.userLocation.lat,
-                                lng: this.state.userLocation.lng
+                                lat: -37.8150384504867,
+                                lng: 144.9666541890734
                             }}
                         >
 
@@ -178,23 +152,20 @@ class GalleryMap extends Component {
                                 marker={this.state.activeMarker}
                                 onClose={this.onInfoWindowClose}
                                 visible={this.state.showingInfoWindow}>
-                                
+
                                 <div>
                                     {(() => {
                                         if (this.state.selectedPlace.name) {
                                             let imageURL = 'https://storage.googleapis.com/feeling-arts-data/app-img-source/map-infowindow-background.jpg'
                                             return (
                                                 <div>
-                                                    <Card className="card-background"
+                                                    <Card
                                                         style={{
                                                             backgroundImage: "url(" + imageURL + ")",
                                                         }}
                                                     >
                                                         <CardBody className="py-5">
-                                                            <div className="icon icon-shape icon-shape-dark rounded-circle mb-4">
-                                                                <i className="ni ni-palette"></i>
-                                                            </div>
-                                                            
+
                                                             <h4 className="text-dark text-capitalize font-weight-bold">
                                                                 {this.state.selectedPlace.name.split("|")[0]}
                                                             </h4>
@@ -202,24 +173,38 @@ class GalleryMap extends Component {
                                                                 {this.state.selectedPlace.name.split("|")[2]}
                                                             </h4>
                                                             <p className="text-dark description mt-3 font-weight-bold">
-                                                                {"Address: " + this.state.selectedPlace.name.split("|")[3] } 
+                                                                <i className="fa fa-home" aria-hidden="true"></i>
+                                                                &nbsp;
+                                                                {"Address: " + this.state.selectedPlace.name.split("|")[3]}
                                                             </p>
                                                             <p className="text-dark description mt-3 font-weight-bold">
-                                                                {"Phone: "+ this.state.selectedPlace.name.split("|")[4]}
+                                                                <i className="fa fa-phone-square" aria-hidden="true"></i>
+                                                                &nbsp;
+                                                                {"Phone: " + this.state.selectedPlace.name.split("|")[4]}
                                                             </p>
                                                             <p className="text-dark description mt-3 font-weight-bold">
+                                                                <i className="fa fa-wheelchair" aria-hidden="true"></i>
+                                                                &nbsp;
                                                                 {"Wheel Support: " + this.state.selectedPlace.name.split("|")[5]}
                                                             </p>
                                                             <p className="text-dark description mt-3 font-weight-bold">
+                                                                <i className="fa fa-blind" aria-hidden="true"></i>
+                                                                &nbsp;&nbsp;
                                                                 {"Blind Support: " + this.state.selectedPlace.name.split("|")[6]}
                                                             </p>
                                                             <p className="text-dark description mt-3 font-weight-bold">
+                                                                <i className="fa fa-volume-up" aria-hidden="true"></i>
+                                                                &nbsp;
                                                                 {"Audio Support: " + this.state.selectedPlace.name.split("|")[7]}
                                                             </p>
                                                             <p className="text-dark description mt-3 font-weight-bold">
+                                                                <i className="fas fa-dog"></i>
+                                                                &nbsp;
                                                                 {"Guide Dog Support: " + this.state.selectedPlace.name.split("|")[8]}
                                                             </p>
                                                             <p className="text-dark description mt-3 font-weight-bold">
+                                                                <i className='fas fa-hands-helping'></i>
+                                                                &nbsp;
                                                                 {"Other Support: " + this.state.selectedPlace.name.split("|")[9]}
                                                             </p>
                                                             <Button
@@ -233,9 +218,9 @@ class GalleryMap extends Component {
                                                         </CardBody>
                                                     </Card>
                                                 </div>
-                                                
+
                                             )
-                                        } 
+                                        }
                                         else {
                                             return (
                                                 <h1>name has no length</h1>
@@ -257,7 +242,7 @@ class GalleryMap extends Component {
                 <div className="blogs-6">
                     <Row className="justify-content-center mt-5">
                         <Col lg="4">
-                            
+
                         </Col>
                     </Row>
                 </div>

@@ -10,6 +10,7 @@ function NormalComponents() {
     return (
         <>
             <Row className="section-basic-components">
+
                 <Col lg="6" md="6">
                     <CardBody className="col-md-8 offset-md-3">
                         <CardTitle className="font-weight-bold" tag="h4">
@@ -52,7 +53,7 @@ function NormalComponents() {
                     </p>
                     </CardBody>
                 </Col>
-                <Col className="mb-3" lg="6">
+                <Col className="mb-3" lg="6" style={{ "marginLeft": "-100px" }}>
                     <img
                         alt="MonaLisa photo"
                         className="table-img"
