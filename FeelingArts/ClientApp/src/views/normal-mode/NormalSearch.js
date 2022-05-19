@@ -5,7 +5,7 @@ import ProfileCard1 from "components/a17components/cards/ProfileCard1.js";
 import Team1 from "components/a17components/cards/Team1.js";
 import Carousel from "components/a17components/cards/Carousel.js";
 import Autosuggest from 'react-autosuggest';
-
+import 'assets/css/common.css'
 
 
 
@@ -282,30 +282,33 @@ class NormalSearch extends React.Component {
                 </ul>
                 <div className="section" >
                     <Container className="shape-container py-lg-2" >
-                        <h6 class="text-muted">
+                        <h6 className="text-muted">
                             Search Feelingarts.tk by entering the keywords of the artist name in the search box below.
                             </h6>
                         {/*<Input type="text" innerRef={Input => this.input = Input} placeHolder="Please enter contents you want to search" />*/}
-                        <div style={{ 'display': 'flex', 'alignItems': 'center' }}>
-                        <Autosuggest
-                            suggestions={suggestions}
-                            onSuggestionsFetchRequested={this.onSuggestionsFetchRequested}
-                            onSuggestionsClearRequested={this.onSuggestionsClearRequested}
-                            getSuggestionValue={getSuggestionValue}
-                            renderSuggestion={renderSuggestion}
-                            inputProps={inputProps}
-                        />
-                            <button
-                                color="transparent"
+                        <div style={{ 'display': 'flex', "alignItems": "center" }}>
+                            <div style={{ width: '60%' }}>
+                                <Autosuggest
+                                    suggestions={suggestions}
+                                    onSuggestionsFetchRequested={this.onSuggestionsFetchRequested}
+                                    onSuggestionsClearRequested={this.onSuggestionsClearRequested}
+                                    getSuggestionValue={getSuggestionValue}
+                                    renderSuggestion={renderSuggestion}
+                                    inputProps={inputProps}
+
+                                />
+                            </div>
+                            <Button color="primary"
                                 type="button"
                                 onClick={this.search.bind(this)}
-                        >
-                            <i className="fa fa-search"></i>
-                            </button>
+                            >
+                                Click to Search
+                        </Button>
                         </div>
+
                     </Container>
                 </div>
-                <Row class="lg-12 align-center">
+                <Row className="lg-12 align-center">
                     <Col lg={{ span: 5, offset: 2 }}>
                         <Row justify="space-around" align="middle">
                             <ul>
@@ -321,15 +324,12 @@ class NormalSearch extends React.Component {
 
                                                         {this.searchArtwork(item.artist).map((item, index) => {
                                                             return (
-                                                                <div>
-                                                                    <img
-                                                                        alt="..."
-                                                                        className="img-fluid rounded shadow-lg"
-                                                                        src={this.requireErrorHandled(item.imageNo)}
-                                                                    >
-                                                                    </img>
-                                                                    <h1>{item.artwork}</h1>
-                                                                </div>
+                                                                <img
+                                                                    alt="..."
+                                                                    className="img-fluid rounded shadow-lg"
+                                                                    src={this.requireErrorHandled(item.imageNo)}
+                                                                >
+                                                                </img>
                                                             )
                                                         })}
                                                     </Col>
