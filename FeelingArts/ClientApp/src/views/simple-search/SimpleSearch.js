@@ -52,7 +52,7 @@ class SimpleSearch extends React.Component {
         }
         else {
             this.setState({
-                artistShow: this.state.artist
+                artistShow: []
             })
         }
         console.log("from changeFunction", this.state.artistShow);
