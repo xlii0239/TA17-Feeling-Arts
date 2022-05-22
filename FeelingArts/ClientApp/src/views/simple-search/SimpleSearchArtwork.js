@@ -105,7 +105,7 @@ class SimpleSearchArtwork extends React.Component {
 
         // Autosuggest will pass through all these props to the input.
         const inputProps = {
-            placeholder: 'Enter an artist name',
+            placeholder: 'Enter an artwork name',
             value,
             onChange: this.onChange
         };
@@ -144,7 +144,7 @@ class SimpleSearchArtwork extends React.Component {
                                 type="button"
                                 onClick={this.search.bind(this)}
                             >
-                                Auto suggest Click to Search
+                                Click to Search
                             </Button>
                         </div>
                     </Container>

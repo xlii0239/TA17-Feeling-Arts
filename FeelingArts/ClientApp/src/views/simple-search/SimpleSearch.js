@@ -142,7 +142,7 @@ class SimpleSearch extends React.Component {
                                 type="button"
                                 onClick={this.search.bind(this)}
                             >
-                                Auto suggest Click to Search
+                                Click to Search
                             </Button>
 
                         </div>

@@ -119,7 +119,7 @@ class NormalSearchArtwork extends React.Component {
 
         // Autosuggest will pass through all these props to the input.
         const inputProps = {
-            placeholder: 'Enter an artist name',
+            placeholder: 'Enter an artwork name',
             value,
             onChange: this.onChange
         };
