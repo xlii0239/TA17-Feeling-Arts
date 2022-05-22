@@ -287,8 +287,8 @@ class NormalSearch extends React.Component {
                                 Search Feelingarts.tk by entering the keywords of the artist name in the search box.
                         </h6>
                         {/*<Input type="text" innerRef={Input => this.input = Input} placeHolder="Please enter contents you want to search" />*/}
-                        <div style={{ 'display': 'flex', "alignItems": "center" }}>
-                            <div style={{ display: "flex", justifyContent: 'center', width: '60%' }} type="text">
+                            <div style={{ 'display': 'flex', "alignItems": "center", width: "72%", margin: " 0px auto" }}>
+                                <div className="a_input">
                                 <Autosuggest
                                     suggestions={suggestions}
                                     onSuggestionsFetchRequested={this.onSuggestionsFetchRequested}
@@ -298,7 +298,7 @@ class NormalSearch extends React.Component {
                                     inputProps={inputProps}
 
                                 />
-                            </div>
+                                 </div>
                             <div className="search_btn"
                                 onClick={this.search.bind(this)}
                             >
@@ -310,8 +310,8 @@ class NormalSearch extends React.Component {
                 </div>
                 <Row className="lg-12 align-center" style={{ "marginLeft": "-30px" }}>
                     <Col lg={{ span: 5, offset: 2 }}>
-                        <Row justify="space-around" align="middle">
-                            <ul>
+                            <Row justify="space-around" align="middle">
+                                <ul style={{ listStyle: "none"}}>
                                 {this.state.artistShow.map((item, index) => {
                                     return (
                                         <li key={item.id}>

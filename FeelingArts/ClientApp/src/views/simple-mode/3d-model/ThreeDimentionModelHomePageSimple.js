@@ -88,8 +88,8 @@ class ThreeDimentionModelHomePage extends React.Component {
                         {/*</Col>*/}
                     </Row>
                     <div r-if="this.state.num < 9" onClick={(e) => { this.setState({ num: this.state.model.length }); }}
-                        style={{ width: "141px", height: "46px", margin: "0px auto", border: '1px solid #5e72e4', 'marginBottom': '20px', padding: '10px 20px', 'borderRadius': '10px', 'cursor': 'pointer', "textAlign": "center" }}>
-                        loading more</div>
+                        style={{ width: "158px", height: "46px", margin: "0px auto", border: '2px solid #5e72e4', 'marginBottom': '20px', padding: '10px 20px', 'borderRadius': '10px', 'cursor': 'pointer', "textAlign": "center" }}>
+                        Loading more</div>
                 </Container>
             </div>
             </>

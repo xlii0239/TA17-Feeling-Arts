@@ -44,3 +44,21 @@
     box-sizing:border-box;
     padding:0px 5px;
 }
+
+
+.a_input{
+    width:60%;
+    height:40px;
+    position:relative;
+}
+.react-autosuggest__container input {
+    position:absolute;
+    width: 100% !important;
+}
+.card-profile[data-image="profile-image"] .card-header::after {
+    background: transparent!important;
+}
+.card-profile[data-image="profile-image"] .card-image img {
+    width: 40% !important;
+    height: 90% !important;
+}

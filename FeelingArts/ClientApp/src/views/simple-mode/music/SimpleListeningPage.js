@@ -43,15 +43,17 @@ class SimpleListeningPage extends React.Component {
                     <li className="breadcrumb-item text-light"><a href="simplemode" className="text-dark font-weight-bold">Simple Mode</a></li>
                     <li className="breadcrumb-item"><a href="simplemusic" className="text-dark font-weight-bold">Art through Music</a></li>
                     <li className="breadcrumb-item active">Listen</li>
-                </ul>
+                    </ul>
+                    <div style={{height:"1vh"}}></div>
                 <div className="page-header">
+
                     <Container>
                         <Row>
                             <Col className="mr-auto">
                                 <h4 className="title font-weight-bold">{this.state.artworkName}</h4>
                                     <h5 className="font-italic">Created by Artist Name</h5>
                                     <h5 className="font-italic">Introduction</h5>
-                                    <h5 className="font-italic" style={{ height: '60px', }}>
+                                    <h5 className="font-italic" >
                                         Listening to the identical music of the artwork with the matching description.
                                     </h5>
                             </Col>
