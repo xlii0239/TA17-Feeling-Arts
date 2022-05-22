@@ -275,6 +275,7 @@ class NormalSearch extends React.Component {
         return (
             <>
                 <NavbarForHome />
+                <div style={{ background: 'url(https://www.publicdomainpictures.net/pictures/240000/velka/light-blue-wallpaper.jpg)', height: '900px', }} >
                 <ul class="breadcrumb bg-transparent font-weight-bold">
                     <li class="breadcrumb-item text-light"><a href="homepage" class="text-dark font-weight-bold">Home</a></li>
                     <li class="breadcrumb-item text-light"><a href="normalmode" class="text-dark font-weight-bold">Picture Mode</a></li>
@@ -308,7 +309,7 @@ class NormalSearch extends React.Component {
 
                     </Container>
                 </div>
-                <Row className="lg-12 align-center">
+                <Row className="lg-12 align-center" style={{ "marginLeft": "-30px" }}>
                     <Col lg={{ span: 5, offset: 2 }}>
                         <Row justify="space-around" align="middle">
                             <ul>
@@ -345,6 +346,7 @@ class NormalSearch extends React.Component {
                     {/*    <Team1 />*/}
                     {/*</Col>*/}
                 </Row>
+            </div>
             </>
         )
     }

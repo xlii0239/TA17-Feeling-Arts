@@ -2,8 +2,6 @@
 import { Container, Row, Col, Button, Card, CardBody, CardTitle} from "reactstrap";
 import { Link } from 'react-router';
 import NavbarForHome from "components/a17components/navbars/NavbarForHome.js";
-import FooterForWeb from "components/a17components/footers/FooterForWeb.js";
-import HeaderForHome from "components/a17components/headers/HeaderForHome.js";
 import { Swiper, SwiperSlide } from 'swiper/react' 
 import 'swiper/swiper.min.css' 
 import 'assets/css/common.css'
@@ -43,6 +41,7 @@ class ThreeDimentionModelHomePage extends React.Component {
         return (
             <>
                 <NavbarForHome />
+                <div style={{ background: 'url(https://www.publicdomainpictures.net/pictures/240000/velka/light-blue-wallpaper.jpg)', height: '400px', }} >
                 <ul class="breadcrumb bg-transparent font-weight-bold">
                     <li class="breadcrumb-item"><a href="homepage" class="text-dark font-weight-bold">Home</a></li>
                     <li class="breadcrumb-item"><a href="normalmode" class="text-dark font-weight-bold">Picture Mode</a></li>
@@ -60,7 +59,7 @@ class ThreeDimentionModelHomePage extends React.Component {
                     <Row style={{ position: "relative" }}>
 
                         <div style={{ display: this.state.change < 2 ? "block" : "none" }}>
-                            <img src={require("assets/img/tip.png")}
+                            <img src={require("assets/NewImg/tip.png")}
                                 style={{ animation: "zy 2.5s .15s linear infinite", width: "92px", height: "80px", position: "absolute", "zIndex": 999, "left": "20px", "top": "50px" }} />
                         </div>
                         <Col >
@@ -144,8 +143,7 @@ class ThreeDimentionModelHomePage extends React.Component {
                         {/*</Col>*/}
                     </Row>
                 </Container>
-
-                <FooterForWeb />
+            </div>
             </>
         )
     }

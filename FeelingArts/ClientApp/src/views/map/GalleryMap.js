@@ -109,6 +109,7 @@ class GalleryMap extends Component {
         return (
             <>
                 <NavbarForHome />
+                <div style={{ background: 'url(https://www.publicdomainpictures.net/pictures/240000/velka/light-blue-wallpaper.jpg)', height: '700px', }} >
                 <ul className="breadcrumb bg-transparent font-weight-bold">
                     <li className="breadcrumb-item"><a href="homepage" className="text-dark font-weight-bold">Home</a></li>
                     <li className="breadcrumb-item active">Galleries Info</li>
@@ -236,7 +237,8 @@ class GalleryMap extends Component {
                                 </div>
                             </InfoWindow>
                         </Map>
-                    </Container>
+                        </Container>
+                </div>
                 </div>
 
                 <div className="blogs-6">

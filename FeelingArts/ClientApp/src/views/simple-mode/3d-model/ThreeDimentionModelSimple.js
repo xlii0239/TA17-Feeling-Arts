@@ -34,6 +34,7 @@ function ThreeDimentionModel() {
     return (
         <>
             <NavbarForHome type="transparent" />
+            <div style={{ background: 'url(https://www.publicdomainpictures.net/pictures/240000/velka/light-blue-wallpaper.jpg)', height: '900px', }} >
             <ul class="breadcrumb bg-transparent font-weight-bold">
                 <li className="breadcrumb-item"><a href="homepage" className="text-dark font-weight-bold">Home</a></li>
                 <li className="breadcrumb-item"><a href="simplemode" className="text-dark font-weight-bold">Simple Mode</a></li>
@@ -90,6 +91,7 @@ function ThreeDimentionModel() {
                     </Col>
                 </Row>
             </Container>
+            </div>
         </>
     );
 }

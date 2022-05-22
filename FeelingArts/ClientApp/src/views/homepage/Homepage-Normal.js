@@ -1,9 +1,5 @@
 import React from "react";
 
-// reactstrap components
-// import {
-//
-// } from "reactstrap";
 
 // Core Components
 import NavbarForHome from "components/a17component/navbars/NavbarForHome.js";

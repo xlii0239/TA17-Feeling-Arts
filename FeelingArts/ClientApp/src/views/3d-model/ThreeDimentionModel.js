@@ -2,7 +2,6 @@
 import { Container, Row, Col, Button } from "reactstrap";
 
 import NavbarForHome from "components/a17components/navbars/NavbarForHome.js";
-import FooterForWeb from "components/a17components/footers/FooterForWeb.js";
 
 import STLViewer from 'stl-viewer'
 
@@ -37,8 +36,9 @@ function ThreeDimentionModel() {
     };
 
     return (
-        <>
+        <>            
             <NavbarForHome type="transparent" />
+            <div style={{ background: 'url(https://www.publicdomainpictures.net/pictures/240000/velka/light-blue-wallpaper.jpg)', height: '900px', }} >
             <ul className="breadcrumb bg-transparent font-weight-bold">
                 <li className="breadcrumb-item"><a href="homepage" className="text-dark font-weight-bold">Home</a></li>
                 <li className="breadcrumb-item"><a href="normalmode" className="text-dark font-weight-bold">Picture Mode</a></li>
@@ -52,6 +52,7 @@ function ThreeDimentionModel() {
                             alt="..."
                             className="img-fluid rounded shadow-lg"
                             src={url_img}
+                            style={{ height: "600px", weight:"1000px"}}
                         >
                         </img>
                     </Col>
@@ -74,14 +75,14 @@ function ThreeDimentionModel() {
                             Download 3D Model (STL file)
                         </Button>
                     </Col>
-                    <Col sm className="py-2 border rounded" display="flex">
+                    <Col sm className="py-2 border rounded">
                         <Button color="success" size="lg" type="button" href="normal-about-3d-printing">
                             3D Model Print Advice
                         </Button>
                     </Col>
                 </Row>
             </Container>
-            <FooterForWeb />
+        </div>
         </>
     );
 }

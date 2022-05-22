@@ -1,8 +1,6 @@
 import React from "react";
-import NavbarForHome from "components/a17components/navbars/NavbarForHome.js";
 import { Container, Row, Col } from "reactstrap";
 import MusicInfo from "components/a17components/Music/MusicInfo.js";
-import { useLocation } from "react-router-dom";
 
 class SimpleListeningPage extends React.Component {
 
@@ -39,7 +37,7 @@ class SimpleListeningPage extends React.Component {
     render() {
         return (
             <>
-                <NavbarForHome />
+                <div style={{ background: 'url(https://www.publicdomainpictures.net/pictures/240000/velka/light-blue-wallpaper.jpg)' }} >
                 <ul className="breadcrumb bg-transparent font-weight-bold" >
                     <li className="breadcrumb-item"><a href="homepage" className="text-dark font-weight-bold">Home</a></li>
                     <li className="breadcrumb-item text-light"><a href="simplemode" className="text-dark font-weight-bold">Simple Mode</a></li>
@@ -71,7 +69,7 @@ class SimpleListeningPage extends React.Component {
                         </Row>
                     </Container>
                 </div>
-
+</div>
             </>
         )
     }

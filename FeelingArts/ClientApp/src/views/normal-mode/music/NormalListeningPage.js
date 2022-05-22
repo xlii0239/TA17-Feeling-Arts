@@ -45,8 +45,9 @@ class NromalListeningPage extends React.Component {
 
     render() {
         return (
-            <>
+            <>                
                 <NavbarForHome />
+                <div style={{ background: 'url(https://www.publicdomainpictures.net/pictures/240000/velka/light-blue-wallpaper.jpg)', height: '1000px', }} >
                 <ul className="breadcrumb bg-transparent font-weight-bold ">
                     <li className="breadcrumb-item"><a href="homepage" className="text-dark font-weight-bold">Home</a></li>
                     <li className="breadcrumb-item text-light"><a href="normalmode" className="text-dark font-weight-bold">Picture Mode</a></li>
@@ -87,7 +88,7 @@ class NromalListeningPage extends React.Component {
                         </Row>
                     </Container>
                 </div>
-
+            </div>
             </>
         )
     }
