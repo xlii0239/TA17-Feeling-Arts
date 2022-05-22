@@ -303,7 +303,7 @@ class NormalSearch extends React.Component {
                                 onClick={this.search.bind(this)}
                             >
                                 Click to Search
-                        </Button>
+                            </Button>
                         </div>
 
                     </Container>
