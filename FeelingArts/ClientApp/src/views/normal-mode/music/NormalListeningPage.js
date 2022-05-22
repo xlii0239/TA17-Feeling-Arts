@@ -60,21 +60,23 @@ class NromalListeningPage extends React.Component {
                             <Col>
                                 <Col className="mr-auto">
                                     <h4 className="title font-weight-bold">{this.state.artworkName}</h4>
+                                    <h5 className="font-italic">Created by Artist Name</h5>
+                                    <h5 className="font-italic">Introduction</h5>
                                 </Col>
                                 <img
                                     alt="..."
                                     className="img-fluid rounded shadow-lg"
                                     src={this.state.artworkImageURL}
-                                    style={{ height: "350px" }}
+                                    style={{ height: "500px",weight:"600px"}}
                                 >
                                 </img>
                             </Col>
                         </Row>
                         <Row>
-                        </Row>
-                        <Row>
                             <Col className="pl-md-2" >
-                                <h5 className="font-italic">Listening to the identical music of the artwork with the matching description.</h5>
+                                    <h5 className="font-italic" style={{ height: '60px', 'marginTop': '40px' }}>
+                                        Listening to the identical music of the artwork with the matching description.
+                                    </h5>
                                 {this.state.music.map((item, index) => {
                                     let video_url = item.mLink.slice(16)
                                     return (

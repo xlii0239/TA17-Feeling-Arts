@@ -67,20 +67,15 @@ class SimpleSearchArtwork extends React.Component {
                     <li className="breadcrumb-item active">Search Artwork</li>
                 </ul>
                 <div className="section">
-                    <Container className="shape-container flex align-items-center py-lg-2"
-
-                    >
-                        <h6 className="text-muted">
-                            Search Feelingarts.tk by entering the keywords of the artwork name in the search box below.
-                            </h6>
+                    <Container className="shape-container flex align-items-center py-lg-2" >
+                        <h6 className="text-muted" style={{ width: "72%", margin: " 0px auto", "minWidth":"360px"}}>
+                            Search Feelingarts.tk by entering the keywords of the artwork name in the search box.
+                        </h6>                                                
                         <div style={{ display: "flex", justifyContent: 'center' }}>
-                            <Input style={{ width: "60%" }} type="text" innerRef={Input => this.input = Input} placeholder="Search all results" />
-                            <Button color="primary"
-                                type="button"
-                                onClick={this.search.bind(this)}
-                            >
+                             <Input style={{ width: "60%" }} type="text" innerRef={Input => this.input = Input} placeholder="Search all results" />
+                             <div className ="search_btn" onClick={this.search.bind(this)}>
                                 Click to Search
-                        </Button>
+                             </div>
                         </div>
                     </Container>
                     <Col>

@@ -83,17 +83,14 @@ class NormalSearchArtwork extends React.Component {
                 </ul>
                 <div className="section">
                     <Container className="shape-container flex align-items-center py-lg-2">
-                        <h6 class="text-muted">
-                            Search Feelingarts.tk by entering the keywords of the artwork name in the search box below.
-                            </h6>
-                        <div style={{ display: "flex" }}>
-                            <Input style={{ width: "60%" }} type="text" innerRef={Input => this.input = Input} placeHolder="Search all results" />
-                            <Button color="primary"
-                                type="button"
-                                onClick={this.search.bind(this)}
-                            >
-                                Click to Search
-                        </Button>
+                        <h6 className="text-muted" style={{ width: "72%", margin: " 0px auto", "minWidth": "360px" }}>
+                             Search Feelingarts.tk by entering the keywords of the artwork name in the search box.
+                        </h6>
+                            <div style={{ display: "flex", justifyContent: 'center' }}>
+                                <Input style={{ width: "60%" }} type="text" innerRef={Input => this.input = Input} placeholder="Search all results" />
+                                <div className="search_btn" onClick={this.search.bind(this)}>
+                                    Click to Search
+                        </div>
                         </div>
                     </Container>
                     {/*<Col>*/}

@@ -74,7 +74,6 @@ class SimpleArtMusicHome extends React.Component {
                                 <Row className="row-grid">
                                     {this.state.artwork.slice(0, this.state.num).map((item, index) => {
                                         console.log(this.state.artwork.length);
-
                                         return (
                                             <Col lg="4">
                                                 <Card className="card-lift--hover shadow border-0">

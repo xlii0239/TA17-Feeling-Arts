@@ -283,12 +283,12 @@ class NormalSearch extends React.Component {
                 </ul>
                 <div className="section" >
                     <Container className="shape-container py-lg-2" >
-                        <h6 className="text-muted">
-                            Search Feelingarts.tk by entering the keywords of the artist name in the search box below.
-                            </h6>
+                        <h6 class="text-muted" style={{ width: "72%", margin: " 0px auto", "minWidth": "360px" }}>
+                                Search Feelingarts.tk by entering the keywords of the artist name in the search box.
+                        </h6>
                         {/*<Input type="text" innerRef={Input => this.input = Input} placeHolder="Please enter contents you want to search" />*/}
                         <div style={{ 'display': 'flex', "alignItems": "center" }}>
-                            <div style={{ width: '60%' }}>
+                            <div style={{ display: "flex", justifyContent: 'center', width: '60%' }} type="text">
                                 <Autosuggest
                                     suggestions={suggestions}
                                     onSuggestionsFetchRequested={this.onSuggestionsFetchRequested}
@@ -299,12 +299,11 @@ class NormalSearch extends React.Component {
 
                                 />
                             </div>
-                            <Button color="primary"
-                                type="button"
+                            <div className="search_btn"
                                 onClick={this.search.bind(this)}
                             >
                                 Click to Search
-                        </Button>
+                            </div>
                         </div>
 
                     </Container>

@@ -49,7 +49,11 @@ class SimpleListeningPage extends React.Component {
                         <Row>
                             <Col className="mr-auto">
                                 <h4 className="title font-weight-bold">{this.state.artworkName}</h4>
-                                <h5 className="font-italic">Listening to the identical music of the artwork with the matching description.</h5>
+                                    <h5 className="font-italic">Created by Artist Name</h5>
+                                    <h5 className="font-italic">Introduction</h5>
+                                    <h5 className="font-italic" style={{ height: '60px', }}>
+                                        Listening to the identical music of the artwork with the matching description.
+                                    </h5>
                             </Col>
                         </Row>
                         <Row>
