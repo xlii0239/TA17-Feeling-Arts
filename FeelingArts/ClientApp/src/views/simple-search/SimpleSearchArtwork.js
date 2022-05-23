@@ -1,6 +1,5 @@
 ﻿import React from 'react';
 import { Button, Container, Row, Col, Input } from "reactstrap";
-
 import NavbarForHome from "components/a17components/navbars/NavbarForHome.js";
 
 import ArtworkResultShow from './ArtworkResultShow';
@@ -106,7 +105,7 @@ class SimpleSearchArtwork extends React.Component {
 
         // Autosuggest will pass through all these props to the input.
         const inputProps = {
-            placeholder: 'Enter an artwork name',
+            placeholder: 'Enter an artist name',
             value,
             onChange: this.onChange
         };
@@ -114,7 +113,7 @@ class SimpleSearchArtwork extends React.Component {
 
         return (
             <>
-                <div style={{ background: 'url(https://www.publicdomainpictures.net/pictures/240000/velka/light-blue-wallpaper.jpg)', height: '900px', }} >
+                <NavbarForHome />
                 <ul className="breadcrumb bg-transparent font-weight-bold">
                     <li className="breadcrumb-item"><a href="homepage" className="text-dark font-weight-bold">Home</a></li>
                     <li className="breadcrumb-item"><a href="simplemode" className="text-dark font-weight-bold">Simple Mode</a></li>
@@ -145,7 +144,7 @@ class SimpleSearchArtwork extends React.Component {
                                 type="button"
                                 onClick={this.search.bind(this)}
                             >
-                                Click to Search
+                                Auto suggest Click to Search
                             </Button>
                         </div>
                     </Container>
@@ -154,7 +153,6 @@ class SimpleSearchArtwork extends React.Component {
                         </ArtworkResultShow>
                     </Col>
                 </div>
-             </div>
             </>
         )
     }

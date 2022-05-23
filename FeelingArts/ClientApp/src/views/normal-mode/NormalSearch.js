@@ -275,7 +275,6 @@ class NormalSearch extends React.Component {
         return (
             <>
                 <NavbarForHome />
-                <div style={{ background: 'url(https://www.publicdomainpictures.net/pictures/240000/velka/light-blue-wallpaper.jpg)', height: '900px', }} >
                 <ul class="breadcrumb bg-transparent font-weight-bold">
                     <li class="breadcrumb-item text-light"><a href="homepage" class="text-dark font-weight-bold">Home</a></li>
                     <li class="breadcrumb-item text-light"><a href="normalmode" class="text-dark font-weight-bold">Picture Mode</a></li>
@@ -283,12 +282,12 @@ class NormalSearch extends React.Component {
                 </ul>
                 <div className="section" >
                     <Container className="shape-container py-lg-2" >
-                        <h6 class="text-muted" style={{ width: "72%", margin: " 0px auto", "minWidth": "360px" }}>
-                                Search Feelingarts.tk by entering the keywords of the artist name in the search box.
-                        </h6>
+                        <h6 className="text-muted">
+                            Search Feelingarts.tk by entering the keywords of the artist name in the search box below.
+                            </h6>
                         {/*<Input type="text" innerRef={Input => this.input = Input} placeHolder="Please enter contents you want to search" />*/}
-                            <div style={{ 'display': 'flex', "alignItems": "center", width: "72%", margin: " 0px auto" }}>
-                                <div className="a_input">
+                        <div style={{ 'display': 'flex', "alignItems": "center" }}>
+                            <div style={{ width: '60%' }}>
                                 <Autosuggest
                                     suggestions={suggestions}
                                     onSuggestionsFetchRequested={this.onSuggestionsFetchRequested}
@@ -298,23 +297,21 @@ class NormalSearch extends React.Component {
                                     inputProps={inputProps}
 
                                 />
-                                 </div>
-                            <div className="search_btn"
+                            </div>
+                            <Button color="primary"
+                                type="button"
                                 onClick={this.search.bind(this)}
                             >
                                 Click to Search
-                            </div>
-
                             </Button>
-
                         </div>
 
                     </Container>
                 </div>
-                <Row className="lg-12 align-center" style={{ "marginLeft": "-30px" }}>
+                <Row className="lg-12 align-center">
                     <Col lg={{ span: 5, offset: 2 }}>
-                            <Row justify="space-around" align="middle">
-                                <ul style={{ listStyle: "none"}}>
+                        <Row justify="space-around" align="middle">
+                            <ul>
                                 {this.state.artistShow.map((item, index) => {
                                     return (
                                         <li key={item.id}>
@@ -348,7 +345,6 @@ class NormalSearch extends React.Component {
                     {/*    <Team1 />*/}
                     {/*</Col>*/}
                 </Row>
-            </div>
             </>
         )
     }

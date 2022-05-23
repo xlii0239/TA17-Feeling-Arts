@@ -17268,6 +17268,14 @@ hr {
     padding: 0; }
     .card-profile[data-image="profile-image"] .card-header::after {
       content: "";
+      width: 24%;
+      overflow: hidden;
+      position: absolute;
+      left: 32%;
+      top: 5%;
+      height: 90%;
+      background-color: #fff;
+      transform: rotate(80deg);
       z-index: 1; }
   .card-profile[data-image="profile-image"] .lead,
   .card-profile[data-image="profile-image"] h4 {
@@ -17901,6 +17909,15 @@ hr {
     margin-bottom: 0;
     padding: 0; }
     .card[data-header="skew"] .card-header::after {
+      content: "";
+      width: 24%;
+      overflow: hidden;
+      position: absolute;
+      left: 37%;
+      top: 7%;
+      height: 96%;
+      background-color: #fff;
+      transform: rotate(80deg);
       z-index: 1; }
   .card[data-header="skew"] .card-category {
     z-index: 2;
@@ -19137,10 +19154,8 @@ header {
     bottom: 60px; }
   .page-header > .container,
   .page-header > .container-fluid {
-    padding-top: 18vh;
-   
-
-  }
+    padding-top: 12vh;
+    padding-bottom: 40px; }
   .page-header .page-header-image {
     position: absolute;
     background-size: cover;

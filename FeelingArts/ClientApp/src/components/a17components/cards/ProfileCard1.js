@@ -37,10 +37,10 @@ function ProfileCard1(props) {
           <div className="card-image">
             <a href="#pablo" onClick={(e) => e.preventDefault()}>
               <img
-                alt="artist photo"
+                alt="..."
                 className="img rounded"
                 src={srcLink}
-                style={{ "width": "250", "height":"260" }}
+                 style={{ width: 250, height: 260 }}
               ></img>
             </a>
           </div>

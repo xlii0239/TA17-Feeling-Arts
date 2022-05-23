@@ -45,9 +45,8 @@ class NromalListeningPage extends React.Component {
 
     render() {
         return (
-            <>                
+            <>
                 <NavbarForHome />
-                <div style={{ background: 'url(https://www.publicdomainpictures.net/pictures/240000/velka/light-blue-wallpaper.jpg)', height: '1000px', }} >
                 <ul className="breadcrumb bg-transparent font-weight-bold ">
                     <li className="breadcrumb-item"><a href="homepage" className="text-dark font-weight-bold">Home</a></li>
                     <li className="breadcrumb-item text-light"><a href="normalmode" className="text-dark font-weight-bold">Picture Mode</a></li>
@@ -60,23 +59,21 @@ class NromalListeningPage extends React.Component {
                             <Col>
                                 <Col className="mr-auto">
                                     <h4 className="title font-weight-bold">{this.state.artworkName}</h4>
-                                    <h5 className="font-italic">Created by Artist Name</h5>
-                                    <h5 className="font-italic">Introduction</h5>
                                 </Col>
                                 <img
                                     alt="..."
                                     className="img-fluid rounded shadow-lg"
                                     src={this.state.artworkImageURL}
-                                    style={{ height: "500px",weight:"600px"}}
+                                    style={{ height: "350px" }}
                                 >
                                 </img>
                             </Col>
                         </Row>
                         <Row>
+                        </Row>
+                        <Row>
                             <Col className="pl-md-2" >
-                                    <h5 className="font-italic" style={{ height: '60px', 'marginTop': '40px' }}>
-                                        Listening to the identical music of the artwork with the matching description.
-                                    </h5>
+                                <h5 className="font-italic">Listening to the identical music of the artwork with the matching description.</h5>
                                 {this.state.music.map((item, index) => {
                                     let video_url = item.mLink.slice(16)
                                     return (
@@ -90,7 +87,7 @@ class NromalListeningPage extends React.Component {
                         </Row>
                     </Container>
                 </div>
-            </div>
+
             </>
         )
     }

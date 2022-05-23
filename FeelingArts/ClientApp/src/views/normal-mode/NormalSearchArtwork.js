@@ -119,7 +119,7 @@ class NormalSearchArtwork extends React.Component {
 
         // Autosuggest will pass through all these props to the input.
         const inputProps = {
-            placeholder: 'Enter an artwork name',
+            placeholder: 'Enter an artist name',
             value,
             onChange: this.onChange
         };
@@ -128,7 +128,6 @@ class NormalSearchArtwork extends React.Component {
         return (
             <>
                 <NavbarForHome />
-                <div style={{ background: 'url(https://www.publicdomainpictures.net/pictures/240000/velka/light-blue-wallpaper.jpg)', height: '900px', }} >
                 <ul class="breadcrumb bg-transparent font-weight-bold">
                     <li class="breadcrumb-item"><a href="homepage" class="text-dark font-weight-bold">Home</a></li>
                     <li class="breadcrumb-item"><a href="normalmode" class="text-dark font-weight-bold">Picture Mode</a></li>
@@ -177,11 +176,10 @@ class NormalSearchArtwork extends React.Component {
                                                     backgroundImage: "url(" + imageURL + ")",
                                                 }}
                                             >
-                                                <a href="artworkinfo" onClick={(e) => e.button()}>
                                                 <CardBody className="py-5">
                                                     <Row>
-                                                        <h4 className="text-capitalize font-weight-bold text-light"
-                                                                style={{ textAlign: 'center', height: '72px', overflow: 'hidden', "textOverflow": '   ellipsis ', display: " -webkit-box ", "-webkit-line-clamp": 2, "-webkit-box-orient": "vertical" }}
+                                                        <h4 className="text-primary text-capitalize font-weight-bold text-light"
+                                                            style={{ height: "100px" }}
                                                         >
                                                             {item.artwork}
                                                         </h4>
@@ -191,9 +189,22 @@ class NormalSearchArtwork extends React.Component {
                                                     </Row>
                                                     <Row className="description mt-3 font-weight-bold text-light">
                                                         {item.style + " style"}
-                                                    </Row>                                                  
+                                                    </Row>
+                                                    <Button
+                                                        className="mt-4"
+                                                        color="info"
+                                                        onClick={(e) => handleClickMusic(e, item.imageNo, item.artwork)}
+                                                    >
+                                                        Listen
+                                                    </Button>
+                                                    <Button
+                                                        className="mt-4"
+                                                        color="warning"
+                                                        onClick={(e) => handleClick3dModel(e, item.modelNo, item.imageNo)}
+                                                    >
+                                                        Touch
+                                                    </Button>
                                                 </CardBody>
-                                                 </a>
                                             </Card>
                                         </Col>
                                     )
@@ -202,7 +213,6 @@ class NormalSearchArtwork extends React.Component {
                         </Col>
                     </Row>
                 </div>
-            </div>
             </>
         )
     }
