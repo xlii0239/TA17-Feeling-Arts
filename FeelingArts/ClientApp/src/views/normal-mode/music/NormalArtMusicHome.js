@@ -73,11 +73,11 @@ class NormalArtMusicHome extends React.Component {
                         </Row>
                         <Row className="justify-content-center mt-5">
                             <Col lg="12">
-                                <Row className="row-grid" style={{ position: "relative" }}>
-                                    <div style={{ display: this.state.change < 2 ? "block" : "none" }}>
+                                    <div style={{ display: this.state.change < 2 ? "block" : "none", textAlign: "center" }}>
                                         <img src={require("assets/NewImg/tip.png")}
-                                            style={{ animation: "zy 2.5s .15s linear infinite", width: "92px", height: "80px", position: "absolute", "zIndex": 999, "left": "-120px", "top": "50px" }} />
+                                            style={{ animation: "zy 2.5s .15s linear infinite", width: "92px", height: "80px", "zIndex": 999 }} />
                                     </div>
+                                <Row className="row-grid" style={{ position: "relative" }}>
                                     <Swiper className="swiper"
                                         style={{ width: '1200px' }}
                                         onSlideChange={() => { this.setState({ change: 2 }); console.log(this.state.change) }}
