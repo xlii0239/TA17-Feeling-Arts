@@ -60,14 +60,15 @@ class SimpleSearch extends React.Component {
 
         return (
             <>
-                <div style={{ background: 'url(https://www.publicdomainpictures.net/pictures/240000/velka/light-blue-wallpaper.jpg)', height: '900px', }} >
-                <ul class="breadcrumb bg-transparent font-weight-bold">
-                    <li class="breadcrumb-item"><a href="homepage" class="text-dark font-weight-bold">Home</a></li>
-                    <li class="breadcrumb-item"><a href="simplemode" class="text-dark font-weight-bold">Simple Mode</a></li>
-                    <li class="breadcrumb-item active">Search Artist</li>
+                <NavbarForHome />
+                <ul className="breadcrumb bg-transparent font-weight-bold">
+                    <li className="breadcrumb-item"><a href="homepage" className="text-dark font-weight-bold">Home</a></li>
+                    <li className="breadcrumb-item"><a href="simplemode" className="text-dark font-weight-bold">Simple Mode</a></li>
+                    <li className="breadcrumb-item active">Search Artist</li>
                 </ul>
                 <div className="section">
                     <Container className="shape-container flex align-items-center py-lg-2">
+
                         <h6 className="text-muted" style={{ width: "72%", margin: " 0px auto", "minWidth": "360px" }}>
                             Search Feelingarts.tk by entering the keywords of the artist name in the search box.
                         </h6>
@@ -76,13 +77,36 @@ class SimpleSearch extends React.Component {
                         <div className="search_btn" onClick={this.search.bind(this)}>
                              Click to Search
                         </div>
+                        <div style={{ display: "flex" }}>
+                            {/*<Input style={{ width: "60%" }} type="text" innerRef={Input => this.input = Input} placeHolder="Search all results" />*/}
+                            {/*<Button color="primary"*/}
+                            {/*    type="button"*/}
+                            {/*    onClick={this.search.bind(this)}*/}
+                            {/*>*/}
+                            {/*    Click to Search*/}
+                            {/*</Button>*/}
+
+                            <Autosuggest
+                                suggestions={suggestions}
+                                onSuggestionsFetchRequested={this.onSuggestionsFetchRequested}
+                                onSuggestionsClearRequested={this.onSuggestionsClearRequested}
+                                getSuggestionValue={this.getSuggestionValue}
+                                renderSuggestion={this.renderSuggestion}
+                                inputProps={inputProps}
+                            />
+                            <Button color="primary"
+                                type="button"
+                                onClick={this.search.bind(this)}
+                            >
+                                Auto suggest Click to Search
+                            </Button>
+
                         </div>
                     </Container>
                     <Col>
                         <ArtistResultShow toData={this.state.artistShow}>
                         </ArtistResultShow>
                     </Col>
-                    </div>
                 </div>
             </>
         )

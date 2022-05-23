@@ -47,7 +47,7 @@ import SimpleSearchArtwork from "./views/simple-search/SimpleSearchArtwork";
 import ThreeDimentionModel from "./views/3d-model/ThreeDimentionModel";
 
 
-import MusicInfo from "./components/a17components/Music/MusicInfo.js";
+import MusicInfo from "./components/a17components/Music/MusicInfo.js"
 
 
 import ThreeDimentionModelHomePage from "./views/3d-model/ThreeDimentionModelHomePage";
@@ -63,7 +63,6 @@ import NormalArtMusicHome from "./views/normal-mode/music/NormalArtMusicHome"
 
 import NromalListeningPage from "./views/normal-mode/music/NormalListeningPage"
 import GalleryMap from "./views/map/GalleryMap";
-import ArtworkInfo from "./views/normal-mode/ArtworkInfo";
 
 
 
@@ -147,7 +146,6 @@ ReactDOM.render(
 
         <ProtectedRoute exact path="/normalmusic" component={NormalArtMusicHome} />
         <ProtectedRoute exact path="/normalmusiclisten" component={NromalListeningPage} />
-        <ProtectedRoute exact path="/artworkinfo" component={ArtworkInfo} />
 
 
         <ProtectedRoute exact path="/gallerymap" component={GalleryMap} />

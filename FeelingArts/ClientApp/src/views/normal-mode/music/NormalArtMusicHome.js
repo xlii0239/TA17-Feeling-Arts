@@ -52,9 +52,8 @@ class NormalArtMusicHome extends React.Component {
 
     render() {
         return (
-            <>                
+            <>
                 <NavbarForHome />
-                <div style={{ background: 'url(https://www.publicdomainpictures.net/pictures/240000/velka/light-blue-wallpaper.jpg)', height: '400px', }} >
                 <ul className="breadcrumb bg-transparent font-weight-bold">
                     <li className="breadcrumb-item"><a href="homepage" className="text-dark font-weight-bold">Home</a></li>
                     <li className="breadcrumb-item"><a href="normalmode" className="text-dark font-weight-bold">Picture Mode</a></li>
@@ -75,7 +74,7 @@ class NormalArtMusicHome extends React.Component {
                             <Col lg="12">
                                 <Row className="row-grid" style={{ position: "relative" }}>
                                     <div style={{ display: this.state.change < 2 ? "block" : "none" }}>
-                                        <img src={require("assets/NewImg/tip.png")}
+                                        <img src={require("assets/img/tip.png")}
                                             style={{ animation: "zy 2.5s .15s linear infinite", width: "92px", height: "80px", position: "absolute", "zIndex": 999, "left": "-120px", "top": "50px" }} />
                                     </div>
                                     <Swiper className="swiper"
@@ -149,7 +148,7 @@ class NormalArtMusicHome extends React.Component {
                                                     >
                                                         <CardBody className="py-5">
                                                             <h4 className="text-white text-capitalize font-weight-bold"
-                                                                style={{ textAlign: 'center', height: '78px', overflow: 'hidden', "textOverflow": '   ellipsis ', display: " -webkit-box ", "-webkit-line-clamp": 2, "-webkit-box-orient": "vertical" }}
+                                                                style={{ height: "72px" }}
                                                             >
                                                                 {item.artwork}
                                                             </h4>
@@ -181,7 +180,6 @@ class NormalArtMusicHome extends React.Component {
                             </Col>
                         </Row>
                     </Container>
-                </div>
                 </div>
             </>
         )

@@ -8,12 +8,14 @@ import {
   NavLink,
   Nav,
   Container,
+  Row,
   Col,
 } from "reactstrap";
 
 // Core Components
 
 function NavbarForHome() {
+  const [collapseOpen, toggleCollapseOpen] = React.useState(false);
   return (
     <>
         <Navbar className="navbar-dark bg-dark" expand="lg">
