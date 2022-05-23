@@ -288,8 +288,8 @@ class NormalSearch extends React.Component {
                         </h6>
                         {/*<Input type="text" innerRef={Input => this.input = Input} placeHolder="Please enter contents you want to search" />*/}
                             <div style={{ 'display': 'flex', "alignItems": "center", width: "72%", margin: " 0px auto" }}>
-                                <div className="a_input">
-                                <Autosuggest
+                                <div className="a_input" style={{ minWidth: "160px" }}>
+                                <Autosuggest 
                                     suggestions={suggestions}
                                     onSuggestionsFetchRequested={this.onSuggestionsFetchRequested}
                                     onSuggestionsClearRequested={this.onSuggestionsClearRequested}
@@ -299,7 +299,7 @@ class NormalSearch extends React.Component {
 
                                 />
                                  </div>
-                            <div className="search_btn"
+                            <div className="search_btn" style={{ minWidth:"140px" }}
                                 onClick={this.search.bind(this)}
                             >
                                 Click to Search

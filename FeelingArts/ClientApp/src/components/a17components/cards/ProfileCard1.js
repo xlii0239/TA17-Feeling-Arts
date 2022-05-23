@@ -34,7 +34,7 @@ function ProfileCard1(props) {
 
   return (
     <>
-        <Card className="card-profile" data-image="profile-image">
+          <Card className="card-profile" data-image="profile-image" >
         <CardHeader>
           <div className="card-image">
             <a href="#pablo" onClick={(e) => e.preventDefault()}>
@@ -47,11 +47,11 @@ function ProfileCard1(props) {
             </a>
           </div>
               </CardHeader>
-        <CardBody className="pt-2">
+              <CardBody className="pt-2">
           <h4 className="display-4 mb-0">{name}</h4>
                   <p className="lead">{currentArtist.birthYear + " -- " + currentArtist.deathYear}</p>
-          <div className="table-responsive">
-            <ul className="list-unstyled">
+          <div className="table-responsive" >
+            <ul className="list-unstyled" >
               <li className="py-1">
                 <div className="d-flex align-items-center">
                   <div>

@@ -135,7 +135,7 @@ class NormalSearchArtwork extends React.Component {
                              Search Feelingarts.tk by entering the keywords of the artwork name in the search box.
                         </h6>
                         <div style={{ 'display': 'flex', "alignItems": "center", width: "72%", margin: " 0px auto" }}>
-                            <div className="a_input">
+                            <div className="a_input" style={{ minWidth:"180px" }}>
                                 <Autosuggest
                                     suggestions={suggestions}
                                     onSuggestionsFetchRequested={this.onSuggestionsFetchRequested}
@@ -146,7 +146,7 @@ class NormalSearchArtwork extends React.Component {
 
                                 />
                             </div>
-                            <div className="search_btn"
+                            <div className="search_btn" style={{ minWidth:"140px" }}
                                 onClick={this.search.bind(this)}
                             >
                                 Click to Search
@@ -171,11 +171,10 @@ class NormalSearchArtwork extends React.Component {
                                                 }}
                                             >
                                                 <a href="artworkinfo" onClick={(e) => e.button()}>
-                                                <CardBody className="py-5">
+                                                <CardBody className="py-5 text-center">
                                                     <Row>
                                                         <h4 className="text-capitalize font-weight-bold text-light"
-                                                                style={{ textAlign: 'center', height: '72px', overflow: 'hidden', "textOverflow": '   ellipsis ', display: " -webkit-box ", "-webkit-line-clamp": 2, "-webkit-box-orient": "vertical" }}
-                                                        >
+                                                                style={{ textAlign: 'center', margin: "0px auto", height: '72px', overflow: 'hidden', "textOverflow": '   ellipsis ', display: " -webkit-box ", "-webkit-line-clamp": 2, "-webkit-box-orient": "vertical" }}>
                                                             {item.artwork}
                                                         </h4>
                                                     </Row>

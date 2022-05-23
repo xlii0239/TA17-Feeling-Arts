@@ -3,8 +3,7 @@ import { Map, GoogleApiWrapper, Marker, InfoWindow } from 'google-maps-react';
 import { Button, Card, CardBody, CardTitle, Container, Row, Col, Input } from "reactstrap";
 import Geocode from "react-geocode";
 import NavbarForHome from "components/a17components/navbars/NavbarForHome.js";
-import { Link } from "react-router-dom";
-import { keyframes } from "styled-components";
+import 'assets/css/common.css'
 
 const mapStyles = {
     position: 'relative',
@@ -153,34 +152,34 @@ class GalleryMap extends Component {
         return (
             <>
                 <NavbarForHome />
+                <div style={{ background: 'url(https://www.publicdomainpictures.net/pictures/240000/velka/light-blue-wallpaper.jpg)', height: '900px', }} >
                 <ul className="breadcrumb bg-transparent font-weight-bold">
                     <li className="breadcrumb-item"><a href="homepage" className="text-dark font-weight-bold">Home</a></li>
                     <li className="breadcrumb-item active">Galleries Info</li>
                 </ul>
                 <div>
                     <Container>
-                        <Row>
+                        <Row style={{ 'marginBottom': '15px' }}>
                             <Col className="text-center mx-auto" md="8" lg="12">
                                 <h4 className="display-4">Find galleries near me.</h4>
                             </Col>
                             <Col className="text-center mx-auto" lg="12">
                                 <h5> Discover various information about the gallery by clicking on the gallery's tab on the map.</h5>
                             </Col>
-                            <div style={{ display: "flex" }}>
-                                <Input style={{ width: "60%" }} type="text" innerRef={Input => this.input = Input} placeHolder="Please input an address" />
-                                <Button color="primary"
-                                    type="button"
+                            <Col style={{ 'display': 'flex', "alignItems": "center", width: "72%", margin: " 0px auto"}}>
+                                    <Input style={{ width: "60%", minWidth: "150px" }} type="text" innerRef={Input => this.input = Input} placeHolder="Search the gallery by city, zip code or address" />
+                                    <div className="search_btn" style={{ minWidth:"168px" }}
                                     onClick={this.searchLocation.bind(this)}
                                 >
-                                    Search a new address
-                                </Button>
-                                <Button color="primary"
-                                    type="button"
-                                    onClick={this.currentLocationClicked}
-                                >
-                                    Use my current location
-                                </Button>
-                            </div>
+                                    Click to search
+                                </div>
+                            </Col>
+                            <Col className="fa-solid fa-child-reaching btn"
+                                onClick={this.currentLocationClicked}
+                            >
+                                &nbsp;&nbsp;my location
+                                
+                            </Col>
                         </Row>
                         <Map
                             google={this.props.google}
@@ -301,6 +300,7 @@ class GalleryMap extends Component {
 
                         </Col>
                     </Row>
+                </div>
                 </div>
             </>
         );
