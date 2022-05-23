@@ -9,7 +9,7 @@ import STLViewer from 'stl-viewer'
 
 const url = "https://storage.googleapis.com/feeling-arts-data/ccab50f18fb14c91ccca300a.stl"
 
-const handleClick = (e, modelNo, imgNo) => {
+const handleClick = (e, modelNo, imgNo, describe) => {
 
     window.location = "/3d-model" + "?model_no=" + modelNo + "&img_no=" + imgNo;
     //console.log("modelName from three model page", modelName)
