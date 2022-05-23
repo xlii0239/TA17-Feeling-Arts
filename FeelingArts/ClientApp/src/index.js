@@ -10,6 +10,27 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 
 
 import Index from "views/Index.js";
+import Sections from "views/Sections.js";
+import Presentation from "views/Presentation.js";
+import AboutUs from "views/examples/AboutUs.js";
+import AccountSettings from "views/examples/AccountSettings.js";
+import BlogPost from "views/examples/BlogPost.js";
+import BlogPosts from "views/examples/BlogPosts.js";
+import ChatPage from "views/examples/ChatPage.js";
+import CheckoutPage from "views/examples/CheckoutPage.js";
+import ContactUs from "views/examples/ContactUs.js";
+import Ecommerce from "views/examples/Ecommerce.js";
+import Error from "views/examples/Error.js";
+import Error500 from "views/examples/Error500.js";
+import InvoicePage from "views/examples/InvoicePage.js";
+import LandingPage from "views/examples/LandingPage.js";
+import LoginPage from "views/examples/LoginPage.js";
+import PricingPage from "views/examples/PricingPage.js";
+import ProductPage from "views/examples/ProductPage.js";
+import ProfilePage from "views/examples/ProfilePage.js";
+import RegisterPage from "views/examples/RegisterPage.js";
+import ResetPage from "views/examples/ResetPage.js";
+
 
 import HomeBlog from "views/HomeBlog.js";
 //import Search from "views/Search.js";
@@ -26,7 +47,7 @@ import SimpleSearchArtwork from "./views/simple-search/SimpleSearchArtwork";
 import ThreeDimentionModel from "./views/3d-model/ThreeDimentionModel";
 
 
-import MusicInfo from "./components/a17components/Music/MusicInfo.js"
+import MusicInfo from "./components/a17components/Music/MusicInfo.js";
 
 
 import ThreeDimentionModelHomePage from "./views/3d-model/ThreeDimentionModelHomePage";
@@ -42,6 +63,7 @@ import NormalArtMusicHome from "./views/normal-mode/music/NormalArtMusicHome"
 
 import NromalListeningPage from "./views/normal-mode/music/NormalListeningPage"
 import GalleryMap from "./views/map/GalleryMap";
+import ArtworkInfo from "./views/normal-mode/ArtworkInfo";
 
 
 
@@ -125,6 +147,7 @@ ReactDOM.render(
 
         <ProtectedRoute exact path="/normalmusic" component={NormalArtMusicHome} />
         <ProtectedRoute exact path="/normalmusiclisten" component={NromalListeningPage} />
+        <ProtectedRoute exact path="/artworkinfo" component={ArtworkInfo} />
 
 
         <ProtectedRoute exact path="/gallerymap" component={GalleryMap} />

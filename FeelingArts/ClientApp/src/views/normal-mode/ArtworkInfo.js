@@ -1,10 +1,24 @@
-﻿import React from 'react';
-import { Button, Container, Row, Col, Input } from "reactstrap";
-import ArtistResultShow from './ArtistResultShow';
-import ArtworkResultShow from './ArtworkResultShow';
+import React from 'react';
+import { Button, Container, Card, CardBody, Row, Col, Input } from "reactstrap";
+import NavbarForHome from "components/a17components/navbars/NavbarForHome.js";
+import ArtworkResultShow from 'views/simple-search/ArtworkResultShow.js';
+import ArtworkBlog from 'components/a17components/blogs/ArtworkBlog.js';
 
 
-class SimpleSearch extends React.Component {
+const handleClickMusic = (e, imageNo, artworkName) => {
+
+    window.location = "/normalmusiclisten" + "?artwork_no=" + imageNo + "&artwork_name=" + artworkName;
+    //console.log("modelName from three model page", modelName)
+};
+
+const handleClick3dModel = (e, modelNo, imgNo) => {
+
+    window.location = "/3d-model" + "?model_no=" + modelNo + "&img_no=" + imgNo;
+    //console.log("modelName from three model page", modelName)
+};
+
+
+class ArtworkInfo extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -59,31 +73,17 @@ class SimpleSearch extends React.Component {
     render() {
 
         return (
-            <>
-                <div style={{ background: 'url(https://www.publicdomainpictures.net/pictures/240000/velka/light-blue-wallpaper.jpg)', height: '900px', }} >
+            <>                
+                <NavbarForHome />
+                <div style={{ background: 'url(https://www.publicdomainpictures.net/pictures/240000/velka/light-blue-wallpaper.jpg)', height: '1000px', }} >
                 <ul class="breadcrumb bg-transparent font-weight-bold">
                     <li class="breadcrumb-item"><a href="homepage" class="text-dark font-weight-bold">Home</a></li>
-                    <li class="breadcrumb-item"><a href="simplemode" class="text-dark font-weight-bold">Simple Mode</a></li>
-                    <li class="breadcrumb-item active">Search Artist</li>
+                    <li class="breadcrumb-item"><a href="normalmode" class="text-dark font-weight-bold">Picture Mode</a></li>
+                    <li class="breadcrumb-item"><a href="normalsearchartwork" class="text-dark font-weight-bold">Search Artwork</a></li>
+                    <li class="breadcrumb-item active">Artwork Information</li>
                 </ul>
-                <div className="section">
-                    <Container className="shape-container flex align-items-center py-lg-2">
-                        <h6 className="text-muted" style={{ width: "72%", margin: " 0px auto", "minWidth": "360px" }}>
-                            Search Feelingarts.tk by entering the keywords of the artist name in the search box.
-                        </h6>
-                        <div style={{ display: "flex", justifyContent: 'center' }}>
-                            <Input style={{ width: "60%" }} type="text" innerRef={Input => this.input = Input} placeholder="Search all results" />
-                        <div className="search_btn" onClick={this.search.bind(this)}>
-                             Click to Search
-                        </div>
-                        </div>
-                    </Container>
-                    <Col>
-                        <ArtistResultShow toData={this.state.artistShow}>
-                        </ArtistResultShow>
-                    </Col>
-                    </div>
-                </div>
+                <ArtworkBlog />
+             </div>  
             </>
         )
     }
@@ -99,4 +99,4 @@ class SimpleSearch extends React.Component {
     }
 }
 
-export default SimpleSearch;
+export default ArtworkInfo;

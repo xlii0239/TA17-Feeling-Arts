@@ -28,8 +28,9 @@ function NormalPage() {
         };
     });
     return (
-        <>
+        <>            
             <NavbarForHome />
+            <div style={{ background: 'url(https://www.publicdomainpictures.net/pictures/240000/velka/light-blue-wallpaper.jpg)', height: '900px', }} >
             <div className="wrapper">
                 <ul className="breadcrumb bg-transparent font-weight-bold">
                     <li className="breadcrumb-item text-light"><a href="homepage" className="text-dark font-weight-bold">Home</a></li>
@@ -45,8 +46,7 @@ function NormalPage() {
                 </Row>
                 <NormalComponents />           
             </div>
-
-
+        </div>
         </>
     );
 }
