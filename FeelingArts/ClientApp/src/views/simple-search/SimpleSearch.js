@@ -124,7 +124,7 @@ class SimpleSearch extends React.Component {
                         </h6>
 
                         <div style={{ 'display': 'flex', "alignItems": "center", width: "72%", margin: " 0px auto" }}>
-                            <div className="a_input">
+                            <div className="a_input" style={{ minWidth:"160px" }}>
                                 <Autosuggest
                                     suggestions={suggestions}
                                     onSuggestionsFetchRequested={this.onSuggestionsFetchRequested}
@@ -134,7 +134,7 @@ class SimpleSearch extends React.Component {
                                     inputProps={inputProps}
                                 />
                             </div>
-                            <div className="search_btn"
+                            <div className="search_btn" style={{ minWidth:"150px" }}
                                 onClick={this.search.bind(this)}
                             >
                                 Click to Search

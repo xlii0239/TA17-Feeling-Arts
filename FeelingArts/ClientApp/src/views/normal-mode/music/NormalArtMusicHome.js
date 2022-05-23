@@ -100,7 +100,7 @@ class NormalArtMusicHome extends React.Component {
                                                     >
                                                         <CardBody className="py-5">
                                                             <h4 className="text-white text-capitalize font-weight-bold"
-                                                                style={{ height: "72px" }}
+                                                                style={{ textAlign: 'center', height: '72px', overflow: 'hidden', "textOverflow": '   ellipsis ', display: " -webkit-box ", "-webkit-line-clamp": 2, "-webkit-box-orient": "vertical" }}
                                                             >
                                                                 {item.artwork}
                                                             </h4>
