@@ -1,9 +1,10 @@
 ﻿import React, { Component } from "react";
 import { Map, GoogleApiWrapper, Marker, InfoWindow } from 'google-maps-react';
-import { Button, Card, CardBody, CardTitle, Container, Row, Col } from "reactstrap";
+import { Button, Card, CardBody, CardTitle, Container, Row, Col, Input} from "reactstrap";
 import Geocode from "react-geocode";
 import NavbarForHome from "components/a17components/navbars/NavbarForHome.js";
 import { Link } from "react-router-dom";
+import { keyframes } from "styled-components";
 
 const mapStyles = {
     position: 'relative',
@@ -35,12 +36,18 @@ class GalleryMap extends Component {
                     lng: 144.2769939
                 }
             ],
-            galleriesData: []
+            galleriesData: [],
+            userLocation: {
+                lat: -37.81461034113269,
+                lng: 144.96660422326192
+            }
 
         };
     }
 
     componentDidMount() {
+        
+
         this.populateData();
     }
 
@@ -81,6 +88,25 @@ class GalleryMap extends Component {
 
     }
 
+    async decodeAddress(address) {
+        Geocode.setApiKey("AIzaSyBkRVZ1kstmg-vm8lz5uGlLA48ibeCbkO0");
+        Geocode.setRegion("au");
+        let geoResponse = await Geocode.fromAddress(address)
+        const { lat, lng } = geoResponse.results[0].geometry.location;
+
+        let newLocation = {
+            lat: lat,
+            lng: lng
+        }
+
+        this.setState({ userLocation: newLocation })
+    }
+
+    searchLocation() {
+        const keyword = this.input.value
+        this.decodeAddress(keyword)
+    }
+
     onMarkerClick = (props, marker, e) =>
         this.setState({
             selectedPlace: props,
@@ -88,11 +114,14 @@ class GalleryMap extends Component {
             showingInfoWindow: true
         });
 
-    onInfoWindowClose = () =>
+    onInfoWindowClose = () => {
         this.setState({
             activeMarker: null,
             showingInfoWindow: false
         });
+
+    }
+        
 
     onMapClicked = () => {
         if (this.state.showingInfoWindow) {
@@ -102,6 +131,21 @@ class GalleryMap extends Component {
             })
         }
     };
+
+    currentLocationClicked = () => {
+        const getUserCurrentLocation = position => {
+            const location = {
+                lat: position.coords.latitude,
+                lng: position.coords.longitude
+            }
+
+            this.setState({ userLocation: location })
+        }
+
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(getUserCurrentLocation)
+        }
+    }
 
     render() {
         if (!this.props.loaded) return <div>Loading...</div>;
