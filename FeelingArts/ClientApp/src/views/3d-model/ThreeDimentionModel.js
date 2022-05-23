@@ -2,7 +2,6 @@
 import { Container, Row, Col, Button } from "reactstrap";
 
 import NavbarForHome from "components/a17components/navbars/NavbarForHome.js";
-import FooterForWeb from "components/a17components/footers/FooterForWeb.js";
 
 import STLViewer from 'stl-viewer'
 
@@ -37,8 +36,9 @@ function ThreeDimentionModel() {
     };
 
     return (
-        <>
+        <>            
             <NavbarForHome type="transparent" />
+            <div style={{ background: 'url(https://www.publicdomainpictures.net/pictures/240000/velka/light-blue-wallpaper.jpg)', height: '900px', }} >
             <ul className="breadcrumb bg-transparent font-weight-bold">
                 <li className="breadcrumb-item"><a href="homepage" className="text-dark font-weight-bold">Home</a></li>
                 <li className="breadcrumb-item"><a href="normalmode" className="text-dark font-weight-bold">Picture Mode</a></li>
@@ -47,41 +47,75 @@ function ThreeDimentionModel() {
             </ul>
             <Container fluid className='gx-0'>
                 <Row className="row-grid mt-5">
-                    <Col>
+                    <Col lg="10" style={{ textAlign: 'center' }} >
+                         <h4 className="title font-weight-bold">Artwork Name</h4>
+                         <h5 className="font-italic">Created by Artist Name</h5>
+                         <h5 className="font-italic">Introduction</h5>
+                    </Col>
+                    <Col lg="6">
                         <img
                             alt="..."
                             className="img-fluid rounded shadow-lg"
                             src={url_img}
+                            style={{ height: "500px", weight:"600px"}}
                         >
                         </img>
                     </Col>
-                    <Col>                     
+                    <Col lg="6">                     
                         <STLViewer
                             url={url}
                             model={url}
-                            width={700}
-	                        height={600}
+                            width={600}
+	                        height={500}
                             modelColor='#2CA4B9'
                             backgroundColor='#EAEAEA'
                             rotate={false}
                             orbitControls={true}
                         />
                     </Col>
-                </Row>
-                <Row>
-                    <Col sm className="py-2 border rounded">
-                        <Button color="success" size="lg" type="button" href={url}>
-                            Download 3D Model (STL file)
-                        </Button>
-                    </Col>
-                    <Col sm className="py-2 border rounded" display="flex">
-                        <Button color="success" size="lg" type="button" href="normal-about-3d-printing">
-                            3D Model Print Advice
-                        </Button>
-                    </Col>
+                    <Col lg="6">
+                         <div className="info info-horizontal transparent">
+                             <div className="icon icon-shape icon-shape-info rounded-circle text-white">
+                                 <i className="fa fa-download text-info"></i>
+                             </div>
+                             <div className="description pl-4">
+                                 <h5 className="title font-weight-bold">Download 3D Model</h5>
+                                    <p>
+                                        Touch the artwork by depicting the replica with 3D shadows of the artwork, highlighting the light and shadow contrast of the artwork.
+                                        Click the download button to get the 3D model file.
+                                    </p>
+                                    <a
+                                        className="font-weight-bold"
+                                        href={url}
+                                        onClick={(e) => e.button()}>
+                                        Download
+                                    </a>
+                                </div>
+                            </div>
+                     </Col>
+                     <Col lg="6">
+                            <div className="info info-horizontal bg-transparent">
+                                <div className="icon icon-shape icon-shape-info rounded-circle text-white">
+                                    <i className="far fa-edit text-info"></i>
+                                </div>
+                                <div className="description pl-4">
+                                    <h5 className="title font-weight-bold">3D Model print advice</h5>
+                                    <p>
+                                        After downloading the 3D Model of the artwork, it can be printed layer by layer on the 3D printer.
+                                        Click the learn more button to get some information about 3D printing.
+                                    </p>
+                                    <a
+                                        className="font-weight-bold"
+                                        href="normal-about-3d-printing"
+                                        onClick={(e) => e.button()}>
+                                        Learn more
+                                    </a>
+                                </div>
+                            </div>
+                     </Col>
                 </Row>
             </Container>
-            <FooterForWeb />
+        </div>
         </>
     );
 }

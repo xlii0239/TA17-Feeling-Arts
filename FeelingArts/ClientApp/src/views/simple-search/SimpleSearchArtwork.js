@@ -1,8 +1,5 @@
 ﻿import React from 'react';
 import { Button, Container, Row, Col, Input } from "reactstrap";
-
-import NavbarForHome from "components/a17components/navbars/NavbarForHome.js";
-
 import ArtworkResultShow from './ArtworkResultShow';
 
 
@@ -61,18 +58,9 @@ class SimpleSearchArtwork extends React.Component {
 
     render() {
 
-        const { value, suggestions } = this.state;
-
-        // Autosuggest will pass through all these props to the input.
-        const inputProps = {
-            placeholder: 'Enter an artist name',
-            value,
-            onChange: this.onChange
-        };
-
         return (
             <>
-                <NavbarForHome />
+                <div style={{ background: 'url(https://www.publicdomainpictures.net/pictures/240000/velka/light-blue-wallpaper.jpg)', height: '900px', }} >
                 <ul className="breadcrumb bg-transparent font-weight-bold">
                     <li className="breadcrumb-item"><a href="homepage" className="text-dark font-weight-bold">Home</a></li>
                     <li className="breadcrumb-item"><a href="simplemode" className="text-dark font-weight-bold">Simple Mode</a></li>
@@ -84,27 +72,10 @@ class SimpleSearchArtwork extends React.Component {
                             Search Feelingarts.tk by entering the keywords of the artwork name in the search box.
                         </h6>                                                
                         <div style={{ display: "flex", justifyContent: 'center' }}>
-                            {/*<Input style={{ width: "60%" }} type="text" innerRef={Input => this.input = Input} placeholder="Search all results" />*/}
-                            {/*<Button color="primary"*/}
-                            {/*    type="button"*/}
-                            {/*    onClick={this.search.bind(this)}*/}
-                            {/*>*/}
-                            {/*    Click to Search*/}
-                            {/*</Button>*/}
-                            <Autosuggest
-                                suggestions={suggestions}
-                                onSuggestionsFetchRequested={this.onSuggestionsFetchRequested}
-                                onSuggestionsClearRequested={this.onSuggestionsClearRequested}
-                                getSuggestionValue={this.getSuggestionValue}
-                                renderSuggestion={this.renderSuggestion}
-                                inputProps={inputProps}
-                            />
-                            <Button color="primary"
-                                type="button"
-                                onClick={this.search.bind(this)}
-                            >
-                                Auto suggest Click to Search
-                            </Button>
+                             <Input style={{ width: "60%" }} type="text" innerRef={Input => this.input = Input} placeholder="Search all results" />
+                             <div className ="search_btn" onClick={this.search.bind(this)}>
+                                Click to Search
+                             </div>
                         </div>
                     </Container>
                     <Col>
@@ -112,6 +83,7 @@ class SimpleSearchArtwork extends React.Component {
                         </ArtworkResultShow>
                     </Col>
                 </div>
+             </div>
             </>
         )
     }

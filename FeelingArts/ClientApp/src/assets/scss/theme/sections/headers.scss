@@ -1,10 +1,10 @@
-header {
+﻿header {
   position: relative;
 }
 
 .page-header {
     min-height: 100vh;
-    max-height: 999px;
+    max-height: 100%;
     padding: 0;
     position: relative;
     overflow: hidden;
@@ -17,8 +17,7 @@ header {
 
     >.container,
     >.container-fluid {
-      padding-top: 12vh;
-      padding-bottom: 40px;
+    
     }
 
     .page-header-image {
@@ -472,3 +471,4 @@ header {
     height: auto;
   }
 }
+

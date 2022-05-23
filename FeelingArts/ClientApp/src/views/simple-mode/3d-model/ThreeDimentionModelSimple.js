@@ -34,6 +34,7 @@ function ThreeDimentionModel() {
     return (
         <>
             <NavbarForHome type="transparent" />
+            <div style={{ background: 'url(https://www.publicdomainpictures.net/pictures/240000/velka/light-blue-wallpaper.jpg)', height: '900px', }} >
             <ul class="breadcrumb bg-transparent font-weight-bold">
                 <li className="breadcrumb-item"><a href="homepage" className="text-dark font-weight-bold">Home</a></li>
                 <li className="breadcrumb-item"><a href="simplemode" className="text-dark font-weight-bold">Simple Mode</a></li>
@@ -45,6 +46,11 @@ function ThreeDimentionModel() {
                     <h4 className="display-4">Enjoy the 3D model to feel more about the artwork.</h4>
                 </Col>
                 <Row className="row-grid mt-5">
+                        <Col lg="10" style={{ textAlign: 'center'}} >
+                            <h4 className="title font-weight-bold">Artwork Name</h4>
+                            <h5 className="font-italic">Created by Artist Name</h5>
+                            <h5 className="font-italic">Introduction</h5>
+                         </Col>
                     <Col lg="6">
                         <div className="info info-horizontal transparent">
                             <div className="icon icon-shape icon-shape-info rounded-circle text-white">
@@ -90,6 +96,7 @@ function ThreeDimentionModel() {
                     </Col>
                 </Row>
             </Container>
+            </div>
         </>
     );
 }
