@@ -9,7 +9,8 @@ class SimpleListeningPage extends React.Component {
         this.state = {
             artworkNo: "",
             artworkName: "",
-            music: []
+            music: [],
+            artwork: []
         }
     }
 
@@ -27,6 +28,11 @@ class SimpleListeningPage extends React.Component {
 
         let queryURL = 'music/' + artworkNo;
 
+        let artworkQueryURL = 'artwork/' + artworkNo;
+        const artworkResponse = await fetch(artworkQueryURL);
+        const data1 = await artworkResponse.json();
+        this.setState({ artwork: data1 });
+
         const response = await fetch(queryURL);
         const data = await response.json();
         this.setState({ music: data });
@@ -35,49 +41,56 @@ class SimpleListeningPage extends React.Component {
     }
 
     render() {
-        return (
-            <>
-                <div style={{ background: 'url(https://www.publicdomainpictures.net/pictures/240000/velka/light-blue-wallpaper.jpg)' }} >
-                <ul className="breadcrumb bg-transparent font-weight-bold" >
-                    <li className="breadcrumb-item"><a href="homepage" className="text-dark font-weight-bold">Home</a></li>
-                    <li className="breadcrumb-item text-light"><a href="simplemode" className="text-dark font-weight-bold">Simple Mode</a></li>
-                    <li className="breadcrumb-item"><a href="simplemusic" className="text-dark font-weight-bold">Art through Music</a></li>
-                    <li className="breadcrumb-item active">Listen</li>
-                    </ul>
-                    <div style={{height:"1vh"}}></div>
-                <div className="page-header">
+        if (this.state.artwork.length == 0) {
+            return (<h1>Loading</h1>)
+        }
+        else {
+            const artwork = this.state.artwork[0]
+            return (
+                <>
+                    <div style={{ background: 'url(https://www.publicdomainpictures.net/pictures/240000/velka/light-blue-wallpaper.jpg)' }} >
+                        <ul className="breadcrumb bg-transparent font-weight-bold" >
+                            <li className="breadcrumb-item"><a href="homepage" className="text-dark font-weight-bold">Home</a></li>
+                            <li className="breadcrumb-item text-light"><a href="simplemode" className="text-dark font-weight-bold">Simple Mode</a></li>
+                            <li className="breadcrumb-item"><a href="simplemusic" className="text-dark font-weight-bold">Art through Music</a></li>
+                            <li className="breadcrumb-item active">Listen</li>
+                        </ul>
+                        <div style={{ height: "1vh" }}></div>
+                        <div className="page-header">
 
-                    <Container>
-                        <Row>
-                            <Col className="mr-auto">
-                                <h4 className="title font-weight-bold">{this.state.artworkName}</h4>
-                                    <h5 className="font-italic">Created by Artist Name</h5>
-                                    <h5 className="font-italic">Introduction</h5>
-                                    <h5 className="font-italic" >
-                                        Listening to the identical music of the artwork with the matching description.
-                                    </h5>
-                            </Col>
-                        </Row>
-                        <Row>
-                            <Col className="pl-md-0" >
-                                <Row className="mx-auto">
-                                    {this.state.music.map((item, index) => {
-                                        let video_url = item.mLink.slice(16)
-                                        return (
-                                            <Col lg="8">
-                                                <MusicInfo videoId={video_url} />
-                                                {/*<MusicInfo videoId='k58gA9ZUhFU' />*/}
-                                            </Col>
-                                        )
-                                    })}
+                            <Container>
+                                <Row>
+                                    <Col className="mr-auto">
+                                        <h4 className="title font-weight-bold">{this.state.artworkName}</h4>
+                                        <h5 className="font-italic">{"Created by " + artwork.artist}</h5>
+                                        <h5 className="font-italic">{artwork.describe}</h5>
+                                        <h5 className="font-italic" >
+                                            Listening to the identical music of the artwork with the matching description.
+                                        </h5>
+                                    </Col>
                                 </Row>
-                            </Col>
-                        </Row>
-                    </Container>
-                </div>
-</div>
-            </>
-        )
+                                <Row>
+                                    <Col className="pl-md-0" >
+                                        <Row className="mx-auto">
+                                            {this.state.music.map((item, index) => {
+                                                let video_url = item.mLink.slice(16)
+                                                return (
+                                                    <Col lg="8">
+                                                        <MusicInfo videoId={video_url} />
+                                                        {/*<MusicInfo videoId='k58gA9ZUhFU' />*/}
+                                                    </Col>
+                                                )
+                                            })}
+                                        </Row>
+                                    </Col>
+                                </Row>
+                            </Container>
+                        </div>
+                    </div>
+                </>
+            )
+        }
+        
     }
 }
 
