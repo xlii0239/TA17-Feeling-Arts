@@ -9,7 +9,7 @@ function BlogsForHome() {
         <>
             <Container fluid>
                 <Row>
-                    <Col lg="6">
+                    <Col lg="4">
                             <Card
                             className="card-blog card-background"
                                 data-animation="zooming"
@@ -33,7 +33,7 @@ function BlogsForHome() {
                                 </a>
                             </Card>
                         </Col>
-                    <Col lg="6" >
+                    <Col lg="4" >
                             <Card
                             className="card-blog card-background"
                                 data-animation="zooming"
@@ -56,7 +56,31 @@ function BlogsForHome() {
                                     </CardBody>
                                 </a>
                             </Card>
-                        </Col>                                             
+                    </Col>
+                    <Col lg="4" >
+                        <Card
+                            className="card-blog card-background"
+                            data-animation="zooming"
+                        >
+                            <div
+                                className="full-background"
+                                style={{
+                                    backgroundImage:
+                                        "url(" + require("assets/NewImg/gallery.jpg") + ")",
+                                }}
+                            ></div>
+                            <a href="gallerymap" onClick={(e) => e.button()}>
+                                <CardBody>
+                                    <div className="content-bottom">
+                                        <CardTitle tag="h3">Gallery Map</CardTitle>
+                                        <h6 className="card-category text-white opacity-8">
+                                            Providing more information about art galleries
+                                            </h6>
+                                    </div>
+                                </CardBody>
+                            </a>
+                        </Card>
+                    </Col>
                     </Row>
                 </Container>
         </>

@@ -153,6 +153,25 @@ class GalleryMap extends Component {
             <>
                 <NavbarForHome />
                 <div style={{ background: 'url(https://www.publicdomainpictures.net/pictures/240000/velka/light-blue-wallpaper.jpg)', height: '900px', }} >
+
+                <ul className="breadcrumb bg-transparent font-weight-bold">
+                    <li className="breadcrumb-item"><a href="homepage" className="text-dark font-weight-bold">Home</a></li>
+                    <li className="breadcrumb-item active">Gallery Map</li>
+                </ul>
+                <div>
+                    <Container>
+                        <Row style={{ 'marginBottom': '15px' }}>
+                            <Col className="text-center mx-auto" md="8" lg="12">
+                                <h4 className="display-4">Find galleries near me.</h4>
+                            </Col>
+                            <Col className="text-center mx-auto" lg="12">
+                                <h5> Discover various information about the gallery by clicking on the gallery's tab on the map.</h5>
+                            </Col>
+                            <Col style={{ 'display': 'flex', "alignItems": "center", width: "72%", margin: " 0px auto"}}>
+                                    <Input style={{ width: "60%", minWidth: "185px" }} type="text" innerRef={Input => this.input = Input} placeHolder="Search galleries by city, zip code or address" />
+                                    <div className="search_btn" style={{ minWidth:"111px" }}
+                                    onClick={this.searchLocation.bind(this)}
+
                     <ul className="breadcrumb bg-transparent font-weight-bold">
                         <li className="breadcrumb-item"><a href="homepage" className="text-dark font-weight-bold">Home</a></li>
                         <li className="breadcrumb-item active">Galleries Info</li>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Container, Card, CardBody, Row, Col, Input, CardTitle} from "reactstrap";
+import { Button, Container, Card, CardBody, Row, Col, Spinner , CardTitle, CardText } from "reactstrap";
 import NavbarForHome from "components/a17components/navbars/NavbarForHome.js";
 import ArtworkResultShow from 'views/simple-search/ArtworkResultShow.js';
 import ArtworkBlog from 'components/a17components/blogs/ArtworkBlog.js';
@@ -41,9 +41,8 @@ class ArtworkInfo extends React.Component {
 
     render() {
         if (this.state.artwork.length == 0) {
-            return (<h1>Loading</h1>)
+            return (<span className="sr-only">Loading</span>)
         }
-
         else {
             const artwork = this.state.artwork[0]
             console.log("artwork", artwork)
@@ -62,42 +61,34 @@ class ArtworkInfo extends React.Component {
                         <section className="blogs-3">
                             <Container>
                                 <Row>
-                                    <Col className="mx-auto" lg="10" md="8">5
+                                    <Col className="mx-auto" lg="12" md="8">
                                         <h2 className="title mb-5 font-weight-bold">On view</h2>
-                                        <Card className="card-blog card-plain blog-horizontal mb-5">
+                                        <Card className="card-blog card-plain  mb-5">
                                             <Row>
-                                                <Col lg="5">
+                                                <Col lg="6">
                                                     <div className="card-image shadow">
                                                         <a>
                                                             <img
                                                                 alt="artwork photo"
                                                                 className="img rounded"
                                                                 src={imgURL}
-                                                                style={{ weight: '500px', height: '400px' }}
+                                                                style={{ weight: '500px', height: '700px' }}
                                                             ></img>
                                                         </a>
                                                     </div>
                                                 </Col>
-                                                <Col lg="7">
+                                                <Col lg="6">
                                                     <CardBody>
                                                         <CardTitle tag="h3">
                                                             {artwork.artwork}
                                                         </CardTitle>
-                                                        <p className="card-description">
+                                                        <CardText tag="h5">
+                                                            <span className="name">{artwork.artist} {"Created in " + artwork.createYear}</span>
+                                                        </CardText>
+                                                        <p className="card-description" style={{ width: '100%', 'textAlign': 'justify' }}>
                                                             {artwork.describe}{" "}
                                                         </p>
-                                                        <div className="author">
-                                                            <img
-                                                                alt="..."
-                                                                className="avatar img-raised"
-                                                                src={require("assets/img/faces/team-1.jpg")}
-                                                            ></img>
-                                                            <div className="text">
-                                                                <span className="name">{artwork.artist}</span>
-                                                                <div className="meta">{artwork.createYear}</div>
-                                                            </div>
-                                                        </div>
-                                                        <Row style={{ 'margin-top': "40px" }}>
+                                                        <Row style={{ 'margin-top': "20px" }}>
                                                             <div>
                                                                 <a href={"/normalmusiclisten" + "?artwork_no=" + artwork.imageNo + "&artwork_name=" + artwork.artwork}
                                                                     style={{ border: '1px solid', 'text-align': 'center', display: 'block', cursor: 'pointer', color: " #fff", "backgroundColor": "#5e72e4", "boxShadow": "0 4px 6px rgb(50 50 93 / 11%), 0 1px 3px rgb(0 0 0 / 8%)", "borderRadius": "5px", padding: "5px 10px" }}><FontAwesomeIcon icon={faMusic} alt="music icon" />&nbsp;<span style={{ width: "5px" }}></span>Listen Music</a>
@@ -118,14 +109,14 @@ class ArtworkInfo extends React.Component {
                 </>
             )
         }
-        
+
     }
 
     async populateData() {
         const search = this.props.location.search;
         const artworkNo = new URLSearchParams(search).get("artwork_no");
         const modelNo = new URLSearchParams(search).get("model_no");
-        
+
 
         this.setState({ artworkNo: artworkNo });
         this.setState({ modelNo: modelNo });
@@ -141,12 +132,12 @@ class ArtworkInfo extends React.Component {
         const data1 = await artworkResponse.json();
         const data2 = await musicResponse.json();
         const data3 = await modelResponse.json();
-        
+
 
         this.setState({ artwork: data1 });
         this.setState({ music: data2 });
         this.setState({ model: data3 });
-        
+
 
         //const url_img = 'https://storage.googleapis.com/feeling-arts-data/artwork-img/' + artworkNo + '.jpg'
         //this.setState({ artworkImageURL: url_img });

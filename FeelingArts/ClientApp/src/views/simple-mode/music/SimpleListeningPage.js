@@ -57,7 +57,6 @@ class SimpleListeningPage extends React.Component {
                         </ul>
                         <div style={{ height: "1vh" }}></div>
                         <div className="page-header">
-
                             <Container>
                                 <Row>
                                     <Col className="mr-auto">
