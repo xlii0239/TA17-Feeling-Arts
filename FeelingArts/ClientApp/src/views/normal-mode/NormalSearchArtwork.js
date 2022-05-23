@@ -17,6 +17,10 @@ const handleClick3dModel = (e, modelNo, imgNo) => {
     //console.log("modelName from three model page", modelName)
 };
 
+const handleClickInfo = (e, imageNo, artworkName, modelNo) => {
+    window.location = "/artworkinfo" + "?artwork_no=" + imageNo + "&model_no=" + modelNo;
+}
+
 
 class NormalSearchArtwork extends React.Component {
     constructor(props) {
@@ -170,7 +174,7 @@ class NormalSearchArtwork extends React.Component {
                                                     backgroundImage: "url(" + imageURL + ")",
                                                 }}
                                             >
-                                                <a href="artworkinfo" onClick={(e) => e.button()}>
+                                                <a href={"/artworkinfo" + "?artwork_no=" + item.imageNo + "&model_no=" + item.modelNo} onClick={(e) => e.button()}>
                                                 <CardBody className="py-5">
                                                     <Row>
                                                         <h4 className="text-capitalize font-weight-bold text-light"

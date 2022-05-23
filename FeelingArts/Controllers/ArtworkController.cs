@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using FeelingArts.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace FeelingArts.Controllers
 {
@@ -21,6 +22,18 @@ namespace FeelingArts.Controllers
                 var listA = db.ArtworkInfos.ToArray();
                 return listA;
             }
+        }
+
+        [HttpGet("{imageNo}")]
+        public async Task<IActionResult> GetArtworkByImage([FromRoute] string imageNo)
+        {
+
+            var atrwork = await db.ArtworkInfos.Where(x => x.ImageNo == imageNo).ToListAsync();
+            if (atrwork == null)
+            {
+                return NotFound();
+            }
+            return Ok(atrwork);
         }
     }
 }
