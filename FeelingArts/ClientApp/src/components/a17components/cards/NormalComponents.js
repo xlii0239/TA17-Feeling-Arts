@@ -73,6 +73,11 @@ function NormalComponents() {
                     >
                     </img>
                     <img
+                        alt="The Leonardo da Vinci photo"
+                        className="table-img"
+                        src={require("assets/NewImg/Leonardo da Vinci.jpg")}
+                    ></img>
+                    <img
                         alt="The starry night photo"
                         className="table-img align-item-center"
                         src={require("assets/NewImg/The-Starry-Night.jpg")}
@@ -80,15 +85,10 @@ function NormalComponents() {
                     </img>
                     <img
                         alt="Vincent van Gogh photo"
-                        className="w-5"
+                        className="linkedin-btn-img"
                         src={require("assets/NewImg/Vincent van Gogh.jpg")}
                     >
                     </img>
-                    <img
-                        alt="The Leonardo da Vinci photo"
-                        className="table-img"
-                        src={require("assets/NewImg/Leonardo da Vinci.jpg")}
-                    ></img>
                 </Col>
             </Row>
         </>

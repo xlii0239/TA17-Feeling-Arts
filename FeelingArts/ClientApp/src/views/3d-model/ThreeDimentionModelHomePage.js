@@ -55,8 +55,7 @@ class ThreeDimentionModelHomePage extends React.Component {
                         <h5>Through our sense of touching to experience and feel the vividly form and expression of artwork.</h5>
                         </Col>
 
-                    </Row>
-
+                    </Row>                  
                     <div style={{ display: this.state.change < 2 ? "block" : "none", textAlign:"center" }}>
                         <img src={require("assets/NewImg/tip.png")}
                             style={{ animation: "zy 2.5s .15s linear infinite", width: "92px", height: "80px", "zIndex": 999}} />
