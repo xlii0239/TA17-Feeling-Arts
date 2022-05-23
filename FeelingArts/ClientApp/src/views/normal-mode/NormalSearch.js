@@ -304,9 +304,6 @@ class NormalSearch extends React.Component {
                             >
                                 Click to Search
                             </div>
-
-                            </Button>
-
                         </div>
 
                     </Container>
