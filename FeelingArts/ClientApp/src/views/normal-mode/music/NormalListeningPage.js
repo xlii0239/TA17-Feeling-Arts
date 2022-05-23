@@ -60,8 +60,6 @@ class NromalListeningPage extends React.Component {
                             <Col>
                                 <Col className="mr-auto">
                                     <h4 className="title font-weight-bold">{this.state.artworkName}</h4>
-                                    <h5 className="font-italic">Created by Artist Name</h5>
-                                    <h5 className="font-italic">Introduction</h5>
                                 </Col>
                                 <img
                                     alt="..."

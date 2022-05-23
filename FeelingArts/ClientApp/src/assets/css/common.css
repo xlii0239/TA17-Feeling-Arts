@@ -55,7 +55,7 @@ h4,h5 {
 a:hover {
     color: #233dd2;
     text-decoration: none;
-    font-family: cursive;
+    font-family: monospace;
 }
 
 .a_input{
@@ -89,7 +89,4 @@ a:hover {
     top:50px;
     background:#fff;
     z-index:999;
-}
-.gm-style .gm-style-iw-c{
-   
 }

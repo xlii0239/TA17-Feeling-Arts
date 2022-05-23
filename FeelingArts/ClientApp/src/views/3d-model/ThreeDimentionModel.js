@@ -57,7 +57,7 @@ function ThreeDimentionModel() {
                             alt="..."
                             className="img-fluid rounded shadow-lg"
                             src={url_img}
-                            style={{ height: "500px", weight:"600px"}}
+                            style={{ height: "500px", weight:"600px",marginLeft:"78px"}}
                         >
                         </img>
                     </Col>
@@ -71,6 +71,7 @@ function ThreeDimentionModel() {
                             backgroundColor='#EAEAEA'
                             rotate={false}
                             orbitControls={true}
+                            style={{marginLeft: "78px" }}
                         />
                     </Col>
                     <Col lg="6">
