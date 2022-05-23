@@ -165,7 +165,7 @@ class GalleryMap extends Component {
                                 <h4 className="display-4">Find galleries near me.</h4>
                             </Col>
                             <Col className="text-center mx-auto" lg="12">
-                                <h5> Discover various information about the gallery by clicking on the gallery's tab on the map.</h5>
+                                <h5> Discover more information about the gallery by clicking on the red tab on the map.</h5>
                             </Col>
                             <Col style={{ 'display': 'flex', "alignItems": "center", width: "72%", margin: " 0px auto"}}>
                                     <Input style={{ width: "60%", minWidth: "185px" }} type="text" innerRef={Input => this.input = Input} placeHolder="Search galleries by city, zip code or address" />
@@ -174,11 +174,12 @@ class GalleryMap extends Component {
                                     >
                                         Click to search
                                     </div>
-                                </Col>
-                                <Col className="fa-solid fa-child-reaching btn"
+                            </Col>
+                                <Col className="btn"
                                     onClick={this.currentLocationClicked}
                                 >
-                                    &nbsp;&nbsp;my location
+                                    <i class="fa fa-child-reaching fa-2x" aria-hidden="true"></i>
+                                    &nbsp;&nbsp;&nbsp;my location
 
                                 </Col>
                             </Row>

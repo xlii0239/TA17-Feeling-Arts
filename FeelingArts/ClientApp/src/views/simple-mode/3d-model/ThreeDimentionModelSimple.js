@@ -67,15 +67,14 @@ class ThreeDimentionModelSimple extends React.Component {
                             <li className="breadcrumb-item"><a href="3d-model-home-simple" className="text-dark font-weight-bold">Art through Touch</a></li>
                             <li className="breadcrumb-item active">3D Model</li>
                         </ul>
-                        <Container fluid className='gx-0'>
-                            <Col className="text-center mx-auto" md="8" lg="12">
-                                <h4 className="display-4">Enjoy the 3D model to feel more about the artwork.</h4>
-                            </Col>
-                            <Row className="row-grid mt-5">
-                                <Col lg="10" style={{ textAlign: 'center' }} >
+                        <Container>
+                            <Row>
+                                <Col className="mr-auto" lg="10" style={{ 'marginLeft':'52px'}}>
                                     <h4 className="title font-weight-bold">{artwork.artwork}</h4>
-                                    <h5 className="font-italic">{"Created by " + artwork.artist}</h5>
-                                    <h5 className="font-italic">{artwork.describe}</h5>
+                                    <h4 className="name">{artwork.artist}</h4>
+                                    <h5 className="font-italic" style={{ width: '100%', 'textAlign': 'justify' }}>
+                                        {artwork.describe}
+                                    </h5>
                                 </Col>
                                 <Col lg="6">
                                     <div className="info info-horizontal transparent">
@@ -85,7 +84,6 @@ class ThreeDimentionModelSimple extends React.Component {
                                         <div className="description pl-4">
                                             <h5 className="title font-weight-bold">Download 3D Model</h5>
                                             <p>
-
                                                 Touch the artwork by depicting the replica with 3D shadows of the artwork, highlighting the light and shadow contrast of the artwork.
                                                 Click the download button to get the 3D model file.
                                             </p>
