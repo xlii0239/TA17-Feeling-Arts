@@ -1,5 +1,6 @@
 ﻿import React from 'react';
 import { Button, Container, Row, Col, Input } from "reactstrap";
+
 import NavbarForHome from "components/a17components/navbars/NavbarForHome.js";
 
 import ArtworkResultShow from './ArtworkResultShow';
@@ -113,7 +114,7 @@ class SimpleSearchArtwork extends React.Component {
 
         return (
             <>
-                <NavbarForHome />
+                <div style={{ background: 'url(https://www.publicdomainpictures.net/pictures/240000/velka/light-blue-wallpaper.jpg)', height: '900px', }} >
                 <ul className="breadcrumb bg-transparent font-weight-bold">
                     <li className="breadcrumb-item"><a href="homepage" className="text-dark font-weight-bold">Home</a></li>
                     <li className="breadcrumb-item"><a href="simplemode" className="text-dark font-weight-bold">Simple Mode</a></li>
@@ -153,6 +154,7 @@ class SimpleSearchArtwork extends React.Component {
                         </ArtworkResultShow>
                     </Col>
                 </div>
+             </div>
             </>
         )
     }

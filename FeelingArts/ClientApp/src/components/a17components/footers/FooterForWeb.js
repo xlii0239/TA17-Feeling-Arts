@@ -25,7 +25,7 @@ function FooterForWeb() {
                             </div>
                         </Col>
                     <Col lg="4" className="align-items-center justify-content-md-between col-md-6 ">
-                        <div className="copyright text-dark">
+                        <div className="copyright text-dark" style={{ textAlign:"center"}}>
                             All rights reserved.  &copy; 2022
                           </div>
                     </Col>

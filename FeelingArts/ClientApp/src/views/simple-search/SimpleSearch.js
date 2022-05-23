@@ -110,11 +110,11 @@ class SimpleSearch extends React.Component {
 
         return (
             <>
-                <NavbarForHome />
-                <ul className="breadcrumb bg-transparent font-weight-bold">
-                    <li className="breadcrumb-item"><a href="homepage" className="text-dark font-weight-bold">Home</a></li>
-                    <li className="breadcrumb-item"><a href="simplemode" className="text-dark font-weight-bold">Simple Mode</a></li>
-                    <li className="breadcrumb-item active">Search Artist</li>
+                <div style={{ background: 'url(https://www.publicdomainpictures.net/pictures/240000/velka/light-blue-wallpaper.jpg)', height: '900px', }} >
+                <ul class="breadcrumb bg-transparent font-weight-bold">
+                    <li class="breadcrumb-item"><a href="homepage" class="text-dark font-weight-bold">Home</a></li>
+                    <li class="breadcrumb-item"><a href="simplemode" class="text-dark font-weight-bold">Simple Mode</a></li>
+                    <li class="breadcrumb-item active">Search Artist</li>
                 </ul>
                 <div className="section">
                     <Container className="shape-container flex align-items-center py-lg-2">
@@ -144,13 +144,13 @@ class SimpleSearch extends React.Component {
                             >
                                 Click to Search
                             </Button>
-
                         </div>
                     </Container>
                     <Col>
                         <ArtistResultShow toData={this.state.artistShow}>
                         </ArtistResultShow>
                     </Col>
+                    </div>
                 </div>
             </>
         )

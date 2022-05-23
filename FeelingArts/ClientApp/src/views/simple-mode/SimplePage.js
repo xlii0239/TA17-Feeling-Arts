@@ -1,6 +1,3 @@
-/// <reference path="../search.js" />
-/// <reference path="../search.js" />
-/// <reference path="../../views/homepage/homepage.js" />
 import React from "react";
 
 // reactstrap components
@@ -44,7 +41,8 @@ function SimplePage() {
                                         backgroundImage:
                                             "url(" + require("assets/NewImg/musicArt.jpg") + ")",
                                     }}
-                                ></div>
+                                >
+                                </div>
                                 <a href="simplemusic" onClick={(e) => e.button()}>
                                     <CardBody>
                                         <div className="content-center">
@@ -75,26 +73,6 @@ function SimplePage() {
                                 </a>
                             </Card>
                         </Col>
-                        {/*<Col lg="6">*/}
-                        {/*    <Card*/}
-                        {/*        className="card-blog card-background"*/}
-                        {/*        data-animation="zooming"  >*/}
-                        {/*        <div*/}
-                        {/*            className="full-background"*/}
-                        {/*            style={{*/}
-                        {/*                backgroundImage:*/}
-                        {/*                    "url(" + require("assets/NewImg/describeArt.jpg") + ")",*/}
-                        {/*            }}*/}
-                        {/*        ></div>*/}
-                        {/*        <a href="#pablo" onClick={(e) => e.preventDefault()}>*/}
-                        {/*            <CardBody>*/}
-                        {/*                <div className="content-center">*/}
-                        {/*                    <CardTitle tag="h4">Art Through Describe</CardTitle>*/}
-                        {/*                </div>*/}
-                        {/*            </CardBody>*/}
-                        {/*        </a>*/}
-                        {/*    </Card>*/}
-                        {/*</Col>*/}
                         <Col lg="6">
                             <Card
                                 className="card-blog card-background"

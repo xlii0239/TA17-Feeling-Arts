@@ -2,8 +2,6 @@
 import { Container, Row, Col, Button, Card, CardBody, CardTitle} from "reactstrap";
 import { Link } from 'react-router';
 import NavbarForHome from "components/a17components/navbars/NavbarForHome.js";
-import FooterForWeb from "components/a17components/footers/FooterForWeb.js";
-import HeaderForHome from "components/a17components/headers/HeaderForHome.js";
 import { Swiper, SwiperSlide } from 'swiper/react' 
 import 'swiper/swiper.min.css' 
 import 'assets/css/common.css'
@@ -43,6 +41,7 @@ class ThreeDimentionModelHomePage extends React.Component {
         return (
             <>
                 <NavbarForHome />
+                <div style={{ background: 'url(https://www.publicdomainpictures.net/pictures/240000/velka/light-blue-wallpaper.jpg)', height: '400px', }} >
                 <ul class="breadcrumb bg-transparent font-weight-bold">
                     <li class="breadcrumb-item"><a href="homepage" class="text-dark font-weight-bold">Home</a></li>
                     <li class="breadcrumb-item"><a href="normalmode" class="text-dark font-weight-bold">Picture Mode</a></li>
@@ -54,18 +53,20 @@ class ThreeDimentionModelHomePage extends React.Component {
                     </Col>
                     <Col className="text-center mx-auto" lg="12">
                         <h5>Through our sense of touching to experience and feel the vividly form and expression of artwork.</h5>
-                    </Col>
-                </Row>
-                <Container fluid>
-                    <Row style={{ position: "relative" }}>
+                        </Col>
 
-                        <div style={{ display: this.state.change < 2 ? "block" : "none" }}>
-                            <img src={require("assets/img/tip.png")}
-                                style={{ animation: "zy 2.5s .15s linear infinite", width: "92px", height: "80px", position: "absolute", "zIndex": 999, "left": "20px", "top": "50px" }} />
-                        </div>
+                    </Row>
+
+                    <div style={{ display: this.state.change < 2 ? "block" : "none", textAlign:"center" }}>
+                        <img src={require("assets/NewImg/tip.png")}
+                            style={{ animation: "zy 2.5s .15s linear infinite", width: "92px", height: "80px", "zIndex": 999}} />
+                    </div>
+                <Container fluid>
+                        <Row >
+
                         <Col >
                             <Swiper className="swiper"
-                                style={{ width: '1200px' }}
+                                style={{ width: "80%" }}
                                 onSlideChange={() => { this.setState({ change: 2 }); console.log(this.state.change) }}
                                 onSwiper={(swiper) => console.log(swiper)}
                                 slidesPerView={3}
@@ -100,7 +101,7 @@ class ThreeDimentionModelHomePage extends React.Component {
                                 })}
                             </Swiper>
                             <Swiper className="swiper"
-                                style={{ width: '1200px' }}
+                                style={{ width: '80%' }}
                                 onSlideChange={() => { this.setState({ change: 2 }); console.log(this.state.change) }}
                                 onSwiper={(swiper) => console.log(swiper)}
                                 slidesPerView={3}
@@ -144,8 +145,7 @@ class ThreeDimentionModelHomePage extends React.Component {
                         {/*</Col>*/}
                     </Row>
                 </Container>
-
-                <FooterForWeb />
+            </div>
             </>
         )
     }
