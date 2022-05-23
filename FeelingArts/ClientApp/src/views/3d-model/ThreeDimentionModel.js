@@ -75,19 +75,19 @@ class ThreeDimentionModel extends React.Component {
                             <li className="breadcrumb-item"><a href="3d-model-home" className="text-dark font-weight-bold">Art through Touch</a></li>
                             <li className="breadcrumb-item active">3D Model</li>
                         </ul>
-                        <Container fluid className='gx-0'>
-                            <Row className="row-grid mt-5">
-                                <Col lg="10" style={{ textAlign: 'center' }} >
-                                    <h4 className="title font-weight-bold">{ artwork.artwork}</h4>
-                                    <h5 className="font-italic">{ "Created by " + artwork.artist}</h5>
-                                    <h5 className="font-italic">{ artwork.describe}</h5>
+                        <Container >
+                            <Row>
+                                <Col className="mr-auto" lg="10" style={{ 'marginLeft': '52px' }} >
+                                    <h4 className="title font-weight-bold">{artwork.artwork}</h4>
+                                    <h4 className="name">{artwork.artist}</h4>
+                                    <h5 className="font-italic" style={{ width: '100%', 'textAlign': 'justify' }}>{ artwork.describe}</h5>
                                 </Col>
                                 <Col lg="6">
                                     <img
                                         alt="..."
                                         className="img-fluid rounded shadow-lg"
                                         src={this.state.imageURL}
-                                        style={{ height: "500px", weight: "600px" }}
+                                        style={{ height: "500px" }}
                                     >
                                     </img>
                                 </Col>
@@ -95,7 +95,7 @@ class ThreeDimentionModel extends React.Component {
                                     <STLViewer
                                         url={this.state.modelUrl}
                                         model={this.state.modelUrl}
-                                        width={600}
+                                        width={450}
                                         height={500}
                                         modelColor='#2CA4B9'
                                         backgroundColor='#EAEAEA'

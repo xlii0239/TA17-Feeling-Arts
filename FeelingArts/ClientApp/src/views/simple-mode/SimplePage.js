@@ -25,7 +25,7 @@ function SimplePage() {
                         <h4 className="display-4">Start the artwork exploration!</h4>
                     </Col>
                     <Col className="text-center mx-auto" lg="12">
-                        <h5>Select your preference and create your new experience.</h5>
+                        <h5>Select your preference and start your new experience.</h5>
                     </Col>
                 </Row>
                 <Container fluid>

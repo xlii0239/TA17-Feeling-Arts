@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Container, Card, CardBody, Row, Col, Spinner , CardTitle, CardText } from "reactstrap";
+import { Button, Container, Card, CardBody, Row, Col, Spinner , CardTitle, CardSubtitle } from "reactstrap";
 import NavbarForHome from "components/a17components/navbars/NavbarForHome.js";
 import ArtworkResultShow from 'views/simple-search/ArtworkResultShow.js';
 import ArtworkBlog from 'components/a17components/blogs/ArtworkBlog.js';
@@ -82,9 +82,9 @@ class ArtworkInfo extends React.Component {
                                                         <CardTitle tag="h3">
                                                             {artwork.artwork}
                                                         </CardTitle>
-                                                        <CardText tag="h5">
-                                                            <span className="name">{artwork.artist} {"Created in " + artwork.createYear}</span>
-                                                        </CardText>
+                                                        <p tag="h5">
+                                                            <span className="name">{artwork.artist} {"," + artwork.createYear}</span>
+                                                        </p>
                                                         <p className="card-description" style={{ width: '100%', 'textAlign': 'justify' }}>
                                                             {artwork.describe}{" "}
                                                         </p>
