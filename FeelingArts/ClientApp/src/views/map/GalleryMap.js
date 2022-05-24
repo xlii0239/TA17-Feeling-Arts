@@ -178,7 +178,7 @@ class GalleryMap extends Component {
                                 <Col className="btn"
                                     onClick={this.currentLocationClicked}
                                 >
-                                    <i class="fa fa-child-reaching fa-2x" aria-hidden="true"></i>
+                                    <i className="fa fa-child fa-2x" aria-hidden="true"></i>
                                     &nbsp;&nbsp;&nbsp;my location
 
                                 </Col>
