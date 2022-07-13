@@ -1,7 +1,7 @@
 ﻿import React from 'react';
 import { Button, Container, Card, CardBody, Row, Col, Input } from "reactstrap";
 import NavbarForHome from "components/a17components/navbars/NavbarForHome.js";
-import ArtworkResultShow from 'views/simple-search/ArtworkResultShow.js';
+import Autosuggest from 'react-autosuggest';
 
 
 
@@ -17,6 +17,10 @@ const handleClick3dModel = (e, modelNo, imgNo) => {
     //console.log("modelName from three model page", modelName)
 };
 
+const handleClickInfo = (e, imageNo, artworkName, modelNo) => {
+    window.location = "/artworkinfo" + "?artwork_no=" + imageNo + "&model_no=" + modelNo;
+}
+
 
 class NormalSearchArtwork extends React.Component {
     constructor(props) {
@@ -25,19 +29,59 @@ class NormalSearchArtwork extends React.Component {
             artist: [],
             artwork: [],
             artistShow: [],
-            artworkShow: []
+            artworkShow: [],
+            artworkSuggestion: [],
+            value: "",
+            suggestions: []
         }
     }
 
     componentDidMount() {
         this.populateData();
-        console.log("detail", this.state.artist)
     }
+
+    onChange = (event, { newValue }) => {
+        this.setState({
+            value: newValue
+        });
+        console.log("from onChange", this.state.value);
+    };
+
+    onSuggestionsFetchRequested = ({ value }) => {
+        this.setState({
+            suggestions: this.getSuggestions(value)
+        });
+    };
+
+    onSuggestionsClearRequested = () => {
+        this.setState({
+            suggestions: []
+        });
+    };
+
+    getSuggestionValue = suggestion => suggestion.name;
+
+    renderSuggestion = suggestion => (
+        <div>
+            {suggestion.name}
+        </div>
+    );
+
+    getSuggestions = value => {
+        const inputValue = value.trim().toLowerCase();
+        const inputLength = inputValue.length;
+
+        console.log("Get suggestion", this.state.artworkSuggestion)
+
+        return inputLength === 0 ? [] : this.state.artworkSuggestion.filter(lang =>
+            lang.name.toLowerCase().slice(0, inputLength) === inputValue
+        );
+    };
 
     //Change the table data
     search() {
         //var keyword = event.target.value
-        var keyword = this.input.value.toLowerCase()
+        var keyword = this.state.value.toLowerCase()
         if (keyword.length > 0) {
             var artistData = this.state.artist
             var artworkData = this.state.artwork
@@ -71,10 +115,19 @@ class NormalSearchArtwork extends React.Component {
     }
 
     render() {
+        const { value, suggestions } = this.state;
+
+        // Autosuggest will pass through all these props to the input.
+        const inputProps = {
+            placeholder: 'Enter an artwork name',
+            value,
+            onChange: this.onChange
+        };
 
         return (
             <>
                 <NavbarForHome />
+                <div style={{ background: 'url(https://www.publicdomainpictures.net/pictures/240000/velka/light-blue-wallpaper.jpg)', height: '900px', }} >
                 <ul class="breadcrumb bg-transparent font-weight-bold">
                     <li class="breadcrumb-item"><a href="homepage" class="text-dark font-weight-bold">Home</a></li>
                     <li class="breadcrumb-item"><a href="normalmode" class="text-dark font-weight-bold">Picture Mode</a></li>
@@ -82,16 +135,27 @@ class NormalSearchArtwork extends React.Component {
                 </ul>
                 <div className="section">
                     <Container className="shape-container flex align-items-center py-lg-2">
-                        <h6 class="text-muted">
-                            Search Feelingarts.tk by entering the keywords of the artwork name in the search box below.
-                            </h6>
-                        <Input type="text" innerRef={Input => this.input = Input} placeHolder="Search all results" />
-                        <Button color="primary"
-                            type="button"
-                            onClick={this.search.bind(this)}
-                        >
-                            Click to Search
-                        </Button>
+                        <h6 className="text-muted" style={{ width: "72%", margin: " 0px auto", "minWidth": "360px" }}>
+                             Search Feelingarts.tk by entering the keywords of the artwork name in the search box.
+                        </h6>
+                        <div style={{ 'display': 'flex', "alignItems": "center", width: "72%", margin: " 0px auto" }}>
+                            <div className="a_input" style={{ minWidth:"180px" }}>
+                                <Autosuggest
+                                    suggestions={suggestions}
+                                    onSuggestionsFetchRequested={this.onSuggestionsFetchRequested}
+                                    onSuggestionsClearRequested={this.onSuggestionsClearRequested}
+                                    getSuggestionValue={this.getSuggestionValue}
+                                    renderSuggestion={this.renderSuggestion}
+                                    inputProps={inputProps}
+
+                                />
+                            </div>
+                            <div className="search_btn" style={{ minWidth:"140px" }}
+                                onClick={this.search.bind(this)}
+                            >
+                                Click to Search
+                            </div>
+                        </div>
                     </Container>
                     {/*<Col>*/}
                     {/*    <ArtworkResultShow toData={this.state.artworkShow}>*/}
@@ -110,11 +174,13 @@ class NormalSearchArtwork extends React.Component {
                                                     backgroundImage: "url(" + imageURL + ")",
                                                 }}
                                             >
-                                                <CardBody className="py-5">
+
+                                                <a href={"/artworkinfo" + "?artwork_no=" + item.imageNo + "&model_no=" + item.modelNo} onClick={(e) => e.button()}>
+                                                <CardBody className="py-5 text-center">
+                                                  
                                                     <Row>
-                                                        <h4 className="text-primary text-capitalize font-weight-bold text-light"
-                                                            style={{ height: "100px" }}
-                                                        >
+                                                        <h4 className="text-capitalize font-weight-bold text-light"
+                                                                style={{ textAlign: 'center', margin: "0px auto", height: '72px', overflow: 'hidden', "textOverflow": '   ellipsis ', display: " -webkit-box ", "-webkit-line-clamp": 2, "-webkit-box-orient": "vertical" }}>
                                                             {item.artwork}
                                                         </h4>
                                                     </Row>
@@ -123,22 +189,9 @@ class NormalSearchArtwork extends React.Component {
                                                     </Row>
                                                     <Row className="description mt-3 font-weight-bold text-light">
                                                         {item.style + " style"}
-                                                    </Row>
-                                                    <Button
-                                                        className="mt-4"
-                                                        color="info"
-                                                        onClick={(e) => handleClickMusic(e, item.imageNo, item.artwork)}
-                                                    >
-                                                        Listen
-                                                    </Button>
-                                                    <Button
-                                                        className="mt-4"
-                                                        color="warning"
-                                                        onClick={(e) => handleClick3dModel(e, item.modelNo, item.imageNo)}
-                                                    >
-                                                        Touch
-                                                    </Button>
+                                                    </Row>                                                  
                                                 </CardBody>
+                                                 </a>
                                             </Card>
                                         </Col>
                                     )
@@ -146,8 +199,8 @@ class NormalSearchArtwork extends React.Component {
                             </Row>
                         </Col>
                     </Row>
-
                 </div>
+            </div>
             </>
         )
     }
@@ -158,6 +211,18 @@ class NormalSearchArtwork extends React.Component {
         const data = await response.json();
         const data1 = await response1.json();
         this.setState({ artist: data, artwork: data1 });
+
+        let artworkName = []
+        for (var i = 0; i < data1.length; i++) {
+            let oneArtwork = {
+                name: data1[i].artwork
+            }
+
+            artworkName.push(oneArtwork)
+        }
+
+        this.setState({ artworkSuggestion: artworkName })
+
         console.log("detail", this.state.artist);
         console.log("detail", this.state.artwork);
     }

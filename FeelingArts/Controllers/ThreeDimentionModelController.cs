@@ -23,5 +23,17 @@ namespace FeelingArts.Controllers
                 return listA;
             }
         }
+
+        [HttpGet("{imageNo}")]
+        public async Task<IActionResult> GetModelByImage([FromRoute] string imageNo)
+        {
+
+            var model = await db.ThreeDimentionModelInfos.Where(x => x.ImageNo == imageNo).ToListAsync();
+            if (model == null)
+            {
+                return NotFound();
+            }
+            return Ok(model);
+        }
     }
 }

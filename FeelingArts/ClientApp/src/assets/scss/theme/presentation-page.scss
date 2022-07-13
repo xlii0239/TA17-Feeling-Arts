@@ -367,9 +367,9 @@
 
 @keyframes floating {
  from {
-   -webkit-transform: translate(50px, 0px);
-       -ms-transform: translate(50px, 0px);
-           transform: translate(50px, 0px);
+   -webkit-transform: translate(10px, 0px);
+       -ms-transform: translate(10px, 0px);
+           transform: translate(10px, 0px);
  }
  65% {
    -webkit-transform: translate(0, 0);
@@ -377,9 +377,9 @@
            transform: translate(0, 0);
  }
  to {
-   -webkit-transform: translate(50px, 0px);
-       -ms-transform: translate(50px, 0px);
-           transform: translate(50px, 0px);
+   -webkit-transform: translate(10px, 0px);
+       -ms-transform: translate(10px, 0px);
+           transform: translate(10px, 0px);
  }
 }
 
@@ -401,7 +401,7 @@
 
 .table-img {
   -webkit-animation-duration: 14s;
-          animation-duration: 14s;
+          animation-duration: 6s;
 }
 
 .coloured-card-btn-img {

@@ -1,11 +1,10 @@
 import React from "react";
 
 // reactstrap components
-import { Button, Card, CardBody, CardTitle, Container, Row, Col } from "reactstrap";
-import { Link } from "react-router-dom";
+import { Button, Card, CardBody, Container, Row, Col } from "reactstrap";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper.min.css';
-import NavbarForHome from "components/a17components/navbars/NavbarForHome.js";
+
 
 
 const handleClick = (e, imageNo, artworkName) => {
@@ -21,7 +20,8 @@ class SimpleArtMusicHome extends React.Component {
         this.state = {
             artwork: [],
             music: [],
-            test: []
+            test: [],
+            num: 9
         }
     }
 
@@ -52,7 +52,7 @@ class SimpleArtMusicHome extends React.Component {
     render() {
         return (
             <>
-                <NavbarForHome />
+                <div style={{ background: 'url(https://www.publicdomainpictures.net/pictures/240000/velka/light-blue-wallpaper.jpg)', height: '300px',}} >
                 <ul className="breadcrumb bg-transparent font-weight-bold">
                     <li className="breadcrumb-item"><a href="homepage" className="text-dark font-weight-bold">Home</a></li>
                     <li className="breadcrumb-item"><a href="simplemode" className="text-dark font-weight-bold">Simple Mode</a></li>
@@ -72,99 +72,54 @@ class SimpleArtMusicHome extends React.Component {
                         <Row className="justify-content-center mt-5">
                             <Col lg="12">
                                 <Row className="row-grid">
-                                    <Swiper className="swiper"
-                                        style={{ width: '1200px' }}
-                                        onSlideChange={() => console.log('slide change')}
-                                        onSwiper={(swiper) => console.log(swiper)}
-                                        slidesPerView={3}
-                                        spaceBetween={30}
-                                        loop={true}
-                                        grid={{ fill: 'rows', rows: 2 }}
-                                    >
-                                        {this.state.artwork.slice(0, 52).map((item, index) => {
-                                            console.log(this.state.artwork.length);
-
-                                            return (
-                                                <SwiperSlide key={index}>
-                                                    <Card className="card-lift--hover shadow border-0">
-                                                        <CardBody className="py-5">
-                                                            <Row>
-                                                                <h5 className="text-primary text-capitalize font-weight-bold"
-                                                                    style={{ height: '100px' }}>
-                                                                    {item.artwork}
-                                                                </h5>
-                                                            </Row>
-                                                            <Row className="description mt-3 font-weight-bold">
-                                                                {item.artist + " created in " + item.createYear}
-                                                            </Row>
-                                                            <Row className="description mt-3 font-weight-bold">
-                                                                {item.style + " style"}
-                                                            </Row>
-                                                            <Button
-                                                                className="mt-4"
-                                                                color="primary"
-                                                                onClick={(e) =>
-                                                                    handleClick(e, item.imageNo, item.artwork)
-                                                                }
-                                                            >
-                                                                Listen
+                                    {this.state.artwork.slice(0, this.state.num).map((item, index) => {
+                                        console.log(this.state.artwork.length);
+                                        return (
+                                            <Col lg="4">
+                                                <Card className="card-lift--hover shadow border-0">
+                                                    <CardBody className="py-5">
+                                                        <h4 className="text-primary text-capitalize font-weight-bold"
+                                                            style={{ textAlign: 'center', height: '72px', overflow: 'hidden', "textOverflow": '   ellipsis ', display: " -webkit-box ", "-webkit-line-clamp": 2, "-webkit-box-orient": "vertical" }}>
+                                                            {item.artwork}
+                                                        </h4>
+                                                        <p className="description mt-3 font-weight-bold">
+                                                            {item.artist +
+                                                                " created in " +
+                                                                item.createYear}
+                                                            </p>
+                                                        <p className="description mt-3 font-weight-bold">
+                                                                
+                                                                {item.style +
+                                                                " style."}
+                                                        </p>
+                                                        <Button
+                                                            className="mt-4"
+                                                            color="primary"
+                                                            onClick={(e) =>
+                                                                handleClick(e, item.imageNo, item.artwork)
+                                                            }
+                                                        >
+                                                            Listen
                                 </Button>
-                                                        </CardBody>
-                                                    </Card>
-                                                </SwiperSlide>
-                                            );
-                                        })}
-                                    </Swiper>
-                                    <Swiper className="swiper"
-                                        style={{ width: '1200px' }}
-                                        onSlideChange={() => console.log('slide change')}
-                                        onSwiper={(swiper) => console.log(swiper)}
-                                        slidesPerView={3}
-                                        spaceBetween={30}
-                                        loop={true}
-                                        grid={{ fill: 'rows', rows: 2 }}
-                                    >
-                                        {this.state.artwork.slice(52, this.state.artwork.length).map((item, index) => {
-                                            console.log(this.state.artwork.length);
+                                                    </CardBody>
+                                                </Card>
+                                            </Col>
+                                        );
+                                    })}
 
-                                            return (
-                                                <SwiperSlide key={index}>
-                                                    <Card className="card-lift--hover shadow border-0">
-                                                        <CardBody className="mx-auto">
-                                                            <Row>
-                                                                <h5 className="text-primary text-capitalize font-weight-bold"
-                                                                    style={{ height: '100px' }}>
-                                                                    {item.artwork}
-                                                                </h5>
-                                                            </Row>
-                                                            <Row className="description mt-3 font-weight-bold">
-                                                                {item.artist + " created in " + item.createYear}
-                                                            </Row>
-                                                            <Row className="description mt-3 font-weight-bold">
-                                                                {item.style + " style"}
-                                                            </Row>
-                                                            <Button
-                                                                className="mt-4"
-                                                                color="primary"
-                                                                onClick={(e) =>
-                                                                    handleClick(e, item.imageNo, item.artwork)
-                                                                }
-                                                            >
-                                                                Listen
-                                </Button>
-                                                        </CardBody>
-                                                    </Card>
-                                                </SwiperSlide>
-                                            );
-                                        })}
-                                    </Swiper>
                                 </Row>
                             </Col>
+                            <div r-if="this.state.num < 9" onClick={(e) => { this.setState({ num: this.state.artwork.length }); }}
+                                style={{ border: '2px solid #5e72e4', 'marginBottom': '20px', padding: '10px 20px', 'borderRadius': '10px', 'cursor': 'pointer' }}>
+                                Loading more
+                            </div>
+
                         </Row>
                     </Container>
                 </div>
+             </div>
             </>
-        )
+        );
     }
 }
 

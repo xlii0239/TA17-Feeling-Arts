@@ -9,9 +9,10 @@ import { Link } from "react-router-dom";
 function NormalComponents() {
     return (
         <>
-            <Row className="section-basic-components">
-                <Col lg="6" md="6">
-                    <CardBody className="col-md-8 offset-md-3">
+            <Row className="section-basic-components" style={{ width: "100%", "margin": "0px auto", flexFlow: "wrap", justifyContent:"center",display:"center"}}>
+
+                <Col lg="5" md="6">
+                    <CardBody className="">
                         <CardTitle className="font-weight-bold" tag="h4">
                             <a href="normalmusic" onClick={(e) => e.button()}>
                                 Art through Music
@@ -21,7 +22,7 @@ function NormalComponents() {
                             Feel and understand the mood and emotion of the artwork with the matching music.
                             </p>
                     </CardBody>
-                    <CardBody className="col-md-8 offset-md-3">
+                    <CardBody className="">
                         <CardTitle className="font-weight-bold" tag="h4">
                             <a href="3d-model-home" onClick={(e) => e.button()}>
                                 Art through Touch
@@ -31,7 +32,7 @@ function NormalComponents() {
                             Experience and feel the form and expression of artwork by touching the 3D model.
                            </p>
                     </CardBody>
-                    <CardBody className="col-md-8 offset-md-3">
+                    <CardBody className="">
                         <CardTitle className="font-weight-bold" tag="h4">
                             <a href="normalsearch" onClick={(e) => e.button()}>
                                 Search Artist
@@ -41,7 +42,7 @@ function NormalComponents() {
                             Experience more by providing more artists information.
                     </p>
                     </CardBody>
-                    <CardBody className="col-md-8 offset-md-3">
+                    <CardBody className="">
                         <CardTitle className="font-weight-bold" tag="h4">
                             <a href="normalsearchartwork" onClick={(e) => e.button()}>
                                 Search Artwork
@@ -52,7 +53,7 @@ function NormalComponents() {
                     </p>
                     </CardBody>
                 </Col>
-                <Col className="mb-3" lg="6">
+                <Col  lg="6" >
                     <img
                         alt="MonaLisa photo"
                         className="table-img"
@@ -72,6 +73,11 @@ function NormalComponents() {
                     >
                     </img>
                     <img
+                        alt="The Leonardo da Vinci photo"
+                        className="table-img"
+                        src={require("assets/NewImg/Leonardo da Vinci.jpg")}
+                    ></img>
+                    <img
                         alt="The starry night photo"
                         className="table-img align-item-center"
                         src={require("assets/NewImg/The-Starry-Night.jpg")}
@@ -79,15 +85,10 @@ function NormalComponents() {
                     </img>
                     <img
                         alt="Vincent van Gogh photo"
-                        className="w-5"
+                        className="linkedin-btn-img"
                         src={require("assets/NewImg/Vincent van Gogh.jpg")}
                     >
                     </img>
-                    <img
-                        alt="The Leonardo da Vinci photo"
-                        className="table-img"
-                        src={require("assets/NewImg/Leonardo da Vinci.jpg")}
-                    ></img>
                 </Col>
             </Row>
         </>

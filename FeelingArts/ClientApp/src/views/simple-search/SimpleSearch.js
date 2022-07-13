@@ -1,9 +1,8 @@
 ﻿import React from 'react';
 import { Button, Container, Row, Col, Input } from "reactstrap";
-import NavbarForHome from "components/a17components/navbars/NavbarForHome.js";
-import ProfileCard1 from "components/a17components/cards/ProfileCard1.js";
 import ArtistResultShow from './ArtistResultShow';
 import ArtworkResultShow from './ArtworkResultShow';
+import Autosuggest from 'react-autosuggest';
 
 
 class SimpleSearch extends React.Component {
@@ -13,7 +12,10 @@ class SimpleSearch extends React.Component {
             artist: [],
             artwork: [],
             artistShow: [],
-            artworkShow: []
+            artworkShow: [],
+            artistSuggestion: [],
+            value: "",
+            suggestions: []
         }
     }
 
@@ -22,10 +24,49 @@ class SimpleSearch extends React.Component {
         console.log("detail", this.state.artist)
     }
 
+    onChange = (event, { newValue }) => {
+        this.setState({
+            value: newValue
+        });
+        console.log("from onChange", this.state.value);
+    };
+
+    onSuggestionsFetchRequested = ({ value }) => {
+        this.setState({
+            suggestions: this.getSuggestions(value)
+        });
+    };
+
+    onSuggestionsClearRequested = () => {
+        this.setState({
+            suggestions: []
+        });
+    };
+
+    getSuggestionValue = suggestion => suggestion.name;
+
+    renderSuggestion = suggestion => (
+        <div>
+            {suggestion.name}
+        </div>
+    );
+
+    getSuggestions = value => {
+        const inputValue = value.trim().toLowerCase();
+        const inputLength = inputValue.length;
+
+        console.log("Get suggestion", this.state.artistSuggestion)
+
+        return inputLength === 0 ? [] : this.state.artistSuggestion.filter(lang =>
+            lang.name.toLowerCase().slice(0, inputLength) === inputValue
+        );
+    };
+
+
     //Change the table data
     search() {
         //var keyword = event.target.value
-        var keyword = this.input.value.toLowerCase()
+        var keyword = this.state.value.toLowerCase()
         if (keyword.length > 0) {
             var artistData = this.state.artist
             var artworkData = this.state.artwork
@@ -59,32 +100,52 @@ class SimpleSearch extends React.Component {
     }
 
     render() {
+        const { value, suggestions } = this.state;
+
+        // Autosuggest will pass through all these props to the input.
+        const inputProps = {
+            placeholder: 'Enter an artist name',
+            value,
+            onChange: this.onChange
+        };
 
         return (
             <>
-                <NavbarForHome />
-                <ul className="breadcrumb bg-transparent font-weight-bold">
-                    <li className="breadcrumb-item"><a href="homepage" className="text-dark font-weight-bold">Home</a></li>
-                    <li className="breadcrumb-item"><a href="simplemode" className="text-dark font-weight-bold">Simple Mode</a></li>
-                    <li className="breadcrumb-item active">Search Artist</li>
-                </ul>
-                <div className="section">
-                    <Container className="shape-container flex align-items-center py-lg-2">
-                        <h6 class="text-muted">
-                            Search Feelingarts.tk by entering the keywords of the artist name in the search box below.
+                <div style={{ background: 'url(https://www.publicdomainpictures.net/pictures/240000/velka/light-blue-wallpaper.jpg)', height: '900px', }} >
+                    <ul class="breadcrumb bg-transparent font-weight-bold">
+                        <li class="breadcrumb-item"><a href="homepage" class="text-dark font-weight-bold">Home</a></li>
+                        <li class="breadcrumb-item"><a href="simplemode" class="text-dark font-weight-bold">Simple Mode</a></li>
+                        <li class="breadcrumb-item active">Search Artist</li>
+                    </ul>
+                    <div className="section">
+                        <Container className="shape-container flex align-items-center py-lg-2">
+                            <h6 className="text-muted" style={{ width: "72%", margin: " 0px auto", "minWidth": "360px" }}>
+                                Search Feelingarts.tk by entering the keywords of the artist name in the search box.
                             </h6>
-                        <Input type="text" innerRef={Input => this.input = Input} placeHolder="Search all results" />
-                        <Button color="primary"
-                            type="button"
-                            onClick={this.search.bind(this)}
-                        >
-                            Click to Search
-                        </Button>
-                    </Container>
-                    <Col>
-                        <ArtistResultShow toData={this.state.artistShow}>
-                        </ArtistResultShow>
-                    </Col>
+
+                            <div style={{ 'display': 'flex', "alignItems": "center", width: "72%", margin: " 0px auto" }}>
+                                <div className="a_input" style={{ minWidth: "160px" }}>
+                                    <Autosuggest
+                                        suggestions={suggestions}
+                                        onSuggestionsFetchRequested={this.onSuggestionsFetchRequested}
+                                        onSuggestionsClearRequested={this.onSuggestionsClearRequested}
+                                        getSuggestionValue={this.getSuggestionValue}
+                                        renderSuggestion={this.renderSuggestion}
+                                        inputProps={inputProps}
+                                    />
+                                </div>
+                                <div className="search_btn" style={{ minWidth: "150px" }}
+                                    onClick={this.search.bind(this)}
+                                >
+                                    Click to Search
+                                </div>
+                            </div>
+                        </Container>
+                        <Col>
+                            <ArtistResultShow toData={this.state.artistShow}>
+                            </ArtistResultShow>
+                        </Col>
+                    </div>
                 </div>
             </>
         )
@@ -98,6 +159,17 @@ class SimpleSearch extends React.Component {
         this.setState({ artist: data, artwork: data1 });
         console.log("detail", this.state.artist);
         console.log("detail", this.state.artwork);
+
+        let artistName = []
+        for (var i = 0; i < data.length; i++) {
+            let oneArtist = {
+                name: data[i].artist
+            }
+
+            artistName.push(oneArtist)
+        }
+
+        this.setState({ artistSuggestion: artistName })
     }
 }
 

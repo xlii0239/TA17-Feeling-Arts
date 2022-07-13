@@ -7,6 +7,8 @@ import {
   CardHeader,
   CardBody,
 } from "reactstrap";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faGlobe, faGem, faImages } from '@fortawesome/fontawesome-free-solid';
 
 // Core Components
 
@@ -32,29 +34,29 @@ function ProfileCard1(props) {
 
   return (
     <>
-        <Card className="card-profile" data-image="profile-image">
+          <Card className="card-profile" data-image="profile-image" >
         <CardHeader>
           <div className="card-image">
             <a href="#pablo" onClick={(e) => e.preventDefault()}>
               <img
-                alt="..."
+                alt="artist photo"
                 className="img rounded"
                 src={srcLink}
-                 style={{ width: 250, height: 260 }}
+                style={{ "width": "250", "height":"260" }}
               ></img>
             </a>
           </div>
               </CardHeader>
-        <CardBody className="pt-2">
+              <CardBody className="pt-2">
           <h4 className="display-4 mb-0">{name}</h4>
                   <p className="lead">{currentArtist.birthYear + " -- " + currentArtist.deathYear}</p>
-          <div className="table-responsive">
-            <ul className="list-unstyled">
+          <div className="table-responsive" >
+            <ul className="list-unstyled" >
               <li className="py-1">
                 <div className="d-flex align-items-center">
                   <div>
                     <Badge className="badge-circle mr-3" color="info">
-                      <i className="ni ni-single-02"></i>
+                       <i><FontAwesomeIcon icon={faGlobe} alt="nationality" /></i>
                     </Badge>
                   </div>
                   <div>
@@ -66,7 +68,7 @@ function ProfileCard1(props) {
                 <div className="d-flex align-items-center">
                   <div>
                     <Badge className="badge-circle mr-3" color="success">
-                      <i className="ni ni-trophy"></i>
+                      <i><FontAwesomeIcon icon={faGem} alt="famous in" /></i>
                     </Badge>
                   </div>
                   <div>
@@ -78,7 +80,7 @@ function ProfileCard1(props) {
                 <div className="d-flex align-items-center">
                   <div>
                     <Badge className="badge-circle mr-3" color="warning">
-                                          <i className="ni ni-diamond"></i>
+                      <i><FontAwesomeIcon icon={faImages} alt="master piece" /></i>
                     </Badge>
                   </div>
                   <div>

@@ -5,7 +5,7 @@ import ProfileCard1 from "components/a17components/cards/ProfileCard1.js";
 import Team1 from "components/a17components/cards/Team1.js";
 import Carousel from "components/a17components/cards/Carousel.js";
 import Autosuggest from 'react-autosuggest';
-
+import 'assets/css/common.css'
 
 
 
@@ -275,6 +275,7 @@ class NormalSearch extends React.Component {
         return (
             <>
                 <NavbarForHome />
+                <div style={{ background: 'url(https://www.publicdomainpictures.net/pictures/240000/velka/light-blue-wallpaper.jpg)', height: '900px', }} >
                 <ul class="breadcrumb bg-transparent font-weight-bold">
                     <li class="breadcrumb-item text-light"><a href="homepage" class="text-dark font-weight-bold">Home</a></li>
                     <li class="breadcrumb-item text-light"><a href="normalmode" class="text-dark font-weight-bold">Picture Mode</a></li>
@@ -282,33 +283,35 @@ class NormalSearch extends React.Component {
                 </ul>
                 <div className="section" >
                     <Container className="shape-container py-lg-2" >
-                        <h6 class="text-muted">
-                            Search Feelingarts.tk by entering the keywords of the artist name in the search box below.
-                            </h6>
+                        <h6 class="text-muted" style={{ width: "72%", margin: " 0px auto", "minWidth": "360px" }}>
+                                Search Feelingarts.tk by entering the keywords of the artist name in the search box.
+                        </h6>
                         {/*<Input type="text" innerRef={Input => this.input = Input} placeHolder="Please enter contents you want to search" />*/}
-                        <div style={{ 'display': 'flex', 'alignItems': 'center' }}>
-                        <Autosuggest
-                            suggestions={suggestions}
-                            onSuggestionsFetchRequested={this.onSuggestionsFetchRequested}
-                            onSuggestionsClearRequested={this.onSuggestionsClearRequested}
-                            getSuggestionValue={getSuggestionValue}
-                            renderSuggestion={renderSuggestion}
-                            inputProps={inputProps}
-                        />
-                            <button
-                                color="transparent"
-                                type="button"
+                            <div style={{ 'display': 'flex', "alignItems": "center", width: "72%", margin: " 0px auto" }}>
+                                <div className="a_input" style={{ minWidth: "160px" }}>
+                                <Autosuggest 
+                                    suggestions={suggestions}
+                                    onSuggestionsFetchRequested={this.onSuggestionsFetchRequested}
+                                    onSuggestionsClearRequested={this.onSuggestionsClearRequested}
+                                    getSuggestionValue={getSuggestionValue}
+                                    renderSuggestion={renderSuggestion}
+                                    inputProps={inputProps}
+
+                                />
+                                 </div>
+                            <div className="search_btn" style={{ minWidth:"140px" }}
                                 onClick={this.search.bind(this)}
-                        >
-                            <i className="fa fa-search"></i>
-                            </button>
+                            >
+                                Click to Search
+                            </div>
                         </div>
+
                     </Container>
                 </div>
-                <Row class="lg-12 align-center">
+                <Row className="lg-12 align-center" style={{ "marginLeft": "-30px" }}>
                     <Col lg={{ span: 5, offset: 2 }}>
-                        <Row justify="space-around" align="middle">
-                            <ul>
+                            <Row justify="space-around" align="middle">
+                                <ul style={{ listStyle: "none"}}>
                                 {this.state.artistShow.map((item, index) => {
                                     return (
                                         <li key={item.id}>
@@ -321,15 +324,12 @@ class NormalSearch extends React.Component {
 
                                                         {this.searchArtwork(item.artist).map((item, index) => {
                                                             return (
-                                                                <div>
-                                                                    <img
-                                                                        alt="..."
-                                                                        className="img-fluid rounded shadow-lg"
-                                                                        src={this.requireErrorHandled(item.imageNo)}
-                                                                    >
-                                                                    </img>
-                                                                    <h1>{item.artwork}</h1>
-                                                                </div>
+                                                                <img
+                                                                    alt="..."
+                                                                    className="img-fluid rounded shadow-lg"
+                                                                    src={this.requireErrorHandled(item.imageNo)}
+                                                                >
+                                                                </img>
                                                             )
                                                         })}
                                                     </Col>
@@ -345,6 +345,7 @@ class NormalSearch extends React.Component {
                     {/*    <Team1 />*/}
                     {/*</Col>*/}
                 </Row>
+            </div>
             </>
         )
     }
